@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog | Ihlamur Gayrimenkul</title>
+<meta name="description" content="Ev alırken, satarken ve kiralarken işinize yarayacak yazılar.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#ffffff">
+<link rel="canonical" href="https://simge-bit.github.io/emlak-demo/blog.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:site_name" content="Ihlamur Gayrimenkul">
+<meta property="og:title" content="Blog | Ihlamur Gayrimenkul">
+<meta property="og:description" content="Ev alırken, satarken ve kiralarken işinize yarayacak yazılar.">
+<meta property="og:image" content="https://simge-bit.github.io/emlak-demo/img/ev-zekeriyakoy.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="fonts/schibsted-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="blog">
+<main>
+  <header class="phead">
+    <div class="crumb" data-reveal><a href="index.html">Ana sayfa</a> / Blog</div>
+    <div>
+      <h1 class="split">Blog</h1>
+      <div class="sub" style="margin-top:30px" data-reveal><p>Danışmanlarımız ev alırken, satarken ve kiralarken işinize yarayacak bilgileri burada paylaşıyor.</p></div>
+    </div>
+  </header>
+  <section class="wrap" style="padding-bottom:clamp(80px,10vw,160px)">
+    <div class="plist" id="plist"></div>
+  </section>
+  <section class="outro sec wrap"><div data-footer></div></section>
+</main>
+<script src="js/vendor/lenis.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/site.js"></script>
+<script>
+  document.getElementById("plist").innerHTML = DATA.yazilar.map((p, i) => {
+    const a = DATA.danismanlar.find((d) => d.id === p.yazar);
+    return `<a class="pitem" href="yazi.html?id=${p.id}" data-cursor="Oku">
+      <div class="ph img-reveal"><img src="${sm(p.gorsel)}" alt="" loading="lazy"></div>
+      <div data-reveal><h2>${p.baslik}</h2><p>${p.ozet}</p></div>
+      <div class="d" data-reveal>${p.tarih}<br>${a.ad}</div>
+    </a>`;
+  }).join("");
+</script>
+</body>
+</html>

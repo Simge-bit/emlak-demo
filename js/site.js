@@ -1,0 +1,345 @@
+// Ortak parçalar ve animasyonlar
+(function () {
+  const D = window.DATA;
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const finePointer = matchMedia("(hover: hover) and (pointer: fine)").matches;
+  const page = document.body.dataset.page || "";
+  const tel = (t) => "tel:+90" + t.replace(/\D/g, "").replace(/^0/, "");
+
+  // Yumuşak kaydırma
+  let lenis = null;
+  if (!reduce && window.Lenis) {
+    lenis = window.__lenis = new Lenis({ lerp: 0.09, wheelMultiplier: 1 });
+    const raf = (t) => { lenis.raf(t); requestAnimationFrame(raf); };
+    requestAnimationFrame(raf);
+  }
+
+  // ---------- Favoriler ----------
+  const FKEY = "ihlamur-favoriler";
+  window.fav = {
+    list: () => { try { return JSON.parse(localStorage.getItem(FKEY)) || []; } catch (e) { return []; } },
+    has: (id) => fav.list().includes(id),
+    toggle: (id) => {
+      const l = fav.list(), i = l.indexOf(id);
+      i < 0 ? l.push(id) : l.splice(i, 1);
+      localStorage.setItem(FKEY, JSON.stringify(l));
+      document.querySelectorAll(`[data-fav="${id}"]`).forEach((b) => b.setAttribute("aria-pressed", i < 0));
+      updateFavCount();
+      dispatchEvent(new CustomEvent("favchange"));
+    }
+  };
+  window.favBtn = (id, cls) => `<button type="button" class="fav ${cls || ""}" data-fav="${id}" aria-pressed="${fav.has(id)}" aria-label="Favorilere ekle">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5 4.2 12.9a4.9 4.9 0 0 1 6.9-6.9l.9.9.9-.9a4.9 4.9 0 0 1 6.9 6.9Z"/></svg></button>`;
+  const updateFavCount = () => document.querySelectorAll(".fav-count").forEach((el) => {
+    const n = fav.list().length;
+    el.textContent = n; el.parentElement.classList.toggle("has", n > 0);
+  });
+
+  // ---------- Menü ----------
+  const links = [
+    ["ilanlar.html", "İlanlar", "ilanlar"],
+    ["hizmetler.html", "Hizmetler", "hizmetler"],
+    ["danismanlar.html", "Danışmanlar", "danismanlar"],
+    ["hakkimizda.html", "Hakkımızda", "hakkimizda"],
+    ["blog.html", "Blog", "blog"],
+    ["iletisim.html", "İletişim", "iletisim"]
+  ];
+  const skip = document.createElement("a");
+  skip.className = "skip"; skip.href = "#icerik"; skip.textContent = "İçeriğe geç";
+  document.body.prepend(skip);
+
+  const nav = document.createElement("header");
+  nav.className = "nav";
+  nav.innerHTML = `
+    <a class="logo" href="index.html" aria-label="${D.ofis.ad} ana sayfa">${D.ofis.kisa}</a>
+    <nav class="links" aria-label="Ana menü">${links.map(([h, t, k]) => `<a href="${h}" class="${k === page ? "on" : ""}" ${k === page ? 'aria-current="page"' : ""}>${t}</a>`).join("")}</nav>
+    <div class="right">
+      <a class="favlink" href="ilanlar.html?fav=1" aria-label="Favori ilanlar">Favoriler <span class="fav-count num">0</span></a>
+      <a class="ulink hide-m" href="${tel(D.ofis.telefon)}">${D.ofis.telefon}</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mmenu"><span>Menü</span></button>
+    </div>`;
+  skip.after(nav);
+
+  // Telefon menüsü
+  const mm = document.createElement("div");
+  mm.className = "mmenu"; mm.id = "mmenu"; mm.setAttribute("aria-hidden", "true");
+  mm.innerHTML = `
+    <nav aria-label="Telefon menüsü">${[["index.html", "Ana sayfa", "home"], ...links].map(([h, t, k], i) =>
+      `<a href="${h}" style="--i:${i}" class="${k === page ? "on" : ""}"><span>${t}</span></a>`).join("")}</nav>
+    <div class="mm-foot"><a href="${tel(D.ofis.telefon)}">${D.ofis.telefon}</a><a href="mailto:${D.ofis.eposta}">${D.ofis.eposta}</a></div>`;
+  document.body.appendChild(mm);
+  const btn = nav.querySelector(".menu-btn");
+  const setMenu = (open) => {
+    document.documentElement.classList.toggle("menu-open", open);
+    nav.classList.toggle("open", open);
+    btn.setAttribute("aria-expanded", open);
+    btn.firstChild.textContent = open ? "Kapat" : "Menü";
+    mm.setAttribute("aria-hidden", !open);
+    if (lenis) open ? lenis.stop() : lenis.start();
+    onScroll();
+  };
+  btn.addEventListener("click", () => setMenu(!nav.classList.contains("open")));
+  addEventListener("keydown", (e) => { if (e.key === "Escape" && nav.classList.contains("open")) setMenu(false); });
+
+  // ---------- Alt bilgi ----------
+  const injectFooter = () => {
+    const foot = document.querySelector("[data-footer]");
+    if (!foot || foot.innerHTML) return;
+    foot.innerHTML = `
+      <div class="foot">
+        <div><div class="h">Merkez ofis</div>${D.ofis.adres}<br><a href="${tel(D.ofis.telefon)}" style="display:inline">${D.ofis.telefon}</a><br><a class="ulink" style="display:inline" href="mailto:${D.ofis.eposta}">${D.ofis.eposta}</a></div>
+        <div><div class="h">Sayfalar</div>${links.map(([h, t]) => `<a href="${h}">${t}</a>`).join("")}</div>
+        <div><div class="h">İlanlar</div><a href="ilanlar.html?tip=Satılık">Satılık</a><a href="ilanlar.html?tip=Kiralık">Kiralık</a><a href="ilanlar.html?kategori=Villa">Villalar</a><a href="ilanlar.html?kategori=Daire">Daireler</a><a href="ilanlar.html?fav=1">Favorilerim</a></div>
+        <div><div class="h">Ofisler</div>${D.ofisler.map((o) => `<a href="${tel(o.tel)}">${o.sehir}, ${o.tel}</a>`).join("")}</div>
+      </div>
+      <div class="foot-bottom">
+        <span>© ${new Date().getFullYear()} ${D.ofis.ad}. Taşınmaz ticareti yetki belgesi no ${D.ofis.yetki}.</span>
+        <span><a class="ulink" href="kvkk.html">KVKK aydınlatma metni</a></span>
+        <span>Bu site bir tasarım demosudur. Ofis ve ilanlar hayalidir.</span>
+      </div>
+      <div class="wordmark" aria-hidden="true">${[...D.ofis.kisa].map((c, i) => `<span style="--i:${i}">${c}</span>`).join("")}</div>`;
+  };
+
+  // WhatsApp düğmesi (demo olduğu için numara yok, kişi seçtirir)
+  const wa = document.createElement("a");
+  wa.className = "wa";
+  wa.href = "https://wa.me/?text=" + encodeURIComponent("Merhaba, ilanlarınız hakkında bilgi almak istiyorum.");
+  wa.target = "_blank"; wa.rel = "noopener"; wa.setAttribute("aria-label", "WhatsApp ile yazın"); wa.dataset.cursor = "Yazın";
+  wa.innerHTML = `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.3Z"/></svg>`;
+  document.body.appendChild(wa);
+
+  // Küçük bildirim
+  window.toast = function (msg) {
+    let t = document.querySelector(".toast");
+    if (!t) { t = document.createElement("div"); t.className = "toast"; t.setAttribute("role", "status"); document.body.appendChild(t); }
+    t.textContent = msg; t.classList.add("on");
+    clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove("on"), 2600);
+  };
+
+  // ---------- Kelimelere bölme ----------
+  window.splitWords = function (root) {
+    root.querySelectorAll(".split").forEach((el) => {
+      if (el.dataset.done) return;
+      el.dataset.done = 1;
+      el.setAttribute("aria-label", el.textContent.replace(/\s+/g, " ").trim());
+      let i = 0;
+      const walk = (node) => {
+        [...node.childNodes].forEach((n) => {
+          if (n.nodeType === 3) {
+            const frag = document.createDocumentFragment();
+            n.textContent.split(/(\s+)/).forEach((part) => {
+              if (!part) return;
+              if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(" ")); return; }
+              const w = document.createElement("span"); w.className = "w"; w.setAttribute("aria-hidden", "true");
+              const s = document.createElement("span"); s.textContent = part; s.style.setProperty("--i", i++);
+              w.appendChild(s); frag.appendChild(w);
+            });
+            n.replaceWith(frag);
+          } else if (n.nodeType === 1 && n.tagName !== "BR") walk(n);
+        });
+      };
+      walk(el);
+    });
+  };
+
+  // ---------- Görünce açılan öğeler ----------
+  const io = new IntersectionObserver((ents) => {
+    ents.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("on"); io.unobserve(e.target); } });
+  }, { rootMargin: "0px 0px -12% 0px" });
+  window.observeReveals = function (root) {
+    splitWords(root);
+    root.querySelectorAll(".split:not(.hero .split), [data-reveal], .img-reveal, .wordmark").forEach((el) => io.observe(el));
+    root.querySelectorAll("[data-count]").forEach((el) => countIO.observe(el));
+  };
+
+  // Sayı sayacı
+  const countIO = new IntersectionObserver((ents) => {
+    ents.forEach((e) => {
+      if (!e.isIntersecting) return;
+      countIO.unobserve(e.target);
+      const el = e.target, end = +el.dataset.count, suf = el.dataset.suffix || "", t0 = performance.now(), dur = reduce ? 1 : 1800;
+      const tick = (t) => {
+        const p = Math.min(1, (t - t0) / dur), k = 1 - Math.pow(1 - p, 4);
+        el.textContent = Math.round(end * k) + suf;
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    });
+  }, { threshold: .4 });
+
+  // ---------- Kaydırmaya bağlı efektler ----------
+  let lastY = scrollY;
+  function onScroll() {
+    const y = scrollY, open = nav.classList.contains("open");
+    nav.classList.toggle("hide", y > lastY && y > 200 && !open);
+    const hero = document.querySelector(".hero, .dhero");
+    nav.classList.toggle("over", !!hero && y < hero.offsetHeight - 80 && !open);
+    lastY = y;
+  }
+  addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  const loop = () => {
+    if (!reduce) {
+      document.querySelectorAll("[data-speed]").forEach((el) => {
+        const r = el.parentElement.getBoundingClientRect();
+        if (r.bottom < 0 || r.top > innerHeight) return;
+        const sp = +el.dataset.speed;
+        el.style.translate = `0 ${(r.top + r.height / 2 - innerHeight / 2) * -sp}px`;
+      });
+    }
+    document.querySelectorAll(".expand").forEach((sec) => {
+      const r = sec.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > innerHeight) return;
+      const p = Math.min(1, Math.max(0, -r.top / (sec.offsetHeight - innerHeight)));
+      const k = reduce ? 1 : Math.min(1, p / 0.7), e = 1 - Math.pow(1 - k, 3);
+      const mobile = innerWidth < 900;
+      const ty = (mobile ? 25 : 22) * (1 - e), tx = (mobile ? 12 : 34) * (1 - e);
+      const fr = sec.querySelector(".frame");
+      fr.style.clipPath = `inset(${ty}% ${tx}% ${ty}% ${tx}%)`;
+      fr.querySelector("img").style.transform = `scale(${1.3 - 0.3 * e})`;
+      fr.style.setProperty("--o", e);
+      sec.querySelectorAll(".side-l, .side-r").forEach((el) => { el.style.opacity = 1 - e * 2.2; });
+      sec.classList.toggle("full", k >= 1);
+    });
+    document.querySelectorAll(".hscroll").forEach((sec) => {
+      const track = sec.querySelector(".track");
+      const dist = track.scrollWidth - innerWidth;
+      sec.style.height = innerHeight + Math.max(0, dist) + "px";
+      const r = sec.getBoundingClientRect();
+      const p = Math.min(1, Math.max(0, -r.top / Math.max(1, sec.offsetHeight - innerHeight)));
+      track.style.transform = `translate3d(${-dist * p}px,0,0)`;
+      const bar = sec.querySelector(".bar i");
+      if (bar) bar.style.transform = `scaleX(${p})`;
+    });
+    requestAnimationFrame(loop);
+  };
+  requestAnimationFrame(loop);
+
+  // ---------- İmleç ----------
+  if (finePointer && !reduce) {
+    const c = document.createElement("div");
+    c.className = "cursor"; c.innerHTML = "<span></span>";
+    document.body.appendChild(c);
+    let x = innerWidth / 2, y = innerHeight / 2, cx = x, cy = y;
+    addEventListener("mousemove", (e) => { x = e.clientX; y = e.clientY; });
+    const follow = () => { cx += (x - cx) * .2; cy += (y - cy) * .2; c.style.transform = `translate(${cx}px,${cy}px)`; requestAnimationFrame(follow); };
+    follow();
+    document.addEventListener("mouseover", (e) => {
+      const t = e.target.closest("[data-cursor]");
+      const onFav = e.target.closest(".fav");
+      c.classList.toggle("big", !!t && !onFav);
+      if (t) c.firstChild.textContent = t.dataset.cursor;
+    });
+  }
+
+  // İmleci takip eden fotoğraf
+  window.floatImages = function (list, sel) {
+    if (!finePointer || reduce) return;
+    const box = document.createElement("div");
+    box.className = "float-img";
+    document.body.appendChild(box);
+    let x = 0, y = 0, cx = 0, cy = 0;
+    list.addEventListener("mousemove", (e) => { x = e.clientX; y = e.clientY; });
+    const f = () => { cx += (x - cx) * .12; cy += (y - cy) * .12; box.style.transform = `translate(${cx + 30}px,${cy - 180}px)`; requestAnimationFrame(f); };
+    f();
+    list.querySelectorAll(sel || "li").forEach((li) => {
+      li.addEventListener("mouseenter", () => {
+        const img = document.createElement("img"); img.src = li.dataset.img; img.alt = "";
+        img.animate([{ clipPath: "inset(100% 0 0 0)" }, { clipPath: "inset(0 0 0 0)" }], { duration: 700, easing: "cubic-bezier(.76,0,.24,1)" });
+        box.appendChild(img);
+        while (box.children.length > 3) box.firstChild.remove();
+        box.classList.add("on");
+      });
+    });
+    list.addEventListener("mouseleave", () => box.classList.remove("on"));
+  };
+
+  // ---------- Açılış ve sayfa geçişi ----------
+  const curtain = document.createElement("div");
+  curtain.className = "curtain";
+  document.body.appendChild(curtain);
+
+  const start = () => {
+    document.body.classList.add("ready");
+    splitWords(document);
+    setTimeout(() => document.querySelectorAll(".hero .split").forEach((el) => el.classList.add("on")), 150);
+    observeReveals(document);
+  };
+
+  const boot = () => {
+    injectFooter();
+    updateFavCount();
+    const main = document.querySelector("main") || document.querySelector("section");
+    if (main && !main.id) main.id = "icerik";
+    onScroll();
+    const fromInside = sessionStorage.getItem("nav") === "1";
+    sessionStorage.removeItem("nav");
+    const firstVisit = !sessionStorage.getItem("seen") && !reduce;
+
+    if (firstVisit && document.body.dataset.loader !== "off") {
+      sessionStorage.setItem("seen", "1");
+      const l = document.createElement("div");
+      l.className = "loader"; l.setAttribute("aria-hidden", "true");
+      l.innerHTML = `<div class="word"><span>${D.ofis.kisa}</span></div><div class="count num">0</div>`;
+      document.body.appendChild(l);
+      requestAnimationFrame(() => requestAnimationFrame(() => l.classList.add("in")));
+      const cnt = l.querySelector(".count"), t0 = performance.now();
+      const step = (t) => {
+        const p = Math.min(1, (t - t0) / 1300);
+        cnt.textContent = Math.round(100 * (1 - Math.pow(1 - p, 3)));
+        if (p < 1) return requestAnimationFrame(step);
+        l.classList.add("out");
+        setTimeout(start, 350);
+        setTimeout(() => l.remove(), 1300);
+      };
+      requestAnimationFrame(step);
+    } else if (fromInside && !reduce) {
+      curtain.style.transition = "none";
+      curtain.classList.add("cover");
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        curtain.style.transition = "";
+        curtain.classList.add("leave");
+        setTimeout(start, 200);
+        setTimeout(() => { curtain.className = "curtain"; }, 900);
+      }));
+    } else {
+      sessionStorage.setItem("seen", "1");
+      start();
+    }
+  };
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot); else boot();
+
+  document.addEventListener("click", (e) => {
+    const f = e.target.closest("[data-fav]");
+    if (f) {
+      e.preventDefault(); e.stopPropagation();
+      const was = fav.has(f.dataset.fav);
+      fav.toggle(f.dataset.fav);
+      toast(was ? "İlan favorilerden çıkarıldı." : "İlan favorilere eklendi.");
+      return;
+    }
+    const a = e.target.closest("a");
+    if (!a || reduce || e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey || a.target === "_blank" || a.hasAttribute("download")) return;
+    const href = a.getAttribute("href");
+    if (!href || href.startsWith("#") || href.startsWith("tel:") || href.startsWith("mailto:") || /^https?:/.test(href)) return;
+    e.preventDefault();
+    sessionStorage.setItem("nav", "1");
+    curtain.classList.add("cover");
+    setTimeout(() => { location.href = href; }, 650);
+  });
+  addEventListener("pageshow", (e) => { if (e.persisted) { curtain.className = "curtain"; setMenu(false); updateFavCount(); } });
+
+  // Küçük fotoğraf sürümü (kartlar için)
+  window.sm = (src) => src.replace("img/", "img/sm/");
+
+  // Ortak kart şablonu
+  window.cardHTML = function (x, i, extra) {
+    const no = i == null ? "" : `<div class="no num"><span>${String(i + 1).padStart(2, "0")}</span><span>${x.kategori}</span></div>`;
+    return `<a class="card ${extra || ""}" href="ilan.html?id=${x.id}" data-cursor="Görüntüle">${no}
+      <div class="ph"><img src="${sm(x.gorseller[0])}" alt="${x.baslik}, ${x.mahalle}" loading="lazy"><img class="alt" src="${sm(x.gorseller[1] || x.gorseller[0])}" alt="" loading="lazy"><span class="tag">${x.tip}</span>${favBtn(x.id)}</div>
+      <div class="row"><span class="t">${x.baslik}</span><span class="num">${x.oda}</span></div>
+      <div class="row"><span>${x.mahalle}, ${x.ilce}</span><span class="num">${fmtFiyat(x)}</span></div>
+    </a>`;
+  };
+})();
