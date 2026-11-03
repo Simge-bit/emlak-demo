@@ -32,13 +32,20 @@
   });
 
   // ---------- Menü ----------
+  // Sayfa adresleri. Statik demoda .html dosyalarıdır, Laravel sürümünde DATA.routes ile değişir.
+  const R = window.ROUTES = Object.assign({
+    home: "index.html", ilanlar: "ilanlar.html", hizmetler: "hizmetler.html", danismanlar: "danismanlar.html",
+    hakkimizda: "hakkimizda.html", blog: "blog.html", iletisim: "iletisim.html", degerleme: "degerleme.html", kvkk: "kvkk.html",
+    ilan: (x) => "ilan.html?id=" + x.id, danisman: (p) => "danisman.html?id=" + p.id, yazi: (y) => "yazi.html?id=" + y.id
+  }, D.routes || {});
+  ["ilan", "danisman", "yazi"].forEach((k) => { if (typeof R[k] === "string") { const base = R[k]; R[k] = (o) => base.replace("{id}", o.id); } });
   const links = [
-    ["ilanlar.html", "İlanlar", "ilanlar"],
-    ["hizmetler.html", "Hizmetler", "hizmetler"],
-    ["danismanlar.html", "Danışmanlar", "danismanlar"],
-    ["hakkimizda.html", "Hakkımızda", "hakkimizda"],
-    ["blog.html", "Blog", "blog"],
-    ["iletisim.html", "İletişim", "iletisim"]
+    [R.ilanlar, "İlanlar", "ilanlar"],
+    [R.hizmetler, "Hizmetler", "hizmetler"],
+    [R.danismanlar, "Danışmanlar", "danismanlar"],
+    [R.hakkimizda, "Hakkımızda", "hakkimizda"],
+    [R.blog, "Blog", "blog"],
+    [R.iletisim, "İletişim", "iletisim"]
   ];
   const skip = document.createElement("a");
   skip.className = "skip"; skip.href = "#icerik"; skip.textContent = "İçeriğe geç";
@@ -47,10 +54,10 @@
   const nav = document.createElement("header");
   nav.className = "nav";
   nav.innerHTML = `
-    <a class="logo" href="index.html" aria-label="${D.ofis.ad} ana sayfa">${D.ofis.kisa}</a>
+    <a class="logo" href="${R.home}" aria-label="${D.ofis.ad} ana sayfa">${D.ofis.kisa}</a>
     <nav class="links" aria-label="Ana menü">${links.map(([h, t, k]) => `<a href="${h}" class="${k === page ? "on" : ""}" ${k === page ? 'aria-current="page"' : ""}>${t}</a>`).join("")}</nav>
     <div class="right">
-      <a class="favlink" href="ilanlar.html?fav=1" aria-label="Favori ilanlar">Favoriler <span class="fav-count num">0</span></a>
+      <a class="favlink" href="${R.ilanlar}?fav=1" aria-label="Favori ilanlar">Favoriler <span class="fav-count num">0</span></a>
       <a class="ulink hide-m" href="${tel(D.ofis.telefon)}">${D.ofis.telefon}</a>
       <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mmenu"><span>Menü</span></button>
     </div>`;
@@ -60,7 +67,7 @@
   const mm = document.createElement("div");
   mm.className = "mmenu"; mm.id = "mmenu"; mm.setAttribute("aria-hidden", "true");
   mm.innerHTML = `
-    <nav aria-label="Telefon menüsü">${[["index.html", "Ana sayfa", "home"], ...links].map(([h, t, k], i) =>
+    <nav aria-label="Telefon menüsü">${[[R.home, "Ana sayfa", "home"], ...links].map(([h, t, k], i) =>
       `<a href="${h}" style="--i:${i}" class="${k === page ? "on" : ""}"><span>${t}</span></a>`).join("")}</nav>
     <div class="mm-foot"><a href="${tel(D.ofis.telefon)}">${D.ofis.telefon}</a><a href="mailto:${D.ofis.eposta}">${D.ofis.eposta}</a></div>`;
   document.body.appendChild(mm);
@@ -84,12 +91,12 @@
       <div class="foot">
         <div><div class="h">Merkez ofis</div>${D.ofis.adres}<br><a href="${tel(D.ofis.telefon)}" style="display:inline">${D.ofis.telefon}</a><br><a class="ulink" style="display:inline" href="mailto:${D.ofis.eposta}">${D.ofis.eposta}</a></div>
         <div><div class="h">Sayfalar</div>${links.map(([h, t]) => `<a href="${h}">${t}</a>`).join("")}</div>
-        <div><div class="h">İlanlar</div><a href="ilanlar.html?tip=Satılık">Satılık</a><a href="ilanlar.html?tip=Kiralık">Kiralık</a><a href="ilanlar.html?kategori=Villa">Villalar</a><a href="ilanlar.html?kategori=Daire">Daireler</a><a href="ilanlar.html?fav=1">Favorilerim</a><a href="degerleme.html">Evinizin değeri</a></div>
+        <div><div class="h">İlanlar</div><a href="${R.ilanlar}?tip=Satılık">Satılık</a><a href="${R.ilanlar}?tip=Kiralık">Kiralık</a><a href="${R.ilanlar}?kategori=Villa">Villalar</a><a href="${R.ilanlar}?kategori=Daire">Daireler</a><a href="${R.ilanlar}?fav=1">Favorilerim</a><a href="${R.degerleme}">Evinizin değeri</a></div>
         <div><div class="h">Ofisler</div>${D.ofisler.map((o) => `<a href="${tel(o.tel)}">${o.sehir}, ${o.tel}</a>`).join("")}</div>
       </div>
       <div class="foot-bottom">
         <span>© ${new Date().getFullYear()} ${D.ofis.ad}. Taşınmaz ticareti yetki belgesi no ${D.ofis.yetki}.</span>
-        <span><a class="ulink" href="kvkk.html">KVKK aydınlatma metni</a></span>
+        <span><a class="ulink" href="${R.kvkk}">KVKK aydınlatma metni</a></span>
         <span>${D.ofis.demoNot || "Bu site bir tasarım demosudur. Ofis ve ilanlar hayalidir."}</span>
       </div>
       <div class="wordmark" aria-hidden="true">${[...D.ofis.kisa].map((c, i) => `<span style="--i:${i}">${c}</span>`).join("")}</div>`;
@@ -246,6 +253,7 @@
     // Sayfadaki ofis bilgisi alanlarını doldur (örneğin <span data-ofis="adres">)
     document.querySelectorAll("[data-ofis]").forEach((el) => { el.textContent = D.ofis[el.dataset.ofis] || ""; });
     updateFavCount();
+    document.querySelectorAll("[data-fav]").forEach((b) => b.setAttribute("aria-pressed", fav.has(b.dataset.fav)));
     const main = document.querySelector("main") || document.querySelector("section");
     if (main && !main.id) main.id = "icerik";
     measure();
@@ -267,12 +275,12 @@
   addEventListener("pageshow", (e) => { if (e.persisted) { setMenu(false); updateFavCount(); } });
 
   // Küçük fotoğraf sürümü (kartlar için)
-  window.sm = (src) => src.replace("img/", "img/sm/");
+  window.sm = (src) => src.replace(/([^/]+)$/, "sm/$1");
 
   // Ortak kart şablonu
   window.cardHTML = function (x, i, extra) {
     const no = i == null ? "" : `<div class="no num"><span>${String(i + 1).padStart(2, "0")}</span><span>${x.kategori}</span></div>`;
-    return `<a class="card ${extra || ""}" href="ilan.html?id=${x.id}">${no}
+    return `<a class="card ${extra || ""}" href="${R.ilan(x)}">${no}
       <div class="ph"><img src="${sm(x.gorseller[0])}" alt="${x.baslik}, ${x.mahalle}" loading="lazy" decoding="async"><img class="alt" src="${sm(x.gorseller[1] || x.gorseller[0])}" alt="" loading="lazy" decoding="async"><span class="tag">${x.tip}</span>${favBtn(x.id)}</div>
       <div class="row"><span class="t">${x.baslik}</span><span class="num">${x.oda}</span></div>
       <div class="row"><span>${x.mahalle}, ${x.ilce}</span><span class="num">${fmtFiyat(x)}</span></div>

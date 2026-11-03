@@ -56,7 +56,7 @@ def gorsel_kaydet(kaynak, hedef_ad, cikti, genislik):
             yol = KOK / yol
         im = Image.open(yol)
     im = im.convert("RGB")
-    for klasor, w in (("img/p", genislik), ("img/sm/p", 760)):
+    for klasor, w in (("img/p", genislik), ("img/p/sm", 760)):
         kopya = im.copy()
         if kopya.width > w:
             kopya = kopya.resize((w, round(kopya.height * w / kopya.width)), Image.LANCZOS)
