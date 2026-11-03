@@ -44,10 +44,12 @@
   document.head.appendChild(desc);
 
   const waText = encodeURIComponent(`Merhaba, ${x.mahalle} bölgesindeki "${x.baslik}" ilanınız hakkında bilgi almak istiyorum.`);
-  const facts = [["Fiyat", fmtFiyat(x)], ["Oda", x.oda], ["Alan", x.m2 + " m²"], ["Banyo", x.banyo], ["Kat", x.kat], ["Bina yaşı", x.yas === 0 ? "Sıfır" : x.yas + " yıl"]];
+  const facts = [["Fiyat", fmtFiyat(x)], ["Oda", x.oda], ["Alan", x.m2 ? x.m2 + " m²" : null], ["Banyo", x.banyo || null], ["Kat", x.kat || null], ["Bina yaşı", x.yas == null || x.yas === "" ? null : x.yas === 0 ? "Sıfır" : x.yas + " yıl"]];
   if (x.arsa) facts.splice(3, 0, ["Arsa", x.arsa.toLocaleString("tr-TR") + " m²"]), facts.pop();
-  const spec = [["İlan no", x.ilanNo], ["İlan tarihi", x.tarih], ["Kategori", x.kategori], ["Tapu durumu", x.tapu], ["Krediye uygun", x.kredi ? "Evet" : "Hayır"],
-    ["Aidat", x.aidat ? x.aidat.toLocaleString("tr-TR") + " TL" : "Yok"], ["Isıtma", x.isitma], ["Yetki belgesi no", D.ofis.yetki]];
+  // Bilinmeyen bilgiler gösterilmez
+  for (let i = facts.length - 1; i >= 0; i--) if (facts[i][1] == null || facts[i][1] === "") facts.splice(i, 1);
+  const spec = [["İlan no", x.ilanNo], ["İlan tarihi", x.tarih], ["Kategori", x.kategori], ["Tapu durumu", x.tapu || null], ["Krediye uygun", x.kredi == null ? null : x.kredi ? "Evet" : "Hayır"],
+    ["Aidat", x.aidat == null ? null : x.aidat ? x.aidat.toLocaleString("tr-TR") + " TL" : "Yok"], ["Isıtma", x.isitma || null], ["Yetki belgesi no", D.ofis.yetki || null]].filter(([, v]) => v != null && v !== "");
   const benzer = D.ilanlar.filter((i) => i.id !== x.id).sort((p, q) => (q.il === x.il) - (p.il === x.il) || (q.tip === x.tip) - (p.tip === x.tip)).slice(0, 3);
 
   document.getElementById("main").innerHTML = `
@@ -55,7 +57,7 @@
     <img src="${x.gorseller[0]}" alt="${x.baslik}">
     <div class="over">
       <div>
-        <div class="label" style="color:rgba(255,255,255,.75)">${x.tip} ${x.kategori.toLowerCase()}, ${x.mahalle}, ${x.ilce}, ${x.il}</div>
+        <div class="label" style="color:rgba(255,255,255,.75)">${x.tip} ${x.kategori.toLowerCase()}, ${[x.mahalle !== x.ilce && x.mahalle, x.ilce, x.il].filter(Boolean).join(", ")}</div>
         <h1 class="split">${x.baslik}</h1>
       </div>
       <div class="price num" data-reveal><small>${x.tip}</small>${fmtFiyat(x)}</div>
@@ -86,19 +88,19 @@
       ${x.gorseller.map((g, i) => `<button type="button" data-i="${i}" class="img-reveal"><img src="${g}" alt="${x.baslik}, fotoğraf ${i + 1}" loading="lazy"></button>`).join("")}
     </section>
 
-    <section class="dmap">
+    ${x.lat && x.lng ? `<section class="dmap">
       <div>
         <div class="label" data-reveal>Konum</div>
         <p data-reveal>Haritadaki işaret evin yaklaşık konumunu gösteriyor. Tam adresi görüşme sırasında paylaşıyoruz.</p>
       </div>
       <div class="map" id="dmap" data-reveal></div>
-    </section>
+    </section>` : ""}
 
     ${x.tip === "Satılık" ? `
     <section class="calc" id="calc">
       <div>
         <div class="label" data-reveal>Kredi hesaplama</div>
-        <p data-reveal>Bu hesaplama yaklaşık bir değer verir. Güncel faiz oranını ve kullanabileceğiniz en yüksek kredi tutarını bankanızdan öğrenin.${x.kredi ? "" : " Bu ev şu anda krediye uygun değildir."}</p>
+        <p data-reveal>Bu hesaplama yaklaşık bir değer verir. Güncel faiz oranını ve kullanabileceğiniz en yüksek kredi tutarını bankanızdan öğrenin.${x.kredi === false ? " Bu ev şu anda krediye uygun değildir." : ""}</p>
       </div>
       <div class="calc-box" data-reveal>
         <div class="calc-in">
@@ -116,15 +118,15 @@
     </section>` : ""}
 
     <section class="agent">
-      <div class="label" data-reveal>Bu ilanla ilgilenen danışman</div>
-      <div class="box" data-reveal>
-        <a href="danisman.html?id=${a.id}"><img src="${sm(a.foto)}" alt="${a.ad}"></a>
+      <div class="label" data-reveal>${a ? "Bu ilanla ilgilenen danışman" : "İletişim"}</div>
+      <div class="box" data-reveal${a ? "" : ' style="grid-template-columns:1fr"'}>
+        ${a ? `<a href="danisman.html?id=${a.id}"><img src="${sm(a.foto)}" alt="${a.ad}"></a>` : ""}
         <div>
-          <h3><a href="danisman.html?id=${a.id}">${a.ad}</a></h3>
-          <div class="r">${a.unvan}, ${a.bolge}</div>
+          <h3>${a ? `<a href="danisman.html?id=${a.id}">${a.ad}</a>` : D.ofis.ad}</h3>
+          <div class="r">${a ? `${a.unvan}, ${a.bolge}` : D.ofis.adres || ""}</div>
           <div class="acts">
             <a class="btn" href="${waLink(decodeURIComponent(waText))}" target="_blank" rel="noopener"><span>WhatsApp ile yazın</span><span class="arr">→</span></a>
-            <a class="btn line" href="tel:+90${a.tel.replace(/\D/g, "").slice(1)}"><span>${a.tel}</span></a>
+            ${(a ? a.tel : D.ofis.telefon) ? `<a class="btn line" href="tel:+90${(a ? a.tel : D.ofis.telefon).replace(/\D/g, "").slice(1)}"><span>${a ? a.tel : D.ofis.telefon}</span></a>` : ""}
           </div>
         </div>
       </div>
@@ -133,7 +135,7 @@
     <section class="agent visit">
       <div>
         <div class="label" data-reveal>Gezme randevusu</div>
-        <p data-reveal>Evi görmek istediğiniz günü seçin. ${a.ad.split(" ")[0]} sizi arayıp saati birlikte belirleyecek.</p>
+        <p data-reveal>Evi görmek istediğiniz günü seçin. ${a ? a.ad.split(" ")[0] : "Danışmanımız"} sizi arayıp saati birlikte belirleyecek.</p>
       </div>
       <form class="form" id="visit" novalidate data-reveal>
         <div class="f"><label for="vAd">Ad soyad</label><input id="vAd" name="ad" required autocomplete="name"></div>
@@ -222,7 +224,7 @@
     if (e.key === "ArrowRight") show(cur + 1);
   });
 
-  {
+  if (document.getElementById("dmap")) {
     const m = makeMap(document.getElementById("dmap"), [x.lat, x.lng], 14);
     L.circle([x.lat, x.lng], { radius: 350, color: "#111", weight: 1, fillColor: "#111", fillOpacity: .08 }).addTo(m);
     L.marker([x.lat, x.lng], { icon: pinIcon("", "dot") }).addTo(m);

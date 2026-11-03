@@ -5,6 +5,8 @@
   const finePointer = matchMedia("(hover: hover) and (pointer: fine)").matches;
   const page = document.body.dataset.page || "";
   document.documentElement.classList.add("js");
+  // Fotoğraflar ofisin kendi fotoğrafı değilse her görselin köşesinde "Temsili görsel" yazar
+  if (D.ofis.temsili) document.documentElement.classList.add("temsili");
   const tel = (t) => t ? "tel:+90" + String(t).replace(/\D/g, "").replace(/^0/, "") : "#";
 
   // Marka rengi ve WhatsApp bağlantısı ofis ayarından gelir
@@ -43,7 +45,7 @@
   const links = [
     [R.ilanlar, "İlanlar", "ilanlar"],
     [R.hizmetler, "Hizmetler", "hizmetler"],
-    [R.danismanlar, "Danışmanlar", "danismanlar"],
+    ...(D.danismanlar && !D.danismanlar.length ? [] : [[R.danismanlar, "Danışmanlar", "danismanlar"]]),
     [R.hakkimizda, "Hakkımızda", "hakkimizda"],
     [R.blog, "Blog", "blog"],
     [R.iletisim, "İletişim", "iletisim"]
@@ -302,7 +304,7 @@
     return `<a class="card ${extra || ""}" href="${R.ilan(x)}">${no}
       <div class="ph"><img src="${sm(x.gorseller[0])}" alt="${x.baslik}, ${x.mahalle}" loading="lazy" decoding="async"><img class="alt" src="${sm(x.gorseller[1] || x.gorseller[0])}" alt="" loading="lazy" decoding="async"><span class="tag">${x.tip}</span>${favBtn(x.id)}</div>
       <div class="row"><span class="t">${x.baslik}</span><span class="num">${x.oda}</span></div>
-      <div class="row"><span>${x.mahalle}, ${x.ilce}</span><span class="num">${fmtFiyat(x)}</span></div>
+      <div class="row"><span>${[x.mahalle !== x.ilce && x.mahalle, x.ilce].filter(Boolean).join(", ")}</span><span class="num">${fmtFiyat(x)}</span></div>
     </a>`;
   };
 })();

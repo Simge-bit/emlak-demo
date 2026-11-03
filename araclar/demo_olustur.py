@@ -98,9 +98,10 @@ def ilan_tamamla(x, sira, danisman_idleri):
     x.setdefault("ozellikler", [])
     x.setdefault("aciklama", "")
     if x.get("danisman") not in danisman_idleri:
-        x["danisman"] = danisman_idleri[0]
+        x["danisman"] = danisman_idleri[0] if danisman_idleri else None
     if "lat" not in x or "lng" not in x:
-        k = konum_bul(x.get("mahalle"), x.get("ilce"), x.get("il"))
+        # Mahalle ya da site adı haritada bulunamazsa ilçenin merkezi kullanılır
+        k = konum_bul(x.get("mahalle"), x.get("ilce"), x.get("il")) or konum_bul(x.get("ilce"), x.get("il"))
         if k:
             x["lat"], x["lng"] = k
     return x
@@ -156,14 +157,21 @@ def main(ayar_yolu):
     # İlanlar
     if "ilanlar" in ayar:
         if danisman_idleri is None:
-            danisman_idleri = ["elif"]
+            danisman_idleri = ["elif"]  # danışman verilmezse ana demonun danışmanları kullanılır
         il = []
         for i, x in enumerate(ayar["ilanlar"]):
             x = ilan_tamamla(x, i + 1, danisman_idleri)
             print(f"  ilan {i + 1}: {x['baslik']}")
-            x["gorseller"] = [gorsel_kaydet(g, f"{x['id']}-{n + 1}.jpg", cikti, 1800) for n, g in enumerate(x.get("gorseller", []))]
+            kaynaklar, x["gorseller"] = x.get("gorseller", []), []
+            for n, g in enumerate(kaynaklar):
+                try:
+                    x["gorseller"].append(gorsel_kaydet(g, f"{x['id']}-{n + 1}.jpg", cikti, 1800))
+                except Exception as e:  # tek bir fotoğraf yüzünden bütün demo durmasın
+                    print(f"  ! Fotoğraf alınamadı ({e}): {g}")
+            # Fotoğrafı inmeyen ilan demoya alınmaz. Gerçek bir ofisin ilanına başka evin fotoğrafı konmamalı.
             if not x["gorseller"]:
-                x["gorseller"] = ["img/ev-catili.jpg"]
+                print(f"  ! Fotoğrafı olmadığı için demoya alınmadı: {x['baslik']}")
+                continue
             il.append(x)
         veri["ilanlar"] = il
         veri["vitrin"] = ayar.get("vitrin") or [x["id"] for x in il[:4]]
@@ -175,7 +183,7 @@ def main(ayar_yolu):
 
     # Ana sitenin örnek yazılarındaki yazarlar yeni danışmanlarla eşleşmezse ilk danışmana bağlanır
     yazar_duzelt = f"""
-  if (D.yazilar) D.yazilar.forEach((y) => {{ if (!D.danismanlar.some((d) => d.id === y.yazar)) y.yazar = D.danismanlar[0].id; }});""" if danisman_idleri else ""
+  if (D.yazilar && D.danismanlar.length) D.yazilar.forEach((y) => {{ if (!D.danismanlar.some((d) => d.id === y.yazar)) y.yazar = D.danismanlar[0].id; }});""" if danisman_idleri else ""
 
     js = f"""// {ofis['ad']} için üretilmiş ofis ayarı. Bu dosyayı elle değil, araclar/demo_olustur.py ile üretin.
 (function () {{

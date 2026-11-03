@@ -222,7 +222,7 @@
   Object.assign(D.ofis, ayar.ofis);
   delete ayar.ofis;
   Object.assign(D, ayar);
-  if (D.yazilar) D.yazilar.forEach((y) => { if (!D.danismanlar.some((d) => d.id === y.yazar)) y.yazar = D.danismanlar[0].id; });
+  if (D.yazilar && D.danismanlar.length) D.yazilar.forEach((y) => { if (!D.danismanlar.some((d) => d.id === y.yazar)) y.yazar = D.danismanlar[0].id; });
   // Ana sitenin fotoğrafları iki klasör yukarıda durur
   const yol = (v) => typeof v === "string" && v.startsWith("img/") && !v.startsWith("img/p/") ? "../../" + v : v;
   const gez = (o) => { for (const k in o) { if (o[k] && typeof o[k] === "object") gez(o[k]); else o[k] = yol(o[k]); } };

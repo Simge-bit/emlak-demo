@@ -82,7 +82,8 @@
 
   const map = makeMap(document.getElementById("map"));
   const markers = {};
-  D.ilanlar.forEach((x) => {
+  // Konumu bilinmeyen ilanlar haritaya konmaz
+  D.ilanlar.filter((x) => x.lat && x.lng).forEach((x) => {
     const m = L.marker([x.lat, x.lng], { icon: pinIcon(fmtKisa(x)) });
     m.bindPopup(`<a class="pop" href="ilan.html?id=${x.id}"><img src="${x.gorseller[0]}" alt=""><div><b>${x.baslik}</b>${x.mahalle}, ${x.ilce}<br>${fmtFiyat(x)}</div></a>`);
     m.on("mouseover", () => hl(x.id, true));
@@ -136,7 +137,8 @@
       if (!show && map.hasLayer(m)) map.removeLayer(m);
     });
     if (!list.length && !map._loaded) map.setView([39.5, 28.5], 6);
-    if (list.length) map.fitBounds(L.latLngBounds(list.map((x) => [x.lat, x.lng])).pad(0.25), { maxZoom: 13 });
+    const pts = list.filter((x) => x.lat && x.lng).map((x) => [x.lat, x.lng]);
+    if (pts.length) map.fitBounds(L.latLngBounds(pts).pad(0.25), { maxZoom: 13 });
 
     // Seçili filtre etiketleri
     const names = { tip: "Tip", konum: "Konum", kategori: "Kategori", oda: "Oda", min: "En az", max: "En çok", m2: "En az m²" };

@@ -28,6 +28,8 @@
   const D = window.DATA;
   const id = new URLSearchParams(location.search).get("id");
   const p = D.danismanlar.find((x) => x.id === id) || D.danismanlar[0];
+  // Bu ofiste danışman yoksa ana sayfaya dönülür
+  if (!p) { location.replace("index.html"); return; }
   const ilanlar = D.ilanlar.filter((x) => x.danisman === p.id);
   document.title = `${p.ad} | ${D.ofis.ad}`;
   const waText = encodeURIComponent(`Merhaba, ${p.ad} ile bir ev hakkında görüşmek istiyorum.`);

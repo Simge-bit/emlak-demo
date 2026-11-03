@@ -193,7 +193,7 @@
     document.getElementById("expLoc").textContent = `${ay.mahalle}, ${ay.ilce}`;
     document.getElementById("expTitle").textContent = ay.baslik;
     document.getElementById("expLink").href = `ilan.html?id=${ay.id}`;
-    document.getElementById("expDl").innerHTML = [["Oda", ay.oda], ["Alan", ay.m2 + " m²"], ["Fiyat", fmtFiyat(ay)]].map(([a, b]) => `<div><dt>${a}</dt><dd class="num">${b}</dd></div>`).join("");
+    document.getElementById("expDl").innerHTML = [["Oda", ay.oda], ay.m2 ? ["Alan", ay.m2 + " m²"] : null, ["Fiyat", fmtFiyat(ay)]].filter(Boolean).map(([a, b]) => `<div><dt>${a}</dt><dd class="num">${b}</dd></div>`).join("");
 
     const iller = [...new Set(D.ilanlar.map((x) => x.il))];
     document.getElementById("qIl").innerHTML += iller.map((i) => `<option>${i}</option>`).join("");
@@ -203,13 +203,16 @@
       <li data-img="${h.gorsel}" data-reveal style="--d:${i * 80}ms"><span class="label num">0${i + 1}</span><h3>${h.baslik}</h3><p>${h.metin}</p></li>`).join("");
     floatImages(svc);
 
-    document.getElementById("team").innerHTML = D.danismanlar.map((p, i) => `
+    if (!D.danismanlar.length) document.getElementById("team").closest("section").remove();
+    else document.getElementById("team").innerHTML = D.danismanlar.map((p, i) => `
       <a class="person" href="danisman.html?id=${p.id}">
         <div class="ph img-reveal" style="--d:${i * 90}ms"><img src="${p.foto}" alt="${p.ad}" loading="lazy"></div>
         <div class="n">${p.ad}</div><div class="r">${p.unvan}, ${p.bolge}</div>
       </a>`).join("");
 
-    document.getElementById("posts").innerHTML = D.yazilar.map((p, i) => `
+    // Yazısı olmayan ofiste blog bölümü gizlenir
+    if (!D.yazilar.length) document.getElementById("posts").closest("section").remove();
+    else document.getElementById("posts").innerHTML = D.yazilar.map((p, i) => `
       <a class="post" href="yazi.html?id=${p.id}">
         <div class="ph img-reveal" style="--d:${i * 90}ms"><img src="${sm(p.gorsel)}" alt="" loading="lazy"></div>
         <div class="d">${p.tarih}</div><h3>${p.baslik}</h3>

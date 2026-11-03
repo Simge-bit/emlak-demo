@@ -27,6 +27,8 @@
   const D = window.DATA;
   const id = new URLSearchParams(location.search).get("id");
   const p = D.yazilar.find((x) => x.id === id) || D.yazilar[0];
+  // Bu ofiste yazı yoksa ana sayfaya dönülür
+  if (!p) { location.replace("index.html"); return; }
   const a = D.danismanlar.find((d) => d.id === p.yazar);
   const diger = D.yazilar.filter((x) => x.id !== p.id);
   document.title = `${p.baslik} | ${D.ofis.ad}`;

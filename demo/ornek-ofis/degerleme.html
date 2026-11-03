@@ -137,7 +137,7 @@
     // Ön tahmin: aynı ildeki aynı tipteki ilanlarımızın metrekare fiyatından hesaplanır
     const m2 = +String(f.m2).replace(/\D/g, "");
     const tip = f.amac || "Satılık";
-    const ref = D.ilanlar.filter((x) => x.il === f.il && x.tip === tip);
+    const ref = D.ilanlar.filter((x) => x.il === f.il && x.tip === tip && x.m2 > 0);
     const est = document.getElementById("est");
     if (ref.length && m2) {
       const birim = ref.reduce((a, x) => a + x.fiyat / x.m2, 0) / ref.length;

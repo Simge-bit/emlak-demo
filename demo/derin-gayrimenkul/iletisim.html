@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>İletişim | Derin Gayrimenkul</title>
+<meta name="description" content="Derin Gayrimenkul Göktürk, Kemerburgaz ve Sarıyer'de satılık ve kiralık daire ve villa ilanları.">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:site_name" content="Derin Gayrimenkul">
+<meta property="og:title" content="İletişim | Derin Gayrimenkul">
+<meta property="og:description" content="Derin Gayrimenkul Göktürk, Kemerburgaz ve Sarıyer'de satılık ve kiralık daire ve villa ilanları.">
+<meta property="og:image" content="https://simge-bit.github.io/emlak-demo/demo/derin-gayrimenkul/img/p/ilan-1244397544-1.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="../../fonts/schibsted-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../js/vendor/leaflet.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/pages.css">
+</head>
+<body data-page="iletisim">
+<main>
+  <header class="phead">
+    <div class="crumb" data-reveal><a href="index.html">Ana sayfa</a> / İletişim</div>
+    <div>
+      <h1 class="split">İletişim</h1>
+      <div class="sub" style="margin-top:30px" data-reveal><p>Formu doldurursanız bölgenizdeki danışmanımız aynı gün içinde size döner. Hızlı bir soru için WhatsApp'tan da yazabilirsiniz.</p></div>
+    </div>
+  </header>
+
+  <section class="contact wrap">
+    <div class="label" data-reveal>Bize yazın</div>
+    <form class="form" id="form" novalidate data-reveal>
+      <div class="f"><label for="ad">Ad soyad</label><input id="ad" name="ad" required autocomplete="name"></div>
+      <div class="f"><label for="tel">Telefon</label><input id="tel" name="tel" required inputmode="tel" autocomplete="tel"></div>
+      <div class="f"><label for="eposta">E-posta</label><input id="eposta" name="eposta" type="email" autocomplete="email"></div>
+      <div class="f"><label for="konu">Konu</label>
+        <select id="konu" name="konu"><option>Ev almak istiyorum</option><option>Evimi satmak istiyorum</option><option>Ev kiralamak istiyorum</option><option>Evimi kiraya vermek istiyorum</option><option>Değerleme raporu istiyorum</option><option>Diğer</option></select></div>
+      <div class="f full"><label for="mesaj">Mesajınız</label><textarea id="mesaj" name="mesaj" rows="4"></textarea></div>
+      <label class="kvkk"><input type="checkbox" name="kvkk" required><span>Kişisel verilerimin bu talebe yanıt verilmesi amacıyla işlenmesine izin veriyorum. <a class="ulink" href="kvkk.html">Aydınlatma metnini</a> okudum.</span></label>
+      <div class="send">
+        <span class="ok" id="ok">Mesajınız alındı. Danışmanımız en kısa sürede size dönecek.</span>
+        <button class="btn" type="submit"><span>Gönder</span><span class="arr">→</span></button>
+      </div>
+    </form>
+  </section>
+
+  <section class="sec wrap" style="padding-top:0">
+    <div class="sec-head">
+      <div class="label" data-reveal>Ofisler</div>
+      <div class="side"><h2 class="split">Ofislerimiz</h2></div>
+    </div>
+    <div class="offices" id="offices"></div>
+    <div class="cmap map" id="cmap" data-reveal></div>
+  </section>
+
+  <section class="outro sec wrap"><div data-footer></div></section>
+</main>
+
+<script src="../../js/vendor/leaflet.js"></script>
+<script src="../../js/data.js"></script>
+<script src="js/ofis.js"></script>
+<script src="../../js/site.js"></script>
+<script src="../../js/map.js"></script>
+<script>
+(function () {
+  const D = window.DATA;
+  document.getElementById("offices").innerHTML = D.ofisler.map((o, i) => `
+    <div class="o" data-reveal style="--d:${i * 100}ms">
+      <h3>${o.sehir}</h3>
+      <p>${o.adres}</p>
+      <p class="num" style="margin-top:6px"><a class="ulink" href="tel:${o.tel.replace(/\s/g, "")}">${o.tel}</a></p>
+      <p style="margin-top:18px"><a class="ulink" href="https://www.openstreetmap.org/?mlat=${o.lat}&mlon=${o.lng}#map=16/${o.lat}/${o.lng}" target="_blank" rel="noopener">Yol tarifi al</a></p>
+    </div>`).join("");
+
+  const m = makeMap(document.getElementById("cmap"));
+  D.ofisler.forEach((o) => L.marker([o.lat, o.lng], { icon: pinIcon(o.sehir) }).addTo(m));
+  m.fitBounds(L.latLngBounds(D.ofisler.map((o) => [o.lat, o.lng])).pad(0.2));
+
+  // Demo formu: gerçek sürümde mesaj yönetim paneline ve e-postaya düşecek
+  const form = document.getElementById("form");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let ok = true;
+    form.querySelectorAll("[required]").forEach((el) => {
+      const bad = el.type === "checkbox" ? !el.checked : !el.value.trim();
+      (el.closest(".f") || el.closest(".kvkk")).classList.toggle("err", bad);
+      if (bad) ok = false;
+    });
+    if (!ok) return;
+    document.getElementById("ok").classList.add("on");
+    form.reset();
+  });
+})();
+</script>
+</body>
+</html>

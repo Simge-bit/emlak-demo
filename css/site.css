@@ -306,3 +306,12 @@ section { position: relative; }
 }
 @keyframes prog { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 @media (hover: none) { .float-img { display: none; } }
+
+/* Temsili görsel etiketi (ofisin gerçek fotoğrafları gelene kadar) */
+.temsili .card .ph::after, .temsili .slide::after, .temsili .dhero::before, .temsili .gal button::after, .temsili .expand .frame::before, .temsili .duo .frame::before {
+  content: "Temsili görsel"; position: absolute; z-index: 5; right: 10px; bottom: 10px; padding: 4px 8px; font-size: 11px; letter-spacing: .02em;
+  background: rgba(17, 17, 17, .72); color: #fff; pointer-events: none;
+}
+.temsili .slide::after { right: auto; left: var(--pad); top: 84px; bottom: auto; }
+.temsili .dhero::before { right: auto; left: var(--pad); top: 84px; bottom: auto; }
+.temsili .expand .frame::before { top: 12px; right: 12px; bottom: auto; }

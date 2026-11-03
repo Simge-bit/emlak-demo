@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>İlanlar | Derin Gayrimenkul</title>
+<meta name="description" content="Derin Gayrimenkul Göktürk, Kemerburgaz ve Sarıyer'de satılık ve kiralık daire ve villa ilanları.">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:site_name" content="Derin Gayrimenkul">
+<meta property="og:title" content="İlanlar | Derin Gayrimenkul">
+<meta property="og:description" content="Derin Gayrimenkul Göktürk, Kemerburgaz ve Sarıyer'de satılık ve kiralık daire ve villa ilanları.">
+<meta property="og:image" content="https://simge-bit.github.io/emlak-demo/demo/derin-gayrimenkul/img/p/ilan-1244397544-1.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="../../fonts/schibsted-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../js/vendor/leaflet.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/pages.css">
+</head>
+<body data-page="ilanlar">
+<main>
+  <header class="phead">
+    <div class="crumb" data-reveal><a href="index.html">Ana sayfa</a> / İlanlar</div>
+    <div>
+      <h1 class="split">İlanlar</h1>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <form class="filters" id="f" autocomplete="off">
+      <label><span>İlan tipi</span><select name="tip"><option value="">Hepsi</option><option>Satılık</option><option>Kiralık</option></select></label>
+      <label><span>Konum</span><select name="konum" id="konum"><option value="">Hepsi</option></select></label>
+      <label><span>Kategori</span><select name="kategori"><option value="">Hepsi</option><option>Daire</option><option>Müstakil ev</option><option>Villa</option></select></label>
+      <label><span>Oda sayısı</span><select name="oda"><option value="">Hepsi</option><option value="2">2+1 ve üstü</option><option value="3">3+1 ve üstü</option><option value="4">4+1 ve üstü</option><option value="5">5+1 ve üstü</option></select></label>
+      <label><span>Fiyat (TL)</span><span style="display:flex;gap:6px;font-size:15px;color:inherit"><input name="min" inputmode="numeric" placeholder="En az"><input name="max" inputmode="numeric" placeholder="En çok"></span></label>
+      <label><span>En az m²</span><input name="m2" inputmode="numeric" placeholder="Örneğin 120"></label>
+      <label><span>Sıralama</span><select name="sira"><option value="">Önerilen</option><option value="artan">Fiyat artan</option><option value="azalan">Fiyat azalan</option><option value="m2">Metrekare</option><option value="yeni">Bina yaşı</option></select></label>
+      <div class="views">
+        <button type="button" class="seg on" data-view="split">Harita ile</button>
+        <button type="button" class="seg" data-view="nomap">Liste</button>
+        <button type="button" class="seg" data-view="onlymap">Harita</button>
+      </div>
+    </form>
+    <div class="chips" id="chips"></div>
+
+    <div class="listing" id="listing">
+      <div class="grid" id="grid"></div>
+      <div class="mapcol"><div class="map" id="map"></div></div>
+    </div>
+  </div>
+
+  <section class="outro sec wrap"><div data-footer></div></section>
+</main>
+
+<script src="../../js/vendor/leaflet.js"></script>
+<script src="../../js/data.js"></script>
+<script src="js/ofis.js"></script>
+<script src="../../js/site.js"></script>
+<script src="../../js/map.js"></script>
+<script>
+(function () {
+  const D = window.DATA, form = document.getElementById("f"), grid = document.getElementById("grid");
+  const listing = document.getElementById("listing"), chips = document.getElementById("chips");
+
+  // Konum seçenekleri: il ve altında ilçeler
+  const iller = {};
+  D.ilanlar.forEach((x) => { (iller[x.il] = iller[x.il] || new Set()).add(x.ilce); });
+  document.getElementById("konum").innerHTML += Object.entries(iller).map(([il, ilceler]) =>
+    `<option value="il:${il}">${il}, tümü</option>` + [...ilceler].map((c) => `<option value="ilce:${c}">${il}, ${c}</option>`).join("")).join("");
+
+  // Adres çubuğundaki filtreleri forma aktar (ana sayfadaki hızlı aramadan gelir)
+  const q = new URLSearchParams(location.search);
+  if (q.get("il")) q.set("konum", "il:" + q.get("il"));
+  for (const [k, v] of q) if (form.elements[k]) form.elements[k].value = v;
+
+  let favOnly = q.get("fav") === "1";
+  if (favOnly) document.querySelector(".phead h1").textContent = "Favorilerim";
+  const num = (s) => +String(s || "").replace(/\D/g, "") || 0;
+
+  const map = makeMap(document.getElementById("map"));
+  const markers = {};
+  // Konumu bilinmeyen ilanlar haritaya konmaz
+  D.ilanlar.filter((x) => x.lat && x.lng).forEach((x) => {
+    const m = L.marker([x.lat, x.lng], { icon: pinIcon(fmtKisa(x)) });
+    m.bindPopup(`<a class="pop" href="ilan.html?id=${x.id}"><img src="${x.gorseller[0]}" alt=""><div><b>${x.baslik}</b>${x.mahalle}, ${x.ilce}<br>${fmtFiyat(x)}</div></a>`);
+    m.on("mouseover", () => hl(x.id, true));
+    m.on("mouseout", () => hl(x.id, false));
+    markers[x.id] = m;
+  });
+
+  function hl(id, on) {
+    const c = grid.querySelector(`[data-id="${id}"]`);
+    if (c) c.classList.toggle("hl", on);
+    const el = markers[id].getElement();
+    if (el) el.firstChild.classList.toggle("on", on);
+  }
+
+  function apply() {
+    const f = Object.fromEntries(new FormData(form));
+    let list = D.ilanlar.filter((x) => {
+      if (favOnly && !fav.has(x.id)) return false;
+      if (f.tip && x.tip !== f.tip) return false;
+      if (f.kategori && x.kategori !== f.kategori) return false;
+      if (f.konum) {
+        const [k, v] = f.konum.split(":");
+        if (x[k] !== v) return false;
+      }
+      if (f.oda && odaSayisi(x.oda) < +f.oda) return false;
+      if (num(f.min) && x.fiyat < num(f.min)) return false;
+      if (num(f.max) && x.fiyat > num(f.max)) return false;
+      if (num(f.m2) && x.m2 < num(f.m2)) return false;
+      return true;
+    });
+    const sorters = { artan: (a, b) => a.fiyat - b.fiyat, azalan: (a, b) => b.fiyat - a.fiyat, m2: (a, b) => b.m2 - a.m2, yeni: (a, b) => a.yas - b.yas };
+    if (sorters[f.sira]) list = list.slice().sort(sorters[f.sira]);
+
+    grid.innerHTML = list.length
+      ? list.map((x, i) => cardHTML(x, i).replace('class="card ', `data-id="${x.id}" data-reveal style="--d:${(i % 2) * 90}ms" class="card `)).join("")
+      : favOnly && !fav.list().length
+      ? `<div class="empty">Henüz favori ilanınız yok. İlan kartlarındaki kalp simgesine dokunarak ilanları buraya kaydedebilirsiniz.<br><a class="btn line" href="ilanlar.html" style="margin-top:18px"><span>Tüm ilanlar</span></a></div>`
+      : `<div class="empty">Bu filtrelere uyan ilan bulunamadı.<br><button type="button" class="btn line" id="reset"><span>Filtreleri temizle</span></button></div>`;
+    observeReveals(grid);
+    grid.querySelectorAll(".card").forEach((c) => {
+      c.addEventListener("mouseenter", () => hl(c.dataset.id, true));
+      c.addEventListener("mouseleave", () => hl(c.dataset.id, false));
+    });
+    const r = document.getElementById("reset");
+    if (r) r.onclick = () => { form.reset(); apply(); };
+
+    // Harita işaretleri
+    Object.entries(markers).forEach(([id, m]) => {
+      const show = list.some((x) => x.id === id);
+      if (show && !map.hasLayer(m)) m.addTo(map);
+      if (!show && map.hasLayer(m)) map.removeLayer(m);
+    });
+    if (!list.length && !map._loaded) map.setView([39.5, 28.5], 6);
+    const pts = list.filter((x) => x.lat && x.lng).map((x) => [x.lat, x.lng]);
+    if (pts.length) map.fitBounds(L.latLngBounds(pts).pad(0.25), { maxZoom: 13 });
+
+    // Seçili filtre etiketleri
+    const names = { tip: "Tip", konum: "Konum", kategori: "Kategori", oda: "Oda", min: "En az", max: "En çok", m2: "En az m²" };
+    const active = Object.entries(f).filter(([k, v]) => v && names[k]);
+    chips.innerHTML = `<span class="count num">${list.length} ilan</span>` + (favOnly ? `<button type="button" class="chip" data-k="fav">Favorilerim <span aria-hidden="true">×</span></button>` : "") + active.map(([k, v]) => {
+      let t = v;
+      if (k === "konum") t = v.split(":")[1];
+      if (k === "oda") t = v + "+1 ve üstü";
+      if (k === "min" || k === "max") t = num(v).toLocaleString("tr-TR") + " TL";
+      return `<button type="button" class="chip" data-k="${k}">${t} <span aria-hidden="true">×</span></button>`;
+    }).join("");
+    chips.querySelectorAll(".chip").forEach((c) => c.onclick = () => {
+      if (c.dataset.k === "fav") { favOnly = false; document.querySelector(".phead h1").textContent = "İlanlar"; }
+      else form.elements[c.dataset.k].value = "";
+      apply();
+    });
+
+    // Adres çubuğunu güncelle, böylece filtreli sayfa paylaşılabilir
+    const p = new URLSearchParams();
+    if (favOnly) p.set("fav", "1");
+    Object.entries(f).forEach(([k, v]) => v && p.set(k, v));
+    history.replaceState(null, "", "?" + p.toString());
+  }
+
+  form.addEventListener("change", apply);
+  form.addEventListener("input", (e) => { if (e.target.tagName === "INPUT") { clearTimeout(apply.t); apply.t = setTimeout(apply, 350); } });
+  form.addEventListener("submit", (e) => { e.preventDefault(); apply(); });
+
+  document.querySelectorAll(".seg").forEach((b) => b.addEventListener("click", () => {
+    document.querySelectorAll(".seg").forEach((x) => x.classList.toggle("on", x === b));
+    listing.className = "listing " + (b.dataset.view === "split" ? "" : b.dataset.view);
+    setTimeout(() => { map.invalidateSize(); apply(); }, 50);
+  }));
+
+  addEventListener("favchange", () => { if (favOnly) apply(); });
+  apply();
+})();
+</script>
+</body>
+</html>
