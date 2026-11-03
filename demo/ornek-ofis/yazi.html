@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yazı | Körfez Emlak</title>
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:site_name" content="Körfez Emlak">
+<meta property="og:title" content="Yazı | Körfez Emlak">
+<meta property="og:description" content="Körfez Emlak satılık ve kiralık ev ilanları, Karşıyaka.">
+<meta property="og:image" content="https://simge-bit.github.io/emlak-demo/demo/ornek-ofis/img/p/bostanli-deniz-manzarali-3-1-daire-1.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="../../fonts/schibsted-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/pages.css">
+</head>
+<body data-page="blog">
+<main id="main"></main>
+<script src="../../js/data.js"></script>
+<script src="js/ofis.js"></script>
+<script src="../../js/site.js"></script>
+<script>
+(function () {
+  const D = window.DATA;
+  const id = new URLSearchParams(location.search).get("id");
+  const p = D.yazilar.find((x) => x.id === id) || D.yazilar[0];
+  const a = D.danismanlar.find((d) => d.id === p.yazar);
+  const diger = D.yazilar.filter((x) => x.id !== p.id);
+  document.title = `${p.baslik} | ${D.ofis.ad}`;
+  const m = document.createElement("meta"); m.name = "description"; m.content = p.ozet; document.head.appendChild(m);
+
+  document.getElementById("main").innerHTML = `
+  <header class="phead" style="grid-template-columns:1fr">
+    <div class="crumb" data-reveal><a href="index.html">Ana sayfa</a> / <a href="blog.html">Blog</a></div>
+    <h1 class="split" style="font-size:clamp(44px,6.4vw,118px);max-width:16ch">${p.baslik}</h1>
+  </header>
+  <div class="wide" style="height:72svh"><img src="${p.gorsel}" alt=""></div>
+  <article class="article wrap">
+    <div data-reveal>
+      <div class="label">${p.tarih}</div>
+      <a class="person" href="danisman.html?id=${a.id}" style="display:flex;gap:14px;align-items:center;margin-top:24px">
+        <img src="${a.foto}" alt="${a.ad}" style="width:56px;height:56px;object-fit:cover;filter:grayscale(1)">
+        <span><span class="n" style="margin:0;display:block">${a.ad}</span><span class="r">${a.unvan}</span></span>
+      </a>
+    </div>
+    <div class="body">${p.icerik.map((t) => `<p data-reveal>${t}</p>`).join("")}</div>
+  </article>
+  <section class="wrap" style="padding-bottom:clamp(80px,10vw,160px)">
+    <div class="sec-head"><div class="label" data-reveal>Diğer yazılar</div><div class="side"><h2 class="split">Okumaya devam edin</h2></div></div>
+    <div class="posts" style="grid-template-columns:repeat(2,1fr)">${diger.map((x, i) => `
+      <a class="post" href="yazi.html?id=${x.id}">
+        <div class="ph img-reveal" style="--d:${i * 90}ms"><img src="${sm(x.gorsel)}" alt="" loading="lazy"></div>
+        <div class="d">${x.tarih}</div><h3>${x.baslik}</h3>
+      </a>`).join("")}</div>
+  </section>
+  <section class="outro sec wrap"><div data-footer></div></section>`;
+})();
+</script>
+</body>
+</html>

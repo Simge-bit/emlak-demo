@@ -1,0 +1,51 @@
+{
+  "klasor": "ornek-ofis",
+  "ofis": {
+    "ad": "Körfez Emlak",
+    "kisa": "Körfez",
+    "telefon": "0 232 000 00 10",
+    "whatsapp": "",
+    "eposta": "bilgi@korfez.example",
+    "adres": "Atatürk Cad. No 00, Karşıyaka, İzmir",
+    "yetki": "3500000",
+    "renk": "#1F3A5F",
+    "tanitim": "Körfez Emlak 2008'den beri Karşıyaka ve Bostanlı'da ev alıp satanlara yardımcı oluyor. Mahalleyi iyi tanıyan üç danışmanla çalışıyoruz.",
+    "hakkinda": "Körfez Emlak 2008'de Karşıyaka'da kuruldu. Ofis bugün Karşıyaka, Bostanlı ve Mavişehir'deki daireler ile müstakil evlerle ilgileniyor.",
+    "demoNot": "Bu sayfa aracın nasıl çalıştığını göstermek için hazırlanmış hayali bir örnektir."
+  },
+  "ofisler": [
+    { "sehir": "Karşıyaka", "adres": "Atatürk Cad. No 00, Karşıyaka, İzmir", "tel": "0 232 000 00 10", "lat": 38.4561, "lng": 27.1095 }
+  ],
+  "istatistik": [[18, "Yıldır Karşıyaka'dayız"], [520, "Tamamlanan satış ve kiralama"], [3, "Danışman"]],
+  "tarihce": [
+    [2008, "Ofis Karşıyaka çarşısında iki kişiyle açıldı."],
+    [2016, "Bostanlı ve Mavişehir'deki yeni projeler portföye eklendi."],
+    [2026, "Bugün üç danışmanla çalışıyoruz."]
+  ],
+  "danismanlar": [
+    { "id": "ayse", "ad": "Ayşe Demir", "unvan": "Kurucu", "bolge": "Karşıyaka", "foto": "img/kisi-defne.jpg", "bio": "Ayşe Demir ofisi 2008'de kurdu. Karşıyaka'daki eski apartmanları ve kentsel dönüşüm projelerini yakından takip ediyor." },
+    { "id": "mert", "ad": "Mert Arslan", "unvan": "Danışman", "bolge": "Bostanlı", "foto": "img/kisi-mert.jpg", "bio": "Mert Arslan Bostanlı ve Mavişehir'deki kiralık dairelerle ilgileniyor." }
+  ],
+  "ilanlar": [
+    { "baslik": "Deniz manzaralı 3+1 daire", "tip": "Satılık", "kategori": "Daire", "il": "İzmir", "ilce": "Karşıyaka", "mahalle": "Bostanlı",
+      "fiyat": 9850000, "oda": "3+1", "m2": 140, "banyo": 2, "kat": "6. kat", "yas": 8, "danisman": "ayse", "aidat": 1800,
+      "aciklama": "Daire Bostanlı sahiline iki dakika yürüme mesafesinde. Salon ve balkon körfeze bakıyor.",
+      "ozellikler": ["Deniz manzarası", "Asansör", "Otopark"],
+      "gorseller": ["img/ic-moda-salon.jpg", "img/ic-beyaz-mutfak.jpg", "img/ic-beyaz-yatak.jpg"] },
+    { "baslik": "Bahçeli müstakil ev", "tip": "Satılık", "kategori": "Müstakil ev", "il": "İzmir", "ilce": "Karşıyaka", "mahalle": "Yalı",
+      "fiyat": 16500000, "oda": "4+1", "m2": 220, "banyo": 2, "kat": "2 katlı", "yas": 25, "danisman": "ayse",
+      "aciklama": "Ev Karşıyaka Yalı mahallesinde, ağaçlı bir sokakta. Arka bahçede limon ve mandalina ağaçları var.",
+      "ozellikler": ["Bahçe", "Şömine"],
+      "gorseller": ["img/ev-ahsap.jpg", "img/ic-bitkili-salon.jpg"] },
+    { "baslik": "Eşyalı 2+1 daire", "tip": "Kiralık", "kategori": "Daire", "il": "İzmir", "ilce": "Karşıyaka", "mahalle": "Mavişehir",
+      "fiyat": 32000, "oda": "2+1", "m2": 95, "banyo": 1, "kat": "3. kat", "yas": 12, "danisman": "mert", "aidat": 1500,
+      "aciklama": "Daire site içinde, havuzlu bir bahçeye bakıyor. Eşyalı olarak kiralanıyor.",
+      "ozellikler": ["Eşyalı", "Site içinde", "Havuz"],
+      "gorseller": ["img/ic-bebek-salon.jpg", "img/ic-yemek.jpg"] },
+    { "baslik": "Yeni binada 3+1 daire", "tip": "Satılık", "kategori": "Daire", "il": "İzmir", "ilce": "Karşıyaka", "mahalle": "Atakent",
+      "fiyat": 11200000, "oda": "3+1", "m2": 150, "banyo": 2, "kat": "4. kat", "yas": 1, "danisman": "mert",
+      "aciklama": "Daire kentsel dönüşümle yeniden yapılan bir binada. Yerden ısıtma ve kapalı otopark var.",
+      "ozellikler": ["Sıfır bina", "Kapalı otopark", "Yerden ısıtma"],
+      "gorseller": ["img/ev-catili.jpg", "img/ic-gri-salon.jpg", "img/ic-mutfak.jpg"] }
+  ]
+}

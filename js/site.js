@@ -6,6 +6,10 @@
   const page = document.body.dataset.page || "";
   const tel = (t) => "tel:+90" + t.replace(/\D/g, "").replace(/^0/, "");
 
+  // Marka rengi ve WhatsApp bağlantısı ofis ayarından gelir
+  if (D.ofis.renk) document.documentElement.style.setProperty("--accent", D.ofis.renk);
+  window.waLink = (text) => `https://wa.me/${D.ofis.whatsapp || ""}?text=${encodeURIComponent(text)}`;
+
   // ---------- Favoriler ----------
   const FKEY = "ihlamur-favoriler";
   window.fav = {
@@ -80,13 +84,13 @@
       <div class="foot">
         <div><div class="h">Merkez ofis</div>${D.ofis.adres}<br><a href="${tel(D.ofis.telefon)}" style="display:inline">${D.ofis.telefon}</a><br><a class="ulink" style="display:inline" href="mailto:${D.ofis.eposta}">${D.ofis.eposta}</a></div>
         <div><div class="h">Sayfalar</div>${links.map(([h, t]) => `<a href="${h}">${t}</a>`).join("")}</div>
-        <div><div class="h">İlanlar</div><a href="ilanlar.html?tip=Satılık">Satılık</a><a href="ilanlar.html?tip=Kiralık">Kiralık</a><a href="ilanlar.html?kategori=Villa">Villalar</a><a href="ilanlar.html?kategori=Daire">Daireler</a><a href="ilanlar.html?fav=1">Favorilerim</a></div>
+        <div><div class="h">İlanlar</div><a href="ilanlar.html?tip=Satılık">Satılık</a><a href="ilanlar.html?tip=Kiralık">Kiralık</a><a href="ilanlar.html?kategori=Villa">Villalar</a><a href="ilanlar.html?kategori=Daire">Daireler</a><a href="ilanlar.html?fav=1">Favorilerim</a><a href="degerleme.html">Evinizin değeri</a></div>
         <div><div class="h">Ofisler</div>${D.ofisler.map((o) => `<a href="${tel(o.tel)}">${o.sehir}, ${o.tel}</a>`).join("")}</div>
       </div>
       <div class="foot-bottom">
         <span>© ${new Date().getFullYear()} ${D.ofis.ad}. Taşınmaz ticareti yetki belgesi no ${D.ofis.yetki}.</span>
         <span><a class="ulink" href="kvkk.html">KVKK aydınlatma metni</a></span>
-        <span>Bu site bir tasarım demosudur. Ofis ve ilanlar hayalidir.</span>
+        <span>${D.ofis.demoNot || "Bu site bir tasarım demosudur. Ofis ve ilanlar hayalidir."}</span>
       </div>
       <div class="wordmark" aria-hidden="true">${[...D.ofis.kisa].map((c, i) => `<span style="--i:${i}">${c}</span>`).join("")}</div>`;
   };
@@ -94,7 +98,7 @@
   // WhatsApp düğmesi (demo olduğu için numara yok, kişi seçtirir)
   const wa = document.createElement("a");
   wa.className = "wa";
-  wa.href = "https://wa.me/?text=" + encodeURIComponent("Merhaba, ilanlarınız hakkında bilgi almak istiyorum.");
+  wa.href = waLink("Merhaba, ilanlarınız hakkında bilgi almak istiyorum.");
   wa.target = "_blank"; wa.rel = "noopener"; wa.setAttribute("aria-label", "WhatsApp ile yazın");
   wa.innerHTML = `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.3Z"/></svg>`;
   document.body.appendChild(wa);
@@ -256,6 +260,8 @@
 
   const boot = () => {
     injectFooter();
+    // Sayfadaki ofis bilgisi alanlarını doldur (örneğin <span data-ofis="adres">)
+    document.querySelectorAll("[data-ofis]").forEach((el) => { el.textContent = D.ofis[el.dataset.ofis] || ""; });
     updateFavCount();
     const main = document.querySelector("main") || document.querySelector("section");
     if (main && !main.id) main.id = "icerik";

@@ -21,6 +21,7 @@
 <main id="main"></main>
 
 <script src="js/data.js"></script>
+<script src="js/ofis.js"></script>
 <script src="js/site.js"></script>
 <script>
 (function () {
@@ -47,7 +48,7 @@
           <div><dt>Telefon</dt><dd class="num"><a class="ulink" href="tel:${p.tel.replace(/\s/g, "")}">${p.tel}</a></dd></div>
         </dl>
         <div class="acts" style="display:flex;gap:10px;flex-wrap:wrap;margin-top:28px" data-reveal>
-          <a class="btn" href="https://wa.me/?text=${waText}" target="_blank" rel="noopener"><span>WhatsApp ile yazın</span><span class="arr">→</span></a>
+          <a class="btn" href="${waLink(decodeURIComponent(waText))}" target="_blank" rel="noopener"><span>WhatsApp ile yazın</span><span class="arr">→</span></a>
           <a class="btn line" href="iletisim.html"><span>Görüşme isteyin</span></a>
         </div>
       </div>

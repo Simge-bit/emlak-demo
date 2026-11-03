@@ -49,12 +49,13 @@
 
   <section class="outro sec wrap">
     <div class="label" style="color:inherit;opacity:.55" data-reveal>Ücretsiz ön görüşme</div>
-    <p class="big split" style="margin-top:24px"><a href="iletisim.html">Evinizin değerini birlikte konuşalım.</a></p>
+    <p class="big split" style="margin-top:24px"><a href="degerleme.html">Evinizin değerini birlikte konuşalım.</a></p>
     <div data-footer></div>
   </section>
 </main>
 
 <script src="js/data.js"></script>
+<script src="js/ofis.js"></script>
 <script src="js/site.js"></script>
 <script>
 (function () {
@@ -92,7 +93,7 @@
     ["Evimi satmak için hangi belgeler gerekiyor?", "Tapu senedi, kimlik belgesi, güncel zorunlu deprem sigortası poliçesi ve enerji kimlik belgesi gerekir. Eksik belgeleri tamamlamanız için size yol gösteriyoruz."],
     ["Değerleme raporu ücretli mi?", "Evini satmak için bizimle çalışan ev sahiplerinden değerleme ücreti almıyoruz. Yalnızca rapor almak isteyenler için ücreti görüşmede belirtiyoruz."],
     ["Evimi aynı anda başka ofislerle de satabilir miyim?", "Evet, yetki sözleşmesini münhasır olmayan şekilde de yapabiliriz. Yine de evin tek bir ofis tarafından tanıtılması fiyatın korunmasına yardımcı olur."],
-    ["Yabancı alıcılarla çalışıyor musunuz?", "Bodrum ofisimiz yabancı alıcılarla İngilizce çalışır. Tapu sürecinde gereken yeminli tercüman ve belgeler konusunda yardımcı oluyoruz."]
+    ["Yabancı alıcılarla çalışıyor musunuz?", "Danışmanlarımız yabancı alıcılarla İngilizce çalışır. Tapu sürecinde gereken yeminli tercüman ve belgeler konusunda yardımcı oluyoruz."]
   ];
   document.getElementById("faq").innerHTML = sss.map(([q, a], i) => `
     <details data-reveal style="--d:${i * 60}ms"><summary><span>${q}</span><i aria-hidden="true"></i></summary><div class="a"><p>${a}</p></div></details>`).join("");

@@ -17,7 +17,7 @@
 .filters input::placeholder { color: var(--fg); opacity: .45; }
 .filters .views { display: flex; align-items: center; gap: 4px; padding-left: 4px; }
 .seg { background: none; border: 1px solid var(--line); padding: 8px 14px; font-size: 13px; cursor: pointer; transition: background .3s, color .3s, border-color .3s; }
-.seg.on { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+.seg.on { background: var(--accent); color: #fff; border-color: var(--accent); }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; padding: 16px 0 0; min-height: 50px; align-items: center; }
 .chip { font-size: 13px; border: 1px solid var(--line); padding: 5px 10px; cursor: pointer; background: none; display: inline-flex; gap: 8px; }
 .chip:hover { border-color: var(--fg); }
@@ -46,7 +46,7 @@
 .leaflet-control-zoom a { border-radius: 0 !important; color: #111 !important; }
 .leaflet-bar { border-radius: 0 !important; border: 1px solid #111 !important; box-shadow: none !important; }
 .pin-wrap { background: none; border: 0; }
-.pin { position: absolute; left: 0; top: 0; transform: translate(-50%, -100%); background: #111; color: #fff; font-size: 12px; padding: 5px 9px; white-space: nowrap; font-variant-numeric: tabular-nums; transition: background .3s, color .3s, transform .4s var(--ease); cursor: pointer; }
+.pin { position: absolute; left: 0; top: 0; transform: translate(-50%, -100%); background: var(--accent); color: #fff; font-size: 12px; padding: 5px 9px; white-space: nowrap; font-variant-numeric: tabular-nums; transition: background .3s, color .3s, transform .4s var(--ease); cursor: pointer; }
 .pin::after { content: ""; position: absolute; left: 50%; bottom: -5px; width: 9px; height: 9px; background: inherit; transform: translateX(-50%) rotate(45deg); z-index: -1; }
 .pin.on, .pin:hover { background: #fff; color: #111; outline: 1px solid #111; transform: translate(-50%, -100%) scale(1.12); z-index: 10; }
 .pin.dot { width: 14px; height: 14px; padding: 0; border-radius: 50%; transform: translate(-50%, -50%); outline: 4px solid rgba(17,17,17,.15); }
@@ -176,6 +176,27 @@
 .faq details[open] .a { animation: faqIn .6s var(--ease); }
 @keyframes faqIn { from { opacity: 0; transform: translateY(-8px); } }
 
+/* ---------- Değerleme formu ---------- */
+.vsteps { list-style: none; margin: 30px 0 0; padding: 0; border-top: 1px solid var(--line); }
+.vsteps li { display: flex; gap: 14px; align-items: baseline; padding: 14px 0; border-bottom: 1px solid var(--line); color: var(--muted); font-size: 18px; letter-spacing: -.01em; transition: color .4s; }
+.vsteps li .num { font-size: 12px; }
+.vsteps li.on { color: var(--fg); }
+.vsteps li.ok { color: var(--fg); }
+.vsteps li.ok::after { content: "✓"; margin-left: auto; font-size: 14px; }
+.form.vform { display: block; border-top: 1px solid var(--fg); }
+.vform .step, .vform .done { width: 100%; }
+.vform .step { display: none; border: 0; margin: 0; padding: 0; min-width: 0; grid-template-columns: 1fr 1fr; gap: 0 var(--pad); }
+.vform .step.on { display: grid; animation: stepIn .6s var(--ease); }
+.vform legend { grid-column: 1 / -1; float: left; width: 100%; padding: 24px 0 4px; font-size: clamp(24px, 2.4vw, 38px); font-weight: 500; letter-spacing: -.035em; }
+.vform .send { margin-top: 30px; }
+.vform .done { display: none; padding-top: 30px; }
+.vform .done.on { display: block; animation: stepIn .6s var(--ease); }
+.vform .big-ok { font-size: clamp(24px, 2.6vw, 40px); line-height: 1.2; letter-spacing: -.03em; margin: 14px 0 40px; max-width: 26ch; }
+.vform .est { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 24px 0; margin-bottom: 30px; }
+.vform .est .range { font-size: clamp(28px, 3.4vw, 54px); letter-spacing: -.045em; margin: 8px 0 12px; line-height: 1.05; }
+.vform .est p { margin: 0; color: var(--muted); max-width: 52ch; font-size: 15px; }
+@keyframes stepIn { from { opacity: 0; transform: translateY(12px); } }
+
 /* ---------- Yasal metin ve 404 ---------- */
 .legal { display: grid; grid-template-columns: 1fr 2fr; gap: var(--pad); padding-bottom: clamp(80px, 10vw, 160px); }
 .legal .body h2 { font-size: 22px; font-weight: 500; letter-spacing: -.02em; margin: 40px 0 10px; }
@@ -252,6 +273,7 @@
 .article .body p:first-child { font-size: clamp(24px, 2.4vw, 38px); line-height: 1.25; letter-spacing: -.025em; max-width: 30ch; }
 
 @media (max-width: 900px) {
+  .vform .step.on { grid-template-columns: 1fr; }
   .svc-row, .svc-row.rev { grid-template-columns: 1fr; }
   .svc-row.rev .ph { order: 0; }
   .steps { grid-template-columns: 1fr; }

@@ -29,6 +29,7 @@
 
 <script src="js/vendor/leaflet.js"></script>
 <script src="js/data.js"></script>
+<script src="js/ofis.js"></script>
 <script src="js/site.js"></script>
 <script src="js/map.js"></script>
 <script>
@@ -121,7 +122,7 @@
           <h3><a href="danisman.html?id=${a.id}">${a.ad}</a></h3>
           <div class="r">${a.unvan}, ${a.bolge}</div>
           <div class="acts">
-            <a class="btn" href="https://wa.me/?text=${waText}" target="_blank" rel="noopener"><span>WhatsApp ile yazın</span><span class="arr">→</span></a>
+            <a class="btn" href="${waLink(decodeURIComponent(waText))}" target="_blank" rel="noopener"><span>WhatsApp ile yazın</span><span class="arr">→</span></a>
             <a class="btn line" href="tel:+90${a.tel.replace(/\D/g, "").slice(1)}"><span>${a.tel}</span></a>
           </div>
         </div>

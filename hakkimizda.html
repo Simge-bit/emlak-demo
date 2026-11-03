@@ -26,18 +26,14 @@
     <h1 class="split">Hakkımızda</h1>
   </header>
 
-  <div class="wide"><img src="img/ev-beyaz-ahsap.jpg" alt="Beyaz ve ahşap cepheli modern ev"></div>
+  <div class="wide"><img id="wideImg" src="img/ev-beyaz-ahsap.jpg" alt=""></div>
 
   <section class="sec wrap">
     <div class="intro">
       <div class="label" data-reveal>Ofis</div>
-      <p class="big split">Elif Aksoy ve Orhan Tekin, Ihlamur Gayrimenkul'ü 2011'de İstanbul'da kurdu. Ofis ilk yıllarında yalnızca Boğaziçi'ndeki evlerle ilgilendi. Bugün İstanbul, Urla ve Bodrum'da beş danışmanla çalışıyor.</p>
+      <p class="big split" data-ofis="hakkinda"></p>
     </div>
-    <div class="stats">
-      <div data-reveal><div class="n num" data-count="15">0</div><div class="t">Yıldır bu işi yapıyoruz</div></div>
-      <div data-reveal style="--d:120ms"><div class="n num" data-count="340">0</div><div class="t">Tamamlanan satış ve kiralama</div></div>
-      <div data-reveal style="--d:240ms"><div class="n num" data-count="5">0</div><div class="t">Danışman</div></div>
-    </div>
+    <div class="stats" id="stats"></div>
   </section>
 
   <section class="sec wrap" style="padding-top:0">
@@ -53,10 +49,7 @@
   </section>
 
   <section class="wrap">
-    <div class="duo" style="margin-top:0">
-      <figure class="a"><div class="frame img-reveal"><img src="img/ic-cam-merdiven.jpg" alt="Cam cepheli salon ve merdiven"></div><figcaption><span>Yalıkavak, salon</span><span class="num">01</span></figcaption></figure>
-      <figure class="b"><div class="frame img-reveal" style="--d:150ms"><img src="img/ic-beyaz-yatak.jpg" alt="Beyaz yatak odası"></div><figcaption><span>Zekeriyaköy, yatak odası</span><span class="num">02</span></figcaption></figure>
-    </div>
+    <div class="duo" id="duo" style="margin-top:0"></div>
   </section>
 
   <section class="sec wrap">
@@ -64,13 +57,7 @@
       <div class="label" data-reveal>Tarihçe</div>
       <div class="side"><h2 class="split">Yıllar içinde</h2></div>
     </div>
-    <div class="timeline">
-      <div class="ti" data-reveal><div class="y num">2011</div><p>Ofis Beşiktaş'ta iki kişiyle açıldı. İlk yıllarda Boğaziçi'ndeki müstakil evlerle ilgilendi.</p></div>
-      <div class="ti" data-reveal><div class="y num">2015</div><p>Anadolu yakasında çalışmaya başladık ve Kadıköy ile Üsküdar'daki evleri portföye ekledik.</p></div>
-      <div class="ti" data-reveal><div class="y num">2018</div><p>Urla ofisi açıldı. Bu ofis bağ evleri ve Çeşme yarımadasındaki yazlıklarla ilgileniyor.</p></div>
-      <div class="ti" data-reveal><div class="y num">2022</div><p>Bodrum ofisi Yalıkavak'ta açıldı ve yabancı alıcılarla çalışmaya başladı.</p></div>
-      <div class="ti" data-reveal><div class="y num">2026</div><p>Bugün üç şehirde beş danışmanla çalışıyoruz.</p></div>
-    </div>
+    <div class="timeline" id="timeline"></div>
   </section>
 
   <section class="outro sec wrap">
@@ -81,6 +68,22 @@
 </main>
 
 <script src="js/data.js"></script>
+<script src="js/ofis.js"></script>
 <script src="js/site.js"></script>
+<script>
+(function () {
+  const D = window.DATA;
+  document.getElementById("stats").innerHTML = D.istatistik.map(([n, t], i) => `<div data-reveal style="--d:${i * 120}ms"><div class="n num" data-count="${n}">0</div><div class="t">${t}</div></div>`).join("");
+  const tl = document.getElementById("timeline");
+  if (D.tarihce && D.tarihce.length) tl.innerHTML = D.tarihce.map(([y, t]) => `<div class="ti" data-reveal><div class="y num">${y}</div><p>${t}</p></div>`).join("");
+  else tl.closest("section").remove();
+  // Fotoğraflar ilanlardan alınır
+  const L = D.ilanlar, a = L[1 % L.length], b = L[2 % L.length], c = L[0];
+  document.getElementById("wideImg").src = c.gorseller[c.gorseller.length - 1];
+  document.getElementById("duo").innerHTML = `
+    <figure class="a"><div class="frame img-reveal"><img src="${a.gorseller[1] || a.gorseller[0]}" alt="" loading="lazy" decoding="async"></div><figcaption><span>${a.mahalle}</span><span class="num">01</span></figcaption></figure>
+    <figure class="b"><div class="frame img-reveal" style="--d:150ms"><img src="${sm(b.gorseller[b.gorseller.length - 1])}" alt="" loading="lazy" decoding="async"></div><figcaption><span>${b.mahalle}</span><span class="num">02</span></figcaption></figure>`;
+})();
+</script>
 </body>
 </html>

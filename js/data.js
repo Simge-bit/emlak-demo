@@ -9,8 +9,29 @@ window.DATA = {
     lat: 41.0569, lng: 29.0335,
     kurulus: 2011,
     yetki: "3400000",
-    site: "https://simge-bit.github.io/emlak-demo/"
+    site: "https://simge-bit.github.io/emlak-demo/",
+    // WhatsApp numarası ülke koduyla, boşluksuz (örneğin 905320000000). Boş kalırsa kişi seçtirir.
+    whatsapp: "",
+    // Butonlar, harita işaretleri ve WhatsApp düğmesi bu renkte olur
+    renk: "#111111",
+    tanitim: "Ihlamur Gayrimenkul 2011'de İstanbul'da kuruldu. Bugün beş danışmanımızla İstanbul, Urla ve Bodrum'da çalışıyoruz. Her evi ilana koymadan önce kendimiz geziyor ve fotoğraflıyoruz.",
+    hakkinda: "Elif Aksoy ve Orhan Tekin, Ihlamur Gayrimenkul'ü 2011'de İstanbul'da kurdu. Ofis ilk yıllarında yalnızca Boğaziçi'ndeki evlerle ilgilendi. Bugün İstanbul, Urla ve Bodrum'da beş danışmanla çalışıyor."
   },
+
+  // Ana sayfa ve hakkımızda sayfasındaki büyük rakamlar
+  istatistik: [[15, "Yıldır bu işi yapıyoruz"], [340, "Tamamlanan satış ve kiralama"], [3, "Şehirde ofisimiz var"]],
+
+  tarihce: [
+    [2011, "Ofis Beşiktaş'ta iki kişiyle açıldı. İlk yıllarda Boğaziçi'ndeki müstakil evlerle ilgilendi."],
+    [2015, "Anadolu yakasında çalışmaya başladık ve Kadıköy ile Üsküdar'daki evleri portföye ekledik."],
+    [2018, "Urla ofisi açıldı. Bu ofis bağ evleri ve Çeşme yarımadasındaki yazlıklarla ilgileniyor."],
+    [2022, "Bodrum ofisi Yalıkavak'ta açıldı ve yabancı alıcılarla çalışmaya başladı."],
+    [2026, "Bugün üç şehirde beş danışmanla çalışıyoruz."]
+  ],
+
+  // Açılış slaytında gösterilecek ilanlar ve "Ayın evi". Boş kalırsa ilk ilanlar kullanılır.
+  vitrin: ["zekeriyakoy-orman-evi", "yalikavak-villa", "urla-bag-evi", "tarabya-ahsap-cephe"],
+  ayinEvi: "yalikavak-villa",
 
   danismanlar: [
     { id: "elif", ad: "Elif Aksoy", unvan: "Kurucu ortak", bolge: "Boğaziçi ve Sarıyer", foto: "img/kisi-elif.jpg", tel: "0 212 000 00 01",

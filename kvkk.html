@@ -30,7 +30,7 @@
     <div class="body" data-reveal>
       <p><b>Bu metin tasarım demosu için hazırlanmış bir örnektir.</b> Gerçek bir ofis için kullanılmadan önce ofisin unvanı, adresi ve veri işleme süreçleriyle güncellenmelidir.</p>
       <h2>Veri sorumlusu</h2>
-      <p>Bu metin 6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında veri sorumlusu sıfatıyla Ihlamur Gayrimenkul tarafından hazırlanmıştır. Ofisin adresi Kuruçeşme Cad. No 00, Beşiktaş, İstanbul'dur.</p>
+      <p>Bu metin 6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında veri sorumlusu sıfatıyla Ihlamur Gayrimenkul tarafından hazırlanmıştır. Ofisin adresi <span data-ofis="adres"></span> olarak kayıtlıdır.</p>
       <h2>Hangi verileri işliyoruz?</h2>
       <ul>
         <li>İletişim ve randevu formlarında paylaştığınız ad soyad, telefon numarası ve e-posta adresi</li>
@@ -46,12 +46,13 @@
       <h2>Çerezler ve tarayıcı hafızası</h2>
       <p>Bu site çerez kullanmaz. Favorilerinize eklediğiniz ilanlar yalnızca kendi tarayıcınızın hafızasında saklanır ve bize gönderilmez. Haritalar OpenStreetMap sunucularından yüklendiği için harita görüntülenirken IP adresiniz bu sunuculara iletilir.</p>
       <h2>Haklarınız</h2>
-      <p>Kanun'un 11. maddesi uyarınca verilerinizin işlenip işlenmediğini öğrenme, işlenmişse bilgi isteme, düzeltilmesini veya silinmesini isteme ve işlemeye itiraz etme haklarına sahipsiniz. Başvurularınızı merhaba@ihlamur.example adresine ya da ofis adresimize yazılı olarak iletebilirsiniz. Başvurunuzu en geç otuz gün içinde yanıtlarız.</p>
+      <p>Kanun'un 11. maddesi uyarınca verilerinizin işlenip işlenmediğini öğrenme, işlenmişse bilgi isteme, düzeltilmesini veya silinmesini isteme ve işlemeye itiraz etme haklarına sahipsiniz. Başvurularınızı <span data-ofis="eposta"></span> adresine ya da ofis adresimize yazılı olarak iletebilirsiniz. Başvurunuzu en geç otuz gün içinde yanıtlarız.</p>
     </div>
   </section>
   <section class="outro sec wrap"><div data-footer></div></section>
 </main>
 <script src="js/data.js"></script>
+<script src="js/ofis.js"></script>
 <script src="js/site.js"></script>
 </body>
 </html>
