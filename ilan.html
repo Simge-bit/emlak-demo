@@ -27,7 +27,6 @@
   <div class="bot"><span id="lbT"></span><div class="navb"><button type="button" id="lbP">Önceki</button><button type="button" id="lbF">Sonraki</button></div></div>
 </div>
 
-<script src="js/vendor/lenis.min.js"></script>
 <script src="js/vendor/leaflet.js"></script>
 <script src="js/data.js"></script>
 <script src="js/site.js"></script>
@@ -51,7 +50,7 @@
 
   document.getElementById("main").innerHTML = `
   <section class="dhero">
-    <img src="${x.gorseller[0]}" alt="${x.baslik}" data-speed="0.1">
+    <img src="${x.gorseller[0]}" alt="${x.baslik}">
     <div class="over">
       <div>
         <div class="label" style="color:rgba(255,255,255,.75)">${x.tip} ${x.kategori.toLowerCase()}, ${x.mahalle}, ${x.ilce}, ${x.il}</div>
@@ -82,7 +81,7 @@
     </section>
 
     <section class="gal" id="gal">
-      ${x.gorseller.map((g, i) => `<button type="button" data-i="${i}" data-cursor="Büyüt" class="img-reveal"><img src="${g}" alt="${x.baslik}, fotoğraf ${i + 1}" loading="lazy"></button>`).join("")}
+      ${x.gorseller.map((g, i) => `<button type="button" data-i="${i}" class="img-reveal"><img src="${g}" alt="${x.baslik}, fotoğraf ${i + 1}" loading="lazy"></button>`).join("")}
     </section>
 
     <section class="dmap">
@@ -117,7 +116,7 @@
     <section class="agent">
       <div class="label" data-reveal>Bu ilanla ilgilenen danışman</div>
       <div class="box" data-reveal>
-        <a href="danisman.html?id=${a.id}" data-cursor="Profil"><img src="${sm(a.foto)}" alt="${a.ad}"></a>
+        <a href="danisman.html?id=${a.id}"><img src="${sm(a.foto)}" alt="${a.ad}"></a>
         <div>
           <h3><a href="danisman.html?id=${a.id}">${a.ad}</a></h3>
           <div class="r">${a.unvan}, ${a.bolge}</div>
@@ -208,8 +207,8 @@
     document.getElementById("lbN").textContent = `${String(cur + 1).padStart(2, "0")} / ${String(x.gorseller.length).padStart(2, "0")}`;
     document.getElementById("lbT").textContent = `${x.baslik}, ${x.mahalle}`;
   };
-  const open = (i) => { show(i); lb.classList.add("on"); window.__lenis && window.__lenis.stop(); };
-  const close = () => { lb.classList.remove("on"); window.__lenis && window.__lenis.start(); };
+  const open = (i) => { show(i); lb.classList.add("on"); document.documentElement.classList.add("lb-open"); };
+  const close = () => { lb.classList.remove("on"); document.documentElement.classList.remove("lb-open"); };
   document.getElementById("gal").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) open(+b.dataset.i); });
   document.getElementById("lbX").onclick = close;
   document.getElementById("lbP").onclick = () => show(cur - 1);

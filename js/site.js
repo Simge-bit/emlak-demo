@@ -6,14 +6,6 @@
   const page = document.body.dataset.page || "";
   const tel = (t) => "tel:+90" + t.replace(/\D/g, "").replace(/^0/, "");
 
-  // Yumuşak kaydırma
-  let lenis = null;
-  if (!reduce && window.Lenis) {
-    lenis = window.__lenis = new Lenis({ lerp: 0.1, wheelMultiplier: 1 });
-    const raf = (t) => { lenis.raf(t); requestAnimationFrame(raf); };
-    requestAnimationFrame(raf);
-  }
-
   // ---------- Favoriler ----------
   const FKEY = "ihlamur-favoriler";
   window.fav = {
@@ -75,7 +67,6 @@
     btn.setAttribute("aria-expanded", open);
     btn.firstChild.textContent = open ? "Kapat" : "Menü";
     mm.setAttribute("aria-hidden", !open);
-    if (lenis) open ? lenis.stop() : lenis.start();
     onScroll();
   };
   btn.addEventListener("click", () => setMenu(!nav.classList.contains("open")));
@@ -104,7 +95,7 @@
   const wa = document.createElement("a");
   wa.className = "wa";
   wa.href = "https://wa.me/?text=" + encodeURIComponent("Merhaba, ilanlarınız hakkında bilgi almak istiyorum.");
-  wa.target = "_blank"; wa.rel = "noopener"; wa.setAttribute("aria-label", "WhatsApp ile yazın"); wa.dataset.cursor = "Yazın";
+  wa.target = "_blank"; wa.rel = "noopener"; wa.setAttribute("aria-label", "WhatsApp ile yazın");
   wa.innerHTML = `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.3Z"/></svg>`;
   document.body.appendChild(wa);
 
@@ -168,28 +159,16 @@
   }, { threshold: .4 });
 
   // ---------- Kaydırmaya bağlı efektler ----------
-  // Ölçümler yalnızca açılışta ve boyut değişince yapılır. Kaydırırken sadece transform yazılır,
-  // böylece tarayıcı her karede sayfa düzenini yeniden hesaplamak zorunda kalmaz.
-  const fx = { par: [], hs: [], exp: [], heroH: 0 };
+  // Ölçümler yalnızca açılışta ve boyut değişince yapılır. Kaydırırken sadece transform yazılır.
+  const fx = { exp: [], heroH: 0 };
   let ticking = false, lastY = scrollY;
 
   function measure() {
     const y = scrollY, vh = innerHeight;
-    fx.hs = [...document.querySelectorAll(".hscroll")].map((sec) => {
-      const track = sec.querySelector(".track");
-      const dist = Math.max(0, track.scrollWidth - innerWidth);
-      sec.style.height = vh + dist + "px";
-      return { sec, track, bar: sec.querySelector(".bar i"), dist };
-    });
-    fx.hs.forEach((o) => { o.top = o.sec.getBoundingClientRect().top + y; o.len = Math.max(1, o.sec.offsetHeight - vh); });
     fx.exp = [...document.querySelectorAll(".expand")].map((sec) => ({
       sec, frame: sec.querySelector(".frame"), img: sec.querySelector(".frame img"), sides: sec.querySelectorAll(".side-l, .side-r"),
       top: sec.getBoundingClientRect().top + y, len: Math.max(1, sec.offsetHeight - vh)
     }));
-    fx.par = reduce ? [] : [...document.querySelectorAll("[data-speed]")].map((el) => {
-      const r = el.parentElement.getBoundingClientRect();
-      return { el, top: r.top + y, h: r.height, sp: +el.dataset.speed };
-    });
     const hero = document.querySelector(".hero, .dhero");
     fx.heroH = hero ? hero.offsetHeight : 0;
     update();
@@ -198,18 +177,6 @@
   function update() {
     ticking = false;
     const y = scrollY, vh = innerHeight;
-    fx.par.forEach((o) => {
-      const top = o.top - y;
-      if (top > vh || top + o.h < 0) return;
-      o.el.style.translate = `0 ${((top + o.h / 2 - vh / 2) * -o.sp).toFixed(1)}px`;
-    });
-    fx.hs.forEach((o) => {
-      const p = Math.min(1, Math.max(0, (y - o.top) / o.len));
-      if (p === o.p) return;
-      o.p = p;
-      o.track.style.transform = `translate3d(${(-o.dist * p).toFixed(1)}px,0,0)`;
-      if (o.bar) o.bar.style.transform = `scaleX(${p.toFixed(4)})`;
-    });
     fx.exp.forEach((o) => {
       if (o.top - y > vh || o.top + o.len + vh - y < 0) return;
       const p = Math.min(1, Math.max(0, (y - o.top) / o.len));
@@ -244,7 +211,7 @@
   if (window.ResizeObserver) new ResizeObserver(remeasure).observe(document.body);
   window.remeasure = remeasure;
 
-  // ---------- İmleç ----------
+  // ---------- Fareyi takip eden öğe ----------
   // Döngü sadece fare hareket ederken çalışır, durunca kendini kapatır.
   const follower = (el, ease, ox, oy) => {
     let x = 0, y = 0, cx = 0, cy = 0, run = false, first = true;
@@ -259,23 +226,6 @@
       if (!run) { run = true; requestAnimationFrame(step); }
     };
   };
-  if (finePointer && !reduce) {
-    const c = document.createElement("div");
-    c.className = "cursor"; c.innerHTML = "<span></span>";
-    document.body.appendChild(c);
-    const move = follower(c, .25, 0, 0);
-    addEventListener("mousemove", (e) => move(e.clientX, e.clientY), { passive: true });
-    let cur = null;
-    document.addEventListener("mouseover", (e) => {
-      const t = e.target.closest("[data-cursor]");
-      const show = t && !e.target.closest(".fav") ? t : null;
-      if (show === cur) return;
-      cur = show;
-      c.classList.toggle("big", !!show);
-      if (show) c.firstChild.textContent = show.dataset.cursor;
-    });
-  }
-
   // İmleci takip eden fotoğraf
   window.floatImages = function (list, sel) {
     if (!finePointer || reduce) return;
@@ -296,11 +246,7 @@
     list.addEventListener("mouseleave", () => box.classList.remove("on"));
   };
 
-  // ---------- Açılış ve sayfa geçişi ----------
-  const curtain = document.createElement("div");
-  curtain.className = "curtain";
-  document.body.appendChild(curtain);
-
+  // ---------- Açılış ----------
   const start = () => {
     document.body.classList.add("ready");
     splitWords(document);
@@ -315,40 +261,7 @@
     if (main && !main.id) main.id = "icerik";
     measure();
     onScroll();
-    const fromInside = sessionStorage.getItem("nav") === "1";
-    sessionStorage.removeItem("nav");
-    const firstVisit = !sessionStorage.getItem("seen") && !reduce;
-
-    if (firstVisit && document.body.dataset.loader !== "off") {
-      sessionStorage.setItem("seen", "1");
-      const l = document.createElement("div");
-      l.className = "loader"; l.setAttribute("aria-hidden", "true");
-      l.innerHTML = `<div class="word"><span>${D.ofis.kisa}</span></div><div class="count num">0</div>`;
-      document.body.appendChild(l);
-      requestAnimationFrame(() => requestAnimationFrame(() => l.classList.add("in")));
-      const cnt = l.querySelector(".count"), t0 = performance.now();
-      const step = (t) => {
-        const p = Math.min(1, (t - t0) / 1300);
-        cnt.textContent = Math.round(100 * (1 - Math.pow(1 - p, 3)));
-        if (p < 1) return requestAnimationFrame(step);
-        l.classList.add("out");
-        setTimeout(start, 350);
-        setTimeout(() => l.remove(), 1300);
-      };
-      requestAnimationFrame(step);
-    } else if (fromInside && !reduce) {
-      curtain.style.transition = "none";
-      curtain.classList.add("cover");
-      requestAnimationFrame(() => requestAnimationFrame(() => {
-        curtain.style.transition = "";
-        curtain.classList.add("leave");
-        setTimeout(start, 200);
-        setTimeout(() => { curtain.className = "curtain"; }, 900);
-      }));
-    } else {
-      sessionStorage.setItem("seen", "1");
-      start();
-    }
+    start();
   };
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot); else boot();
 
@@ -361,16 +274,8 @@
       toast(was ? "İlan favorilerden çıkarıldı." : "İlan favorilere eklendi.");
       return;
     }
-    const a = e.target.closest("a");
-    if (!a || reduce || e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey || a.target === "_blank" || a.hasAttribute("download")) return;
-    const href = a.getAttribute("href");
-    if (!href || href.startsWith("#") || href.startsWith("tel:") || href.startsWith("mailto:") || /^https?:/.test(href)) return;
-    e.preventDefault();
-    sessionStorage.setItem("nav", "1");
-    curtain.classList.add("cover");
-    setTimeout(() => { location.href = href; }, 650);
   });
-  addEventListener("pageshow", (e) => { if (e.persisted) { curtain.className = "curtain"; setMenu(false); updateFavCount(); } });
+  addEventListener("pageshow", (e) => { if (e.persisted) { setMenu(false); updateFavCount(); } });
 
   // Küçük fotoğraf sürümü (kartlar için)
   window.sm = (src) => src.replace("img/", "img/sm/");
@@ -378,7 +283,7 @@
   // Ortak kart şablonu
   window.cardHTML = function (x, i, extra) {
     const no = i == null ? "" : `<div class="no num"><span>${String(i + 1).padStart(2, "0")}</span><span>${x.kategori}</span></div>`;
-    return `<a class="card ${extra || ""}" href="ilan.html?id=${x.id}" data-cursor="Görüntüle">${no}
+    return `<a class="card ${extra || ""}" href="ilan.html?id=${x.id}">${no}
       <div class="ph"><img src="${sm(x.gorseller[0])}" alt="${x.baslik}, ${x.mahalle}" loading="lazy" decoding="async"><img class="alt" src="${sm(x.gorseller[1] || x.gorseller[0])}" alt="" loading="lazy" decoding="async"><span class="tag">${x.tip}</span>${favBtn(x.id)}</div>
       <div class="row"><span class="t">${x.baslik}</span><span class="num">${x.oda}</span></div>
       <div class="row"><span>${x.mahalle}, ${x.ilce}</span><span class="num">${fmtFiyat(x)}</span></div>

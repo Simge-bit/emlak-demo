@@ -37,7 +37,6 @@
   <section class="outro sec wrap" style="margin-top:clamp(80px,10vw,160px)"><div data-footer></div></section>
 </main>
 
-<script src="js/vendor/lenis.min.js"></script>
 <script src="js/data.js"></script>
 <script src="js/site.js"></script>
 <script>
@@ -45,7 +44,7 @@
   const D = window.DATA;
   const sayi = (id) => D.ilanlar.filter((x) => x.danisman === id).length;
   document.getElementById("team").innerHTML = D.danismanlar.map((p, i) => `
-    <a class="person" href="danisman.html?id=${p.id}" data-cursor="Profil">
+    <a class="person" href="danisman.html?id=${p.id}">
       <div class="ph img-reveal" style="--d:${i * 90}ms"><img src="${p.foto}" alt="${p.ad}"></div>
       <div class="n">${p.ad}</div><div class="r">${p.unvan}</div>
     </a>`).join("");

@@ -291,7 +291,7 @@
 
 /* Yazdırma: ilan sayfası sade bir bilgi föyüne dönüşür */
 @media print {
-  .nav, .wa, .cursor, .curtain, .loader, .mmenu, .skip, .dbar .tools, .gal, .dmap, .visit, .calc, .similar, .outro, .sec, .toast, .lb, .fav { display: none !important; }
+  .nav, .wa, .mmenu, .skip, .dbar .tools, .gal, .dmap, .visit, .calc, .similar, .outro, .sec, .toast, .lb, .fav { display: none !important; }
   .dhero { height: 60vh; }
   .dhero img { transform: none !important; height: 100%; }
   [data-reveal], .split .w > span, .img-reveal, .img-reveal img { opacity: 1 !important; transform: none !important; clip-path: none !important; }

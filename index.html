@@ -42,11 +42,11 @@
   </div>
   <div class="duo">
     <figure class="a">
-      <div class="frame img-reveal"><img src="img/ic-ahsap-salon.jpg" alt="Ahşap duvarlı geniş salon" data-speed="0.08"></div>
+      <div class="frame img-reveal"><img src="img/ic-ahsap-salon.jpg" alt="Ahşap duvarlı geniş salon"></div>
       <figcaption><span>Zekeriyaköy, salon</span><span class="num">01</span></figcaption>
     </figure>
     <figure class="b">
-      <div class="frame img-reveal" style="--d:150ms"><img src="img/ev-koyu-ahsap.jpg" alt="Koyu ahşap cepheli ev" data-speed="0.12"></div>
+      <div class="frame img-reveal" style="--d:150ms"><img src="img/ev-koyu-ahsap.jpg" alt="Koyu ahşap cepheli ev"></div>
       <figcaption><span>Tarabya, cephe</span><span class="num">02</span></figcaption>
     </figure>
   </div>
@@ -57,15 +57,12 @@
   </div>
 </section>
 
-<section class="hscroll">
-  <div class="sticky">
-    <div class="head">
-      <h2 class="h2 split">Seçilmiş ilanlar</h2>
-      <a class="ulink" href="ilanlar.html">Tüm ilanlar</a>
-    </div>
-    <div class="track" id="track"></div>
-    <div class="bar"><i></i></div>
+<section class="sec wrap" style="padding-top:0">
+  <div class="sec-head">
+    <div class="label" data-reveal>Portföy</div>
+    <div class="side"><h2 class="split">Seçilmiş ilanlar</h2><a class="ulink" href="ilanlar.html">Tüm ilanlar</a></div>
   </div>
+  <div class="featured" id="track"></div>
 </section>
 
 <section class="expand" id="expand">
@@ -76,7 +73,7 @@
     <div class="info">
       <div><div class="label" style="color:rgba(255,255,255,.7)" id="expLoc"></div><h3 id="expTitle"></h3></div>
       <dl id="expDl"></dl>
-      <a class="btn" id="expLink" href="#" data-cursor="Görüntüle"><span>İlanı inceleyin</span><span class="arr">→</span></a>
+      <a class="btn" id="expLink" href="#"><span>İlanı inceleyin</span><span class="arr">→</span></a>
     </div>
   </div>
 </section>
@@ -123,11 +120,10 @@
 
 <section class="outro sec wrap">
   <div class="label" style="color:inherit;opacity:.55" data-reveal>Ev sahipleri için</div>
-  <p class="big split" style="margin-top:24px"><a href="iletisim.html" data-cursor="Yazın">Evinizi satmak ya da kiralamak mı istiyorsunuz?</a></p>
+  <p class="big split" style="margin-top:24px"><a href="iletisim.html">Evinizi satmak ya da kiralamak mı istiyorsunuz?</a></p>
   <div data-footer></div>
 </section>
 
-<script src="js/vendor/lenis.min.js"></script>
 <script src="js/data.js"></script>
 <script src="js/site.js"></script>
 <script>
@@ -176,7 +172,7 @@
     document.addEventListener("visibilitychange", () => { if (!document.hidden && visible) run(); else clearTimeout(timer); });
 
     // Seçilmiş ilanlar
-    document.getElementById("track").innerHTML = D.ilanlar.map((x, i) => cardHTML(x, i)).join("");
+    document.getElementById("track").innerHTML = D.ilanlar.slice(0, 6).map((x, i) => cardHTML(x, i).replace('class="card ', `data-reveal style="--d:${(i % 3) * 90}ms" class="card `)).join("");
 
     // Ayın evi
     const ay = byId("yalikavak-villa");
@@ -200,13 +196,13 @@
     floatImages(svc);
 
     document.getElementById("team").innerHTML = D.danismanlar.map((p, i) => `
-      <a class="person" href="danisman.html?id=${p.id}" data-cursor="Profil">
+      <a class="person" href="danisman.html?id=${p.id}">
         <div class="ph img-reveal" style="--d:${i * 90}ms"><img src="${p.foto}" alt="${p.ad}" loading="lazy"></div>
         <div class="n">${p.ad}</div><div class="r">${p.unvan}, ${p.bolge}</div>
       </a>`).join("");
 
     document.getElementById("posts").innerHTML = D.yazilar.map((p, i) => `
-      <a class="post" href="yazi.html?id=${p.id}" data-cursor="Oku">
+      <a class="post" href="yazi.html?id=${p.id}">
         <div class="ph img-reveal" style="--d:${i * 90}ms"><img src="${sm(p.gorsel)}" alt="" loading="lazy"></div>
         <div class="d">${p.tarih}</div><h3>${p.baslik}</h3>
       </a>`).join("");

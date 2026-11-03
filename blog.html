@@ -33,13 +33,12 @@
   </section>
   <section class="outro sec wrap"><div data-footer></div></section>
 </main>
-<script src="js/vendor/lenis.min.js"></script>
 <script src="js/data.js"></script>
 <script src="js/site.js"></script>
 <script>
   document.getElementById("plist").innerHTML = DATA.yazilar.map((p, i) => {
     const a = DATA.danismanlar.find((d) => d.id === p.yazar);
-    return `<a class="pitem" href="yazi.html?id=${p.id}" data-cursor="Oku">
+    return `<a class="pitem" href="yazi.html?id=${p.id}">
       <div class="ph img-reveal"><img src="${sm(p.gorsel)}" alt="" loading="lazy"></div>
       <div data-reveal><h2>${p.baslik}</h2><p>${p.ozet}</p></div>
       <div class="d" data-reveal>${p.tarih}<br>${a.ad}</div>

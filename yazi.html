@@ -19,7 +19,6 @@
 </head>
 <body data-page="blog">
 <main id="main"></main>
-<script src="js/vendor/lenis.min.js"></script>
 <script src="js/data.js"></script>
 <script src="js/site.js"></script>
 <script>
@@ -37,7 +36,7 @@
     <div class="crumb" data-reveal><a href="index.html">Ana sayfa</a> / <a href="blog.html">Blog</a></div>
     <h1 class="split" style="font-size:clamp(44px,6.4vw,118px);max-width:16ch">${p.baslik}</h1>
   </header>
-  <div class="wide" style="height:72svh"><img src="${p.gorsel}" alt="" data-speed="0.1"></div>
+  <div class="wide" style="height:72svh"><img src="${p.gorsel}" alt=""></div>
   <article class="article wrap">
     <div data-reveal>
       <div class="label">${p.tarih}</div>
@@ -51,7 +50,7 @@
   <section class="wrap" style="padding-bottom:clamp(80px,10vw,160px)">
     <div class="sec-head"><div class="label" data-reveal>Diğer yazılar</div><div class="side"><h2 class="split">Okumaya devam edin</h2></div></div>
     <div class="posts" style="grid-template-columns:repeat(2,1fr)">${diger.map((x, i) => `
-      <a class="post" href="yazi.html?id=${x.id}" data-cursor="Oku">
+      <a class="post" href="yazi.html?id=${x.id}">
         <div class="ph img-reveal" style="--d:${i * 90}ms"><img src="${sm(x.gorsel)}" alt="" loading="lazy"></div>
         <div class="d">${x.tarih}</div><h3>${x.baslik}</h3>
       </a>`).join("")}</div>

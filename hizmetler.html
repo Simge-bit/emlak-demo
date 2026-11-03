@@ -49,12 +49,11 @@
 
   <section class="outro sec wrap">
     <div class="label" style="color:inherit;opacity:.55" data-reveal>Ücretsiz ön görüşme</div>
-    <p class="big split" style="margin-top:24px"><a href="iletisim.html" data-cursor="Yazın">Evinizin değerini birlikte konuşalım.</a></p>
+    <p class="big split" style="margin-top:24px"><a href="iletisim.html">Evinizin değerini birlikte konuşalım.</a></p>
     <div data-footer></div>
   </section>
 </main>
 
-<script src="js/vendor/lenis.min.js"></script>
 <script src="js/data.js"></script>
 <script src="js/site.js"></script>
 <script>
@@ -68,7 +67,7 @@
   ];
   document.getElementById("svcs").innerHTML = D.hizmetler.map((h, i) => `
     <article class="svc-row ${i % 2 ? "rev" : ""}">
-      <div class="ph img-reveal"><img src="${h.gorsel}" alt="${h.baslik}" loading="lazy" data-speed="0.06"></div>
+      <div class="ph img-reveal"><img src="${h.gorsel}" alt="${h.baslik}" loading="lazy"></div>
       <div class="txt">
         <span class="label num" data-reveal>0${i + 1}</span>
         <h2 class="split">${h.baslik}</h2>
