@@ -9,7 +9,7 @@
   // Yumuşak kaydırma
   let lenis = null;
   if (!reduce && window.Lenis) {
-    lenis = window.__lenis = new Lenis({ lerp: 0.09, wheelMultiplier: 1 });
+    lenis = window.__lenis = new Lenis({ lerp: 0.1, wheelMultiplier: 1 });
     const raf = (t) => { lenis.raf(t); requestAnimationFrame(raf); };
     requestAnimationFrame(raf);
   }
@@ -168,68 +168,111 @@
   }, { threshold: .4 });
 
   // ---------- Kaydırmaya bağlı efektler ----------
-  let lastY = scrollY;
+  // Ölçümler yalnızca açılışta ve boyut değişince yapılır. Kaydırırken sadece transform yazılır,
+  // böylece tarayıcı her karede sayfa düzenini yeniden hesaplamak zorunda kalmaz.
+  const fx = { par: [], hs: [], exp: [], heroH: 0 };
+  let ticking = false, lastY = scrollY;
+
+  function measure() {
+    const y = scrollY, vh = innerHeight;
+    fx.hs = [...document.querySelectorAll(".hscroll")].map((sec) => {
+      const track = sec.querySelector(".track");
+      const dist = Math.max(0, track.scrollWidth - innerWidth);
+      sec.style.height = vh + dist + "px";
+      return { sec, track, bar: sec.querySelector(".bar i"), dist };
+    });
+    fx.hs.forEach((o) => { o.top = o.sec.getBoundingClientRect().top + y; o.len = Math.max(1, o.sec.offsetHeight - vh); });
+    fx.exp = [...document.querySelectorAll(".expand")].map((sec) => ({
+      sec, frame: sec.querySelector(".frame"), img: sec.querySelector(".frame img"), sides: sec.querySelectorAll(".side-l, .side-r"),
+      top: sec.getBoundingClientRect().top + y, len: Math.max(1, sec.offsetHeight - vh)
+    }));
+    fx.par = reduce ? [] : [...document.querySelectorAll("[data-speed]")].map((el) => {
+      const r = el.parentElement.getBoundingClientRect();
+      return { el, top: r.top + y, h: r.height, sp: +el.dataset.speed };
+    });
+    const hero = document.querySelector(".hero, .dhero");
+    fx.heroH = hero ? hero.offsetHeight : 0;
+    update();
+  }
+
+  function update() {
+    ticking = false;
+    const y = scrollY, vh = innerHeight;
+    fx.par.forEach((o) => {
+      const top = o.top - y;
+      if (top > vh || top + o.h < 0) return;
+      o.el.style.translate = `0 ${((top + o.h / 2 - vh / 2) * -o.sp).toFixed(1)}px`;
+    });
+    fx.hs.forEach((o) => {
+      const p = Math.min(1, Math.max(0, (y - o.top) / o.len));
+      if (p === o.p) return;
+      o.p = p;
+      o.track.style.transform = `translate3d(${(-o.dist * p).toFixed(1)}px,0,0)`;
+      if (o.bar) o.bar.style.transform = `scaleX(${p.toFixed(4)})`;
+    });
+    fx.exp.forEach((o) => {
+      if (o.top - y > vh || o.top + o.len + vh - y < 0) return;
+      const p = Math.min(1, Math.max(0, (y - o.top) / o.len));
+      const k = reduce ? 1 : Math.min(1, p / 0.7), e = 1 - Math.pow(1 - k, 3);
+      if (e === o.e) return;
+      o.e = e;
+      const mobile = innerWidth < 900;
+      // Çerçeve küçültülür, içindeki fotoğraf ters yönde büyütülür. Görüntü bozulmaz ve her şey ekran kartında çizilir.
+      const sx = 1 - 2 * (mobile ? .12 : .34) * (1 - e), sy = 1 - 2 * (mobile ? .25 : .22) * (1 - e), z = 1.3 - .3 * e;
+      o.frame.style.transform = `scale(${sx.toFixed(4)},${sy.toFixed(4)})`;
+      o.img.style.transform = `scale(${(z / sx).toFixed(4)},${(z / sy).toFixed(4)})`;
+      o.frame.style.setProperty("--o", e.toFixed(3));
+      o.sides.forEach((el) => { el.style.opacity = Math.max(0, 1 - e * 2.2).toFixed(3); });
+      o.sec.classList.toggle("full", k >= 1);
+    });
+  }
+
   function onScroll() {
     const y = scrollY, open = nav.classList.contains("open");
-    nav.classList.toggle("hide", y > lastY && y > 200 && !open);
-    const hero = document.querySelector(".hero, .dhero");
-    nav.classList.toggle("over", !!hero && y < hero.offsetHeight - 80 && !open);
+    if (Math.abs(y - lastY) > 2 || y < 200) nav.classList.toggle("hide", y > lastY && y > 200 && !open);
+    nav.classList.toggle("over", fx.heroH > 0 && y < fx.heroH - 80 && !open);
     lastY = y;
+    if (!ticking) { ticking = true; requestAnimationFrame(update); }
   }
   addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
-
-  const loop = () => {
-    if (!reduce) {
-      document.querySelectorAll("[data-speed]").forEach((el) => {
-        const r = el.parentElement.getBoundingClientRect();
-        if (r.bottom < 0 || r.top > innerHeight) return;
-        const sp = +el.dataset.speed;
-        el.style.translate = `0 ${(r.top + r.height / 2 - innerHeight / 2) * -sp}px`;
-      });
-    }
-    document.querySelectorAll(".expand").forEach((sec) => {
-      const r = sec.getBoundingClientRect();
-      if (r.bottom < 0 || r.top > innerHeight) return;
-      const p = Math.min(1, Math.max(0, -r.top / (sec.offsetHeight - innerHeight)));
-      const k = reduce ? 1 : Math.min(1, p / 0.7), e = 1 - Math.pow(1 - k, 3);
-      const mobile = innerWidth < 900;
-      const ty = (mobile ? 25 : 22) * (1 - e), tx = (mobile ? 12 : 34) * (1 - e);
-      const fr = sec.querySelector(".frame");
-      fr.style.clipPath = `inset(${ty}% ${tx}% ${ty}% ${tx}%)`;
-      fr.querySelector("img").style.transform = `scale(${1.3 - 0.3 * e})`;
-      fr.style.setProperty("--o", e);
-      sec.querySelectorAll(".side-l, .side-r").forEach((el) => { el.style.opacity = 1 - e * 2.2; });
-      sec.classList.toggle("full", k >= 1);
-    });
-    document.querySelectorAll(".hscroll").forEach((sec) => {
-      const track = sec.querySelector(".track");
-      const dist = track.scrollWidth - innerWidth;
-      sec.style.height = innerHeight + Math.max(0, dist) + "px";
-      const r = sec.getBoundingClientRect();
-      const p = Math.min(1, Math.max(0, -r.top / Math.max(1, sec.offsetHeight - innerHeight)));
-      track.style.transform = `translate3d(${-dist * p}px,0,0)`;
-      const bar = sec.querySelector(".bar i");
-      if (bar) bar.style.transform = `scaleX(${p})`;
-    });
-    requestAnimationFrame(loop);
-  };
-  requestAnimationFrame(loop);
+  let rt;
+  const remeasure = () => { clearTimeout(rt); rt = setTimeout(measure, 120); };
+  addEventListener("resize", remeasure);
+  addEventListener("load", remeasure);
+  if (document.fonts) document.fonts.ready.then(remeasure);
+  // Sayfa yüksekliği değişirse (filtre, görsel yüklenmesi) ölçümleri yenile
+  if (window.ResizeObserver) new ResizeObserver(remeasure).observe(document.body);
+  window.remeasure = remeasure;
 
   // ---------- İmleç ----------
+  // Döngü sadece fare hareket ederken çalışır, durunca kendini kapatır.
+  const follower = (el, ease, ox, oy) => {
+    let x = 0, y = 0, cx = 0, cy = 0, run = false, first = true;
+    const step = () => {
+      cx += (x - cx) * ease; cy += (y - cy) * ease;
+      el.style.transform = `translate3d(${(cx + ox).toFixed(1)}px,${(cy + oy).toFixed(1)}px,0)`;
+      if (Math.abs(x - cx) + Math.abs(y - cy) > .3) requestAnimationFrame(step); else run = false;
+    };
+    return (nx, ny) => {
+      x = nx; y = ny;
+      if (first) { cx = x; cy = y; first = false; }
+      if (!run) { run = true; requestAnimationFrame(step); }
+    };
+  };
   if (finePointer && !reduce) {
     const c = document.createElement("div");
     c.className = "cursor"; c.innerHTML = "<span></span>";
     document.body.appendChild(c);
-    let x = innerWidth / 2, y = innerHeight / 2, cx = x, cy = y;
-    addEventListener("mousemove", (e) => { x = e.clientX; y = e.clientY; });
-    const follow = () => { cx += (x - cx) * .2; cy += (y - cy) * .2; c.style.transform = `translate(${cx}px,${cy}px)`; requestAnimationFrame(follow); };
-    follow();
+    const move = follower(c, .25, 0, 0);
+    addEventListener("mousemove", (e) => move(e.clientX, e.clientY), { passive: true });
+    let cur = null;
     document.addEventListener("mouseover", (e) => {
       const t = e.target.closest("[data-cursor]");
-      const onFav = e.target.closest(".fav");
-      c.classList.toggle("big", !!t && !onFav);
-      if (t) c.firstChild.textContent = t.dataset.cursor;
+      const show = t && !e.target.closest(".fav") ? t : null;
+      if (show === cur) return;
+      cur = show;
+      c.classList.toggle("big", !!show);
+      if (show) c.firstChild.textContent = show.dataset.cursor;
     });
   }
 
@@ -239,16 +282,14 @@
     const box = document.createElement("div");
     box.className = "float-img";
     document.body.appendChild(box);
-    let x = 0, y = 0, cx = 0, cy = 0;
-    list.addEventListener("mousemove", (e) => { x = e.clientX; y = e.clientY; });
-    const f = () => { cx += (x - cx) * .12; cy += (y - cy) * .12; box.style.transform = `translate(${cx + 30}px,${cy - 180}px)`; requestAnimationFrame(f); };
-    f();
+    const move = follower(box, .14, 30, -180);
+    list.addEventListener("mousemove", (e) => move(e.clientX, e.clientY), { passive: true });
     list.querySelectorAll(sel || "li").forEach((li) => {
       li.addEventListener("mouseenter", () => {
-        const img = document.createElement("img"); img.src = li.dataset.img; img.alt = "";
+        const img = document.createElement("img"); img.src = li.dataset.img; img.alt = ""; img.decoding = "async";
         img.animate([{ clipPath: "inset(100% 0 0 0)" }, { clipPath: "inset(0 0 0 0)" }], { duration: 700, easing: "cubic-bezier(.76,0,.24,1)" });
         box.appendChild(img);
-        while (box.children.length > 3) box.firstChild.remove();
+        while (box.children.length > 2) box.firstChild.remove();
         box.classList.add("on");
       });
     });
@@ -272,6 +313,7 @@
     updateFavCount();
     const main = document.querySelector("main") || document.querySelector("section");
     if (main && !main.id) main.id = "icerik";
+    measure();
     onScroll();
     const fromInside = sessionStorage.getItem("nav") === "1";
     sessionStorage.removeItem("nav");
@@ -337,7 +379,7 @@
   window.cardHTML = function (x, i, extra) {
     const no = i == null ? "" : `<div class="no num"><span>${String(i + 1).padStart(2, "0")}</span><span>${x.kategori}</span></div>`;
     return `<a class="card ${extra || ""}" href="ilan.html?id=${x.id}" data-cursor="Görüntüle">${no}
-      <div class="ph"><img src="${sm(x.gorseller[0])}" alt="${x.baslik}, ${x.mahalle}" loading="lazy"><img class="alt" src="${sm(x.gorseller[1] || x.gorseller[0])}" alt="" loading="lazy"><span class="tag">${x.tip}</span>${favBtn(x.id)}</div>
+      <div class="ph"><img src="${sm(x.gorseller[0])}" alt="${x.baslik}, ${x.mahalle}" loading="lazy" decoding="async"><img class="alt" src="${sm(x.gorseller[1] || x.gorseller[0])}" alt="" loading="lazy" decoding="async"><span class="tag">${x.tip}</span>${favBtn(x.id)}</div>
       <div class="row"><span class="t">${x.baslik}</span><span class="num">${x.oda}</span></div>
       <div class="row"><span>${x.mahalle}, ${x.ilce}</span><span class="num">${fmtFiyat(x)}</span></div>
     </a>`;

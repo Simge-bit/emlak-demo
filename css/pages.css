@@ -39,8 +39,8 @@
 .empty button { margin-top: 18px; }
 
 /* Harita */
-.map { filter: grayscale(1) contrast(1.02); }
-.map .pin { filter: none; }
+/* Sadece harita parçaları gri tonlanır, işaretler ve kontroller filtrelenmez */
+.map .leaflet-tile-pane { filter: grayscale(1) contrast(1.02); }
 .leaflet-container { font-family: var(--font); background: var(--bg-2); }
 .leaflet-control-attribution { font-size: 10px; background: rgba(255,255,255,.8) !important; }
 .leaflet-control-zoom a { border-radius: 0 !important; color: #111 !important; }
@@ -295,5 +295,6 @@
   .dhero { height: 60vh; }
   .dhero img { transform: none !important; height: 100%; }
   [data-reveal], .split .w > span, .img-reveal, .img-reveal img { opacity: 1 !important; transform: none !important; clip-path: none !important; }
+  .img-reveal::after { display: none; }
   body { font-size: 12px; }
 }

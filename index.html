@@ -137,10 +137,10 @@
     // Açılış slaytı
     const slides = ["zekeriyakoy-orman-evi", "yalikavak-villa", "urla-bag-evi", "tarabya-ahsap-cephe"].map(byId);
     const box = document.getElementById("slides"), cap = document.getElementById("cap"), cnt = document.getElementById("cnt"), prog = document.getElementById("prog");
-    box.innerHTML = slides.map((x, i) => `<div class="slide${i === 0 ? " active" : ""}"><img src="${x.gorseller[0]}" alt="${x.baslik}"></div>`).join("");
+    box.innerHTML = slides.map((x, i) => `<div class="slide${i === 0 ? " active" : ""}"><div class="in"><img src="${x.gorseller[0]}" alt="${x.baslik}" ${i ? 'loading="lazy" decoding="async"' : 'fetchpriority="high"'}></div></div>`).join("");
     const els = [...box.children], DUR = 6500;
     const pad = (n) => String(n).padStart(2, "0");
-    let cur = 0, t0 = performance.now();
+    let cur = 0, timer = null, visible = true;
     const setCap = (i, anim) => {
       const x = slides[i];
       const html = `<a href="ilan.html?id=${x.id}" class="ulink">${x.baslik}, ${x.mahalle}</a>`;
@@ -152,20 +152,28 @@
         requestAnimationFrame(() => requestAnimationFrame(() => a.classList.remove("in")));
       }, 450);
     };
-    setCap(0, false);
+    // İlerleme çizgisi CSS animasyonuyla çizilir, slayt değişimi zamanlayıcıyla yapılır
+    const run = () => {
+      clearTimeout(timer);
+      prog.style.animation = "none"; void prog.offsetWidth;
+      prog.style.animation = `prog ${DUR}ms linear forwards`;
+      timer = setTimeout(() => go((cur + 1) % slides.length), DUR);
+    };
     const go = (n) => {
       els.forEach((e) => e.classList.remove("prev"));
       els[cur].classList.remove("active"); els[cur].classList.add("prev");
       cur = n; els[cur].classList.add("active");
-      setCap(cur, true); t0 = performance.now();
+      setCap(cur, true);
+      if (visible && !document.hidden) run();
     };
-    const tick = (t) => {
-      const p = Math.min(1, (t - t0) / DUR);
-      prog.style.transform = `scaleX(${p})`;
-      if (p >= 1 && !document.hidden) go((cur + 1) % slides.length);
-      requestAnimationFrame(tick);
-    };
-    requestAnimationFrame(tick);
+    setCap(0, false);
+    run();
+    // Slayt ekranda değilse ya da sekme arka plandaysa durur
+    new IntersectionObserver(([e]) => {
+      visible = e.isIntersecting;
+      if (visible) run(); else { clearTimeout(timer); prog.style.animationPlayState = "paused"; }
+    }).observe(document.querySelector(".hero"));
+    document.addEventListener("visibilitychange", () => { if (!document.hidden && visible) run(); else clearTimeout(timer); });
 
     // Seçilmiş ilanlar
     document.getElementById("track").innerHTML = D.ilanlar.map((x, i) => cardHTML(x, i)).join("");
