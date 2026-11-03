@@ -9,12 +9,13 @@
   "eposta": "",
   "adres": "Göktürk Merkez, Eyüpsultan, İstanbul",
   "yetki": "",
-  "renk": "#16324F",
+  "renk": "#1677B0",
   "tanitim": "Derin Gayrimenkul Göktürk, Kemerburgaz ve Sarıyer'deki satılık ve kiralık evlerle ilgileniyor. Portföyümüzde site içindeki dairelerden bahçeli villalara kadar farklı evler bulunuyor.",
   "hakkinda": "Derin Gayrimenkul'ün ofisi Göktürk merkezde. Ofis İstanbul'un kuzeyindeki site ve villa bölgelerinin yanında Kocaeli'deki evlerle de ilgileniyor.",
   "aciklama": "Derin Gayrimenkul Göktürk, Kemerburgaz ve Sarıyer'de satılık ve kiralık daire ve villa ilanları.",
   "temsili": true,
   "demoNot": "Bu sayfa Derin Gayrimenkul için hazırlanmış bir tasarım önizlemesidir. İlan bilgileri ofisin sahibinden mağazasından alınmıştır, fotoğraflar temsilidir.",
+  "logo": "img/p/logo.png",
   "site": "https://simge-bit.github.io/emlak-demo/demo/derin-gayrimenkul/"
  },
  "ofisler": [

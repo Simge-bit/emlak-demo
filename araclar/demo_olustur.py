@@ -119,6 +119,12 @@ def main(ayar_yolu):
     print(f"Demo hazırlanıyor: {ofis['ad']} -> demo/{klasor}/")
 
     ofis.setdefault("kisa", ofis["ad"].split(" ")[0])
+    # Logo PNG olarak olduğu gibi kopyalanır, şeffaflığı ve keskinliği korunur
+    if ofis.get("logo"):
+        kaynak = Path(ofis["logo"]) if Path(ofis["logo"]).is_absolute() else KOK / ofis["logo"]
+        (cikti / "img/p").mkdir(parents=True, exist_ok=True)
+        shutil.copy(kaynak, cikti / "img/p/logo.png")
+        ofis["logo"] = "img/p/logo.png"
     ofis["site"] = adres
     ofis.setdefault("demoNot", f"Bu sayfa {ofis['ad']} için hazırlanmış bir tasarım önizlemesidir.")
     veri = {"ofis": ofis}

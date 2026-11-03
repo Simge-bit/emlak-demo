@@ -46,6 +46,10 @@ button, input, select { font: inherit; color: inherit; }
 .nav.over { color: #fff; background: transparent; }
 .nav.hide { transform: translateY(-110%); }
 .nav .logo { font-weight: 600; font-size: 19px; letter-spacing: -.02em; }
+/* Ofisin kendi logosu: beyaz zeminli logolar koyu fotoğrafın üstünde de okunur kalsın diye beyaz bir kutuda durur */
+.nav .logo.has-img { display: inline-flex; justify-self: start; background: #fff; padding: 5px 8px; border-radius: 4px; }
+.nav .logo.has-img img { height: 34px; width: auto; display: block; }
+@media (max-width: 900px) { .nav .logo.has-img img { height: 28px; } }
 .nav .links { display: flex; gap: 34px; font-size: 14px; }
 .nav .links a, .ulink { position: relative; }
 .nav .links a::after, .ulink::after {

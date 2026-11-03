@@ -57,7 +57,7 @@
   const nav = document.createElement("header");
   nav.className = "nav";
   nav.innerHTML = `
-    <a class="logo" href="${R.home}" aria-label="${D.ofis.ad} ana sayfa">${D.ofis.kisa}</a>
+    <a class="logo${D.ofis.logo ? " has-img" : ""}" href="${R.home}" aria-label="${D.ofis.ad} ana sayfa">${D.ofis.logo ? `<img src="${D.ofis.logo}" alt="${D.ofis.ad}">` : D.ofis.kisa}</a>
     <nav class="links" aria-label="Ana menü">${links.map(([h, t, k]) => `<a href="${h}" class="${k === page ? "on" : ""}" ${k === page ? 'aria-current="page"' : ""}>${t}</a>`).join("")}</nav>
     <div class="right">
       <a class="favlink" href="${R.ilanlar}?fav=1" aria-label="Favori ilanlar">Favoriler <span class="fav-count num">0</span></a>
