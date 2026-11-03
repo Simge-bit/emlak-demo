@@ -4,6 +4,7 @@
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const finePointer = matchMedia("(hover: hover) and (pointer: fine)").matches;
   const page = document.body.dataset.page || "";
+  document.documentElement.classList.add("js");
   const tel = (t) => "tel:+90" + t.replace(/\D/g, "").replace(/^0/, "");
 
   // Marka rengi ve WhatsApp bağlantısı ofis ayarından gelir
@@ -120,7 +121,7 @@
 
   // ---------- Kelimelere bölme ----------
   window.splitWords = function (root) {
-    root.querySelectorAll(".hero .split").forEach((el) => {
+    root.querySelectorAll(".hero .split, h1.split").forEach((el) => {
       if (el.dataset.done) return;
       el.dataset.done = 1;
       el.setAttribute("aria-label", el.textContent.replace(/\s+/g, " ").trim());
@@ -145,10 +146,27 @@
   };
 
   // ---------- Görünce açılan öğeler ----------
+  const io = new IntersectionObserver((ents) => {
+    ents.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("on"); io.unobserve(e.target); } });
+  }, { rootMargin: "0px 0px -8% 0px" });
+  // Rakamlar ekrana gelince 1,2 saniyede sayar
+  const countIO = new IntersectionObserver((ents) => {
+    ents.forEach((e) => {
+      if (!e.isIntersecting) return;
+      countIO.unobserve(e.target);
+      const el = e.target, end = +el.dataset.count, suf = el.dataset.suffix || "", t0 = performance.now(), dur = reduce ? 1 : 1200;
+      const tick = (t) => {
+        const p = Math.min(1, (t - t0) / dur);
+        el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))) + suf;
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    });
+  }, { threshold: .4 });
   window.observeReveals = function (root) {
     splitWords(root);
-    // Sayılar doğrudan yazılır, sayma animasyonu yok
-    root.querySelectorAll("[data-count]").forEach((el) => { el.textContent = el.dataset.count + (el.dataset.suffix || ""); });
+    root.querySelectorAll("h1.split:not(.hero .split), [data-reveal], .img-reveal").forEach((el) => io.observe(el));
+    root.querySelectorAll("[data-count]").forEach((el) => countIO.observe(el));
   };
 
 
