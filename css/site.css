@@ -90,19 +90,12 @@ button, input, select { font: inherit; color: inherit; }
 .hero .cap a.in { transform: translateY(100%); opacity: 0; transition: none; }
 
 /* ---------- Kelime kelime yazı efekti ---------- */
-.split .w { display: inline-block; overflow: hidden; vertical-align: top; padding: .14em 0 .08em; margin: -.14em 0 -.08em; }
-.split .w > span { display: inline-block; transform: translateY(108%); transition: transform .9s var(--ease); transition-delay: calc(min(var(--i), 12) * 25ms + var(--d, 0ms)); }
-.split.on .w > span { transform: none; }
+.hero .split .w { display: inline-block; overflow: hidden; vertical-align: top; padding: .14em 0 .08em; margin: -.14em 0 -.08em; }
+.hero .split .w > span { display: inline-block; transform: translateY(108%); transition: transform .9s var(--ease); transition-delay: calc(min(var(--i), 12) * 25ms + var(--d, 0ms)); }
+.hero .split.on .w > span { transform: none; }
 
-[data-reveal] { opacity: 0; transform: translateY(18px); transition: opacity .8s var(--ease), transform .8s var(--ease); transition-delay: var(--d, 0ms); }
-[data-reveal].on { opacity: 1; transform: none; }
 
-/* Fotoğraf açılışı: üstteki zemin renginde örtü yukarı doğru toplanır. Sadece transform kullanıldığı için akıcıdır. */
 .img-reveal { position: relative; overflow: hidden; }
-.img-reveal::after { content: ""; position: absolute; inset: -1px; z-index: 1000; background: var(--bg); transform-origin: top; pointer-events: none; transition: transform 1s var(--ease-io); transition-delay: var(--d, 0ms); }
-.img-reveal.on::after { transform: scaleY(0); }
-.img-reveal img { transform: scale(1.12); transition: transform 1.3s var(--ease); transition-delay: var(--d, 0ms); }
-.img-reveal.on img { transform: scale(1); }
 
 /* ---------- Bölümler ---------- */
 section { position: relative; }
@@ -186,11 +179,6 @@ section { position: relative; }
 .owner h2 { margin: 0 0 24px; font-size: clamp(34px, 4.6vw, 76px); font-weight: 500; letter-spacing: -.045em; line-height: 1; max-width: 16ch; }
 .owner p { margin: 0 0 30px; color: var(--muted); max-width: 46ch; font-size: 17px; }
 
-/* Kayan semt yazısı */
-.marquee { overflow: hidden; white-space: nowrap; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 26px 0; }
-.marquee .in { display: inline-flex; gap: 60px; animation: mq 38s linear infinite; font-size: clamp(36px, 5.5vw, 92px); letter-spacing: -.04em; line-height: 1; }
-.marquee .in span:nth-child(even) { color: var(--muted); }
-@keyframes mq { to { transform: translateX(-50%); } }
 
 /* Hizmet listesi ve imleci takip eden fotoğraf */
 .svc { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
@@ -229,8 +217,6 @@ section { position: relative; }
 .foot a { display: block; margin: 3px 0; }
 .foot-bottom { display: flex; justify-content: space-between; align-items: baseline; padding: 40px 0 10px; font-size: 12px; opacity: .55; gap: 20px; flex-wrap: wrap; }
 .wordmark { font-size: 27.5vw; font-weight: 500; letter-spacing: -.075em; line-height: .74; margin: 20px 0 0 -.04em; white-space: nowrap; overflow: hidden; padding-bottom: .04em; }
-.wordmark span { display: inline-block; transform: translateY(100%); transition: transform 1.4s var(--ease); transition-delay: calc(var(--i) * 60ms); }
-.wordmark.on span { transform: none; }
 
 /* WhatsApp düğmesi */
 .wa {

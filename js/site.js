@@ -113,7 +113,7 @@
 
   // ---------- Kelimelere bölme ----------
   window.splitWords = function (root) {
-    root.querySelectorAll(".split").forEach((el) => {
+    root.querySelectorAll(".hero .split").forEach((el) => {
       if (el.dataset.done) return;
       el.dataset.done = 1;
       el.setAttribute("aria-label", el.textContent.replace(/\s+/g, " ").trim());
@@ -138,29 +138,12 @@
   };
 
   // ---------- Görünce açılan öğeler ----------
-  const io = new IntersectionObserver((ents) => {
-    ents.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("on"); io.unobserve(e.target); } });
-  }, { rootMargin: "0px 0px -12% 0px" });
   window.observeReveals = function (root) {
     splitWords(root);
-    root.querySelectorAll(".split:not(.hero .split), [data-reveal], .img-reveal, .wordmark").forEach((el) => io.observe(el));
-    root.querySelectorAll("[data-count]").forEach((el) => countIO.observe(el));
+    // Sayılar doğrudan yazılır, sayma animasyonu yok
+    root.querySelectorAll("[data-count]").forEach((el) => { el.textContent = el.dataset.count + (el.dataset.suffix || ""); });
   };
 
-  // Sayı sayacı
-  const countIO = new IntersectionObserver((ents) => {
-    ents.forEach((e) => {
-      if (!e.isIntersecting) return;
-      countIO.unobserve(e.target);
-      const el = e.target, end = +el.dataset.count, suf = el.dataset.suffix || "", t0 = performance.now(), dur = reduce ? 1 : 1800;
-      const tick = (t) => {
-        const p = Math.min(1, (t - t0) / dur), k = 1 - Math.pow(1 - p, 4);
-        el.textContent = Math.round(end * k) + suf;
-        if (p < 1) requestAnimationFrame(tick);
-      };
-      requestAnimationFrame(tick);
-    });
-  }, { threshold: .4 });
 
   // ---------- Kaydırmaya bağlı efektler ----------
   // Ölçümler yalnızca açılışta ve boyut değişince yapılır. Kaydırırken sadece transform yazılır.
