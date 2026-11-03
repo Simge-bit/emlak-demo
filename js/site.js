@@ -5,7 +5,7 @@
   const finePointer = matchMedia("(hover: hover) and (pointer: fine)").matches;
   const page = document.body.dataset.page || "";
   document.documentElement.classList.add("js");
-  const tel = (t) => "tel:+90" + t.replace(/\D/g, "").replace(/^0/, "");
+  const tel = (t) => t ? "tel:+90" + String(t).replace(/\D/g, "").replace(/^0/, "") : "#";
 
   // Marka rengi ve WhatsApp bağlantısı ofis ayarından gelir
   if (D.ofis.renk) document.documentElement.style.setProperty("--accent", D.ofis.renk);
@@ -59,7 +59,7 @@
     <nav class="links" aria-label="Ana menü">${links.map(([h, t, k]) => `<a href="${h}" class="${k === page ? "on" : ""}" ${k === page ? 'aria-current="page"' : ""}>${t}</a>`).join("")}</nav>
     <div class="right">
       <a class="favlink" href="${R.ilanlar}?fav=1" aria-label="Favori ilanlar">Favoriler <span class="fav-count num">0</span></a>
-      <a class="ulink hide-m" href="${tel(D.ofis.telefon)}">${D.ofis.telefon}</a>
+      ${D.ofis.telefon ? `<a class="ulink hide-m" href="${tel(D.ofis.telefon)}">${D.ofis.telefon}</a>` : ""}
       <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mmenu"><span>Menü</span></button>
     </div>`;
   skip.after(nav);
@@ -70,7 +70,7 @@
   mm.innerHTML = `
     <nav aria-label="Telefon menüsü">${[[R.home, "Ana sayfa", "home"], ...links].map(([h, t, k], i) =>
       `<a href="${h}" style="--i:${i}" class="${k === page ? "on" : ""}"><span>${t}</span></a>`).join("")}</nav>
-    <div class="mm-foot"><a href="${tel(D.ofis.telefon)}">${D.ofis.telefon}</a><a href="mailto:${D.ofis.eposta}">${D.ofis.eposta}</a></div>`;
+    <div class="mm-foot">${D.ofis.telefon ? `<a href="${tel(D.ofis.telefon)}">${D.ofis.telefon}</a>` : ""}${D.ofis.eposta ? `<a href="mailto:${D.ofis.eposta}">${D.ofis.eposta}</a>` : ""}</div>`;
   document.body.appendChild(mm);
   const btn = nav.querySelector(".menu-btn");
   const setMenu = (open) => {
@@ -90,15 +90,16 @@
     if (!foot || foot.innerHTML) return;
     foot.innerHTML = `
       <div class="foot">
-        <div><div class="h">Merkez ofis</div>${D.ofis.adres}<br><a href="${tel(D.ofis.telefon)}" style="display:inline">${D.ofis.telefon}</a><br><a class="ulink" style="display:inline" href="mailto:${D.ofis.eposta}">${D.ofis.eposta}</a></div>
+        <div><div class="h">Merkez ofis</div>${[D.ofis.adres, D.ofis.telefon && `<a href="${tel(D.ofis.telefon)}" style="display:inline">${D.ofis.telefon}</a>`, D.ofis.eposta && `<a class="ulink" style="display:inline" href="mailto:${D.ofis.eposta}">${D.ofis.eposta}</a>`].filter(Boolean).join("<br>")}</div>
         <div><div class="h">Sayfalar</div>${links.map(([h, t]) => `<a href="${h}">${t}</a>`).join("")}</div>
         <div><div class="h">İlanlar</div><a href="${R.ilanlar}?tip=Satılık">Satılık</a><a href="${R.ilanlar}?tip=Kiralık">Kiralık</a><a href="${R.ilanlar}?kategori=Villa">Villalar</a><a href="${R.ilanlar}?kategori=Daire">Daireler</a><a href="${R.ilanlar}?fav=1">Favorilerim</a><a href="${R.degerleme}">Evinizin değeri</a></div>
-        <div><div class="h">Ofisler</div>${D.ofisler.map((o) => `<a href="${tel(o.tel)}">${o.sehir}, ${o.tel}</a>`).join("")}</div>
+        <div><div class="h">Ofisler</div>${(D.ofisler || []).map((o) => o.tel ? `<a href="${tel(o.tel)}">${o.sehir}, ${o.tel}</a>` : `<span style="display:block;margin:3px 0">${o.sehir}</span>`).join("")}</div>
       </div>
       <div class="foot-bottom">
-        <span>© ${new Date().getFullYear()} ${D.ofis.ad}. Taşınmaz ticareti yetki belgesi no ${D.ofis.yetki}.</span>
+        <span>© ${new Date().getFullYear()} ${D.ofis.ad}.${D.ofis.yetki ? ` Taşınmaz ticareti yetki belgesi no ${D.ofis.yetki}.` : ""}</span>
         <span><a class="ulink" href="${R.kvkk}">KVKK aydınlatma metni</a></span>
-        <span>${D.ofis.demoNot || "Bu site bir tasarım demosudur. Ofis ve ilanlar hayalidir."}</span>
+        <span>${D.ofis.demoNot ?? "Bu site bir tasarım demosudur. Ofis ve ilanlar hayalidir."}</span>
+        ${D.platform ? `<span><a class="ulink" href="${D.platform.url}" target="_blank" rel="noopener">${D.platform.ad} ile hazırlandı</a></span>` : ""}
       </div>
       <div class="wordmark" aria-hidden="true">${[...D.ofis.kisa].map((c, i) => `<span style="--i:${i}">${c}</span>`).join("")}</div>`;
   };
