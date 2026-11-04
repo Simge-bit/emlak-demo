@@ -32,6 +32,7 @@
 <script src="js/ofis.js"></script>
 <script src="js/site.js"></script>
 <script src="js/map.js"></script>
+<script src="js/kredi.js"></script>
 <script>
 (function () {
   const D = window.DATA;
@@ -96,25 +97,7 @@
     </section>` : ""}
 
     ${x.tip === "Satılık" ? `
-    <section class="calc" id="calc">
-      <div>
-        <div class="label" data-reveal>Kredi hesaplama</div>
-        <p data-reveal>Bu hesaplama yaklaşık bir değer verir. Güncel faiz oranını ve kullanabileceğiniz en yüksek kredi tutarını bankanızdan öğrenin.${x.kredi === false ? " Bu ev şu anda krediye uygun değildir." : ""}</p>
-      </div>
-      <div class="calc-box" data-reveal>
-        <div class="calc-in">
-          <label><span>Peşinat oranı</span><output id="cPesO" class="num">%30</output><input type="range" id="cPes" min="10" max="90" step="5" value="30"></label>
-          <label><span>Vade</span><select id="cVade"><option value="12">12 ay</option><option value="36">36 ay</option><option value="60">60 ay</option><option value="120" selected>120 ay</option></select></label>
-          <label><span>Aylık faiz oranı (%)</span><input id="cFaiz" inputmode="decimal" value="2,5"></label>
-        </div>
-        <div class="calc-out">
-          <div><dt>Kredi tutarı</dt><dd class="num" id="cTutar"></dd></div>
-          <div><dt>Peşinat</dt><dd class="num" id="cPesTL"></dd></div>
-          <div class="main"><dt>Aylık taksit</dt><dd class="num" id="cTaksit"></dd></div>
-          <div><dt>Toplam geri ödeme</dt><dd class="num" id="cToplam"></dd></div>
-        </div>
-      </div>
-    </section>` : ""}
+    <section class="calc" id="calc"></section>` : ""}
 
     <section class="agent">
       <div class="label" data-reveal>${a ? "Bu ilanla ilgilenen danışman" : "İletişim"}</div>
@@ -165,19 +148,7 @@
   };
 
   // Kredi hesaplama
-  if (document.getElementById("calc")) {
-    const $ = (i) => document.getElementById(i), tl = (n) => Math.round(n).toLocaleString("tr-TR") + " TL";
-    const calc = () => {
-      const pes = +$("cPes").value / 100, n = +$("cVade").value, r = (parseFloat($("cFaiz").value.replace(",", ".")) || 0) / 100;
-      const P = x.fiyat * (1 - pes);
-      const m = r ? P * r / (1 - Math.pow(1 + r, -n)) : P / n;
-      $("cPesO").textContent = "%" + Math.round(pes * 100);
-      $("cTutar").textContent = tl(P); $("cPesTL").textContent = tl(x.fiyat * pes);
-      $("cTaksit").textContent = tl(m); $("cToplam").textContent = tl(m * n);
-    };
-    ["cPes", "cVade", "cFaiz"].forEach((i) => $(i).addEventListener("input", calc));
-    calc();
-  }
+  window.krediHesapla && document.getElementById("calc") && krediHesapla(x.fiyat, x.kredi);
 
   // Gezme randevusu
   const visit = document.getElementById("visit"), gun = document.getElementById("vGun");

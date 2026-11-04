@@ -324,3 +324,13 @@
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
 .video { position: relative; aspect-ratio: 16 / 9; background: #000; }
 .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+/* Banka karşılaştırması */
+.calc-banks { width: 100%; border-collapse: collapse; margin-top: 34px; font-size: 15px; }
+.calc-banks th { text-align: left; font-size: 12px; font-weight: 400; color: var(--muted); padding: 0 12px 10px 0; border-bottom: 1px solid var(--fg); }
+.calc-banks td { padding: 12px 12px 12px 0; border-bottom: 1px solid var(--line); }
+.calc-banks th:not(:first-child), .calc-banks td:not(:first-child) { text-align: right; padding-right: 0; padding-left: 12px; }
+.calc-banks tr.best td { font-weight: 600; }
+.calc-banks tr.best td:first-child::after { content: "En düşük"; margin-left: 10px; font-size: 11px; font-weight: 500; padding: 2px 8px; border: 1px solid currentColor; vertical-align: 2px; }
+.calc-note { margin: 18px 0 0; font-size: 13px; color: var(--muted); max-width: 70ch; }
+@media (max-width: 700px) { .calc-banks { font-size: 13px; } .calc-banks th:nth-child(4), .calc-banks td:nth-child(4) { display: none; } }
