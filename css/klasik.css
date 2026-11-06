@@ -249,3 +249,25 @@ h1, h2, h3 { font-weight: 600; letter-spacing: -.015em; }
 .randevu .btn { width: 100%; }
 @media (max-width: 960px) { .ekip { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 600px) { .ekip { grid-template-columns: 1fr; } }
+
+/* Panel sitelerinde form onayı ve sonuç mesajları */
+.onay { display: flex; gap: 8px; align-items: flex-start; font-size: 13.5px; color: var(--soluk); line-height: 1.5; margin: 4px 0; }
+.form .onay input, .randevu .onay input, .onay input { width: 16px; height: 16px; min-height: 0; padding: 0; margin: 2px 0 0; flex: none; accent-color: var(--ana); }
+.onay a { color: var(--ana); text-decoration: underline; text-underline-offset: 2px; }
+.tuzak { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; opacity: 0; }
+.tamam { background: #eef7f1; color: #17603a; border-radius: 8px; padding: 16px 18px; font-size: 15px; }
+.hata { background: #fdeeee; color: #9b1c1c; border-radius: 6px; padding: 10px 14px; font-size: 14px; }
+
+/* Yazı sayfaları (blog ve aydınlatma metni) */
+.yazi-kap { max-width: 780px; }
+.yazi-kap h2 { font-size: 22px; margin: 32px 0 10px; }
+.yazi-kap p, .yazi-kap li { color: var(--yazi); line-height: 1.75; }
+.yazi-kap img.kapak { width: 100%; border-radius: 10px; margin: 8px 0 24px; aspect-ratio: 16 / 9; object-fit: cover; }
+.yazi-ust { color: var(--soluk); font-size: 14px; margin-top: 8px; }
+.yazilar { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.yazilar a { border: 1px solid var(--cizgi); border-radius: 10px; overflow: hidden; background: #fff; display: flex; flex-direction: column; }
+.yazilar img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+.yazilar .ic { padding: 18px; display: grid; gap: 8px; }
+.yazilar h3 { margin: 0; font-size: 18px; }
+.yazilar p { margin: 0; color: var(--soluk); font-size: 14.5px; }
+@media (max-width: 900px) { .yazilar { grid-template-columns: 1fr; } }
