@@ -76,7 +76,7 @@
   if (sayfa === "ana") {
     const vitrin = (D.vitrin || []).map((id) => ilanlar.find((x) => x.id === id)).filter(Boolean);
     const sirali = [...vitrin, ...ilanlar.filter((x) => !vitrin.includes(x))];
-    const kapak = (sirali[0] || {}).gorseller?.[0] || "";
+    const kapak = O.kapak || (sirali[0] || {}).gorseller?.[0] || "";
     const mahalleler = [...new Set(ilanlar.map((x) => x.mahalle).filter(Boolean))].sort((a, b) => a.localeCompare(b, "tr"));
     const odalar = [...new Set(ilanlar.map((x) => x.oda).filter(Boolean))].sort();
     const bolge = merkez.sehir || O.adres.split(",").slice(-2, -1)[0]?.trim() || "";

@@ -15,6 +15,7 @@
   "demoNot": "Bu sayfa aracın nasıl çalıştığını göstermek için hazırlanmış hayali bir örnektir.",
   "aciklama": "Karşıyaka, Bostanlı ve Mavişehir'de satılık ve kiralık daire, müstakil ev ve işyeri ilanları.",
   "saatler": "Pazartesi - Cumartesi, 09.00 - 19.00",
+  "kapak": "img/ev-modern-havuz.jpg",
   "site": "https://simge-bit.github.io/emlak-demo/demo/ornek-ofis/"
  },
  "ofisler": [
