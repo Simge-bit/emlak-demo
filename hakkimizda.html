@@ -42,9 +42,9 @@
       <div class="side"><h2 class="split">Çalışma ilkelerimiz</h2></div>
     </div>
     <ul class="values">
-      <li data-reveal><span class="label num">01</span><h3>Her evi kendimiz geziyoruz</h3><p>Bir evi ilana koymadan önce mutlaka yerinde görüyoruz. Fotoğrafları ve plan çizimlerini kendi ekibimiz hazırlıyor.</p></li>
-      <li data-reveal style="--d:100ms"><span class="label num">02</span><h3>Az ama doğru ilan veriyoruz</h3><p>Portföyümüze aynı anda sınırlı sayıda ev alıyoruz. Böylece her eve ve her alıcıya yeterli zaman ayırabiliyoruz.</p></li>
-      <li data-reveal style="--d:200ms"><span class="label num">03</span><h3>Fiyatı veriyle belirliyoruz</h3><p>Bir evin fiyatını bölgedeki son satışlara ve evin gerçek durumuna bakarak öneriyoruz. Bu değerlendirmeyi ev sahibiyle yazılı olarak paylaşıyoruz.</p></li>
+      <li data-reveal><span class="label num">01</span><h3>Evi yerinde görüyoruz</h3><p>Bir evi ilana koymadan önce yerinde görüyor, bilgilerini ve fotoğraflarını kendimiz hazırlıyoruz.</p></li>
+      <li data-reveal style="--d:100ms"><span class="label num">02</span><h3>Bölgeyi tanıyoruz</h3><p>Çalıştığımız mahallelerdeki fiyatları ve satış sürelerini yakından takip ediyoruz.</p></li>
+      <li data-reveal style="--d:200ms"><span class="label num">03</span><h3>Süreci yazılı yürütüyoruz</h3><p>Yetki sözleşmesinden kira sözleşmesine kadar bütün adımları yazılı olarak kayda alıyoruz.</p></li>
     </ul>
   </section>
 
@@ -61,8 +61,8 @@
   </section>
 
   <section class="outro sec wrap">
-    <div class="label" style="color:inherit;opacity:.55" data-reveal>Ekip</div>
-    <p class="big split" style="margin-top:24px"><a href="danismanlar.html">Danışmanlarımızla tanışın.</a></p>
+    <div class="label" style="color:inherit;opacity:.55" data-reveal id="outroLabel">Ekip</div>
+    <p class="big split" style="margin-top:24px"><a href="danismanlar.html" id="outroLink">Danışmanlarımızla tanışın.</a></p>
     <div data-footer></div>
   </section>
 </main>
@@ -73,6 +73,11 @@
 <script>
 (function () {
   const D = window.DATA;
+  // Danışman bilgisi olmayan ofislerde sayfa iletişime yönlendirir
+  if (!(D.danismanlar && D.danismanlar.length)) {
+    document.getElementById("outroLabel").textContent = "İletişim";
+    const a = document.getElementById("outroLink"); a.href = "iletisim.html"; a.textContent = "Bize ulaşın.";
+  }
   document.getElementById("stats").innerHTML = D.istatistik.map(([n, t], i) => `<div data-reveal style="--d:${i * 120}ms"><div class="n num" data-count="${n}">0</div><div class="t">${t}</div></div>`).join("");
   const tl = document.getElementById("timeline");
   if (D.tarihce && D.tarihce.length) tl.innerHTML = D.tarihce.map(([y, t]) => `<div class="ti" data-reveal><div class="y num">${y}</div><p>${t}</p></div>`).join("");

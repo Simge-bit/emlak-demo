@@ -61,10 +61,10 @@
 (function () {
   const D = window.DATA;
   const detay = [
-    ["Evinizi gezip fotoğraflarını çekiyoruz", "Plan çizimini hazırlıyoruz", "Bölgedeki son satışlara göre fiyat öneriyoruz", "Alıcı adaylarını görüşmeden önce kontrol ediyoruz", "Tapu devrine kadar süreci yürütüyoruz"],
-    ["Kiracı adaylarının gelir ve referanslarını kontrol ediyoruz", "Kira sözleşmesini hazırlıyoruz", "Teslim tutanağını fotoğraflarla birlikte tutuyoruz", "Depozito ve aidat konularını yazılı hale getiriyoruz"],
-    ["Evi yerinde inceliyoruz", "Tapu ve imar durumunu kontrol ediyoruz", "Bölgedeki emsal satışları karşılaştırıyoruz", "Yazılı bir değer raporu veriyoruz"],
-    ["Arsa ve projelerin imar durumunu araştırıyoruz", "Kira getirisini ve geri dönüş süresini hesaplıyoruz", "Yabancı alıcılara İngilizce destek veriyoruz", "Satın alma sonrası kiralama ve yönetimi üstleniyoruz"]
+    ["Evi yerinde görüp fotoğraflarını çekiyoruz", "Fiyatı bölgedeki satışlara göre belirliyoruz", "İlanı sitemizde ve emlak portallarında yayınlıyoruz", "Alıcılarla görüşme ve gösterimleri ayarlıyoruz", "Tapu devrine kadar süreci takip ediyoruz"],
+    ["Kiracı adaylarıyla görüşüyoruz", "Kira sözleşmesini hazırlıyoruz", "Depozito ve aidat konularını sözleşmeye yazıyoruz", "Teslimde evin durumunu kayda alıyoruz"],
+    ["Evi yerinde inceliyoruz", "Tapu durumunu kontrol ediyoruz", "Bölgedeki benzer satışları karşılaştırıyoruz", "Değer önerimizi sizinle paylaşıyoruz"],
+    ["Bütçenize uygun evleri listeliyoruz", "Gösterimleri ayarlıyoruz", "Tapu ve iskan durumunu kontrol ediyoruz", "Kredi sürecinde yol gösteriyoruz"]
   ];
   document.getElementById("svcs").innerHTML = D.hizmetler.map((h, i) => `
     <article class="svc-row ${i % 2 ? "rev" : ""}">
@@ -78,22 +78,22 @@
     </article>`).join("");
 
   const adimlar = [
-    ["Tanışma", "Evinizi birlikte geziyor, beklentilerinizi ve zamanlamanızı konuşuyoruz."],
-    ["Değerleme", "Bölgedeki son satışlara bakarak size yazılı bir fiyat önerisi sunuyoruz."],
-    ["Yetki sözleşmesi", "Yönetmeliğin istediği yazılı yetkilendirme sözleşmesini imzalıyoruz."],
-    ["Hazırlık", "Fotoğrafları çekiyor, plan çizimini hazırlıyor ve ilan metnini yazıyoruz."],
-    ["Gösterim", "Evi yalnızca kontrol ettiğimiz alıcı adaylarına, sizin uygun olduğunuz saatlerde gösteriyoruz."],
-    ["Tapu devri", "Pazarlığı, ön sözleşmeyi ve tapu randevusunu biz yönetiyoruz."]
+    ["Görüşme", "Evinizi görüp beklentilerinizi konuşuyoruz."],
+    ["Fiyat", "Satış fiyatını bölgedeki benzer satışlara göre birlikte belirliyoruz."],
+    ["Yetki sözleşmesi", "Yönetmeliğin öngördüğü yazılı yetki sözleşmesini imzalıyoruz."],
+    ["İlan", "Evin fotoğraflarını çekip ilanı yayınlıyoruz."],
+    ["Gösterim", "Evi alıcı adaylarına sizin uygun olduğunuz saatlerde gösteriyoruz."],
+    ["Tapu devri", "Ön sözleşmeden tapu randevusuna kadar süreci takip ediyoruz."]
   ];
   document.getElementById("steps").innerHTML = adimlar.map(([t, m], i) => `
     <li data-reveal style="--d:${(i % 3) * 90}ms"><span class="n num">0${i + 1}</span><h3>${t}</h3><p>${m}</p></li>`).join("");
 
   const sss = [
     ["Hizmet bedeliniz ne kadar?", "Satışta alıcı ve satıcıdan ayrı ayrı satış bedelinin yüzde ikisini ve KDV'yi alıyoruz. Kiralamada hizmet bedeli bir aylık kira ve KDV'dir. Bu oranlar Taşınmaz Ticareti Hakkında Yönetmelik'teki üst sınırlardır."],
-    ["Evimi satmak için hangi belgeler gerekiyor?", "Tapu senedi, kimlik belgesi, güncel zorunlu deprem sigortası poliçesi ve enerji kimlik belgesi gerekir. Eksik belgeleri tamamlamanız için size yol gösteriyoruz."],
-    ["Değerleme raporu ücretli mi?", "Evini satmak için bizimle çalışan ev sahiplerinden değerleme ücreti almıyoruz. Yalnızca rapor almak isteyenler için ücreti görüşmede belirtiyoruz."],
-    ["Evimi aynı anda başka ofislerle de satabilir miyim?", "Evet, yetki sözleşmesini münhasır olmayan şekilde de yapabiliriz. Yine de evin tek bir ofis tarafından tanıtılması fiyatın korunmasına yardımcı olur."],
-    ["Yabancı alıcılarla çalışıyor musunuz?", "Danışmanlarımız yabancı alıcılarla İngilizce çalışır. Tapu sürecinde gereken yeminli tercüman ve belgeler konusunda yardımcı oluyoruz."]
+    ["Evimi satmak için hangi belgeler gerekiyor?", "Tapu senedi, kimlik belgesi, güncel zorunlu deprem sigortası poliçesi ve enerji kimlik belgesi gerekir."],
+    ["Değerleme raporu ücretli mi?", "Evini satmak ya da kiralamak için bizimle çalışan ev sahiplerinden değerleme ücreti alınmaz."],
+    ["Evimi aynı anda başka ofislerle de satabilir miyim?", "Evet, yetki sözleşmesi münhasır olmayan şekilde de yapılabilir."],
+    ["Bir ev ne kadar sürede satılır?", "Süre evin fiyatına, konumuna ve piyasanın durumuna göre değişir. Bölgedeki benzer evlerin satış sürelerini ilk görüşmede paylaşıyoruz."]
   ];
   document.getElementById("faq").innerHTML = sss.map(([q, a], i) => `
     <details data-reveal style="--d:${i * 60}ms"><summary><span>${q}</span><i aria-hidden="true"></i></summary><div class="a"><p>${a}</p></div></details>`).join("");

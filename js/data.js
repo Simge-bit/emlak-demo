@@ -112,10 +112,10 @@ window.DATA = {
   ],
 
   hizmetler: [
-    { baslik: "Satış", gorsel: "img/ev-beyaz-ahsap.jpg", metin: "Evinizi önce birlikte geziyor, sonra piyasa verisiyle fiyatlandırıyoruz. Fotoğraf ve plan çizimini kendi ekibimiz hazırlıyor." },
-    { baslik: "Kiralama", gorsel: "img/ic-bebek-salon.jpg", metin: "Kiracı adaylarını görüşmeden önce tek tek kontrol ediyoruz. Sözleşme, depozito ve teslim tutanağını biz hazırlıyoruz." },
-    { baslik: "Değerleme", gorsel: "img/ev-modern-villa.jpg", metin: "Bölgedeki son satışları ve evin durumunu inceleyerek yazılı bir değer raporu veriyoruz. Bu hizmet satış sözü vermeyen ev sahiplerine de açıktır." },
-    { baslik: "Yatırım danışmanlığı", gorsel: "img/ev-modern-havuz.jpg", metin: "Arsa ve proje yatırımlarında imar durumunu, kira getirisini ve çıkış süresini birlikte hesaplıyoruz." }
+    { baslik: "Satış", gorsel: "img/ev-beyaz-ahsap.jpg", metin: "Evinizin satış sürecini ilk görüşmeden tapu devrine kadar yürütüyoruz. Satış fiyatını bölgedeki güncel satışlara göre birlikte belirliyoruz." },
+    { baslik: "Kiralama", gorsel: "img/ic-bebek-salon.jpg", metin: "Kiracı adaylarıyla görüşmeleri, kira sözleşmesini ve evin teslimini yürütüyoruz." },
+    { baslik: "Değerleme", gorsel: "img/ev-modern-villa.jpg", metin: "Evinizin bugünkü değerini, evin durumuna ve bölgedeki benzer satışlara bakarak belirliyoruz." },
+    { baslik: "Alım danışmanlığı", gorsel: "img/ev-modern-havuz.jpg", metin: "Bütçenize ve ihtiyacınıza uygun evleri bulup gösteriyor, alım sürecini tapu devrine kadar takip ediyoruz." }
   ],
 
   ofisler: [
