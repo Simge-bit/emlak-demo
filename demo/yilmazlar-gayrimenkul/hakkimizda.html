@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hakkımızda | Yılmazlar Gayrimenkul</title>
+<meta name="description" content="Yılmazlar Gayrimenkul Gaziosmanpaşa'da satılık ve kiralık daire, dükkan ve arsa ilanları.">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:site_name" content="Yılmazlar Gayrimenkul">
+<meta property="og:title" content="Hakkımızda | Yılmazlar Gayrimenkul">
+<meta property="og:description" content="Yılmazlar Gayrimenkul Gaziosmanpaşa'da satılık ve kiralık daire, dükkan ve arsa ilanları.">
+<meta property="og:image" content="https://simge-bit.github.io/emlak-demo/demo/yilmazlar-gayrimenkul/img/p/sarigol-3-1-1.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="../../fonts/schibsted-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/pages.css">
+</head>
+<body data-page="hakkimizda">
+<main>
+  <header class="phead">
+    <div class="crumb" data-reveal><a href="index.html">Ana sayfa</a> / Hakkımızda</div>
+    <h1 class="split">Hakkımızda</h1>
+  </header>
+
+  <div class="wide"><img id="wideImg" src="../../img/ev-beyaz-ahsap.jpg" alt=""></div>
+
+  <section class="sec wrap">
+    <div class="intro">
+      <div class="label" data-reveal>Ofis</div>
+      <p class="big split" data-ofis="hakkinda"></p>
+    </div>
+    <div class="stats" id="stats"></div>
+  </section>
+
+  <section class="sec wrap" style="padding-top:0">
+    <div class="sec-head">
+      <div class="label" data-reveal>Nasıl çalışıyoruz?</div>
+      <div class="side"><h2 class="split">Çalışma ilkelerimiz</h2></div>
+    </div>
+    <ul class="values">
+      <li data-reveal><span class="label num">01</span><h3>Her evi kendimiz geziyoruz</h3><p>Bir evi ilana koymadan önce mutlaka yerinde görüyoruz. Fotoğrafları ve plan çizimlerini kendi ekibimiz hazırlıyor.</p></li>
+      <li data-reveal style="--d:100ms"><span class="label num">02</span><h3>Az ama doğru ilan veriyoruz</h3><p>Portföyümüze aynı anda sınırlı sayıda ev alıyoruz. Böylece her eve ve her alıcıya yeterli zaman ayırabiliyoruz.</p></li>
+      <li data-reveal style="--d:200ms"><span class="label num">03</span><h3>Fiyatı veriyle belirliyoruz</h3><p>Bir evin fiyatını bölgedeki son satışlara ve evin gerçek durumuna bakarak öneriyoruz. Bu değerlendirmeyi ev sahibiyle yazılı olarak paylaşıyoruz.</p></li>
+    </ul>
+  </section>
+
+  <section class="wrap">
+    <div class="duo" id="duo" style="margin-top:0"></div>
+  </section>
+
+  <section class="sec wrap">
+    <div class="sec-head">
+      <div class="label" data-reveal>Tarihçe</div>
+      <div class="side"><h2 class="split">Yıllar içinde</h2></div>
+    </div>
+    <div class="timeline" id="timeline"></div>
+  </section>
+
+  <section class="outro sec wrap">
+    <div class="label" style="color:inherit;opacity:.55" data-reveal>Ekip</div>
+    <p class="big split" style="margin-top:24px"><a href="danismanlar.html">Danışmanlarımızla tanışın.</a></p>
+    <div data-footer></div>
+  </section>
+</main>
+
+<script src="../../js/data.js"></script>
+<script src="js/ofis.js"></script>
+<script src="../../js/site.js"></script>
+<script>
+(function () {
+  const D = window.DATA;
+  document.getElementById("stats").innerHTML = D.istatistik.map(([n, t], i) => `<div data-reveal style="--d:${i * 120}ms"><div class="n num" data-count="${n}">0</div><div class="t">${t}</div></div>`).join("");
+  const tl = document.getElementById("timeline");
+  if (D.tarihce && D.tarihce.length) tl.innerHTML = D.tarihce.map(([y, t]) => `<div class="ti" data-reveal><div class="y num">${y}</div><p>${t}</p></div>`).join("");
+  else tl.closest("section").remove();
+  // Fotoğraflar ilanlardan alınır
+  const L = D.ilanlar, a = L[1 % L.length], b = L[2 % L.length], c = L[0];
+  document.getElementById("wideImg").src = c.gorseller[c.gorseller.length - 1];
+  document.getElementById("duo").innerHTML = `
+    <figure class="a"><div class="frame img-reveal"><img src="${a.gorseller[1] || a.gorseller[0]}" alt="" loading="lazy" decoding="async"></div><figcaption><span>${a.mahalle}</span><span class="num">01</span></figcaption></figure>
+    <figure class="b"><div class="frame img-reveal" style="--d:150ms"><img src="${sm(b.gorseller[b.gorseller.length - 1])}" alt="" loading="lazy" decoding="async"></div><figcaption><span>${b.mahalle}</span><span class="num">02</span></figcaption></figure>`;
+})();
+</script>
+</body>
+</html>

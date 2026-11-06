@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Evinizin değeri | Yılmazlar Gayrimenkul</title>
+<meta name="description" content="Yılmazlar Gayrimenkul Gaziosmanpaşa'da satılık ve kiralık daire, dükkan ve arsa ilanları.">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:site_name" content="Yılmazlar Gayrimenkul">
+<meta property="og:title" content="Evinizin değeri | Yılmazlar Gayrimenkul">
+<meta property="og:description" content="Yılmazlar Gayrimenkul Gaziosmanpaşa'da satılık ve kiralık daire, dükkan ve arsa ilanları.">
+<meta property="og:image" content="https://simge-bit.github.io/emlak-demo/demo/yilmazlar-gayrimenkul/img/p/sarigol-3-1-1.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="../../fonts/schibsted-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/pages.css">
+</head>
+<body data-page="degerleme">
+<main>
+  <header class="phead">
+    <div class="crumb" data-reveal><a href="index.html">Ana sayfa</a> / Değerleme</div>
+    <div>
+      <h1 class="split" style="font-size:clamp(48px,7.6vw,140px)">Evinizin değeri</h1>
+      <div class="sub" style="margin-top:30px" data-reveal><p>Evinizi satmayı ya da kiraya vermeyi düşünüyorsanız formu doldurun. Danışmanımız evinizi yerinde görüp size yazılı bir fiyat önerisi sunar. Bu hizmet ücretsizdir.</p></div>
+    </div>
+  </header>
+
+  <section class="contact wrap">
+    <div>
+      <div class="label" data-reveal>Üç kısa adım</div>
+      <ol class="vsteps" id="vsteps" data-reveal>
+        <li class="on"><span class="num">01</span>Konum</li>
+        <li><span class="num">02</span>Ev</li>
+        <li><span class="num">03</span>İletişim</li>
+      </ol>
+    </div>
+
+    <form class="form vform" id="vform" novalidate data-reveal>
+      <fieldset class="step on" data-step="0">
+        <legend>Evin konumu</legend>
+        <div class="f"><label for="dIl">İl</label><select id="dIl" name="il" required><option value="">Seçin</option><option>İstanbul</option><option>İzmir</option><option>Muğla</option><option>Diğer</option></select></div>
+        <div class="f"><label for="dIlce">İlçe</label><input id="dIlce" name="ilce" required autocomplete="address-level2"></div>
+        <div class="f full"><label for="dMah">Mahalle</label><input id="dMah" name="mahalle"></div>
+        <div class="send"><span></span><button class="btn" type="button" data-next><span>Devam</span><span class="arr">→</span></button></div>
+      </fieldset>
+
+      <fieldset class="step" data-step="1">
+        <legend>Evin özellikleri</legend>
+        <div class="f"><label for="dAmac">Ne yapmak istiyorsunuz?</label><select id="dAmac" name="amac"><option value="Satılık">Satmak istiyorum</option><option value="Kiralık">Kiraya vermek istiyorum</option><option value="">Sadece değerini merak ediyorum</option></select></div>
+        <div class="f"><label for="dTip">Ev tipi</label><select id="dTip" name="tip"><option>Daire</option><option>Müstakil ev</option><option>Villa</option></select></div>
+        <div class="f"><label for="dM2">Brüt alan (m²)</label><input id="dM2" name="m2" inputmode="numeric" required></div>
+        <div class="f"><label for="dOda">Oda sayısı</label><select id="dOda" name="oda"><option>1+1</option><option>2+1</option><option selected>3+1</option><option>4+1</option><option>5+1 ve üstü</option></select></div>
+        <div class="f"><label for="dYas">Bina yaşı</label><select id="dYas" name="yas"><option>0 ile 5 yıl</option><option>6 ile 15 yıl</option><option>16 ile 30 yıl</option><option>30 yıldan eski</option></select></div>
+        <div class="f"><label for="dDurum">Evin durumu</label><select id="dDurum" name="durum"><option>Yeni yapılmış ya da yenilenmiş</option><option>İyi durumda</option><option>Bakım gerekiyor</option></select></div>
+        <div class="send"><button class="tool" type="button" data-prev>Geri</button><button class="btn" type="button" data-next><span>Devam</span><span class="arr">→</span></button></div>
+      </fieldset>
+
+      <fieldset class="step" data-step="2">
+        <legend>İletişim bilgileriniz</legend>
+        <div class="f"><label for="dAd">Ad soyad</label><input id="dAd" name="ad" required autocomplete="name"></div>
+        <div class="f"><label for="dTel">Telefon</label><input id="dTel" name="tel" required inputmode="tel" autocomplete="tel"></div>
+        <div class="f full"><label for="dNot">Eklemek istedikleriniz</label><textarea id="dNot" name="not" rows="3"></textarea></div>
+        <label class="kvkk"><input type="checkbox" name="kvkk" required><span>Kişisel verilerimin değerleme talebime yanıt verilmesi amacıyla işlenmesine izin veriyorum. <a class="ulink" href="kvkk.html">Aydınlatma metni</a></span></label>
+        <div class="send"><button class="tool" type="button" data-prev>Geri</button><button class="btn" type="submit"><span>Değerleme iste</span><span class="arr">→</span></button></div>
+      </fieldset>
+
+      <div class="step done" id="done">
+        <div class="label">Talebiniz alındı</div>
+        <p class="big-ok" id="okText"></p>
+        <div class="est" id="est"></div>
+        <a class="btn line" href="ilanlar.html"><span>Bölgedeki ilanlara bakın</span></a>
+      </div>
+    </form>
+  </section>
+
+  <section class="sec wrap" style="padding-top:0">
+    <div class="sec-head">
+      <div class="label" data-reveal>Neden bizimle?</div>
+      <div class="side"><h2 class="split">Değerlemeyi nasıl yapıyoruz?</h2></div>
+    </div>
+    <ul class="values">
+      <li data-reveal><span class="label num">01</span><h3>Evi yerinde görüyoruz</h3><p>Fotoğraf ya da formdaki bilgilerle yetinmiyoruz. Evin ışığını, manzarasını ve bakımını yerinde değerlendiriyoruz.</p></li>
+      <li data-reveal style="--d:100ms"><span class="label num">02</span><h3>Gerçek satışlara bakıyoruz</h3><p>İlan fiyatlarını değil, bölgede son altı ayda gerçekleşen satış ve kiralamaları karşılaştırıyoruz.</p></li>
+      <li data-reveal style="--d:200ms"><span class="label num">03</span><h3>Yazılı rapor veriyoruz</h3><p>Önerdiğimiz fiyatı ve dayandığımız örnekleri iki sayfalık bir raporla sizinle paylaşıyoruz.</p></li>
+    </ul>
+  </section>
+
+  <section class="outro sec wrap"><div data-footer></div></section>
+</main>
+
+<script src="../../js/data.js"></script>
+<script src="js/ofis.js"></script>
+<script src="../../js/site.js"></script>
+<script>
+(function () {
+  const D = window.DATA, form = document.getElementById("vform");
+  const steps = [...form.querySelectorAll(".step[data-step]")], marks = [...document.querySelectorAll("#vsteps li")];
+  let cur = 0;
+
+  const valid = (fs) => {
+    let ok = true;
+    fs.querySelectorAll("[required]").forEach((el) => {
+      const bad = el.type === "checkbox" ? !el.checked : !el.value.trim();
+      (el.closest(".f") || el.closest(".kvkk")).classList.toggle("err", bad);
+      if (bad) ok = false;
+    });
+    if (!ok) toast("Lütfen işaretli alanları doldurun.");
+    return ok;
+  };
+  const show = (n) => {
+    steps[cur].classList.remove("on");
+    cur = n;
+    steps[cur].classList.add("on");
+    marks.forEach((m, i) => { m.classList.toggle("on", i === cur); m.classList.toggle("ok", i < cur); });
+    const f = steps[cur].querySelector("input, select"); if (f) f.focus({ preventScroll: true });
+  };
+  form.addEventListener("click", (e) => {
+    if (e.target.closest("[data-next]") && valid(steps[cur])) show(cur + 1);
+    if (e.target.closest("[data-prev]")) show(cur - 1);
+  });
+  // Enter tuşu formu göndermek yerine bir sonraki adıma geçsin
+  form.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" && e.target.tagName === "INPUT" && cur < steps.length - 1) { e.preventDefault(); if (valid(steps[cur])) show(cur + 1); }
+  });
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (!valid(steps[cur])) return;
+    const f = Object.fromEntries(new FormData(form));
+    const ad = f.ad.trim().split(" ")[0];
+    document.getElementById("okText").textContent = `Teşekkürler ${ad}. ${f.ilce} bölgesinden sorumlu danışmanımız en geç bir iş günü içinde sizi arayacak.`;
+
+    // Ön tahmin: aynı ildeki aynı tipteki ilanlarımızın metrekare fiyatından hesaplanır
+    const m2 = +String(f.m2).replace(/\D/g, "");
+    const tip = f.amac || "Satılık";
+    const ref = D.ilanlar.filter((x) => x.il === f.il && x.tip === tip && x.m2 > 0);
+    const est = document.getElementById("est");
+    if (ref.length && m2) {
+      const birim = ref.reduce((a, x) => a + x.fiyat / x.m2, 0) / ref.length;
+      const kat = { "Yeni yapılmış ya da yenilenmiş": 1.08, "İyi durumda": 1, "Bakım gerekiyor": .88 }[f.durum] || 1;
+      const orta = birim * m2 * kat, yuvarla = (n) => Math.round(n / (tip === "Kiralık" ? 1e3 : 1e5)) * (tip === "Kiralık" ? 1e3 : 1e5);
+      const tl = (n) => yuvarla(n).toLocaleString("tr-TR") + " TL" + (tip === "Kiralık" ? " / ay" : "");
+      est.innerHTML = `<div class="label">Ön tahmin</div>
+        <div class="range num">${tl(orta * .88)} ile ${tl(orta * 1.12)} arası</div>
+        <p>Bu aralık ${f.il} bölgesindeki ${ref.length} ${tip.toLowerCase()} ilanımızın metrekare fiyatına göre hesaplandı. Kesin değer evi gördükten sonra belirlenir.</p>`;
+    } else {
+      est.innerHTML = `<p>Bölgeniz için elimizde yeterli karşılaştırma verisi yok. Danışmanımız fiyatı evi gördükten sonra sizinle paylaşacak.</p>`;
+    }
+    steps[cur].classList.remove("on");
+    marks.forEach((m) => { m.classList.remove("on"); m.classList.add("ok"); });
+    document.getElementById("done").classList.add("on");
+    form.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+})();
+</script>
+</body>
+</html>

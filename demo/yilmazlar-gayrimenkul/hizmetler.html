@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hizmetler | Yılmazlar Gayrimenkul</title>
+<meta name="description" content="Yılmazlar Gayrimenkul Gaziosmanpaşa'da satılık ve kiralık daire, dükkan ve arsa ilanları.">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:site_name" content="Yılmazlar Gayrimenkul">
+<meta property="og:title" content="Hizmetler | Yılmazlar Gayrimenkul">
+<meta property="og:description" content="Yılmazlar Gayrimenkul Gaziosmanpaşa'da satılık ve kiralık daire, dükkan ve arsa ilanları.">
+<meta property="og:image" content="https://simge-bit.github.io/emlak-demo/demo/yilmazlar-gayrimenkul/img/p/sarigol-3-1-1.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="../../fonts/schibsted-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/pages.css">
+</head>
+<body data-page="hizmetler">
+<main>
+  <header class="phead">
+    <div class="crumb" data-reveal><a href="index.html">Ana sayfa</a> / Hizmetler</div>
+    <div>
+      <h1 class="split">Hizmetler</h1>
+      <div class="sub" style="margin-top:30px" data-reveal><p>Ev satarken, kiralarken ya da yatırım yaparken sürecin her adımında yanınızdayız.</p></div>
+    </div>
+  </header>
+
+  <section class="wrap" id="svcs"></section>
+
+  <section class="sec wrap">
+    <div class="sec-head">
+      <div class="label" data-reveal>Süreç</div>
+      <div class="side"><h2 class="split">Bir evi nasıl satıyoruz?</h2></div>
+    </div>
+    <ol class="steps" id="steps"></ol>
+  </section>
+
+  <section class="sec wrap" style="padding-top:0">
+    <div class="sec-head">
+      <div class="label" data-reveal>Sık sorulan sorular</div>
+      <div class="side"><h2 class="split">Merak edilenler</h2></div>
+    </div>
+    <div class="faq" id="faq"></div>
+  </section>
+
+  <section class="outro sec wrap">
+    <div class="label" style="color:inherit;opacity:.55" data-reveal>Ücretsiz ön görüşme</div>
+    <p class="big split" style="margin-top:24px"><a href="degerleme.html">Evinizin değerini birlikte konuşalım.</a></p>
+    <div data-footer></div>
+  </section>
+</main>
+
+<script src="../../js/data.js"></script>
+<script src="js/ofis.js"></script>
+<script src="../../js/site.js"></script>
+<script>
+(function () {
+  const D = window.DATA;
+  const detay = [
+    ["Evinizi gezip fotoğraflarını çekiyoruz", "Plan çizimini hazırlıyoruz", "Bölgedeki son satışlara göre fiyat öneriyoruz", "Alıcı adaylarını görüşmeden önce kontrol ediyoruz", "Tapu devrine kadar süreci yürütüyoruz"],
+    ["Kiracı adaylarının gelir ve referanslarını kontrol ediyoruz", "Kira sözleşmesini hazırlıyoruz", "Teslim tutanağını fotoğraflarla birlikte tutuyoruz", "Depozito ve aidat konularını yazılı hale getiriyoruz"],
+    ["Evi yerinde inceliyoruz", "Tapu ve imar durumunu kontrol ediyoruz", "Bölgedeki emsal satışları karşılaştırıyoruz", "Yazılı bir değer raporu veriyoruz"],
+    ["Arsa ve projelerin imar durumunu araştırıyoruz", "Kira getirisini ve geri dönüş süresini hesaplıyoruz", "Yabancı alıcılara İngilizce destek veriyoruz", "Satın alma sonrası kiralama ve yönetimi üstleniyoruz"]
+  ];
+  document.getElementById("svcs").innerHTML = D.hizmetler.map((h, i) => `
+    <article class="svc-row ${i % 2 ? "rev" : ""}">
+      <div class="ph img-reveal"><img src="${h.gorsel}" alt="${h.baslik}" loading="lazy"></div>
+      <div class="txt">
+        <span class="label num" data-reveal>0${i + 1}</span>
+        <h2 class="split">${h.baslik}</h2>
+        <p data-reveal>${h.metin}</p>
+        <ul>${detay[i].map((d, k) => `<li data-reveal style="--d:${k * 60}ms">${d}</li>`).join("")}</ul>
+      </div>
+    </article>`).join("");
+
+  const adimlar = [
+    ["Tanışma", "Evinizi birlikte geziyor, beklentilerinizi ve zamanlamanızı konuşuyoruz."],
+    ["Değerleme", "Bölgedeki son satışlara bakarak size yazılı bir fiyat önerisi sunuyoruz."],
+    ["Yetki sözleşmesi", "Yönetmeliğin istediği yazılı yetkilendirme sözleşmesini imzalıyoruz."],
+    ["Hazırlık", "Fotoğrafları çekiyor, plan çizimini hazırlıyor ve ilan metnini yazıyoruz."],
+    ["Gösterim", "Evi yalnızca kontrol ettiğimiz alıcı adaylarına, sizin uygun olduğunuz saatlerde gösteriyoruz."],
+    ["Tapu devri", "Pazarlığı, ön sözleşmeyi ve tapu randevusunu biz yönetiyoruz."]
+  ];
+  document.getElementById("steps").innerHTML = adimlar.map(([t, m], i) => `
+    <li data-reveal style="--d:${(i % 3) * 90}ms"><span class="n num">0${i + 1}</span><h3>${t}</h3><p>${m}</p></li>`).join("");
+
+  const sss = [
+    ["Hizmet bedeliniz ne kadar?", "Satışta alıcı ve satıcıdan ayrı ayrı satış bedelinin yüzde ikisini ve KDV'yi alıyoruz. Kiralamada hizmet bedeli bir aylık kira ve KDV'dir. Bu oranlar Taşınmaz Ticareti Hakkında Yönetmelik'teki üst sınırlardır."],
+    ["Evimi satmak için hangi belgeler gerekiyor?", "Tapu senedi, kimlik belgesi, güncel zorunlu deprem sigortası poliçesi ve enerji kimlik belgesi gerekir. Eksik belgeleri tamamlamanız için size yol gösteriyoruz."],
+    ["Değerleme raporu ücretli mi?", "Evini satmak için bizimle çalışan ev sahiplerinden değerleme ücreti almıyoruz. Yalnızca rapor almak isteyenler için ücreti görüşmede belirtiyoruz."],
+    ["Evimi aynı anda başka ofislerle de satabilir miyim?", "Evet, yetki sözleşmesini münhasır olmayan şekilde de yapabiliriz. Yine de evin tek bir ofis tarafından tanıtılması fiyatın korunmasına yardımcı olur."],
+    ["Yabancı alıcılarla çalışıyor musunuz?", "Danışmanlarımız yabancı alıcılarla İngilizce çalışır. Tapu sürecinde gereken yeminli tercüman ve belgeler konusunda yardımcı oluyoruz."]
+  ];
+  document.getElementById("faq").innerHTML = sss.map(([q, a], i) => `
+    <details data-reveal style="--d:${i * 60}ms"><summary><span>${q}</span><i aria-hidden="true"></i></summary><div class="a"><p>${a}</p></div></details>`).join("");
+
+  // Sık sorulan sorular için yapısal veri
+  const ld = document.createElement("script"); ld.type = "application/ld+json";
+  ld.textContent = JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: sss.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })) });
+  document.head.appendChild(ld);
+})();
+</script>
+</body>
+</html>
