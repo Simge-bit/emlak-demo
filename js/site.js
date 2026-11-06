@@ -5,8 +5,7 @@
   const finePointer = matchMedia("(hover: hover) and (pointer: fine)").matches;
   const page = document.body.dataset.page || "";
   document.documentElement.classList.add("js");
-  // Fotoğraflar ofisin kendi fotoğrafı değilse her görselin köşesinde "Temsili görsel" yazar
-  if (D.ofis.temsili) document.documentElement.classList.add("temsili");
+  // Temsili fotoğraflar her görselde değil, yalnızca sayfanın altındaki notta belirtilir
   const tel = (t) => t ? "tel:+90" + String(t).replace(/\D/g, "").replace(/^0/, "") : "#";
 
   // Marka rengi ve WhatsApp bağlantısı ofis ayarından gelir
@@ -261,12 +260,35 @@
     list.addEventListener("mouseleave", () => box.classList.remove("on"));
   };
 
+  // ---------- Ofis tanıtımı ve ofis kartı ----------
+  window.ofisBlok = function (el, metinler) {
+    if (!el) return;
+    const O = D.ofis, tel = String(O.telefon || "").replace(/\D/g, "");
+    const harita = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(O.adres || O.ad);
+    el.innerHTML = `
+      <div class="label" data-reveal>${el.dataset.etiket || "Hakkımızda"}</div>
+      <div class="metin" data-reveal>${metinler.filter(Boolean).map((m) => `<p>${m}</p>`).join("")}</div>
+      <div class="ofis-kart" data-reveal><dl>
+        ${O.adres ? `<div><dt>Adres</dt><dd>${O.adres}</dd></div>` : ""}
+        ${O.telefon ? `<div><dt>Telefon</dt><dd><a href="tel:${tel}">${O.telefon}</a></dd></div>` : ""}
+        <div><dt>Çalışma saatleri</dt><dd>${O.saatler || "Pazartesi - Cumartesi, 09.00 - 19.00"}</dd></div>
+      </dl><div class="btns">
+        ${O.telefon ? `<a href="tel:${tel}">Arayın</a>` : ""}
+        ${O.whatsapp ? `<a href="https://wa.me/${O.whatsapp}?text=${encodeURIComponent("Merhaba, bilgi almak istiyorum.")}" target="_blank" rel="noopener">WhatsApp</a>` : ""}
+        <a href="${harita}" target="_blank" rel="noopener">Yol tarifi</a>
+      </div></div>`;
+  };
+
   // ---------- Açılış ----------
   const start = () => {
     document.body.classList.add("ready");
     splitWords(document);
     setTimeout(() => document.querySelectorAll(".hero .split").forEach((el) => el.classList.add("on")), 150);
     observeReveals(document);
+    // Yavaş bağlantıda bir görselin açılışı kaçarsa ekrandaki görseller birkaç saniye sonra yine de gösterilir
+    setTimeout(() => document.querySelectorAll(".img-reveal:not(.on)").forEach((el) => {
+      const r = el.getBoundingClientRect(); if (r.top < innerHeight && r.bottom > 0) el.classList.add("on");
+    }), 2500);
   };
 
   const boot = () => {

@@ -1,0 +1,170 @@
+// Klasik emlak ofisi şablonu. Veriyi js/data.js ve ofise özel js/ofis.js'ten alır.
+(function () {
+  const D = window.DATA, O = D.ofis, $ = (s, k = document) => k.querySelector(s);
+  const sayfa = document.body.dataset.sayfa;
+  const ilanlar = D.ilanlar || [];
+  const merkez = (D.ofisler || [])[0] || {};
+  document.documentElement.style.setProperty("--ana", O.renk || "#1F2D5C");
+
+  const tl = (n) => Math.round(n).toLocaleString("tr-TR") + " TL";
+  const fiyat = (x) => tl(x.fiyat) + (x.tip === "Kiralık" ? " / ay" : "");
+  const yer = (x) => [x.mahalle, x.ilce].filter(Boolean).join(", ");
+  const tel = (t) => "tel:" + String(t || "").replace(/\D/g, "").replace(/^0?/, "0");
+  const wa = (m) => `https://wa.me/${O.whatsapp}?text=${encodeURIComponent(m)}`;
+  // Bulunma eki: Gaziosmanpaşa'da, Şişli'de, Kadıköy'de, Ataşehir'de, Bakırköy'de, Esenyurt'ta
+  const de = (ad) => {
+    const kucuk = ad.toLocaleLowerCase("tr"), unlu = (kucuk.match(/[aeıioöuü]/g) || []).pop() || "e";
+    return `${ad}'${/[fstkçşhp]$/.test(kucuk) ? "t" : "d"}${"aıou".includes(unlu) ? "a" : "e"}`;
+  };
+  const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const waIkon = `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.3Z"/></svg>`;
+  // Kurumsal hizmet metinleri. Ofis kendi metnini verirse onlar kullanılır.
+  const HIZMETLER = O.hizmetler || [
+    { baslik: "Satış danışmanlığı", metin: "Gayrimenkulünüzün piyasa değerinin belirlenmesi, pazarlanması ve tapu devrine kadar satış sürecinin yürütülmesi." },
+    { baslik: "Kiralama", metin: "Kiracı adaylarının değerlendirilmesi, kira sözleşmesinin hazırlanması ve teslim sürecinin takibi." },
+    { baslik: "Değerleme", metin: "Bölgedeki emsal satışlar esas alınarak gayrimenkulünüzün güncel piyasa değerinin belirlenmesi." },
+    { baslik: "Alım danışmanlığı", metin: "İhtiyacınıza ve bütçenize uygun portföyün sunulması, kredi ve tapu süreçlerinde destek." }
+  ];
+  const marka = O.logo ? `<img src="${O.logo}" alt="${esc(O.ad)}">` : `<span>${esc(O.ad)}<small>Gayrimenkul danışmanlığı</small></span>`;
+
+  // Üst bilgi, menü ve alt bilgi
+  const menuler = [["index.html", "Ana sayfa", "ana"], ["ilanlar.html", "İlanlar", "ilanlar"], ["index.html#hakkimizda", "Hakkımızda", "hak"], ["iletisim.html", "İletişim", "iletisim"]];
+  document.body.insertAdjacentHTML("afterbegin", `
+    <div class="ust"><div class="kap"><div><span class="adr">${esc(O.adres)}</span></div><div>${O.telefon ? `<span><a href="${tel(O.telefon)}">${esc(O.telefon)}</a></span>` : ""}${O.eposta ? `<span>${esc(O.eposta)}</span>` : ""}</div></div></div>
+    <header class="menu" id="menu"><div class="kap">
+      <a class="marka" href="index.html">${marka}</a>
+      <nav>${menuler.map(([h, a, k]) => `<a href="${h}"${k === sayfa ? ' class="on"' : ""}>${a}</a>`).join("")}</nav>
+      ${O.telefon ? `<a class="tel" href="${tel(O.telefon)}">${esc(O.telefon)}</a>` : "<span></span>"}
+      <button class="mbtn" type="button" aria-label="Menü">Menü</button>
+    </div></header>`);
+  $(".mbtn").addEventListener("click", () => $("#menu").classList.toggle("acik"));
+
+  document.body.insertAdjacentHTML("beforeend", `
+    <footer class="alt"><div class="kap">
+      <div class="sut">
+        <div><div class="marka">${esc(O.ad)}</div><p style="margin:12px 0 0;max-width:40ch">${esc(O.aciklama || "")}</p></div>
+        <div><h3>Sayfalar</h3>${menuler.map(([h, a]) => `<a href="${h}">${a}</a>`).join("")}</div>
+        <div><h3>İletişim</h3><div>${esc(O.adres)}</div>${O.telefon ? `<a href="${tel(O.telefon)}">${esc(O.telefon)}</a>` : ""}${O.whatsapp ? `<a href="${wa("Merhaba, ilanlarınız hakkında bilgi almak istiyorum.")}" target="_blank" rel="noopener">WhatsApp</a>` : ""}</div>
+      </div>
+      <div class="dip"><span>© ${new Date().getFullYear()} ${esc(O.ad)}${O.yetki ? `. Yetki belgesi no ${esc(O.yetki)}` : ""}</span><span>${esc(O.demoNot || "")}</span></div>
+    </div></footer>
+    ${O.whatsapp ? `<a class="wa-yuzen" href="${wa("Merhaba, ilanlarınız hakkında bilgi almak istiyorum.")}" target="_blank" rel="noopener" aria-label="WhatsApp">${waIkon}</a>` : ""}`);
+
+  const kart = (x) => `
+    <a class="kart" href="ilan.html?id=${encodeURIComponent(x.id)}">
+      <div class="gor"><img src="${x.gorseller[0]}" alt="${esc(x.baslik)}" loading="lazy"><span class="rozet${x.tip === "Kiralık" ? " kira" : ""}">${x.tip}</span></div>
+      <div class="ic"><div class="fiyat">${fiyat(x)}</div><h3>${esc(x.baslik)}</h3><div class="yer">${esc(yer(x))}</div>
+        <div class="oz">${x.oda ? `<span><b>${x.oda}</b> oda</span>` : `<span><b>${x.kategori}</b></span>`}${x.m2 ? `<span><b>${x.m2}</b> m²</span>` : ""}${x.kat ? `<span>${esc(x.kat)}</span>` : ""}</div></div>
+    </a>`;
+
+  const harita = (el, noktalar, zoom) => {
+    if (!window.L || !el || !noktalar.length) { if (el) el.remove(); return; }
+    const m = L.map(el, { scrollWheelZoom: false }).setView(noktalar[0], zoom);
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19, attribution: "© OpenStreetMap" }).addTo(m);
+    noktalar.forEach((p) => L.circleMarker(p, { radius: 9, color: "#fff", weight: 2, fillColor: getComputedStyle(document.documentElement).getPropertyValue("--ana"), fillOpacity: 1 }).addTo(m));
+  };
+  const ofisNokta = merkez.lat ? [[merkez.lat, merkez.lng]] : [];
+  const iletisimKutusu = () => `
+    <div class="bilgi"><dl>
+      <dt>Adres</dt><dd>${esc(O.adres)}</dd>
+      ${O.telefon ? `<dt>Telefon</dt><dd><a href="${tel(O.telefon)}">${esc(O.telefon)}</a></dd>` : ""}
+      ${O.eposta ? `<dt>E-posta</dt><dd>${esc(O.eposta)}</dd>` : ""}
+      <dt>Çalışma saatleri</dt><dd>${esc(O.saatler || "Pazartesi - Cumartesi, 09.00 - 19.00")}</dd>
+    </dl><div class="btns">${O.telefon ? `<a class="btn" href="${tel(O.telefon)}">Arayın</a>` : ""}${O.whatsapp ? `<a class="btn wa" href="${wa("Merhaba, bilgi almak istiyorum.")}" target="_blank" rel="noopener">WhatsApp</a>` : ""}</div></div>`;
+
+  // Ana sayfa
+  if (sayfa === "ana") {
+    const vitrin = (D.vitrin || []).map((id) => ilanlar.find((x) => x.id === id)).filter(Boolean);
+    const sirali = [...vitrin, ...ilanlar.filter((x) => !vitrin.includes(x))];
+    const kapak = (sirali[0] || {}).gorseller?.[0] || "";
+    const mahalleler = [...new Set(ilanlar.map((x) => x.mahalle).filter(Boolean))].sort((a, b) => a.localeCompare(b, "tr"));
+    const odalar = [...new Set(ilanlar.map((x) => x.oda).filter(Boolean))].sort();
+    const bolge = merkez.sehir || O.adres.split(",").slice(-2, -1)[0]?.trim() || "";
+    $("#giris").style.backgroundImage = `url("${kapak}")`;
+    $("#giris").innerHTML = `<div class="kap">
+      <h1>${esc(de(bolge))} satılık ve kiralık gayrimenkul</h1>
+      <p>Konut, işyeri ve arsa alım satım ve kiralama süreçlerinde profesyonel danışmanlık.</p>
+      <form class="ara" action="ilanlar.html">
+        <div><label for="tip">İlan tipi</label><select id="tip" name="tip"><option value="">Tümü</option><option>Satılık</option><option>Kiralık</option></select></div>
+        <div><label for="mah">Mahalle</label><select id="mah" name="mahalle"><option value="">Tümü</option>${mahalleler.map((m) => `<option>${esc(m)}</option>`).join("")}</select></div>
+        <div><label for="oda">Oda sayısı</label><select id="oda" name="oda"><option value="">Tümü</option>${odalar.map((o) => `<option>${o}</option>`).join("")}</select></div>
+        <button class="btn" type="submit">İlan ara</button>
+      </form></div>`;
+    $("#son").innerHTML = sirali.slice(0, 6).map(kart).join("");
+    $("#hiz").innerHTML = HIZMETLER.map((h) => `<div><h3>${esc(h.baslik)}</h3><p>${esc(h.metin)}</p></div>`).join("");
+    $("#bant").innerHTML = `<div><h2>Gayrimenkulünüzün değerini öğrenin</h2><p>Satmayı ya da kiraya vermeyi düşündüğünüz gayrimenkul için ücretsiz değerleme yapılmaktadır.</p></div>
+      ${O.whatsapp ? `<a class="btn acik" href="${wa("Merhaba, evim için değerleme yaptırmak istiyorum.")}" target="_blank" rel="noopener">Değerleme talebi</a>` : ""}`;
+    $("#hakkimizda .metin").innerHTML = `<div class="etiket">Kurumsal</div><h2>Hakkımızda</h2><p>${esc(O.tanitim || "")}</p><p>${esc(O.hakkinda || "")}</p>`;
+    $("#hakkimizda .kutu2").innerHTML = iletisimKutusu() + `<div class="harita" id="harita"></div>`;
+    harita($("#harita"), ofisNokta, 15);
+  }
+
+  // İlanlar
+  if (sayfa === "ilanlar") {
+    const q = new URLSearchParams(location.search);
+    const mahalleler = [...new Set(ilanlar.map((x) => x.mahalle).filter(Boolean))].sort((a, b) => a.localeCompare(b, "tr"));
+    const odalar = [...new Set(ilanlar.map((x) => x.oda).filter(Boolean))].sort();
+    const kategoriler = [...new Set(ilanlar.map((x) => x.kategori).filter(Boolean))];
+    const sec = (ad, ops) => `<select name="${ad}"><option value="">Tümü</option>${ops.map((o) => `<option${q.get(ad) === o ? " selected" : ""}>${esc(o)}</option>`).join("")}</select>`;
+    $("#filtre").innerHTML = `
+      <label>İlan tipi</label>${sec("tip", ["Satılık", "Kiralık"])}
+      <label>Kategori</label>${sec("kategori", kategoriler)}
+      <label>Mahalle</label>${sec("mahalle", mahalleler)}
+      <label>Oda sayısı</label>${sec("oda", odalar)}
+      <label>Fiyat (TL)</label><div class="iki"><input name="min" inputmode="numeric" placeholder="En az" value="${esc(q.get("min") || "")}"><input name="max" inputmode="numeric" placeholder="En çok" value="${esc(q.get("max") || "")}"></div>
+      <button class="btn" type="submit">Filtrele</button>`;
+    const ciz = () => {
+      const f = Object.fromEntries(new FormData($("#filtre")));
+      const sayi = (v) => +String(v || "").replace(/\D/g, "") || 0;
+      let l = ilanlar.filter((x) => (!f.tip || x.tip === f.tip) && (!f.kategori || x.kategori === f.kategori) && (!f.mahalle || x.mahalle === f.mahalle) && (!f.oda || x.oda === f.oda)
+        && (!sayi(f.min) || x.fiyat >= sayi(f.min)) && (!sayi(f.max) || x.fiyat <= sayi(f.max)));
+      const s = $("#sira").value;
+      if (s === "artan") l = [...l].sort((a, b) => a.fiyat - b.fiyat);
+      if (s === "azalan") l = [...l].sort((a, b) => b.fiyat - a.fiyat);
+      $("#adet").textContent = `${l.length} ilan`;
+      $("#sonuc").innerHTML = l.length ? l.map(kart).join("") : `<div class="bos" style="grid-column:1/-1">Bu ölçütlere uygun ilan bulunamadı.</div>`;
+    };
+    $("#filtre").addEventListener("submit", (e) => { e.preventDefault(); ciz(); });
+    $("#filtre").addEventListener("change", ciz);
+    $("#sira").addEventListener("change", ciz);
+    ciz();
+  }
+
+  // İlan detayı
+  if (sayfa === "ilan") {
+    const x = ilanlar.find((i) => i.id === new URLSearchParams(location.search).get("id")) || ilanlar[0];
+    if (!x) return;
+    document.title = `${x.baslik} | ${O.ad}`;
+    $("#yol").innerHTML = `<a href="index.html">Ana sayfa</a> / <a href="ilanlar.html">İlanlar</a> / ${esc(x.baslik)}`;
+    const g = x.gorseller || [];
+    $("#galeri").innerHTML = `<div class="ana"><img id="buyuk" src="${g[0]}" alt="${esc(x.baslik)}"></div>
+      ${g.length > 1 ? `<div class="kucuk">${g.map((s, i) => `<button type="button"${i ? "" : ' class="on"'} data-s="${s}"><img src="${s}" alt=""></button>`).join("")}</div>` : ""}
+      ${O.temsili ? `<div class="not">Fotoğraflar temsilidir.</div>` : ""}`;
+    $("#galeri").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; $("#buyuk").src = b.dataset.s; $("#galeri").querySelectorAll("button").forEach((k) => k.classList.toggle("on", k === b)); });
+    const satir = [["İlan no", x.ilanNo], ["İlan tarihi", x.tarih], ["Kategori", x.kategori], ["Oda sayısı", x.oda], ["Brüt alan", x.m2 && x.m2 + " m²"], ["Banyo", x.banyo], ["Bulunduğu kat", x.kat], ["Bina yaşı", x.yas != null && x.yas + " yıl"],
+      ["Isıtma", x.isitma], ["Aidat", x.aidat ? tl(x.aidat) : null], ["Tapu durumu", x.tapu], ["Krediye uygun", x.kredi == null ? null : x.kredi ? "Evet" : "Hayır"]].filter(([, v]) => v);
+    $("#ozellik").innerHTML = `<h2>İlan bilgileri</h2><table class="ozt">${satir.map(([k, v]) => `<tr><td>${k}</td><td>${esc(v)}</td></tr>`).join("")}</table>`;
+    $("#acik").innerHTML = x.aciklama ? `<h2>Açıklama</h2><p style="margin:0">${esc(x.aciklama)}</p>` : "";
+    if (!x.aciklama) $("#acik").remove();
+    const mesaj = `Merhaba, ${x.ilanNo ? x.ilanNo + " numaralı " : ""}"${x.baslik}" ilanı hakkında bilgi almak istiyorum.`;
+    $("#yan").innerHTML = `<span class="tip${x.tip === "Kiralık" ? " kira" : ""}">${x.tip} ${x.kategori.toLocaleLowerCase("tr")}</span><div class="fiyat">${fiyat(x)}</div><h1>${esc(x.baslik)}</h1><div class="yer">${esc([x.mahalle, x.ilce, x.il].filter(Boolean).join(", "))}</div>
+      <div class="btns">${O.telefon ? `<a class="btn" href="${tel(O.telefon)}">Arayın</a>` : ""}${O.whatsapp ? `<a class="btn wa" href="${wa(mesaj)}" target="_blank" rel="noopener">WhatsApp ile bilgi alın</a>` : ""}</div>
+      <div class="ofis"><b>${esc(O.ad)}</b>${esc(O.adres)}</div>`;
+    if (x.tip === "Satılık" && window.krediHesapla && $("#calc")) krediHesapla(x.fiyat, x.kredi); else $("#calc")?.closest(".kutu").remove();
+    if (x.lat) harita($("#ilanHarita"), [[x.lat, x.lng]], 14); else $("#ilanHarita").closest(".kutu").remove();
+    const benzer = ilanlar.filter((i) => i.id !== x.id && i.tip === x.tip).slice(0, 3);
+    $("#benzer").innerHTML = benzer.map(kart).join("");
+    if (!benzer.length) $("#benzerBolum").remove();
+  }
+
+  // İletişim
+  if (sayfa === "iletisim") {
+    $("#ilet").innerHTML = iletisimKutusu() + `<div class="harita" id="harita"></div>`;
+    harita($("#harita"), ofisNokta, 15);
+    $("#form").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const d = Object.fromEntries(new FormData(e.target));
+      window.open(wa(`Merhaba, ben ${d.ad}. ${d.konu}. ${d.mesaj}${d.tel ? " Telefon: " + d.tel : ""}`), "_blank", "noopener");
+    });
+  }
+})();

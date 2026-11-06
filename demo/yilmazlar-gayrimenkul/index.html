@@ -4,220 +4,32 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Yılmazlar Gayrimenkul | Satılık ve kiralık ilanlar</title>
-<meta name="description" content="Yılmazlar Gayrimenkul Gaziosmanpaşa'da satılık ve kiralık daire, dükkan ve arsa ilanları.">
-<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<meta name="description" content="Gaziosmanpaşa ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.">
+<meta property="og:description" content="Gaziosmanpaşa ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.">
+<meta property="og:image" content="https://simge-bit.github.io/emlak-demo/demo/yilmazlar-gayrimenkul/img/p/sarigol-3-1-1.jpg">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#ffffff">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="tr_TR">
-<meta property="og:site_name" content="Yılmazlar Gayrimenkul">
-<meta property="og:title" content="Yılmazlar Gayrimenkul | Satılık ve kiralık ilanlar">
-<meta property="og:description" content="Yılmazlar Gayrimenkul Gaziosmanpaşa'da satılık ve kiralık daire, dükkan ve arsa ilanları.">
-<meta property="og:image" content="https://simge-bit.github.io/emlak-demo/demo/yilmazlar-gayrimenkul/img/p/sarigol-3-1-1.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="preload" href="../../fonts/schibsted-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../../css/site.css">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../js/vendor/leaflet.css">
+<link rel="stylesheet" href="../../css/klasik.css">
 </head>
-<body data-page="home">
-
-<section class="hero">
-  <div class="slides" id="slides"></div>
-  <div class="shade"></div>
-  <h1 class="title split" id="heroTitle">Yılmazlar<br>Gayrimenkul</h1>
-  <div class="meta">
-    <i class="prog" id="prog"></i>
-    <span id="heroCities"></span>
-    <span class="cap" id="cap"></span>
-    <span class="num" id="cnt"></span>
-  </div>
-</section>
-
-<section class="sec wrap">
-  <div class="intro">
-    <div class="label" data-reveal>Hakkımızda</div>
-    <p class="big split" data-ofis="tanitim"></p>
-  </div>
-  <div class="duo" id="duo"></div>
-  <div class="stats" id="stats"></div>
-</section>
-
-<section class="sec wrap" style="padding-top:0">
-  <div class="sec-head">
-    <div class="label" data-reveal>Portföy</div>
-    <div class="side"><h2 class="split">Seçilmiş ilanlar</h2><a class="ulink" href="ilanlar.html">Tüm ilanlar</a></div>
-  </div>
-  <div class="featured" id="track"></div>
-</section>
-
-<section class="expand" id="expand">
-  <div class="sticky">
-    <div class="side-l">Ayın</div>
-    <div class="side-r">evi</div>
-    <div class="frame"><img id="expImg" src="" alt=""></div>
-    <div class="info">
-      <div><div class="label" style="color:rgba(255,255,255,.7)" id="expLoc"></div><h3 id="expTitle"></h3></div>
-      <dl id="expDl"></dl>
-      <a class="btn" id="expLink" href="#"><span>İlanı inceleyin</span><span class="arr">→</span></a>
-    </div>
-  </div>
-</section>
-
-<section class="sec wrap">
-  <div class="sec-head">
-    <div class="label" data-reveal>İlan arama</div>
-    <div class="side"><h2 class="split">Aradığınız evi filtreleyin</h2></div>
-  </div>
-  <form class="quick" action="ilanlar.html" data-reveal>
-    <label><span>İlan tipi</span><select name="tip"><option value="">Hepsi</option><option>Satılık</option><option>Kiralık</option></select></label>
-    <label><span>Konum</span><select name="il" id="qIl"><option value="">Hepsi</option></select></label>
-    <label><span>Oda sayısı</span><select name="oda"><option value="">Hepsi</option><option value="2">2+1 ve üstü</option><option value="3">3+1 ve üstü</option><option value="4">4+1 ve üstü</option><option value="5">5+1 ve üstü</option></select></label>
-    <label><span>Kategori</span><select name="kategori"><option value="">Hepsi</option><option>Daire</option><option>Müstakil ev</option><option>Villa</option></select></label>
-    <button class="btn" type="submit"><span>İlanları göster</span><span class="arr">→</span></button>
-  </form>
-</section>
-
-<section class="wrap" style="padding-bottom:clamp(90px,12vw,180px)">
-  <div class="owner">
-    <div class="label" data-reveal>Ev sahipleri için</div>
-    <div>
-      <h2 class="split">Evinizin değerini öğrenin</h2>
-      <p data-reveal>Formu doldurmanızın ardından evinizi yerinde görüp ücretsiz bir fiyat önerisi sunuyoruz.</p>
-      <a class="btn" href="degerleme.html" data-reveal><span>Ücretsiz değerleme isteyin</span><span class="arr">→</span></a>
-    </div>
-  </div>
-</section>
-
-<section class="sec wrap">
-  <div class="sec-head">
-    <div class="label" data-reveal>Hizmetler</div>
-    <div class="side"><h2 class="split">Ne yapıyoruz?</h2><a class="ulink" href="hizmetler.html">Tüm hizmetler</a></div>
-  </div>
-  <ul class="svc" id="svc"></ul>
-</section>
-
-<section class="sec wrap" style="padding-top:0">
-  <div class="sec-head">
-    <div class="label" data-reveal>Ekip</div>
-    <div class="side"><h2 class="split">Danışmanlar</h2><a class="ulink" href="danismanlar.html">Tüm ekip</a></div>
-  </div>
-  <div class="team" id="team"></div>
-</section>
-
-<section class="sec wrap" style="padding-top:0">
-  <div class="sec-head">
-    <div class="label" data-reveal>Blog</div>
-    <div class="side"><h2 class="split">Yazılar</h2><a class="ulink" href="blog.html">Tüm yazılar</a></div>
-  </div>
-  <div class="posts" id="posts"></div>
-</section>
-
-<section class="outro sec wrap">
-  <div class="label" style="color:inherit;opacity:.55" data-reveal>Ev sahipleri için</div>
-  <p class="big split" style="margin-top:24px"><a href="degerleme.html">Evinizi satmak ya da kiralamak mı istiyorsunuz?</a></p>
-  <div data-footer></div>
-</section>
-
+<body data-sayfa="ana">
+<main>
+  <section class="giris" id="giris"></section>
+  <section class="bolum"><div class="kap">
+    <div class="bas"><div><div class="etiket">Portföy</div><h2>Güncel ilanlar</h2></div><a href="ilanlar.html">Tüm ilanlar →</a></div>
+    <div class="izgara" id="son"></div>
+  </div></section>
+  <section class="bolum gri"><div class="kap">
+    <div class="bas"><div><div class="etiket">Hizmetler</div><h2>Hizmetlerimiz</h2></div></div>
+    <div class="hiz" id="hiz"></div>
+  </div></section>
+  <section class="bolum"><div class="kap"><div class="bant" id="bant"></div></div></section>
+  <section class="bolum" id="hakkimizda" style="padding-top:0"><div class="kap ikili"><div class="metin"></div><div class="kutu2"></div></div></section>
+</main>
+<script src="../../js/vendor/leaflet.js"></script>
 <script src="../../js/data.js"></script>
 <script src="js/ofis.js"></script>
-<script src="../../js/site.js"></script>
-<script>
-  (function () {
-    const D = window.DATA, byId = (id) => D.ilanlar.find((x) => x.id === id);
-
-    // Ofis adı iki satıra bölünür, şehirler ofislerden gelir
-    const ad = D.ofis.ad.split(" ");
-    document.getElementById("heroTitle").innerHTML = ad.length > 1 ? ad.slice(0, Math.ceil(ad.length / 2)).join(" ") + "<br>" + ad.slice(Math.ceil(ad.length / 2)).join(" ") : ad[0];
-    document.getElementById("heroCities").textContent = [...new Set(D.ofisler.map((o) => o.sehir))].join(", ");
-
-    // Açılış slaytı
-    const slides = ((D.vitrin && D.vitrin.length ? D.vitrin.map(byId).filter(Boolean) : []).concat(D.ilanlar)).filter((x, i, a) => a.indexOf(x) === i).slice(0, 4);
-    const box = document.getElementById("slides"), cap = document.getElementById("cap"), cnt = document.getElementById("cnt"), prog = document.getElementById("prog");
-    box.innerHTML = slides.map((x, i) => `<div class="slide${i === 0 ? " active" : ""}"><div class="in"><img src="${x.gorseller[0]}" alt="${x.baslik}" ${i ? 'loading="lazy" decoding="async"' : 'fetchpriority="high"'}></div></div>`).join("");
-    const els = [...box.children], DUR = 6500;
-    const pad = (n) => String(n).padStart(2, "0");
-    let cur = 0, timer = null, visible = true;
-    const setCap = (i, anim) => {
-      const x = slides[i];
-      const html = `<a href="ilan.html?id=${x.id}" class="ulink">${x.baslik}, ${x.mahalle}</a>`;
-      cnt.textContent = `${pad(i + 1)} / ${pad(slides.length)}`;
-      if (!anim) { cap.innerHTML = html; return; }
-      const old = cap.firstElementChild; old.classList.add("out");
-      setTimeout(() => {
-        cap.innerHTML = html; const a = cap.firstElementChild; a.classList.add("in");
-        requestAnimationFrame(() => requestAnimationFrame(() => a.classList.remove("in")));
-      }, 450);
-    };
-    // İlerleme çizgisi CSS animasyonuyla çizilir, slayt değişimi zamanlayıcıyla yapılır
-    const run = () => {
-      clearTimeout(timer);
-      prog.style.animation = "none"; void prog.offsetWidth;
-      prog.style.animation = `prog ${DUR}ms linear forwards`;
-      timer = setTimeout(() => go((cur + 1) % slides.length), DUR);
-    };
-    const go = (n) => {
-      els.forEach((e) => e.classList.remove("prev"));
-      els[cur].classList.remove("active"); els[cur].classList.add("prev");
-      cur = n; els[cur].classList.add("active");
-      setCap(cur, true);
-      if (visible && !document.hidden) run();
-    };
-    setCap(0, false);
-    run();
-    // Slayt ekranda değilse ya da sekme arka plandaysa durur
-    new IntersectionObserver(([e]) => {
-      visible = e.isIntersecting;
-      if (visible) run(); else { clearTimeout(timer); prog.style.animationPlayState = "paused"; }
-    }).observe(document.querySelector(".hero"));
-    document.addEventListener("visibilitychange", () => { if (!document.hidden && visible) run(); else clearTimeout(timer); });
-
-    // Seçilmiş ilanlar
-    document.getElementById("track").innerHTML = D.ilanlar.slice(0, 6).map((x, i) => cardHTML(x, i).replace('class="card ', `data-reveal style="--d:${(i % 3) * 90}ms" class="card `)).join("");
-
-    // Ayın evi
-    const ay = byId(D.ayinEvi) || D.ilanlar.filter((x) => x.tip === "Satılık").sort((a, b) => b.fiyat - a.fiyat)[0] || D.ilanlar[0];
-
-    // Tanıtım fotoğrafları vitrindeki ilanlardan alınır
-    const fa = slides[0], fb = slides[slides.length - 1];
-    document.getElementById("duo").innerHTML = `
-      <figure class="a"><div class="frame img-reveal"><img src="${fa.gorseller[1] || fa.gorseller[0]}" alt="${fa.baslik}" loading="lazy" decoding="async"></div><figcaption><span>${fa.mahalle}</span><span class="num">01</span></figcaption></figure>
-      <figure class="b"><div class="frame img-reveal" style="--d:150ms"><img src="${sm(fb.gorseller[0])}" alt="${fb.baslik}" loading="lazy" decoding="async"></div><figcaption><span>${fb.mahalle}</span><span class="num">02</span></figcaption></figure>`;
-    document.getElementById("stats").innerHTML = D.istatistik.map(([n, t], i) => `<div data-reveal style="--d:${i * 120}ms"><div class="n num" data-count="${n}">0</div><div class="t">${t}</div></div>`).join("");
-
-    // Arama motorları için ofis bilgisi
-    const ld = document.createElement("script"); ld.type = "application/ld+json";
-    ld.textContent = JSON.stringify({ "@context": "https://schema.org", "@type": "RealEstateAgent", name: D.ofis.ad, url: D.ofis.site, telephone: D.ofis.telefon, email: D.ofis.eposta,
-      address: { "@type": "PostalAddress", streetAddress: D.ofis.adres, addressCountry: "TR" }, areaServed: [...new Set(D.ofisler.map((o) => o.sehir))] });
-    document.head.appendChild(ld);
-    document.getElementById("expImg").src = ay.gorseller[0];
-    document.getElementById("expImg").alt = ay.baslik;
-    document.getElementById("expLoc").textContent = `${ay.mahalle}, ${ay.ilce}`;
-    document.getElementById("expTitle").textContent = ay.baslik;
-    document.getElementById("expLink").href = `ilan.html?id=${ay.id}`;
-    document.getElementById("expDl").innerHTML = [["Oda", ay.oda], ay.m2 ? ["Alan", ay.m2 + " m²"] : null, ["Fiyat", fmtFiyat(ay)]].filter(Boolean).map(([a, b]) => `<div><dt>${a}</dt><dd class="num">${b}</dd></div>`).join("");
-
-    const iller = [...new Set(D.ilanlar.map((x) => x.il))];
-    document.getElementById("qIl").innerHTML += iller.map((i) => `<option>${i}</option>`).join("");
-
-    const svc = document.getElementById("svc");
-    svc.innerHTML = D.hizmetler.map((h, i) => `
-      <li data-img="${h.gorsel}" data-reveal style="--d:${i * 80}ms"><span class="label num">0${i + 1}</span><h3>${h.baslik}</h3><p>${h.metin}</p></li>`).join("");
-    floatImages(svc);
-
-    if (!D.danismanlar.length) document.getElementById("team").closest("section").remove();
-    else document.getElementById("team").innerHTML = D.danismanlar.map((p, i) => `
-      <a class="person" href="danisman.html?id=${p.id}">
-        <div class="ph img-reveal" style="--d:${i * 90}ms"><img src="${p.foto}" alt="${p.ad}" loading="lazy"></div>
-        <div class="n">${p.ad}</div><div class="r">${p.unvan}, ${p.bolge}</div>
-      </a>`).join("");
-
-    // Yazısı olmayan ofiste blog bölümü gizlenir
-    if (!D.yazilar.length) document.getElementById("posts").closest("section").remove();
-    else document.getElementById("posts").innerHTML = D.yazilar.map((p, i) => `
-      <a class="post" href="yazi.html?id=${p.id}">
-        <div class="ph img-reveal" style="--d:${i * 90}ms"><img src="${sm(p.gorsel)}" alt="" loading="lazy"></div>
-        <div class="d">${p.tarih}</div><h3>${p.baslik}</h3>
-      </a>`).join("");
-  })();
-</script>
+<script src="../../js/klasik.js"></script>
 </body>
 </html>

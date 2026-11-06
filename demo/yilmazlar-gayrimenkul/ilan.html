@@ -4,203 +4,33 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>İlan | Yılmazlar Gayrimenkul</title>
-<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<meta name="description" content="Gaziosmanpaşa ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.">
+<meta property="og:description" content="Gaziosmanpaşa ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.">
+<meta property="og:image" content="https://simge-bit.github.io/emlak-demo/demo/yilmazlar-gayrimenkul/img/p/sarigol-3-1-1.jpg">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#ffffff">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="tr_TR">
-<meta property="og:site_name" content="Yılmazlar Gayrimenkul">
-<meta property="og:title" content="İlan | Yılmazlar Gayrimenkul">
-<meta property="og:description" content="Yılmazlar Gayrimenkul Gaziosmanpaşa'da satılık ve kiralık daire, dükkan ve arsa ilanları.">
-<meta property="og:image" content="https://simge-bit.github.io/emlak-demo/demo/yilmazlar-gayrimenkul/img/p/sarigol-3-1-1.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="preload" href="../../fonts/schibsted-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../../js/vendor/leaflet.css">
-<link rel="stylesheet" href="../../css/site.css">
-<link rel="stylesheet" href="../../css/pages.css">
+<link rel="stylesheet" href="../../css/klasik.css">
 </head>
-<body data-page="ilanlar">
-<main id="main"></main>
-
-<div class="lb" id="lb" role="dialog" aria-label="Fotoğraf galerisi">
-  <div class="top"><span class="num" id="lbN"></span><button type="button" id="lbX">Kapat</button></div>
-  <div class="stage" id="lbStage"></div>
-  <div class="bot"><span id="lbT"></span><div class="navb"><button type="button" id="lbP">Önceki</button><button type="button" id="lbF">Sonraki</button></div></div>
+<body data-sayfa="ilan">
+<div class="sbas"><div class="kap"><div class="yol" id="yol" style="margin:0"></div></div></div>
+<main class="bolum" style="padding-top:28px"><div class="kap detay">
+  <div>
+    <div class="galeri" id="galeri"></div>
+    <div class="kutu" id="acik"></div>
+    <div class="kutu" id="ozellik"></div>
+    <div class="kutu"><section class="calc" id="calc"></section></div>
+    <div class="kutu"><h2>Konum</h2><div class="harita" id="ilanHarita" style="margin-top:0"></div><div class="not">Harita evin yaklaşık konumunu gösterir.</div></div>
+  </div>
+  <aside class="yan"><div class="kutu" id="yan" style="margin-top:0"></div></aside>
 </div>
-
+<div class="kap" id="benzerBolum" style="margin-top:56px"><div class="bas"><div><div class="etiket">Portföy</div><h2>Benzer ilanlar</h2></div><a href="ilanlar.html">Tüm ilanlar →</a></div><div class="izgara" id="benzer"></div></div>
+</main>
 <script src="../../js/vendor/leaflet.js"></script>
 <script src="../../js/data.js"></script>
 <script src="js/ofis.js"></script>
-<script src="../../js/site.js"></script>
-<script src="../../js/map.js"></script>
 <script src="../../js/kredi.js"></script>
-<script>
-(function () {
-  const D = window.DATA;
-  const id = new URLSearchParams(location.search).get("id");
-  const x = D.ilanlar.find((i) => i.id === id) || D.ilanlar[0];
-  const a = D.danismanlar.find((p) => p.id === x.danisman);
-  document.title = `${x.baslik}, ${x.mahalle} | ${D.ofis.ad}`;
-  const desc = document.createElement("meta"); desc.name = "description"; desc.content = x.aciklama.split(". ")[0] + ".";
-  document.head.appendChild(desc);
-
-  const waText = encodeURIComponent(`Merhaba, ${x.mahalle} bölgesindeki "${x.baslik}" ilanınız hakkında bilgi almak istiyorum.`);
-  const facts = [["Fiyat", fmtFiyat(x)], ["Oda", x.oda], ["Alan", x.m2 ? x.m2 + " m²" : null], ["Banyo", x.banyo || null], ["Kat", x.kat || null], ["Bina yaşı", x.yas == null || x.yas === "" ? null : x.yas === 0 ? "Sıfır" : x.yas + " yıl"]];
-  if (x.arsa) facts.splice(3, 0, ["Arsa", x.arsa.toLocaleString("tr-TR") + " m²"]), facts.pop();
-  // Bilinmeyen bilgiler gösterilmez
-  for (let i = facts.length - 1; i >= 0; i--) if (facts[i][1] == null || facts[i][1] === "") facts.splice(i, 1);
-  const spec = [["İlan no", x.ilanNo], ["İlan tarihi", x.tarih], ["Kategori", x.kategori], ["Tapu durumu", x.tapu || null], ["Krediye uygun", x.kredi == null ? null : x.kredi ? "Evet" : "Hayır"],
-    ["Aidat", x.aidat == null ? null : x.aidat ? x.aidat.toLocaleString("tr-TR") + " TL" : "Yok"], ["Isıtma", x.isitma || null], ["Yetki belgesi no", D.ofis.yetki || null]].filter(([, v]) => v != null && v !== "");
-  const benzer = D.ilanlar.filter((i) => i.id !== x.id).sort((p, q) => (q.il === x.il) - (p.il === x.il) || (q.tip === x.tip) - (p.tip === x.tip)).slice(0, 3);
-
-  document.getElementById("main").innerHTML = `
-  <section class="dhero">
-    <img src="${x.gorseller[0]}" alt="${x.baslik}">
-    <div class="over">
-      <div>
-        <div class="label" style="color:rgba(255,255,255,.75)">${x.tip} ${x.kategori.toLowerCase()}, ${[x.mahalle !== x.ilce && x.mahalle, x.ilce, x.il].filter(Boolean).join(", ")}</div>
-        <h1 class="split">${x.baslik}</h1>
-      </div>
-      <div class="price num" data-reveal><small>${x.tip}</small>${fmtFiyat(x)}</div>
-    </div>
-  </section>
-
-  <div class="wrap">
-    <div class="dbar">
-      <span class="label num">İlan no ${x.ilanNo}<span class="sep"></span>${x.tarih}</span>
-      <div class="tools">
-        <button type="button" class="tool" id="share"><span>Paylaş</span></button>
-        <button type="button" class="tool" onclick="print()"><span>Yazdır</span></button>
-        ${favBtn(x.id, "big")}
-      </div>
-    </div>
-    <dl class="facts">${facts.map(([k, v], i) => `<div data-reveal style="--d:${i * 60}ms"><dt>${k}</dt><dd class="num">${v}</dd></div>`).join("")}</dl>
-
-    <section class="dbody">
-      <div class="label" data-reveal>Açıklama</div>
-      <div>
-        <p class="text split">${x.aciklama}</p>
-        <ul class="feat">${x.ozellikler.map((o, i) => `<li data-reveal style="--d:${(i % 3) * 70}ms">${o}</li>`).join("")}</ul>
-        <dl class="spec" data-reveal>${spec.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join("")}</dl>
-      </div>
-    </section>
-
-    <section class="gal" id="gal">
-      ${x.gorseller.map((g, i) => `<button type="button" data-i="${i}" class="img-reveal"><img src="${g}" alt="${x.baslik}, fotoğraf ${i + 1}" loading="lazy"></button>`).join("")}
-    </section>
-
-    ${x.lat && x.lng ? `<section class="dmap">
-      <div>
-        <div class="label" data-reveal>Konum</div>
-        <p data-reveal>Haritadaki işaret evin yaklaşık konumunu gösteriyor. Tam adresi görüşme sırasında paylaşıyoruz.</p>
-      </div>
-      <div class="map" id="dmap" data-reveal></div>
-    </section>` : ""}
-
-    ${x.tip === "Satılık" ? `
-    <section class="calc" id="calc"></section>` : ""}
-
-    <section class="agent">
-      <div class="label" data-reveal>${a ? "Bu ilanla ilgilenen danışman" : "İletişim"}</div>
-      <div class="box" data-reveal${a ? "" : ' style="grid-template-columns:1fr"'}>
-        ${a ? `<a href="danisman.html?id=${a.id}"><img src="${sm(a.foto)}" alt="${a.ad}"></a>` : ""}
-        <div>
-          <h3>${a ? `<a href="danisman.html?id=${a.id}">${a.ad}</a>` : D.ofis.ad}</h3>
-          <div class="r">${a ? `${a.unvan}, ${a.bolge}` : D.ofis.adres || ""}</div>
-          <div class="acts">
-            <a class="btn" href="${waLink(decodeURIComponent(waText))}" target="_blank" rel="noopener"><span>WhatsApp ile yazın</span><span class="arr">→</span></a>
-            ${(a ? a.tel : D.ofis.telefon) ? `<a class="btn line" href="tel:+90${(a ? a.tel : D.ofis.telefon).replace(/\D/g, "").slice(1)}"><span>${a ? a.tel : D.ofis.telefon}</span></a>` : ""}
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="agent visit">
-      <div>
-        <div class="label" data-reveal>Gezme randevusu</div>
-        <p data-reveal>Evi görmek istediğiniz günü seçin. ${a ? a.ad.split(" ")[0] : "Danışmanımız"} sizi arayıp saati birlikte belirleyecek.</p>
-      </div>
-      <form class="form" id="visit" novalidate data-reveal>
-        <div class="f"><label for="vAd">Ad soyad</label><input id="vAd" name="ad" required autocomplete="name"></div>
-        <div class="f"><label for="vTel">Telefon</label><input id="vTel" name="tel" required inputmode="tel" autocomplete="tel"></div>
-        <div class="f"><label for="vGun">Tercih ettiğiniz gün</label><input id="vGun" name="gun" type="date" required></div>
-        <div class="f"><label for="vSaat">Saat aralığı</label><select id="vSaat" name="saat"><option>Sabah</option><option>Öğleden sonra</option><option>Akşam</option></select></div>
-        <label class="kvkk"><input type="checkbox" name="kvkk" required><span>Kişisel verilerimin randevu talebime yanıt verilmesi amacıyla işlenmesine izin veriyorum. <a class="ulink" href="kvkk.html">Aydınlatma metni</a></span></label>
-        <div class="send"><span class="ok" id="vOk">Talebiniz alındı. Danışmanımız sizi arayacak.</span><button class="btn" type="submit"><span>Randevu iste</span><span class="arr">→</span></button></div>
-      </form>
-    </section>
-
-    <section class="sec" style="padding-bottom:clamp(80px,10vw,160px)">
-      <div class="sec-head">
-        <div class="label" data-reveal>Benzer ilanlar</div>
-        <div class="side"><h2 class="split">Bunlara da bakabilirsiniz</h2><a class="ulink" href="ilanlar.html">Tüm ilanlar</a></div>
-      </div>
-      <div class="similar">${benzer.map((b, i) => cardHTML(b, i).replace('class="card ', `data-reveal style="--d:${i * 90}ms" class="card `)).join("")}</div>
-    </section>
-  </div>
-
-  <section class="outro sec wrap"><div data-footer></div></section>`;
-
-  // Paylaş
-  document.getElementById("share").onclick = async () => {
-    const data = { title: document.title, text: `${x.baslik}, ${x.mahalle}`, url: location.href };
-    if (navigator.share) { try { await navigator.share(data); } catch (e) {} return; }
-    try { await navigator.clipboard.writeText(location.href); toast("İlan linki kopyalandı."); } catch (e) { prompt("İlan linki", location.href); }
-  };
-
-  // Kredi hesaplama
-  window.krediHesapla && document.getElementById("calc") && krediHesapla(x.fiyat, x.kredi);
-
-  // Gezme randevusu
-  const visit = document.getElementById("visit"), gun = document.getElementById("vGun");
-  gun.min = new Date().toISOString().slice(0, 10);
-  visit.addEventListener("submit", (e) => {
-    e.preventDefault();
-    let ok = true;
-    visit.querySelectorAll("[required]").forEach((el) => {
-      const bad = el.type === "checkbox" ? !el.checked : !el.value.trim();
-      (el.closest(".f") || el.closest(".kvkk")).classList.toggle("err", bad);
-      if (bad) ok = false;
-    });
-    if (!ok) return toast("Lütfen işaretli alanları doldurun.");
-    document.getElementById("vOk").classList.add("on");
-    visit.reset();
-  });
-
-  // Yapısal veri (arama motorları için)
-  const ld = document.createElement("script"); ld.type = "application/ld+json";
-  ld.textContent = JSON.stringify({ "@context": "https://schema.org", "@type": "RealEstateListing", name: x.baslik, description: x.aciklama, image: x.gorseller,
-    offers: { "@type": "Offer", price: x.fiyat, priceCurrency: "TRY" }, address: { "@type": "PostalAddress", addressLocality: x.ilce, addressRegion: x.il, addressCountry: "TR" } });
-  document.head.appendChild(ld);
-
-  // Galeri büyütme
-  const lb = document.getElementById("lb"), st = document.getElementById("lbStage");
-  let cur = 0;
-  const show = (i) => {
-    cur = (i + x.gorseller.length) % x.gorseller.length;
-    st.innerHTML = `<img src="${x.gorseller[cur]}" alt="${x.baslik}, fotoğraf ${cur + 1}">`;
-    document.getElementById("lbN").textContent = `${String(cur + 1).padStart(2, "0")} / ${String(x.gorseller.length).padStart(2, "0")}`;
-    document.getElementById("lbT").textContent = `${x.baslik}, ${x.mahalle}`;
-  };
-  const open = (i) => { show(i); lb.classList.add("on"); document.documentElement.classList.add("lb-open"); };
-  const close = () => { lb.classList.remove("on"); document.documentElement.classList.remove("lb-open"); };
-  document.getElementById("gal").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) open(+b.dataset.i); });
-  document.getElementById("lbX").onclick = close;
-  document.getElementById("lbP").onclick = () => show(cur - 1);
-  document.getElementById("lbF").onclick = () => show(cur + 1);
-  addEventListener("keydown", (e) => {
-    if (!lb.classList.contains("on")) return;
-    if (e.key === "Escape") close();
-    if (e.key === "ArrowLeft") show(cur - 1);
-    if (e.key === "ArrowRight") show(cur + 1);
-  });
-
-  if (document.getElementById("dmap")) {
-    const m = makeMap(document.getElementById("dmap"), [x.lat, x.lng], 14);
-    L.circle([x.lat, x.lng], { radius: 350, color: "#111", weight: 1, fillColor: "#111", fillOpacity: .08 }).addTo(m);
-    L.marker([x.lat, x.lng], { icon: pinIcon("", "dot") }).addTo(m);
-  }
-})();
-</script>
+<script src="../../js/klasik.js"></script>
 </body>
 </html>

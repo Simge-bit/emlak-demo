@@ -33,11 +33,7 @@
 </section>
 
 <section class="sec wrap">
-  <div class="intro">
-    <div class="label" data-reveal>Hakkımızda</div>
-    <p class="big split" data-ofis="tanitim"></p>
-  </div>
-  <div class="duo" id="duo"></div>
+  <div class="ofis-blok" id="ofisBlok"></div>
   <div class="stats" id="stats"></div>
 </section>
 
@@ -177,10 +173,7 @@
     const ay = byId(D.ayinEvi) || D.ilanlar.filter((x) => x.tip === "Satılık").sort((a, b) => b.fiyat - a.fiyat)[0] || D.ilanlar[0];
 
     // Tanıtım fotoğrafları vitrindeki ilanlardan alınır
-    const fa = slides[0], fb = slides[slides.length - 1];
-    document.getElementById("duo").innerHTML = `
-      <figure class="a"><div class="frame img-reveal"><img src="${fa.gorseller[1] || fa.gorseller[0]}" alt="${fa.baslik}" loading="lazy" decoding="async"></div><figcaption><span>${fa.mahalle}</span><span class="num">01</span></figcaption></figure>
-      <figure class="b"><div class="frame img-reveal" style="--d:150ms"><img src="${sm(fb.gorseller[0])}" alt="${fb.baslik}" loading="lazy" decoding="async"></div><figcaption><span>${fb.mahalle}</span><span class="num">02</span></figcaption></figure>`;
+    ofisBlok(document.getElementById("ofisBlok"), [D.ofis.tanitim]);
     document.getElementById("stats").innerHTML = D.istatistik.map(([n, t], i) => `<div data-reveal style="--d:${i * 120}ms"><div class="n num" data-count="${n}">0</div><div class="t">${t}</div></div>`).join("");
 
     // Arama motorları için ofis bilgisi
@@ -200,7 +193,7 @@
 
     const svc = document.getElementById("svc");
     svc.innerHTML = D.hizmetler.map((h, i) => `
-      <li data-img="${h.gorsel}" data-reveal style="--d:${i * 80}ms"><span class="label num">0${i + 1}</span><h3>${h.baslik}</h3><p>${h.metin}</p></li>`).join("");
+      <li data-img="${D.ofis.temsili && D.ilanlar[i] ? D.ilanlar[(i * 2 + 1) % D.ilanlar.length].gorseller.at(-1) : h.gorsel}" data-reveal style="--d:${i * 80}ms"><span class="label num">0${i + 1}</span><h3>${h.baslik}</h3><p>${h.metin}</p></li>`).join("");
     floatImages(svc);
 
     if (!D.danismanlar.length) document.getElementById("team").closest("section").remove();

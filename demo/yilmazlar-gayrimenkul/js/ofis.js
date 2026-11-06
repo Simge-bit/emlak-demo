@@ -10,11 +10,12 @@
   "adres": "Sarıgöl Mah. Hamam Cad. No: 105A, Gaziosmanpaşa, İstanbul",
   "yetki": "",
   "renk": "#7A1F2B",
-  "tanitim": "Yılmazlar Gayrimenkul ve Danışmanlık, Gaziosmanpaşa ve çevresinde satılık ve kiralık konut, dükkan ve arsa ilanlarıyla ilgileniyor. Alım, satım ve kiralama süreçlerinde ev sahiplerine ve alıcılara danışmanlık veriyor.",
-  "hakkinda": "Yılmazlar Gayrimenkul'ün ofisi Gaziosmanpaşa Sarıgöl Mahallesi'nde, Hamam Caddesi üzerinde. Ofis Gaziosmanpaşa'nın yanında Eyüpsultan, Sultangazi ve Bayrampaşa'daki evlerle de ilgileniyor.",
-  "aciklama": "Yılmazlar Gayrimenkul Gaziosmanpaşa'da satılık ve kiralık daire, dükkan ve arsa ilanları.",
+  "tanitim": "Yılmazlar Gayrimenkul ve Danışmanlık, Gaziosmanpaşa merkezli olarak konut, işyeri ve arsa alım satım ve kiralama süreçlerinde danışmanlık hizmeti vermektedir.",
+  "hakkinda": "Ofisimiz Sarıgöl Mahallesi Hamam Caddesi üzerinde yer almaktadır. Gaziosmanpaşa'nın yanı sıra Eyüpsultan, Sultangazi ve Bayrampaşa bölgelerindeki portföyümüzle alıcı, satıcı ve kiracılara hizmet sunmaktayız.",
+  "aciklama": "Gaziosmanpaşa ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.",
   "temsili": true,
   "demoNot": "Bu sayfa Yılmazlar Gayrimenkul için hazırlanmış bir tasarım önizlemesidir. İlanlar ve fotoğraflar temsilidir.",
+  "saatler": "Pazartesi - Cumartesi, 09.00 - 19.00",
   "site": "https://simge-bit.github.io/emlak-demo/demo/yilmazlar-gayrimenkul/"
  },
  "ofisler": [
@@ -30,7 +31,7 @@
  "ilanlar": [
   {
    "id": "sarigol-3-1",
-   "baslik": "Sarıgöl'de cadde yakını 3+1 daire",
+   "baslik": "Sarıgöl'de Hamam Caddesi'ne Yakın Satılık 3+1 Daire",
    "tip": "Satılık",
    "kategori": "Daire",
    "il": "İstanbul",
@@ -45,7 +46,7 @@
    "isitma": "Kombi (doğalgaz)",
    "tapu": "Kat mülkiyeti",
    "kredi": true,
-   "aciklama": "Hamam Caddesi'ne yürüme mesafesinde, güney cepheli, ara katta 3+1 daire. Ebeveyn banyolu, ankastre mutfaklı, otoparklı binada.",
+   "aciklama": "Hamam Caddesi'ne yürüme mesafesinde, güney cepheli, ara katta 120 m² 3+1 daire. Ebeveyn banyolu, ankastre mutfaklı, kapalı otoparklı binada. Okul, market ve toplu ulaşıma yakın konumdadır. Krediye uygundur.",
    "gorseller": [
     "img/p/sarigol-3-1-1.jpg",
     "img/p/sarigol-3-1-2.jpg",
@@ -61,7 +62,7 @@
   },
   {
    "id": "hurriyet-2-1",
-   "baslik": "Hürriyet'te masrafsız 2+1 daire",
+   "baslik": "Hürriyet Mahallesi'nde Masrafsız Satılık 2+1 Daire",
    "tip": "Satılık",
    "kategori": "Daire",
    "il": "İstanbul",
@@ -76,7 +77,7 @@
    "isitma": "Kombi (doğalgaz)",
    "tapu": "Kat mülkiyeti",
    "kredi": true,
-   "aciklama": "Metroya ve okullara yakın, yeni yapılı binada bakımlı 2+1 daire. Taşınmaya hazır, masrafsız.",
+   "aciklama": "6 yıllık binada, 3. katta 95 m² 2+1 daire. Yapılı ve bakımlı, taşınmaya hazırdır. Metroya ve okullara yürüme mesafesindedir. Krediye uygundur.",
    "gorseller": [
     "img/p/hurriyet-2-1-1.jpg",
     "img/p/hurriyet-2-1-2.jpg"
@@ -91,7 +92,7 @@
   },
   {
    "id": "karadeniz-4-1",
-   "baslik": "Karadeniz Mahallesi'nde dubleks 4+1",
+   "baslik": "Karadeniz Mahallesi'nde Teraslı Satılık 4+1 Dubleks",
    "tip": "Satılık",
    "kategori": "Daire",
    "il": "İstanbul",
@@ -106,7 +107,7 @@
    "isitma": "Kombi (doğalgaz)",
    "tapu": "Kat mülkiyeti",
    "kredi": true,
-   "aciklama": "Geniş teraslı, şehir manzaralı çatı dubleksi. Asansörlü ve otoparklı binada.",
+   "aciklama": "4 yıllık asansörlü binada 185 m² çatı dubleksi. Geniş teras, şehir manzarası, iki banyo ve kapalı otopark mevcuttur. Krediye uygundur.",
    "gorseller": [
     "img/p/karadeniz-4-1-1.jpg",
     "img/p/karadeniz-4-1-2.jpg",
@@ -122,7 +123,7 @@
   },
   {
    "id": "yildiztabya-2-1",
-   "baslik": "Yıldıztabya'da site içinde 2+1",
+   "baslik": "Yıldıztabya'da Site İçinde Satılık 2+1 Daire",
    "tip": "Satılık",
    "kategori": "Daire",
    "il": "İstanbul",
@@ -137,7 +138,7 @@
    "isitma": "Kombi (doğalgaz)",
    "tapu": "Kat mülkiyeti",
    "kredi": true,
-   "aciklama": "Güvenlikli site içinde, çocuk parkı ve otoparkı olan, yeni binada 2+1 daire.",
+   "aciklama": "Güvenlikli site içinde, 3 yıllık binada, 5. katta 100 m² 2+1 daire. Çocuk oyun alanı ve kapalı otopark mevcuttur. Krediye uygundur.",
    "gorseller": [
     "img/p/yildiztabya-2-1-1.jpg",
     "img/p/yildiztabya-2-1-2.jpg"
@@ -152,7 +153,7 @@
   },
   {
    "id": "sarigol-kiralik-2-1",
-   "baslik": "Sarıgöl'de eşyasız kiralık 2+1",
+   "baslik": "Sarıgöl'de Eşyasız Kiralık 2+1 Daire",
    "tip": "Kiralık",
    "kategori": "Daire",
    "il": "İstanbul",
@@ -166,7 +167,7 @@
    "yas": 10,
    "isitma": "Kombi (doğalgaz)",
    "aidat": 500,
-   "aciklama": "Ana caddeye yakın, toplu ulaşıma 3 dakika, aileye kiralık 2+1 daire.",
+   "aciklama": "Ana caddeye ve toplu ulaşıma yakın, 1. katta 90 m² 2+1 daire. Doğalgaz kombili, aidat 500 TL. Aileye kiralıktır.",
    "gorseller": [
     "img/p/sarigol-kiralik-2-1-1.jpg",
     "img/p/sarigol-kiralik-2-1-2.jpg"
@@ -182,7 +183,7 @@
   },
   {
    "id": "baglarbasi-kiralik-3-1",
-   "baslik": "Bağlarbaşı'nda kiralık 3+1 daire",
+   "baslik": "Bağlarbaşı'nda Asansörlü Binada Kiralık 3+1 Daire",
    "tip": "Kiralık",
    "kategori": "Daire",
    "il": "İstanbul",
@@ -196,7 +197,7 @@
    "yas": 7,
    "isitma": "Kombi (doğalgaz)",
    "aidat": 750,
-   "aciklama": "Asansörlü binada, geniş balkonlu ve aydınlık 3+1 daire.",
+   "aciklama": "Asansörlü binada, 4. katta 125 m² 3+1 daire. Geniş balkonlu ve aydınlıktır. Doğalgaz kombili, aidat 750 TL.",
    "gorseller": [
     "img/p/baglarbasi-kiralik-3-1-1.jpg",
     "img/p/baglarbasi-kiralik-3-1-2.jpg"
@@ -212,7 +213,7 @@
   },
   {
    "id": "merkez-dukkan",
-   "baslik": "Merkez'de cadde üzeri satılık dükkan",
+   "baslik": "Merkez'de Cadde Üzeri Kiracılı Satılık Dükkan",
    "tip": "Satılık",
    "kategori": "Dükkan",
    "il": "İstanbul",
@@ -223,7 +224,7 @@
    "kat": "Zemin kat",
    "yas": 15,
    "tapu": "Kat mülkiyeti",
-   "aciklama": "Yaya trafiği yüksek cadde üzerinde, vitrin cepheli, kiracılı dükkan.",
+   "aciklama": "Yaya trafiği yoğun cadde üzerinde, vitrin cepheli 70 m² dükkan. Kat mülkiyetli ve kiracılıdır, yatırıma uygundur.",
    "gorseller": [
     "img/p/merkez-dukkan-1.jpg"
    ],
@@ -240,7 +241,7 @@
   },
   {
    "id": "karlitepe-1-1",
-   "baslik": "Karlıtepe'de yatırımlık 1+1",
+   "baslik": "Karlıtepe'de Yatırımlık Satılık 1+1 Daire",
    "tip": "Satılık",
    "kategori": "Daire",
    "il": "İstanbul",
@@ -255,7 +256,7 @@
    "isitma": "Kombi (doğalgaz)",
    "tapu": "Kat mülkiyeti",
    "kredi": true,
-   "aciklama": "Kira getirisi yüksek, metrobüs ve metro hattına yakın 1+1 daire.",
+   "aciklama": "Metro ve metrobüs hattına yakın, 5 yıllık binada 60 m² 1+1 daire. Kira getirisi yüksektir. Krediye uygundur.",
    "gorseller": [
     "img/p/karlitepe-1-1-1.jpg"
    ],

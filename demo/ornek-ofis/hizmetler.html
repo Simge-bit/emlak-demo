@@ -25,7 +25,7 @@
     <div class="crumb" data-reveal><a href="index.html">Ana sayfa</a> / Hizmetler</div>
     <div>
       <h1 class="split">Hizmetler</h1>
-      <div class="sub" style="margin-top:30px" data-reveal><p>Ev satarken, kiralarken ya da yatırım yaparken sürecin her adımında yanınızdayız.</p></div>
+      <div class="sub" style="margin-top:30px" data-reveal><p>Satış, kiralama, değerleme ve alım süreçlerinde verdiğimiz hizmetler.</p></div>
     </div>
   </header>
 
@@ -68,7 +68,7 @@
   ];
   document.getElementById("svcs").innerHTML = D.hizmetler.map((h, i) => `
     <article class="svc-row ${i % 2 ? "rev" : ""}">
-      <div class="ph img-reveal"><img src="${h.gorsel}" alt="${h.baslik}" loading="lazy"></div>
+      <div class="ph img-reveal"><img src="${D.ofis.temsili && D.ilanlar[i] ? D.ilanlar[(i * 2 + 1) % D.ilanlar.length].gorseller.at(-1) : h.gorsel}" alt="${h.baslik}" loading="lazy"></div>
       <div class="txt">
         <span class="label num" data-reveal>0${i + 1}</span>
         <h2 class="split">${h.baslik}</h2>

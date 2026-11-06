@@ -29,6 +29,8 @@ KOK = Path(__file__).resolve().parent.parent
 SITE = "https://simge-bit.github.io/emlak-demo/"
 SAYFALAR = ["index.html", "ilanlar.html", "ilan.html", "hizmetler.html", "danismanlar.html", "danisman.html",
             "hakkimizda.html", "blog.html", "yazi.html", "iletisim.html", "degerleme.html", "kvkk.html"]
+# "sablon": "klasik" seçilen ofislerde sayfalar klasik/ klasöründen alınır
+KLASIK_SAYFALAR = ["index.html", "ilanlar.html", "ilan.html", "iletisim.html"]
 AYLAR = ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"]
 UA = "emlak-demo-olusturucu/1.0 (github.com/Simge-bit/emlak-demo)"
 
@@ -209,8 +211,9 @@ def main(ayar_yolu):
     sehirler = ", ".join(dict.fromkeys(o["sehir"] for o in veri.get("ofisler", []))) or ""
     aciklama = ofis.get("aciklama") or f"{ofis['ad']} satılık ve kiralık ev ilanları" + (f", {sehirler}" if sehirler else "") + "."
     ilk_gorsel = veri["ilanlar"][0]["gorseller"][0] if veri.get("ilanlar") else "img/ev-zekeriyakoy.jpg"
-    for ad in SAYFALAR:
-        s = (KOK / ad).read_text(encoding="utf-8")
+    klasik = ayar.get("sablon") == "klasik"
+    for ad in (KLASIK_SAYFALAR if klasik else SAYFALAR):
+        s = ((KOK / "klasik" / ad) if klasik else (KOK / ad)).read_text(encoding="utf-8")
         s = s.replace('src="js/ofis.js"', 'src="__OFIS__"')
         s = re.sub(r'(href|src)="(css|js|fonts|img)/', r'\1="../../\2/', s)
         s = s.replace('href="favicon.svg"', 'href="../../favicon.svg"').replace('src="__OFIS__"', 'src="js/ofis.js"')

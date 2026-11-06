@@ -319,3 +319,17 @@ section { position: relative; }
 .temsili .slide::after { right: auto; left: var(--pad); top: 84px; bottom: auto; }
 .temsili .dhero::before { right: auto; left: var(--pad); top: 84px; bottom: auto; }
 .temsili .expand .frame::before { top: 12px; right: 12px; bottom: auto; }
+
+/* Ofis tanıtımı ve ofis kartı (ana sayfa ve Hakkımızda) */
+.ofis-blok { display: grid; grid-template-columns: 1fr 1.25fr 1fr; gap: var(--pad); align-items: start; }
+.ofis-blok .metin p { margin: 0 0 16px; font-size: clamp(17px, 1.35vw, 20px); line-height: 1.6; color: var(--fg); }
+.ofis-kart { border: 1px solid var(--line); padding: 26px; }
+.ofis-kart dl { margin: 0; }
+.ofis-kart dl div { padding: 12px 0; border-bottom: 1px solid var(--line); }
+.ofis-kart dl div:first-child { padding-top: 0; }
+.ofis-kart dt { font-size: 12px; color: var(--muted); }
+.ofis-kart dd { margin: 4px 0 0; font-size: 16px; }
+.ofis-kart .btns { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.ofis-kart .btns a { display: inline-flex; align-items: center; min-height: 42px; padding: 0 16px; border: 1px solid var(--fg); font-size: 14px; }
+.ofis-kart .btns a:first-child { background: var(--fg); color: var(--bg); }
+@media (max-width: 900px) { .ofis-blok { grid-template-columns: 1fr; } }
