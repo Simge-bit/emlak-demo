@@ -182,6 +182,7 @@ h1, h2, h3 { margin: 0; line-height: 1.2; font-weight: 700; letter-spacing: -.01
   .bant { flex-direction: column; align-items: flex-start; padding: 28px; }
   .ikili, .liste, .detay { grid-template-columns: 1fr; }
   .filtre, .yan { position: static; }
+  .detay > aside { order: -1; }
   .alt .sut { grid-template-columns: 1fr; }
   .calc-box { grid-template-columns: 1fr; }
 }
@@ -230,3 +231,21 @@ h1, h2, h3 { font-weight: 600; letter-spacing: -.015em; }
 .sbas h1 { font-size: 34px; }
 .kutu { border-radius: 12px; }
 @media (max-width: 960px) { .giris { min-height: 0; } .giris h1 { font-size: 34px; } .bolum { padding: 64px 0; } .bant { padding: 30px; } }
+
+/* Danışmanlar, ilan haritası ve randevu formu */
+.ekip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.kisi { border-radius: 12px; overflow: hidden; background: #fff; box-shadow: 0 1px 2px rgba(20,24,34,.05), 0 10px 26px -16px rgba(20,24,34,.22); }
+.kisi img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: top; }
+.kisi .ic { padding: 18px 20px 20px; }
+.kisi h3 { font-size: 17px; }
+.kisi .unvan { font-size: 14px; color: var(--soluk); margin-top: 2px; }
+.kisi p { font-size: 14.5px; color: var(--soluk); margin: 10px 0 0; line-height: 1.55; }
+.kisi a { display: inline-block; margin-top: 12px; font-weight: 600; color: var(--ana); font-size: 14.5px; }
+.liste-harita { height: 300px; margin: 0 0 20px; }
+.fiyat-isaret a { display: inline-block; transform: translate(-50%, -100%); background: var(--ana); color: #fff; font-size: 12px; font-weight: 700; padding: 4px 8px; border-radius: 4px; white-space: nowrap; box-shadow: 0 4px 10px -4px rgba(0,0,0,.4); }
+.randevu { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--cizgi); display: grid; gap: 8px; }
+.randevu h2 { font-size: 16px; margin-bottom: 4px; }
+.randevu input { height: 42px; border: 1px solid var(--cizgi); border-radius: 6px; padding: 0 12px; background: #fff; }
+.randevu .btn { width: 100%; }
+@media (max-width: 960px) { .ekip { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .ekip { grid-template-columns: 1fr; } }

@@ -93,7 +93,11 @@
     $("#son").innerHTML = sirali.slice(0, 6).map(kart).join("");
     $("#hiz").innerHTML = HIZMETLER.map((h) => `<div><h3>${esc(h.baslik)}</h3><p>${esc(h.metin)}</p></div>`).join("");
     $("#bant").innerHTML = `<div><h2>Gayrimenkulünüzün değerini öğrenin</h2><p>Satmayı ya da kiraya vermeyi düşündüğünüz gayrimenkul için ücretsiz değerleme yapılmaktadır.</p></div>
-      ${O.whatsapp ? `<a class="btn acik" href="${wa("Merhaba, evim için değerleme yaptırmak istiyorum.")}" target="_blank" rel="noopener">Değerleme talebi</a>` : ""}`;
+      <a class="btn acik" href="iletisim.html?konu=degerleme">Değerleme talebi</a>`;
+    // Danışmanlar
+    const ekip = D.danismanlar || [];
+    if (ekip.length) $("#ekip").innerHTML = ekip.map((a) => `<div class="kisi">${a.foto ? `<img src="${a.foto}" alt="${esc(a.ad)}" loading="lazy">` : ""}<div class="ic"><h3>${esc(a.ad)}</h3><div class="unvan">${esc([a.unvan, a.bolge].filter(Boolean).join(", "))}</div>${a.bio ? `<p>${esc(a.bio)}</p>` : ""}${a.tel ? `<a href="${tel(a.tel)}">${esc(a.tel)}</a>` : ""}</div></div>`).join("");
+    else $("#ekipBolum").remove();
     $("#hakkimizda .metin").innerHTML = `<div class="etiket">Kurumsal</div><h2>Hakkımızda</h2><p>${esc(O.tanitim || "")}</p><p>${esc(O.hakkinda || "")}</p>`;
     $("#hakkimizda .kutu2").innerHTML = iletisimKutusu() + `<div class="harita" id="harita"></div>`;
     harita($("#harita"), ofisNokta, 15);
@@ -113,6 +117,13 @@
       <label>Oda sayısı</label>${sec("oda", odalar)}
       <label>Fiyat (TL)</label><div class="iki"><input name="min" inputmode="numeric" placeholder="En az" value="${esc(q.get("min") || "")}"><input name="max" inputmode="numeric" placeholder="En çok" value="${esc(q.get("max") || "")}"></div>
       <button class="btn" type="submit">Filtrele</button>`;
+    let lm = null, katman = null;
+    if (window.L && $("#listeHarita")) {
+      lm = L.map($("#listeHarita"), { scrollWheelZoom: false }).setView([merkez.lat || 41, merkez.lng || 29], 13);
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19, attribution: "© OpenStreetMap" }).addTo(lm);
+      katman = L.layerGroup().addTo(lm);
+    } else $("#listeHarita")?.remove();
+    const kisa = (x) => x.tip === "Kiralık" ? Math.round(x.fiyat / 1000) + " B TL" : (x.fiyat >= 1e6 ? (x.fiyat / 1e6).toLocaleString("tr-TR", { maximumFractionDigits: 1 }) + " M TL" : Math.round(x.fiyat / 1000) + " B TL");
     const ciz = () => {
       const f = Object.fromEntries(new FormData($("#filtre")));
       const sayi = (v) => +String(v || "").replace(/\D/g, "") || 0;
@@ -123,6 +134,11 @@
       if (s === "azalan") l = [...l].sort((a, b) => b.fiyat - a.fiyat);
       $("#adet").textContent = `${l.length} ilan`;
       $("#sonuc").innerHTML = l.length ? l.map(kart).join("") : `<div class="bos" style="grid-column:1/-1">Bu ölçütlere uygun ilan bulunamadı.</div>`;
+      if (katman) {
+        katman.clearLayers();
+        const n = l.filter((x) => x.lat).map((x) => { L.marker([x.lat, x.lng], { icon: L.divIcon({ className: "fiyat-isaret", html: `<a href="ilan.html?id=${encodeURIComponent(x.id)}">${kisa(x)}</a>`, iconSize: null }) }).addTo(katman); return [x.lat, x.lng]; });
+        if (n.length) lm.fitBounds(n, { padding: [40, 40], maxZoom: 15 });
+      }
     };
     $("#filtre").addEventListener("submit", (e) => { e.preventDefault(); ciz(); });
     $("#filtre").addEventListener("change", ciz);
@@ -149,7 +165,15 @@
     const mesaj = `Merhaba, ${x.ilanNo ? x.ilanNo + " numaralı " : ""}"${x.baslik}" ilanı hakkında bilgi almak istiyorum.`;
     $("#yan").innerHTML = `<span class="tip${x.tip === "Kiralık" ? " kira" : ""}">${x.tip} ${x.kategori.toLocaleLowerCase("tr")}</span><div class="fiyat">${fiyat(x)}</div><h1>${esc(x.baslik)}</h1><div class="yer">${esc([x.mahalle, x.ilce, x.il].filter(Boolean).join(", "))}</div>
       <div class="btns">${O.telefon ? `<a class="btn" href="${tel(O.telefon)}">Arayın</a>` : ""}${O.whatsapp ? `<a class="btn wa" href="${wa(mesaj)}" target="_blank" rel="noopener">WhatsApp ile bilgi alın</a>` : ""}</div>
+      <form class="randevu" id="randevu"><h2>Gezme randevusu</h2>
+        <input name="ad" placeholder="Adınız soyadınız" required><input name="tel" placeholder="Telefon" inputmode="tel" required>
+        <input name="gun" type="date" required aria-label="Tarih"><button class="btn acik" type="submit">Randevu talebi gönder</button></form>
       <div class="ofis"><b>${esc(O.ad)}</b>${esc(O.adres)}</div>`;
+    $("#randevu").gun.min = new Date().toISOString().slice(0, 10);
+    $("#randevu").addEventListener("submit", (e) => {
+      e.preventDefault(); const d = Object.fromEntries(new FormData(e.target));
+      window.open(wa(`Merhaba, "${x.baslik}" ilanı için gezme randevusu talep ediyorum. Tarih: ${d.gun.split("-").reverse().join(".")}. Ad soyad: ${d.ad}. Telefon: ${d.tel}.`), "_blank", "noopener");
+    });
     if (x.tip === "Satılık" && window.krediHesapla && $("#calc")) krediHesapla(x.fiyat, x.kredi); else $("#calc")?.closest(".kutu").remove();
     if (x.lat) harita($("#ilanHarita"), [[x.lat, x.lng]], 14); else $("#ilanHarita").closest(".kutu").remove();
     const benzer = ilanlar.filter((i) => i.id !== x.id && i.tip === x.tip).slice(0, 3);
@@ -161,6 +185,7 @@
   if (sayfa === "iletisim") {
     $("#ilet").innerHTML = iletisimKutusu() + `<div class="harita" id="harita"></div>`;
     harita($("#harita"), ofisNokta, 15);
+    if (new URLSearchParams(location.search).get("konu") === "degerleme") $("#form").konu.value = "Değerleme istiyorum";
     $("#form").addEventListener("submit", (e) => {
       e.preventDefault();
       const d = Object.fromEntries(new FormData(e.target));
