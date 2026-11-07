@@ -170,6 +170,10 @@ def main(ayar_yolu):
         for i, x in enumerate(ayar["ilanlar"]):
             x = ilan_tamamla(x, i + 1, danisman_idleri)
             print(f"  ilan {i + 1}: {x['baslik']}")
+            # Otomatik önizlemelerde temsili fotoğraflar kopyalanmaz, ana sitedeki dosyalar kullanılır
+            if ayar.get("ortak_gorsel"):
+                il.append(x)
+                continue
             kaynaklar, x["gorseller"] = x.get("gorseller", []), []
             for n, g in enumerate(kaynaklar):
                 try:

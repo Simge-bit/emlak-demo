@@ -1,0 +1,220 @@
+{
+ "klasor": "umit-insaat-gayrimenkul",
+ "sablon": "klasik",
+ "ortak_gorsel": true,
+ "ofis": {
+  "ad": "Ümit İnşaat & Gayrimenkul",
+  "kisa": "Ümit",
+  "telefon": "0532 375 08 51",
+  "whatsapp": "905323750851",
+  "eposta": "",
+  "adres": "Battalgazi Mah., bosna Caddesi, Sultanbeyli, İstanbul",
+  "yetki": "",
+  "renk": "#2B3A55",
+  "temsili": true,
+  "kapak": "img/ev-havuzlu-villa.jpg",
+  "tanitim": "Ümit İnşaat & Gayrimenkul, Sultanbeyli merkezli olarak konut, işyeri ve arsa alım satım ve kiralama süreçlerinde danışmanlık hizmeti vermektedir.",
+  "hakkinda": "Sultanbeyli ve çevresindeki portföyümüzle alıcı, satıcı ve kiracılara hizmet sunmaktayız.",
+  "aciklama": "Sultanbeyli ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.",
+  "demoNot": "Bu sayfa Ümit İnşaat & Gayrimenkul için hazırlanmış bir tasarım önizlemesidir. İlanlar ve fotoğraflar temsilidir.",
+  "saatler": "Pazartesi - Cumartesi, 09.00 - 19.00"
+ },
+ "ofisler": [
+  {
+   "sehir": "Sultanbeyli",
+   "adres": "Battalgazi Mah., bosna Caddesi, Sultanbeyli, İstanbul",
+   "tel": "0532 375 08 51",
+   "lat": 40.987,
+   "lng": 29.26422
+  }
+ ],
+ "danismanlar": [],
+ "istatistik": [],
+ "tarihce": [],
+ "yazilar": [],
+ "ilanlar": [
+  {
+   "id": "ilan-1",
+   "baslik": "Battalgazi'de Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Sultanbeyli",
+   "mahalle": "Battalgazi",
+   "fiyat": 7350000,
+   "m2": 132,
+   "kat": "4. kat",
+   "yas": 15,
+   "aciklama": "Asansörlü binada, ara katta 132 m² 3+1 daire. Ebeveyn banyolu ve kapalı otoparklıdır. Toplu ulaşıma ve okullara yakındır.",
+   "gorseller": [
+    "img/ic-bitkili-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 40.99335,
+   "lng": 29.26666,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-2",
+   "baslik": "Osmangazi'de Satılık 2+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Sultanbeyli",
+   "mahalle": "Osmangazi",
+   "fiyat": 6550000,
+   "m2": 100,
+   "kat": "2. kat",
+   "yas": 15,
+   "aciklama": "Bakımlı binada 100 m² 2+1 daire. Doğalgaz kombili ve balkonludur. Krediye uygundur.",
+   "gorseller": [
+    "img/ic-moda-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 40.99352,
+   "lng": 29.26244,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-3",
+   "baslik": "Adil'de Satılık 4+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Sultanbeyli",
+   "mahalle": "Adil",
+   "fiyat": 9050000,
+   "m2": 154,
+   "kat": "2. kat",
+   "yas": 17,
+   "aciklama": "Site içinde 154 m² 4+1 daire. Geniş salon, iki banyo ve kapalı otopark bulunmaktadır.",
+   "gorseller": [
+    "img/ic-moda-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 40.99428,
+   "lng": 29.25748,
+   "oda": "4+1",
+   "banyo": 2,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-4",
+   "baslik": "Ahmet Yesevi'de Kiralık 2+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Sultanbeyli",
+   "mahalle": "Ahmet Yesevi",
+   "fiyat": 29500,
+   "m2": 95,
+   "kat": "4. kat",
+   "yas": 5,
+   "aciklama": "Ana caddeye yakın, 95 m² 2+1 daire. Doğalgaz kombili, aileye kiralıktır.",
+   "gorseller": [
+    "img/ic-ahsap-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 40.99169,
+   "lng": 29.26759,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 500
+  },
+  {
+   "id": "ilan-5",
+   "baslik": "Abdurrahmangazi'de Satılık 1+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Sultanbeyli",
+   "mahalle": "Abdurrahmangazi",
+   "fiyat": 3050000,
+   "m2": 56,
+   "kat": "1. kat",
+   "yas": 14,
+   "aciklama": "Yeni binada 56 m² 1+1 daire. Kira getirisi yüksek, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-ahsap-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 40.985,
+   "lng": 29.26904,
+   "oda": "1+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-6",
+   "baslik": "Battalgazi'de Kiralık 3+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Sultanbeyli",
+   "mahalle": "Battalgazi",
+   "fiyat": 40500,
+   "m2": 124,
+   "kat": "3. kat",
+   "yas": 13,
+   "aciklama": "Asansörlü binada 124 m² 3+1 daire. Aydınlık ve geniş balkonludur.",
+   "gorseller": [
+    "img/ic-ahsap-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 40.98673,
+   "lng": 29.26385,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 750
+  },
+  {
+   "id": "ilan-7",
+   "baslik": "Osmangazi'de Satılık Dükkan",
+   "tip": "Satılık",
+   "kategori": "Dükkan",
+   "il": "İstanbul",
+   "ilce": "Sultanbeyli",
+   "mahalle": "Osmangazi",
+   "fiyat": 4900000,
+   "m2": 65,
+   "kat": "Zemin kat",
+   "yas": 2,
+   "aciklama": "Cadde üzerinde, vitrin cepheli 65 m² dükkan. Kiracılıdır, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-moda-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 40.99166,
+   "lng": 29.26406
+  },
+  {
+   "id": "ilan-8",
+   "baslik": "Adil'de Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Sultanbeyli",
+   "mahalle": "Adil",
+   "fiyat": 7650000,
+   "m2": 142,
+   "kat": "6. kat",
+   "yas": 3,
+   "aciklama": "Yeni yapılmış binada 142 m² 3+1 daire. Ankastre mutfak ve kapalı otopark mevcuttur.",
+   "gorseller": [
+    "img/ic-sari-koltuk.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 40.98545,
+   "lng": 29.26668,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  }
+ ]
+}

@@ -1,0 +1,43 @@
+# Hafta içi her sabah 09.00'da (Türkiye) web sitesi olmayan 10 emlak ofisi için önizleme hazırlar,
+# siteye ekler ve listeyi e-postayla gönderir. Elle çalıştırmak için: Actions > Günlük önizleme > Run workflow
+name: Günlük önizleme
+on:
+  schedule:
+    - cron: "0 6 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      adet:
+        description: "Kaç ofis"
+        default: "10"
+permissions:
+  contents: write
+concurrency: gunluk-onizleme
+jobs:
+  hazirla:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow
+      - name: Önizlemeleri hazırla
+        run: python araclar/gunluk_onizleme.py --adet "${{ github.event.inputs.adet || '10' }}" --liste "$RUNNER_TEMP/liste.json"
+      - name: Siteye ekle
+        run: |
+          git config user.name "Konutra otomasyon"
+          git config user.email "bildirim@konutra.com.tr"
+          git add demo ofisler/otomatik data
+          git diff --cached --quiet || git commit -m "Günlük önizlemeler $(date +%F)"
+          git push
+      - name: Yayına girmesini bekle ve listeyi gönder
+        env:
+          SMTP_KULLANICI: ${{ secrets.SMTP_KULLANICI }}
+          SMTP_SIFRE: ${{ secrets.SMTP_SIFRE }}
+          LISTE_ALICI: ${{ secrets.LISTE_ALICI }}
+        run: |
+          ILK=$(python -c "import json;l=json.load(open('$RUNNER_TEMP/liste.json'));print(l[0]['link'] if l else '')")
+          if [ -z "$ILK" ]; then echo "Liste boş"; exit 0; fi
+          for i in $(seq 1 40); do curl -sf -o /dev/null "$ILK" && break; sleep 15; done
+          python araclar/gunluk_onizleme.py --eposta-gonder "$RUNNER_TEMP/liste.json"
