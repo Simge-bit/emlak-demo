@@ -1,0 +1,220 @@
+{
+ "klasor": "gayrimenkul-insaat",
+ "sablon": "klasik",
+ "ortak_gorsel": true,
+ "ofis": {
+  "ad": "Gayrimenkul & İnşaat",
+  "kisa": "Gayrimenkul",
+  "telefon": "0531 723 92 78",
+  "whatsapp": "905317239278",
+  "eposta": "",
+  "adres": "Yavuz Selim Mah., Numan Sokağı, Pendik, İstanbul",
+  "yetki": "",
+  "renk": "#6B3E26",
+  "temsili": true,
+  "kapak": "img/ev-beyaz-villa.jpg",
+  "tanitim": "Gayrimenkul & İnşaat, Pendik merkezli olarak konut, işyeri ve arsa alım satım ve kiralama süreçlerinde danışmanlık hizmeti vermektedir.",
+  "hakkinda": "Pendik ve çevresindeki portföyümüzle alıcı, satıcı ve kiracılara hizmet sunmaktayız.",
+  "aciklama": "Pendik ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.",
+  "demoNot": "Bu sayfa Gayrimenkul & İnşaat için hazırlanmış bir tasarım önizlemesidir. İlanlar ve fotoğraflar temsilidir.",
+  "saatler": "Pazartesi - Cumartesi, 09.00 - 19.00"
+ },
+ "ofisler": [
+  {
+   "sehir": "Pendik",
+   "adres": "Yavuz Selim Mah., Numan Sokağı, Pendik, İstanbul",
+   "tel": "0531 723 92 78",
+   "lat": 40.9502,
+   "lng": 29.27963
+  }
+ ],
+ "danismanlar": [],
+ "istatistik": [],
+ "tarihce": [],
+ "yazilar": [],
+ "ilanlar": [
+  {
+   "id": "ilan-1",
+   "baslik": "Yavuz Selim'de Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Pendik",
+   "mahalle": "Yavuz Selim",
+   "fiyat": 9700000,
+   "m2": 139,
+   "kat": "6. kat",
+   "yas": 16,
+   "aciklama": "Asansörlü binada, ara katta 139 m² 3+1 daire. Ebeveyn banyolu ve kapalı otoparklıdır. Toplu ulaşıma ve okullara yakındır.",
+   "gorseller": [
+    "img/ic-gri-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 40.94557,
+   "lng": 29.28123,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-2",
+   "baslik": "Çamlık'ta Satılık 2+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Pendik",
+   "mahalle": "Çamlık",
+   "fiyat": 6950000,
+   "m2": 100,
+   "kat": "2. kat",
+   "yas": 18,
+   "aciklama": "Bakımlı binada 100 m² 2+1 daire. Doğalgaz kombili ve balkonludur. Krediye uygundur.",
+   "gorseller": [
+    "img/ic-sari-koltuk.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 40.95641,
+   "lng": 29.28228,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-3",
+   "baslik": "Orhangazi'de Satılık 4+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Pendik",
+   "mahalle": "Orhangazi",
+   "fiyat": 12600000,
+   "m2": 189,
+   "kat": "3. kat",
+   "yas": 14,
+   "aciklama": "Site içinde 189 m² 4+1 daire. Geniş salon, iki banyo ve kapalı otopark bulunmaktadır.",
+   "gorseller": [
+    "img/ic-bitkili-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 40.94497,
+   "lng": 29.27832,
+   "oda": "4+1",
+   "banyo": 2,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-4",
+   "baslik": "Akşemsettin'de Kiralık 2+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Pendik",
+   "mahalle": "Akşemsettin",
+   "fiyat": 31500,
+   "m2": 95,
+   "kat": "6. kat",
+   "yas": 11,
+   "aciklama": "Ana caddeye yakın, 95 m² 2+1 daire. Doğalgaz kombili, aileye kiralıktır.",
+   "gorseller": [
+    "img/ic-ahsap-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 40.94312,
+   "lng": 29.27879,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 550
+  },
+  {
+   "id": "ilan-5",
+   "baslik": "Fatih'te Satılık 1+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Pendik",
+   "mahalle": "Fatih",
+   "fiyat": 3700000,
+   "m2": 57,
+   "kat": "6. kat",
+   "yas": 8,
+   "aciklama": "Yeni binada 57 m² 1+1 daire. Kira getirisi yüksek, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-urla-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 40.95262,
+   "lng": 29.27737,
+   "oda": "1+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-6",
+   "baslik": "Yavuz Selim'de Kiralık 3+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Pendik",
+   "mahalle": "Yavuz Selim",
+   "fiyat": 43000,
+   "m2": 141,
+   "kat": "5. kat",
+   "yas": 17,
+   "aciklama": "Asansörlü binada 141 m² 3+1 daire. Aydınlık ve geniş balkonludur.",
+   "gorseller": [
+    "img/ic-moda-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 40.94837,
+   "lng": 29.28951,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 1100
+  },
+  {
+   "id": "ilan-7",
+   "baslik": "Çamlık'ta Satılık Dükkan",
+   "tip": "Satılık",
+   "kategori": "Dükkan",
+   "il": "İstanbul",
+   "ilce": "Pendik",
+   "mahalle": "Çamlık",
+   "fiyat": 5300000,
+   "m2": 74,
+   "kat": "Zemin kat",
+   "yas": 7,
+   "aciklama": "Cadde üzerinde, vitrin cepheli 74 m² dükkan. Kiracılıdır, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-bebek-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 40.95143,
+   "lng": 29.28596
+  },
+  {
+   "id": "ilan-8",
+   "baslik": "Orhangazi'de Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Pendik",
+   "mahalle": "Orhangazi",
+   "fiyat": 10550000,
+   "m2": 156,
+   "kat": "1. kat",
+   "yas": 15,
+   "aciklama": "Yeni yapılmış binada 156 m² 3+1 daire. Ankastre mutfak ve kapalı otopark mevcuttur.",
+   "gorseller": [
+    "img/ic-genis-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 40.94599,
+   "lng": 29.27381,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  }
+ ]
+}
