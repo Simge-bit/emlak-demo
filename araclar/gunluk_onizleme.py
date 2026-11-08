@@ -75,23 +75,23 @@ def overpass(sorgu):
 
 
 def adaylari_getir():
-    """OpenStreetMap'teki emlak ofislerini illere göre toplar. Dosya bir haftadan eskiyse yenilenir."""
+    """OpenStreetMap'teki Türkiye geneli emlak ofislerini toplar. Dosya bir haftadan eskiyse yenilenir."""
     if ADAY_DOSYA.exists() and datetime.fromtimestamp(ADAY_DOSYA.stat().st_mtime) > datetime.now() - timedelta(days=7):
         return json.loads(ADAY_DOSYA.read_text(encoding="utf-8"))
+    q = '[out:json][timeout:240];area["ISO3166-1"="TR"]["admin_level"="2"]->.a;(nwr["office"="estate_agent"](area.a);nwr["shop"="estate_agent"](area.a););out center tags;'
+    try:
+        ogeler = overpass(q)
+    except Exception as h:
+        print(f"! Harita verisi alınamadı: {h}")
+        return json.loads(ADAY_DOSYA.read_text(encoding="utf-8")) if ADAY_DOSYA.exists() else []
     adaylar = []
-    for il in ILLER:
-        q = f'[out:json][timeout:90];area["name"="{il}"]["admin_level"="4"]->.a;(nwr["office"="estate_agent"](area.a);nwr["shop"="estate_agent"](area.a););out center tags;'
-        try:
-            for e in overpass(q):
-                t = e.get("tags", {})
-                lat = e.get("lat") or e.get("center", {}).get("lat")
-                lng = e.get("lon") or e.get("center", {}).get("lon")
-                adaylar.append({"id": f'{e["type"]}/{e["id"]}', "il": il, "lat": lat, "lng": lng, "tags": t})
-        except Exception as h:
-            print(f"! {il} alınamadı: {h}")
-    # Bazı iller alınamadıysa dosya yazılmaz, bir sonraki çalışmada yeniden denenir
-    if len({a["il"] for a in adaylar}) == len(ILLER):
-        ADAY_DOSYA.write_text(json.dumps(adaylar, ensure_ascii=False), encoding="utf-8")
+    for e in ogeler:
+        t = e.get("tags", {})
+        lat = e.get("lat") or e.get("center", {}).get("lat")
+        lng = e.get("lon") or e.get("center", {}).get("lon")
+        il = t.get("addr:province") or t.get("addr:city") or ""
+        adaylar.append({"id": f'{e["type"]}/{e["id"]}', "il": il, "lat": lat, "lng": lng, "tags": t})
+    ADAY_DOSYA.write_text(json.dumps(adaylar, ensure_ascii=False), encoding="utf-8")
     return adaylar
 
 
@@ -157,7 +157,7 @@ def yuvarla(n, adim):
 
 
 def ilanlar_uret(rnd, il, ilce, mahalleler, lat, lng):
-    m2_satis, m2_kira = ILLER[il]
+    m2_satis, m2_kira = ILLER.get(il, (25000, 140))
     sablon = [
         ("Satılık", "Daire", "3+1", 125, "Asansörlü binada, ara katta {m2} m² 3+1 daire. Ebeveyn banyolu ve kapalı otoparklıdır. Toplu ulaşıma ve okullara yakındır."),
         ("Satılık", "Daire", "2+1", 95, "Bakımlı binada {m2} m² 2+1 daire. Doğalgaz kombili ve balkonludur. Krediye uygundur."),
@@ -210,6 +210,11 @@ def ofis_hazirla(a):
     if not tel:
         return None
     adres_osm = ters_konum(a["lat"], a["lng"])
+    il = adres_osm.get("province") or adres_osm.get("state") or a["il"] or ""
+    il = re.sub(r"\s+(İli|ili)$", "", il)
+    if not il:
+        return None
+    a = {**a, "il": il}
     ilce = t.get("addr:district") or adres_osm.get("town") or adres_osm.get("county") or adres_osm.get("city_district") or a["il"]
     mahalle = adres_osm.get("suburb") or adres_osm.get("quarter") or adres_osm.get("neighbourhood")
     mahalleler = yakin_mahalleler(a["lat"], a["lng"])
@@ -292,7 +297,7 @@ def eposta_gonder(liste):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--adet", type=int, default=10)
+    ap.add_argument("--adet", type=int, default=15)
     ap.add_argument("--eposta-yok", action="store_true")
     ap.add_argument("--liste", help="Hazırlanan listeyi bu dosyaya yaz (depo dışında bir yol)")
     ap.add_argument("--eposta-gonder", help="Daha önce yazılmış listeyi e-postayla gönder ve çık")
@@ -304,10 +309,14 @@ def main():
     gonderilen = json.loads(GONDERILEN.read_text(encoding="utf-8")) if GONDERILEN.exists() else []
     gidenler = {g["osm"] for g in gonderilen}
     adaylar = [a for a in adaylari_getir() if uygun_mu(a, gidenler)]
-    # Her gün farklı illerden karışık seçim, İstanbul ağırlıklı
+    # Her gün karışık seçim. WhatsApp'tan ulaşılabilen cep telefonlu ofisler öne alınır.
     rnd = random.Random(date.today().toordinal())
     rnd.shuffle(adaylar)
-    adaylar.sort(key=lambda a: a["il"] != "İstanbul" and rnd.random() < .6)
+    def cep(a):
+        t = a["tags"]
+        tel = telefon_duzelt(t.get("contact:mobile") or t.get("phone") or t.get("contact:phone") or "")
+        return bool(tel and tel[2])
+    adaylar.sort(key=lambda a: not cep(a))
     print(f"Uygun aday: {len(adaylar)}")
     hazir = []
     for a in adaylar:

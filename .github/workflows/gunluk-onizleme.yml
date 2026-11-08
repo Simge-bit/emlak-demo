@@ -1,4 +1,4 @@
-# Hafta içi her sabah 09.00'da (Türkiye) web sitesi olmayan 10 emlak ofisi için önizleme hazırlar,
+# Hafta içi her sabah 09.00'da (Türkiye) web sitesi olmayan 15 emlak ofisi için önizleme hazırlar,
 # siteye ekler ve listeyi e-postayla gönderir. Elle çalıştırmak için: Actions > Günlük önizleme > Run workflow
 name: Günlük önizleme
 on:
@@ -8,7 +8,7 @@ on:
     inputs:
       adet:
         description: "Kaç ofis"
-        default: "10"
+        default: "15"
 permissions:
   contents: write
 concurrency: gunluk-onizleme
@@ -23,7 +23,7 @@ jobs:
           python-version: "3.12"
       - run: pip install pillow
       - name: Önizlemeleri hazırla
-        run: python araclar/gunluk_onizleme.py --adet "${{ github.event.inputs.adet || '10' }}" --liste "$RUNNER_TEMP/liste.json"
+        run: python araclar/gunluk_onizleme.py --adet "${{ github.event.inputs.adet || '15' }}" --liste "$RUNNER_TEMP/liste.json"
       - name: Siteye ekle
         run: |
           git config user.name "Konutra otomasyon"
