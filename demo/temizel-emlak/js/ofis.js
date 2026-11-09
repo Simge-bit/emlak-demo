@@ -17,7 +17,7 @@
   "aciklama": "Saray ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.",
   "demoNot": "Bu sayfa Temizel Emlak için hazırlanmış bir tasarım önizlemesidir. İlanlar ve fotoğraflar temsilidir.",
   "saatler": "Pazartesi - Cumartesi, 09.00 - 19.00",
-  "site": "https://simge-bit.github.io/emlak-demo/demo/temizel-emlak/"
+  "site": "https://onizleme.konutra.com.tr/demo/temizel-emlak/"
  },
  "ofisler": [
   {

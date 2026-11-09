@@ -9,7 +9,7 @@ window.DATA = {
     lat: 41.0569, lng: 29.0335,
     kurulus: 2011,
     yetki: "3400000",
-    site: "https://simge-bit.github.io/emlak-demo/",
+    site: "https://onizleme.konutra.com.tr/",
     // WhatsApp numarası ülke koduyla, boşluksuz (örneğin 905320000000). Boş kalırsa kişi seçtirir.
     whatsapp: "",
     // Butonlar, harita işaretleri ve WhatsApp düğmesi bu renkte olur

@@ -5,7 +5,7 @@ Kullanım:
     python3 araclar/demo_olustur.py ofisler/ofis-adi.json
 
 Çıktı demo/<klasor>/ altına yazılır ve şu adresten açılır:
-    https://simge-bit.github.io/emlak-demo/demo/<klasor>/
+    https://onizleme.konutra.com.tr/demo/<klasor>/
 
 Demo, tasarım dosyalarını (css, js, yazı tipi) ana siteden kullanır. Bu yüzden ana sitede
 yapılan her tasarım düzeltmesi bütün demolara kendiliğinden yansır. Demo klasöründe
@@ -26,7 +26,7 @@ from pathlib import Path
 from PIL import Image
 
 KOK = Path(__file__).resolve().parent.parent
-SITE = "https://simge-bit.github.io/emlak-demo/"
+SITE = "https://onizleme.konutra.com.tr/"
 SAYFALAR = ["index.html", "ilanlar.html", "ilan.html", "hizmetler.html", "danismanlar.html", "danisman.html",
             "hakkimizda.html", "blog.html", "yazi.html", "iletisim.html", "degerleme.html", "kvkk.html"]
 # "sablon": "klasik" seçilen ofislerde sayfalar klasik/ klasöründen alınır

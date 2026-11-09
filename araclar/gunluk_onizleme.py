@@ -38,7 +38,7 @@ KOK = Path(__file__).resolve().parent.parent
 VERI = KOK / "data"
 ADAY_DOSYA = VERI / "osm-adaylar.json"
 GONDERILEN = VERI / "gonderilenler.json"
-SITE = "https://simge-bit.github.io/emlak-demo/demo/"
+SITE = "https://onizleme.konutra.com.tr/demo/"
 UA = "konutra-onizleme/1.0 (github.com/Simge-bit/emlak-demo)"
 OVERPASS = "https://overpass-api.de/api/interpreter"
 BROSUR = "https://konutra.com.tr/konutra-brosur.pdf"
@@ -255,11 +255,12 @@ def ofis_hazirla(a):
 
 
 def mesaj(o):
-    return (f"Merhaba, iyi günler. Konutra'dan Simge Solmaz.\n\n"
-            f"{o['ad']} için kurumsal bir web sitesi önizlemesi hazırladık:\n{o['link']}\n\n"
-            f"Önizlemedeki ilanlar temsilidir. Dilerseniz mevcut ilanlarınızla hazırlanmış halini ücretsiz olarak iletebiliriz. "
-            f"Tanıtım broşürümüz: {BROSUR}\n\n"
-            f"Bu konuda mesaj almak istemezseniz belirtmeniz yeterlidir.")
+    return (f"Merhaba, iyi günler. Ben Simge Solmaz, emlak ofislerine kurumsal web sitesi hazırlayan Konutra'nın kurucusuyum. "
+            f"Ofisinizin numarasına haritalardaki herkese açık işletme kaydınızdan ulaştım.\n\n"
+            f"{o['ad']} için ücretsiz bir site örneği hazırladım, sizden herhangi bir bilgi veya ödeme istemiyorum.\n{o['link']}\n\n"
+            f"Örnekteki ilanlar temsilidir. Beğenirseniz mevcut ilanlarınızla hazırlanmış halini de ücretsiz iletebilirim. "
+            f"Sorularınızı bu numaradan yazılı olarak iletebilirsiniz.\n\n"
+            f"Mesaj almak istemezseniz belirtmeniz yeterlidir.\nkonutra.com.tr")
 
 
 def eposta_gonder(liste):

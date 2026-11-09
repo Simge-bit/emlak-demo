@@ -34,7 +34,7 @@ Fotoğraflar Unsplash lisansıyla kullanılmıştır.
 python3 araclar/demo_olustur.py ofisler/kaya-emlak.json
 ```
 
-5. http://localhost:8791/demo/kaya-emlak/ adresinden kontrol edin, sonra GitHub'a gönderin. Demo şu adreste yayına girer: https://simge-bit.github.io/emlak-demo/demo/kaya-emlak/
+5. http://localhost:8791/demo/kaya-emlak/ adresinden kontrol edin, sonra GitHub'a gönderin. Demo şu adreste yayına girer: https://onizleme.konutra.com.tr/demo/kaya-emlak/
 
 Zorunlu alanlar `ofis.ad`, `ofis.telefon` ve her ilan için `baslik`, `fiyat`, `oda`, `m2`, `il`, `ilce`, `mahalle`. Diğer alanlar boş bırakılırsa makul bir varsayılan kullanılır. Hizmetler ve blog yazıları verilmezse ana demodakiler kullanılır.
 

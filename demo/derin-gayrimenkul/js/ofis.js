@@ -16,7 +16,7 @@
   "temsili": true,
   "demoNot": "Bu sayfa Derin Gayrimenkul için hazırlanmış bir tasarım önizlemesidir. İlan bilgileri ofisin sahibinden mağazasından alınmıştır, fotoğraflar temsilidir.",
   "logo": "img/p/logo.png",
-  "site": "https://simge-bit.github.io/emlak-demo/demo/derin-gayrimenkul/"
+  "site": "https://onizleme.konutra.com.tr/demo/derin-gayrimenkul/"
  },
  "ofisler": [
   {

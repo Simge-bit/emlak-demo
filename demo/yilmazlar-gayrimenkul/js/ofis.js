@@ -16,7 +16,7 @@
   "temsili": true,
   "demoNot": "Bu sayfa Yılmazlar Gayrimenkul için hazırlanmış bir tasarım önizlemesidir. İlanlar ve fotoğraflar temsilidir.",
   "saatler": "Pazartesi - Cumartesi, 09.00 - 19.00",
-  "site": "https://simge-bit.github.io/emlak-demo/demo/yilmazlar-gayrimenkul/"
+  "site": "https://onizleme.konutra.com.tr/demo/yilmazlar-gayrimenkul/"
  },
  "ofisler": [
   {

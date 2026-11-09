@@ -17,7 +17,7 @@
   "aciklama": "Sultanbeyli ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.",
   "demoNot": "Bu sayfa Ümit İnşaat & Gayrimenkul için hazırlanmış bir tasarım önizlemesidir. İlanlar ve fotoğraflar temsilidir.",
   "saatler": "Pazartesi - Cumartesi, 09.00 - 19.00",
-  "site": "https://simge-bit.github.io/emlak-demo/demo/umit-insaat-gayrimenkul/"
+  "site": "https://onizleme.konutra.com.tr/demo/umit-insaat-gayrimenkul/"
  },
  "ofisler": [
   {

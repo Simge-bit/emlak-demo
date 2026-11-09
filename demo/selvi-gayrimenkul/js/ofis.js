@@ -16,7 +16,7 @@
   "aciklama": "Çankaya, Çukurambar, Kavaklıdere ve Oran'da satılık ve kiralık daire, villa ve ofis ilanları.",
   "saatler": "Pazartesi - Cumartesi, 09.30 - 19.00",
   "kapak": "img/ev-beyaz-villa.jpg",
-  "site": "https://simge-bit.github.io/emlak-demo/demo/selvi-gayrimenkul/"
+  "site": "https://onizleme.konutra.com.tr/demo/selvi-gayrimenkul/"
  },
  "ofisler": [
   {
