@@ -11,6 +11,13 @@
   const ilanlar = D.ilanlar || [];
   const merkez = (D.ofisler || [])[0] || {};
   document.documentElement.style.setProperty("--ana", O.renk || "#1F2D5C");
+  // Statik önizlemelerde ziyaretleri Konutra sayacına yaz (panel sitelerinde çalışmaz).
+  if (!R && location.hostname.endsWith("github.io")) {
+    const gc = document.createElement("script");
+    gc.async = true; gc.src = "//gc.zgo.at/count.js";
+    gc.dataset.goatcounter = "https://konutra.goatcounter.com/count";
+    document.head.appendChild(gc);
+  }
 
   const tl = (n) => Math.round(n).toLocaleString("tr-TR") + " TL";
   const fiyat = (x) => tl(x.fiyat) + (x.tip === "Kiralık" ? " / ay" : "");
