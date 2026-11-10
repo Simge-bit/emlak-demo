@@ -1,0 +1,220 @@
+{
+ "klasor": "uhud-emlak",
+ "sablon": "klasik",
+ "ortak_gorsel": true,
+ "ofis": {
+  "ad": "Uhud Emlak",
+  "kisa": "Uhud",
+  "telefon": "0533 201 50 60",
+  "whatsapp": "905332015060",
+  "eposta": "",
+  "adres": "İnönü Mah., Kazım Karabekir Caddesi, Kapaklı, Tekirdağ",
+  "yetki": "",
+  "renk": "#283618",
+  "temsili": true,
+  "kapak": "img/ev-havuzlu-villa.jpg",
+  "tanitim": "Uhud Emlak, Kapaklı merkezli olarak konut, işyeri ve arsa alım satım ve kiralama süreçlerinde danışmanlık hizmeti vermektedir.",
+  "hakkinda": "Kapaklı ve çevresindeki portföyümüzle alıcı, satıcı ve kiracılara hizmet sunmaktayız.",
+  "aciklama": "Kapaklı ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.",
+  "demoNot": "Bu sayfa Uhud Emlak için hazırlanmış bir tasarım önizlemesidir. İlanlar ve fotoğraflar temsilidir.",
+  "saatler": "Pazartesi - Cumartesi, 09.00 - 19.00"
+ },
+ "ofisler": [
+  {
+   "sehir": "Kapaklı",
+   "adres": "İnönü Mah., Kazım Karabekir Caddesi, Kapaklı, Tekirdağ",
+   "tel": "0533 201 50 60",
+   "lat": 41.32671,
+   "lng": 27.9756
+  }
+ ],
+ "danismanlar": [],
+ "istatistik": [],
+ "tarihce": [],
+ "yazilar": [],
+ "ilanlar": [
+  {
+   "id": "ilan-1",
+   "baslik": "İnönü'de Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Kapaklı",
+   "mahalle": "İnönü",
+   "fiyat": 4200000,
+   "m2": 124,
+   "kat": "6. kat",
+   "yas": 11,
+   "aciklama": "Asansörlü binada, ara katta 124 m² 3+1 daire. Ebeveyn banyolu ve kapalı otoparklıdır. Toplu ulaşıma ve okullara yakındır.",
+   "gorseller": [
+    "img/ic-sari-koltuk.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 41.33037,
+   "lng": 27.98239,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-2",
+   "baslik": "İsmet Paşa'da Satılık 2+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Kapaklı",
+   "mahalle": "İsmet Paşa",
+   "fiyat": 2900000,
+   "m2": 103,
+   "kat": "1. kat",
+   "yas": 16,
+   "aciklama": "Bakımlı binada 103 m² 2+1 daire. Doğalgaz kombili ve balkonludur. Krediye uygundur.",
+   "gorseller": [
+    "img/ic-bitkili-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 41.32396,
+   "lng": 27.96748,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-3",
+   "baslik": "Atatürk'te Satılık 4+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Kapaklı",
+   "mahalle": "Atatürk",
+   "fiyat": 5500000,
+   "m2": 171,
+   "kat": "1. kat",
+   "yas": 6,
+   "aciklama": "Site içinde 171 m² 4+1 daire. Geniş salon, iki banyo ve kapalı otopark bulunmaktadır.",
+   "gorseller": [
+    "img/ic-bebek-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 41.31932,
+   "lng": 27.98229,
+   "oda": "4+1",
+   "banyo": 2,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-4",
+   "baslik": "Bahçelievler'de Kiralık 2+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Kapaklı",
+   "mahalle": "Bahçelievler",
+   "fiyat": 13500,
+   "m2": 88,
+   "kat": "5. kat",
+   "yas": 17,
+   "aciklama": "Ana caddeye yakın, 88 m² 2+1 daire. Doğalgaz kombili, aileye kiralıktır.",
+   "gorseller": [
+    "img/ic-ahsap-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 41.32003,
+   "lng": 27.97651,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 800
+  },
+  {
+   "id": "ilan-5",
+   "baslik": "Cumhuriyet'te Satılık 1+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Kapaklı",
+   "mahalle": "Cumhuriyet",
+   "fiyat": 2150000,
+   "m2": 65,
+   "kat": "3. kat",
+   "yas": 6,
+   "aciklama": "Yeni binada 65 m² 1+1 daire. Kira getirisi yüksek, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-urla-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 41.32366,
+   "lng": 27.98368,
+   "oda": "1+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-6",
+   "baslik": "İnönü'de Kiralık 3+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Kapaklı",
+   "mahalle": "İnönü",
+   "fiyat": 27000,
+   "m2": 141,
+   "kat": "6. kat",
+   "yas": 13,
+   "aciklama": "Asansörlü binada 141 m² 3+1 daire. Aydınlık ve geniş balkonludur.",
+   "gorseller": [
+    "img/ic-gri-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 41.32403,
+   "lng": 27.98175,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 550
+  },
+  {
+   "id": "ilan-7",
+   "baslik": "İsmet Paşa'da Satılık Dükkan",
+   "tip": "Satılık",
+   "kategori": "Dükkan",
+   "il": "Tekirdağ",
+   "ilce": "Kapaklı",
+   "mahalle": "İsmet Paşa",
+   "fiyat": 2800000,
+   "m2": 76,
+   "kat": "Zemin kat",
+   "yas": 14,
+   "aciklama": "Cadde üzerinde, vitrin cepheli 76 m² dükkan. Kiracılıdır, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-moda-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 41.33417,
+   "lng": 27.9839
+  },
+  {
+   "id": "ilan-8",
+   "baslik": "Atatürk'te Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Kapaklı",
+   "mahalle": "Atatürk",
+   "fiyat": 4250000,
+   "m2": 132,
+   "kat": "5. kat",
+   "yas": 8,
+   "aciklama": "Yeni yapılmış binada 132 m² 3+1 daire. Ankastre mutfak ve kapalı otopark mevcuttur.",
+   "gorseller": [
+    "img/ic-genis-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 41.33431,
+   "lng": 27.97681,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  }
+ ]
+}

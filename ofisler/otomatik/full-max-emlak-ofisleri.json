@@ -1,0 +1,220 @@
+{
+ "klasor": "full-max-emlak-ofisleri",
+ "sablon": "klasik",
+ "ortak_gorsel": true,
+ "ofis": {
+  "ad": "Full Max Emlak Ofisleri",
+  "kisa": "Full",
+  "telefon": "0541 726 29 26",
+  "whatsapp": "905417262926",
+  "eposta": "",
+  "adres": "Orhangazi Mah., Müderris Sokağı No: 2/A, Pendik, İstanbul",
+  "yetki": "",
+  "renk": "#1E4D3A",
+  "temsili": true,
+  "kapak": "img/ev-beyaz-villa.jpg",
+  "tanitim": "Full Max Emlak Ofisleri, Pendik merkezli olarak konut, işyeri ve arsa alım satım ve kiralama süreçlerinde danışmanlık hizmeti vermektedir.",
+  "hakkinda": "Pendik ve çevresindeki portföyümüzle alıcı, satıcı ve kiracılara hizmet sunmaktayız.",
+  "aciklama": "Pendik ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.",
+  "demoNot": "Bu sayfa Full Max Emlak Ofisleri için hazırlanmış bir tasarım önizlemesidir. İlanlar ve fotoğraflar temsilidir.",
+  "saatler": "Pazartesi - Cumartesi, 09.00 - 19.00"
+ },
+ "ofisler": [
+  {
+   "sehir": "Pendik",
+   "adres": "Orhangazi Mah., Müderris Sokağı No: 2/A, Pendik, İstanbul",
+   "tel": "0541 726 29 26",
+   "lat": 40.867,
+   "lng": 29.29529
+  }
+ ],
+ "danismanlar": [],
+ "istatistik": [],
+ "tarihce": [],
+ "yazilar": [],
+ "ilanlar": [
+  {
+   "id": "ilan-1",
+   "baslik": "Orhangazi'de Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Pendik",
+   "mahalle": "Orhangazi",
+   "fiyat": 6900000,
+   "m2": 115,
+   "kat": "6. kat",
+   "yas": 6,
+   "aciklama": "Asansörlü binada, ara katta 115 m² 3+1 daire. Ebeveyn banyolu ve kapalı otoparklıdır. Toplu ulaşıma ve okullara yakındır.",
+   "gorseller": [
+    "img/ic-genis-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 40.86418,
+   "lng": 29.30289,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-2",
+   "baslik": "Atabey'de Satılık 2+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Pendik",
+   "mahalle": "Atabey",
+   "fiyat": 5900000,
+   "m2": 105,
+   "kat": "2. kat",
+   "yas": 6,
+   "aciklama": "Bakımlı binada 105 m² 2+1 daire. Doğalgaz kombili ve balkonludur. Krediye uygundur.",
+   "gorseller": [
+    "img/ic-sari-koltuk.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 40.86638,
+   "lng": 29.29419,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-3",
+   "baslik": "Güzelyalı'da Satılık 4+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Pendik",
+   "mahalle": "Güzelyalı",
+   "fiyat": 12450000,
+   "m2": 179,
+   "kat": "4. kat",
+   "yas": 17,
+   "aciklama": "Site içinde 179 m² 4+1 daire. Geniş salon, iki banyo ve kapalı otopark bulunmaktadır.",
+   "gorseller": [
+    "img/ic-gri-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 40.87319,
+   "lng": 29.30332,
+   "oda": "4+1",
+   "banyo": 2,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-4",
+   "baslik": "İçmeler'de Kiralık 2+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Pendik",
+   "mahalle": "İçmeler",
+   "fiyat": 29500,
+   "m2": 87,
+   "kat": "3. kat",
+   "yas": 12,
+   "aciklama": "Ana caddeye yakın, 87 m² 2+1 daire. Doğalgaz kombili, aileye kiralıktır.",
+   "gorseller": [
+    "img/ic-bitkili-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 40.86921,
+   "lng": 29.29746,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 900
+  },
+  {
+   "id": "ilan-5",
+   "baslik": "Aydıntepe'de Satılık 1+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Pendik",
+   "mahalle": "Aydıntepe",
+   "fiyat": 4100000,
+   "m2": 63,
+   "kat": "3. kat",
+   "yas": 8,
+   "aciklama": "Yeni binada 63 m² 1+1 daire. Kira getirisi yüksek, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-bebek-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 40.87197,
+   "lng": 29.29508,
+   "oda": "1+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-6",
+   "baslik": "Orhangazi'de Kiralık 3+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Pendik",
+   "mahalle": "Orhangazi",
+   "fiyat": 39500,
+   "m2": 136,
+   "kat": "4. kat",
+   "yas": 14,
+   "aciklama": "Asansörlü binada 136 m² 3+1 daire. Aydınlık ve geniş balkonludur.",
+   "gorseller": [
+    "img/ic-urla-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 40.86908,
+   "lng": 29.2908,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 650
+  },
+  {
+   "id": "ilan-7",
+   "baslik": "Atabey'de Satılık Dükkan",
+   "tip": "Satılık",
+   "kategori": "Dükkan",
+   "il": "İstanbul",
+   "ilce": "Pendik",
+   "mahalle": "Atabey",
+   "fiyat": 4600000,
+   "m2": 66,
+   "kat": "Zemin kat",
+   "yas": 6,
+   "aciklama": "Cadde üzerinde, vitrin cepheli 66 m² dükkan. Kiracılıdır, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-ahsap-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 40.87408,
+   "lng": 29.30191
+  },
+  {
+   "id": "ilan-8",
+   "baslik": "Güzelyalı'da Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Pendik",
+   "mahalle": "Güzelyalı",
+   "fiyat": 9400000,
+   "m2": 140,
+   "kat": "5. kat",
+   "yas": 18,
+   "aciklama": "Yeni yapılmış binada 140 m² 3+1 daire. Ankastre mutfak ve kapalı otopark mevcuttur.",
+   "gorseller": [
+    "img/ic-moda-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 40.86535,
+   "lng": 29.28875,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  }
+ ]
+}

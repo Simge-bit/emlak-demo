@@ -1,0 +1,220 @@
+{
+ "klasor": "tata-gayrimenkul",
+ "sablon": "klasik",
+ "ortak_gorsel": true,
+ "ofis": {
+  "ad": "Tata Gayrimenkul",
+  "kisa": "Tata",
+  "telefon": "0545 474 59 44",
+  "whatsapp": "905454745944",
+  "eposta": "",
+  "adres": "Gazi Mustafa Kemal Paşa Mah., Çerkezköy, Tekirdağ",
+  "yetki": "",
+  "renk": "#1E4D3A",
+  "temsili": true,
+  "kapak": "img/ev-havuzlu-villa.jpg",
+  "tanitim": "Tata Gayrimenkul, Çerkezköy merkezli olarak konut, işyeri ve arsa alım satım ve kiralama süreçlerinde danışmanlık hizmeti vermektedir.",
+  "hakkinda": "Çerkezköy ve çevresindeki portföyümüzle alıcı, satıcı ve kiracılara hizmet sunmaktayız.",
+  "aciklama": "Çerkezköy ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.",
+  "demoNot": "Bu sayfa Tata Gayrimenkul için hazırlanmış bir tasarım önizlemesidir. İlanlar ve fotoğraflar temsilidir.",
+  "saatler": "Pazartesi - Cumartesi, 09.00 - 19.00"
+ },
+ "ofisler": [
+  {
+   "sehir": "Çerkezköy",
+   "adres": "Gazi Mustafa Kemal Paşa Mah., Çerkezköy, Tekirdağ",
+   "tel": "0545 474 59 44",
+   "lat": 41.28828,
+   "lng": 28.0015
+  }
+ ],
+ "danismanlar": [],
+ "istatistik": [],
+ "tarihce": [],
+ "yazilar": [],
+ "ilanlar": [
+  {
+   "id": "ilan-1",
+   "baslik": "Gazi Mustafa Kemal Paşa'da Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Çerkezköy",
+   "mahalle": "Gazi Mustafa Kemal Paşa",
+   "fiyat": 3500000,
+   "m2": 126,
+   "kat": "1. kat",
+   "yas": 2,
+   "aciklama": "Asansörlü binada, ara katta 126 m² 3+1 daire. Ebeveyn banyolu ve kapalı otoparklıdır. Toplu ulaşıma ve okullara yakındır.",
+   "gorseller": [
+    "img/ic-moda-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 41.28696,
+   "lng": 27.99985,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-2",
+   "baslik": "İstasyon'da Satılık 2+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Çerkezköy",
+   "mahalle": "İstasyon",
+   "fiyat": 2500000,
+   "m2": 92,
+   "kat": "5. kat",
+   "yas": 12,
+   "aciklama": "Bakımlı binada 92 m² 2+1 daire. Doğalgaz kombili ve balkonludur. Krediye uygundur.",
+   "gorseller": [
+    "img/ic-genis-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 41.29264,
+   "lng": 27.99592,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-3",
+   "baslik": "Yıldırım Beyazıt'ta Satılık 4+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Çerkezköy",
+   "mahalle": "Yıldırım Beyazıt",
+   "fiyat": 4500000,
+   "m2": 165,
+   "kat": "1. kat",
+   "yas": 12,
+   "aciklama": "Site içinde 165 m² 4+1 daire. Geniş salon, iki banyo ve kapalı otopark bulunmaktadır.",
+   "gorseller": [
+    "img/ic-urla-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 41.29348,
+   "lng": 28.00644,
+   "oda": "4+1",
+   "banyo": 2,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-4",
+   "baslik": "Bağlık'ta Kiralık 2+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Çerkezköy",
+   "mahalle": "Bağlık",
+   "fiyat": 15000,
+   "m2": 85,
+   "kat": "2. kat",
+   "yas": 17,
+   "aciklama": "Ana caddeye yakın, 85 m² 2+1 daire. Doğalgaz kombili, aileye kiralıktır.",
+   "gorseller": [
+    "img/ic-bitkili-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 41.28184,
+   "lng": 27.99983,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 850
+  },
+  {
+   "id": "ilan-5",
+   "baslik": "Fatih'te Satılık 1+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Çerkezköy",
+   "mahalle": "Fatih",
+   "fiyat": 1600000,
+   "m2": 59,
+   "kat": "3. kat",
+   "yas": 15,
+   "aciklama": "Yeni binada 59 m² 1+1 daire. Kira getirisi yüksek, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-gri-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 41.29248,
+   "lng": 27.99328,
+   "oda": "1+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-6",
+   "baslik": "Gazi Mustafa Kemal Paşa'da Kiralık 3+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Çerkezköy",
+   "mahalle": "Gazi Mustafa Kemal Paşa",
+   "fiyat": 17500,
+   "m2": 117,
+   "kat": "1. kat",
+   "yas": 6,
+   "aciklama": "Asansörlü binada 117 m² 3+1 daire. Aydınlık ve geniş balkonludur.",
+   "gorseller": [
+    "img/ic-ahsap-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 41.29492,
+   "lng": 27.99301,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 800
+  },
+  {
+   "id": "ilan-7",
+   "baslik": "İstasyon'da Satılık Dükkan",
+   "tip": "Satılık",
+   "kategori": "Dükkan",
+   "il": "Tekirdağ",
+   "ilce": "Çerkezköy",
+   "mahalle": "İstasyon",
+   "fiyat": 2700000,
+   "m2": 72,
+   "kat": "Zemin kat",
+   "yas": 5,
+   "aciklama": "Cadde üzerinde, vitrin cepheli 72 m² dükkan. Kiracılıdır, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-sari-koltuk.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 41.291,
+   "lng": 28.00567
+  },
+  {
+   "id": "ilan-8",
+   "baslik": "Yıldırım Beyazıt'ta Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Çerkezköy",
+   "mahalle": "Yıldırım Beyazıt",
+   "fiyat": 4400000,
+   "m2": 136,
+   "kat": "3. kat",
+   "yas": 10,
+   "aciklama": "Yeni yapılmış binada 136 m² 3+1 daire. Ankastre mutfak ve kapalı otopark mevcuttur.",
+   "gorseller": [
+    "img/ic-bebek-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 41.29443,
+   "lng": 28.00131,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  }
+ ]
+}

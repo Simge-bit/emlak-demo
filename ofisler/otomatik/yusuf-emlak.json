@@ -1,0 +1,220 @@
+{
+ "klasor": "yusuf-emlak",
+ "sablon": "klasik",
+ "ortak_gorsel": true,
+ "ofis": {
+  "ad": "Yusuf Emlak",
+  "kisa": "Yusuf",
+  "telefon": "0532 543 12 70",
+  "whatsapp": "905325431270",
+  "eposta": "",
+  "adres": "Hamidiye Mah., Orhangazi Caddesi, Pendik, İstanbul",
+  "yetki": "",
+  "renk": "#7A1F2B",
+  "temsili": true,
+  "kapak": "img/ev-havuzlu-villa.jpg",
+  "tanitim": "Yusuf Emlak, Pendik merkezli olarak konut, işyeri ve arsa alım satım ve kiralama süreçlerinde danışmanlık hizmeti vermektedir.",
+  "hakkinda": "Pendik ve çevresindeki portföyümüzle alıcı, satıcı ve kiracılara hizmet sunmaktayız.",
+  "aciklama": "Pendik ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.",
+  "demoNot": "Bu sayfa Yusuf Emlak için hazırlanmış bir tasarım önizlemesidir. İlanlar ve fotoğraflar temsilidir.",
+  "saatler": "Pazartesi - Cumartesi, 09.00 - 19.00"
+ },
+ "ofisler": [
+  {
+   "sehir": "Pendik",
+   "adres": "Hamidiye Mah., Orhangazi Caddesi, Pendik, İstanbul",
+   "tel": "0532 543 12 70",
+   "lat": 40.94793,
+   "lng": 29.2839
+  }
+ ],
+ "danismanlar": [],
+ "istatistik": [],
+ "tarihce": [],
+ "yazilar": [],
+ "ilanlar": [
+  {
+   "id": "ilan-1",
+   "baslik": "Hamidiye'de Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Pendik",
+   "mahalle": "Hamidiye",
+   "fiyat": 8150000,
+   "m2": 129,
+   "kat": "6. kat",
+   "yas": 2,
+   "aciklama": "Asansörlü binada, ara katta 129 m² 3+1 daire. Ebeveyn banyolu ve kapalı otoparklıdır. Toplu ulaşıma ve okullara yakındır.",
+   "gorseller": [
+    "img/ic-bitkili-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 40.95287,
+   "lng": 29.29035,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-2",
+   "baslik": "Çamlık'ta Satılık 2+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Pendik",
+   "mahalle": "Çamlık",
+   "fiyat": 5600000,
+   "m2": 85,
+   "kat": "4. kat",
+   "yas": 3,
+   "aciklama": "Bakımlı binada 85 m² 2+1 daire. Doğalgaz kombili ve balkonludur. Krediye uygundur.",
+   "gorseller": [
+    "img/ic-sari-koltuk.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 40.9474,
+   "lng": 29.28165,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-3",
+   "baslik": "Orhangazi'de Satılık 4+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Pendik",
+   "mahalle": "Orhangazi",
+   "fiyat": 9800000,
+   "m2": 185,
+   "kat": "1. kat",
+   "yas": 11,
+   "aciklama": "Site içinde 185 m² 4+1 daire. Geniş salon, iki banyo ve kapalı otopark bulunmaktadır.",
+   "gorseller": [
+    "img/ic-moda-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 40.94695,
+   "lng": 29.27407,
+   "oda": "4+1",
+   "banyo": 2,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-4",
+   "baslik": "Akşemsettin'de Kiralık 2+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Pendik",
+   "mahalle": "Akşemsettin",
+   "fiyat": 33500,
+   "m2": 93,
+   "kat": "5. kat",
+   "yas": 2,
+   "aciklama": "Ana caddeye yakın, 93 m² 2+1 daire. Doğalgaz kombili, aileye kiralıktır.",
+   "gorseller": [
+    "img/ic-genis-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 40.9534,
+   "lng": 29.27505,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 700
+  },
+  {
+   "id": "ilan-5",
+   "baslik": "Fatih'te Satılık 1+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Pendik",
+   "mahalle": "Fatih",
+   "fiyat": 4400000,
+   "m2": 64,
+   "kat": "3. kat",
+   "yas": 15,
+   "aciklama": "Yeni binada 64 m² 1+1 daire. Kira getirisi yüksek, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-ahsap-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 40.94304,
+   "lng": 29.27448,
+   "oda": "1+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-6",
+   "baslik": "Hamidiye'de Kiralık 3+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Pendik",
+   "mahalle": "Hamidiye",
+   "fiyat": 46000,
+   "m2": 128,
+   "kat": "5. kat",
+   "yas": 18,
+   "aciklama": "Asansörlü binada 128 m² 3+1 daire. Aydınlık ve geniş balkonludur.",
+   "gorseller": [
+    "img/ic-bebek-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 40.94022,
+   "lng": 29.29292,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 650
+  },
+  {
+   "id": "ilan-7",
+   "baslik": "Çamlık'ta Satılık Dükkan",
+   "tip": "Satılık",
+   "kategori": "Dükkan",
+   "il": "İstanbul",
+   "ilce": "Pendik",
+   "mahalle": "Çamlık",
+   "fiyat": 6050000,
+   "m2": 76,
+   "kat": "Zemin kat",
+   "yas": 8,
+   "aciklama": "Cadde üzerinde, vitrin cepheli 76 m² dükkan. Kiracılıdır, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-urla-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 40.9518,
+   "lng": 29.28285
+  },
+  {
+   "id": "ilan-8",
+   "baslik": "Orhangazi'de Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Pendik",
+   "mahalle": "Orhangazi",
+   "fiyat": 8350000,
+   "m2": 133,
+   "kat": "4. kat",
+   "yas": 8,
+   "aciklama": "Yeni yapılmış binada 133 m² 3+1 daire. Ankastre mutfak ve kapalı otopark mevcuttur.",
+   "gorseller": [
+    "img/ic-gri-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 40.95265,
+   "lng": 29.28437,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  }
+ ]
+}

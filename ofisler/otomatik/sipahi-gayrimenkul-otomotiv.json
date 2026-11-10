@@ -1,0 +1,220 @@
+{
+ "klasor": "sipahi-gayrimenkul-otomotiv",
+ "sablon": "klasik",
+ "ortak_gorsel": true,
+ "ofis": {
+  "ad": "Sipahi Gayrimenkul & Otomotiv",
+  "kisa": "Sipahi",
+  "telefon": "0533 093 50 12",
+  "whatsapp": "905330935012",
+  "eposta": "",
+  "adres": "Turgut Reis Mah., Fatih Bulvarı Caddesi, Sultanbeyli, İstanbul",
+  "yetki": "",
+  "renk": "#2B3A55",
+  "temsili": true,
+  "kapak": "img/ev-catili.jpg",
+  "tanitim": "Sipahi Gayrimenkul & Otomotiv, Sultanbeyli merkezli olarak konut, işyeri ve arsa alım satım ve kiralama süreçlerinde danışmanlık hizmeti vermektedir.",
+  "hakkinda": "Sultanbeyli ve çevresindeki portföyümüzle alıcı, satıcı ve kiracılara hizmet sunmaktayız.",
+  "aciklama": "Sultanbeyli ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.",
+  "demoNot": "Bu sayfa Sipahi Gayrimenkul & Otomotiv için hazırlanmış bir tasarım önizlemesidir. İlanlar ve fotoğraflar temsilidir.",
+  "saatler": "Pazartesi - Cumartesi, 09.00 - 19.00"
+ },
+ "ofisler": [
+  {
+   "sehir": "Sultanbeyli",
+   "adres": "Turgut Reis Mah., Fatih Bulvarı Caddesi, Sultanbeyli, İstanbul",
+   "tel": "0533 093 50 12",
+   "lat": 40.96444,
+   "lng": 29.28086
+  }
+ ],
+ "danismanlar": [],
+ "istatistik": [],
+ "tarihce": [],
+ "yazilar": [],
+ "ilanlar": [
+  {
+   "id": "ilan-1",
+   "baslik": "Turgut Reis'te Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Sultanbeyli",
+   "mahalle": "Turgut Reis",
+   "fiyat": 7350000,
+   "m2": 125,
+   "kat": "6. kat",
+   "yas": 2,
+   "aciklama": "Asansörlü binada, ara katta 125 m² 3+1 daire. Ebeveyn banyolu ve kapalı otoparklıdır. Toplu ulaşıma ve okullara yakındır.",
+   "gorseller": [
+    "img/ic-moda-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 40.95678,
+   "lng": 29.27917,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-2",
+   "baslik": "Adil'de Satılık 2+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Sultanbeyli",
+   "mahalle": "Adil",
+   "fiyat": 5500000,
+   "m2": 92,
+   "kat": "1. kat",
+   "yas": 8,
+   "aciklama": "Bakımlı binada 92 m² 2+1 daire. Doğalgaz kombili ve balkonludur. Krediye uygundur.",
+   "gorseller": [
+    "img/ic-bitkili-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 40.96053,
+   "lng": 29.2739,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-3",
+   "baslik": "Akşemsettin'de Satılık 4+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Sultanbeyli",
+   "mahalle": "Akşemsettin",
+   "fiyat": 11300000,
+   "m2": 186,
+   "kat": "3. kat",
+   "yas": 2,
+   "aciklama": "Site içinde 186 m² 4+1 daire. Geniş salon, iki banyo ve kapalı otopark bulunmaktadır.",
+   "gorseller": [
+    "img/ic-bebek-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 40.96671,
+   "lng": 29.28163,
+   "oda": "4+1",
+   "banyo": 2,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-4",
+   "baslik": "Fatih'te Kiralık 2+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Sultanbeyli",
+   "mahalle": "Fatih",
+   "fiyat": 24000,
+   "m2": 82,
+   "kat": "6. kat",
+   "yas": 8,
+   "aciklama": "Ana caddeye yakın, 82 m² 2+1 daire. Doğalgaz kombili, aileye kiralıktır.",
+   "gorseller": [
+    "img/ic-ahsap-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 40.97006,
+   "lng": 29.28265,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 500
+  },
+  {
+   "id": "ilan-5",
+   "baslik": "Ahmet Yesevi'de Satılık 1+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Sultanbeyli",
+   "mahalle": "Ahmet Yesevi",
+   "fiyat": 4300000,
+   "m2": 62,
+   "kat": "4. kat",
+   "yas": 2,
+   "aciklama": "Yeni binada 62 m² 1+1 daire. Kira getirisi yüksek, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-gri-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 40.97238,
+   "lng": 29.28393,
+   "oda": "1+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-6",
+   "baslik": "Turgut Reis'te Kiralık 3+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Sultanbeyli",
+   "mahalle": "Turgut Reis",
+   "fiyat": 45000,
+   "m2": 133,
+   "kat": "1. kat",
+   "yas": 10,
+   "aciklama": "Asansörlü binada 133 m² 3+1 daire. Aydınlık ve geniş balkonludur.",
+   "gorseller": [
+    "img/ic-sari-koltuk.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 40.96234,
+   "lng": 29.29086,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 500
+  },
+  {
+   "id": "ilan-7",
+   "baslik": "Adil'de Satılık Dükkan",
+   "tip": "Satılık",
+   "kategori": "Dükkan",
+   "il": "İstanbul",
+   "ilce": "Sultanbeyli",
+   "mahalle": "Adil",
+   "fiyat": 5250000,
+   "m2": 67,
+   "kat": "Zemin kat",
+   "yas": 8,
+   "aciklama": "Cadde üzerinde, vitrin cepheli 67 m² dükkan. Kiracılıdır, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-urla-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 40.96031,
+   "lng": 29.27506
+  },
+  {
+   "id": "ilan-8",
+   "baslik": "Akşemsettin'de Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Sultanbeyli",
+   "mahalle": "Akşemsettin",
+   "fiyat": 8650000,
+   "m2": 156,
+   "kat": "5. kat",
+   "yas": 8,
+   "aciklama": "Yeni yapılmış binada 156 m² 3+1 daire. Ankastre mutfak ve kapalı otopark mevcuttur.",
+   "gorseller": [
+    "img/ic-genis-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 40.95996,
+   "lng": 29.27392,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  }
+ ]
+}
