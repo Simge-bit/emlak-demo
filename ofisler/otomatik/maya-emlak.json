@@ -1,0 +1,220 @@
+{
+ "klasor": "maya-emlak",
+ "sablon": "klasik",
+ "ortak_gorsel": true,
+ "ofis": {
+  "ad": "Maya Emlak",
+  "kisa": "Maya",
+  "telefon": "0537 824 63 73",
+  "whatsapp": "905378246373",
+  "eposta": "",
+  "adres": "Yukarı Bahçelievler Mah., 46. Sokak, Çankaya, Ankara",
+  "yetki": "",
+  "renk": "#0F4C5C",
+  "temsili": true,
+  "kapak": "img/ev-modern-villa.jpg",
+  "tanitim": "Maya Emlak, Çankaya merkezli olarak konut, işyeri ve arsa alım satım ve kiralama süreçlerinde danışmanlık hizmeti vermektedir.",
+  "hakkinda": "Çankaya ve çevresindeki portföyümüzle alıcı, satıcı ve kiracılara hizmet sunmaktayız.",
+  "aciklama": "Çankaya ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.",
+  "demoNot": "Bu sayfa Maya Emlak için hazırlanmış bir tasarım önizlemesidir. İlanlar ve fotoğraflar temsilidir.",
+  "saatler": "Pazartesi - Cumartesi, 09.00 - 19.00"
+ },
+ "ofisler": [
+  {
+   "sehir": "Çankaya",
+   "adres": "Yukarı Bahçelievler Mah., 46. Sokak, Çankaya, Ankara",
+   "tel": "0537 824 63 73",
+   "lat": 39.9226,
+   "lng": 32.82357
+  }
+ ],
+ "danismanlar": [],
+ "istatistik": [],
+ "tarihce": [],
+ "yazilar": [],
+ "ilanlar": [
+  {
+   "id": "ilan-1",
+   "baslik": "Yukarı Bahçelievler'de Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Ankara",
+   "ilce": "Çankaya",
+   "mahalle": "Yukarı Bahçelievler",
+   "fiyat": 4650000,
+   "m2": 134,
+   "kat": "3. kat",
+   "yas": 5,
+   "aciklama": "Asansörlü binada, ara katta 134 m² 3+1 daire. Ebeveyn banyolu ve kapalı otoparklıdır. Toplu ulaşıma ve okullara yakındır.",
+   "gorseller": [
+    "img/ic-ahsap-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 39.92571,
+   "lng": 32.82998,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-2",
+   "baslik": "Beştepe'de Satılık 2+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Ankara",
+   "ilce": "Çankaya",
+   "mahalle": "Beştepe",
+   "fiyat": 3350000,
+   "m2": 92,
+   "kat": "2. kat",
+   "yas": 10,
+   "aciklama": "Bakımlı binada 92 m² 2+1 daire. Doğalgaz kombili ve balkonludur. Krediye uygundur.",
+   "gorseller": [
+    "img/ic-genis-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 39.92451,
+   "lng": 32.83209,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-3",
+   "baslik": "Emniyet'te Satılık 4+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Ankara",
+   "ilce": "Çankaya",
+   "mahalle": "Emniyet",
+   "fiyat": 5600000,
+   "m2": 182,
+   "kat": "3. kat",
+   "yas": 2,
+   "aciklama": "Site içinde 182 m² 4+1 daire. Geniş salon, iki banyo ve kapalı otopark bulunmaktadır.",
+   "gorseller": [
+    "img/ic-gri-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 39.92716,
+   "lng": 32.82242,
+   "oda": "4+1",
+   "banyo": 2,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-4",
+   "baslik": "Gazi'de Kiralık 2+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "Ankara",
+   "ilce": "Çankaya",
+   "mahalle": "Gazi",
+   "fiyat": 18500,
+   "m2": 97,
+   "kat": "2. kat",
+   "yas": 4,
+   "aciklama": "Ana caddeye yakın, 97 m² 2+1 daire. Doğalgaz kombili, aileye kiralıktır.",
+   "gorseller": [
+    "img/ic-bebek-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 39.92654,
+   "lng": 32.82718,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 800
+  },
+  {
+   "id": "ilan-5",
+   "baslik": "Kızılay'da Satılık 1+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Ankara",
+   "ilce": "Çankaya",
+   "mahalle": "Kızılay",
+   "fiyat": 1950000,
+   "m2": 54,
+   "kat": "5. kat",
+   "yas": 3,
+   "aciklama": "Yeni binada 54 m² 1+1 daire. Kira getirisi yüksek, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-bitkili-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 39.92145,
+   "lng": 32.82004,
+   "oda": "1+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-6",
+   "baslik": "Yukarı Bahçelievler'de Kiralık 3+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "Ankara",
+   "ilce": "Çankaya",
+   "mahalle": "Yukarı Bahçelievler",
+   "fiyat": 27000,
+   "m2": 122,
+   "kat": "1. kat",
+   "yas": 12,
+   "aciklama": "Asansörlü binada 122 m² 3+1 daire. Aydınlık ve geniş balkonludur.",
+   "gorseller": [
+    "img/ic-sari-koltuk.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 39.91596,
+   "lng": 32.82287,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 700
+  },
+  {
+   "id": "ilan-7",
+   "baslik": "Beştepe'de Satılık Dükkan",
+   "tip": "Satılık",
+   "kategori": "Dükkan",
+   "il": "Ankara",
+   "ilce": "Çankaya",
+   "mahalle": "Beştepe",
+   "fiyat": 2650000,
+   "m2": 68,
+   "kat": "Zemin kat",
+   "yas": 4,
+   "aciklama": "Cadde üzerinde, vitrin cepheli 68 m² dükkan. Kiracılıdır, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-moda-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 39.91468,
+   "lng": 32.82322
+  },
+  {
+   "id": "ilan-8",
+   "baslik": "Emniyet'te Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Ankara",
+   "ilce": "Çankaya",
+   "mahalle": "Emniyet",
+   "fiyat": 5300000,
+   "m2": 147,
+   "kat": "5. kat",
+   "yas": 12,
+   "aciklama": "Yeni yapılmış binada 147 m² 3+1 daire. Ankastre mutfak ve kapalı otopark mevcuttur.",
+   "gorseller": [
+    "img/ic-urla-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 39.93035,
+   "lng": 32.81775,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  }
+ ]
+}

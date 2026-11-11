@@ -1,0 +1,220 @@
+{
+ "klasor": "kocer-emlak-insaat",
+ "sablon": "klasik",
+ "ortak_gorsel": true,
+ "ofis": {
+  "ad": "Koçer Emlak İnşaat",
+  "kisa": "Koçer",
+  "telefon": "0533 262 05 24",
+  "whatsapp": "905332620524",
+  "eposta": "",
+  "adres": "Atatürk Mah., Saray, Tekirdağ",
+  "yetki": "",
+  "renk": "#2B3A55",
+  "temsili": true,
+  "kapak": "img/ev-havuzlu-villa.jpg",
+  "tanitim": "Koçer Emlak İnşaat, Saray merkezli olarak konut, işyeri ve arsa alım satım ve kiralama süreçlerinde danışmanlık hizmeti vermektedir.",
+  "hakkinda": "Saray ve çevresindeki portföyümüzle alıcı, satıcı ve kiracılara hizmet sunmaktayız.",
+  "aciklama": "Saray ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.",
+  "demoNot": "Bu sayfa Koçer Emlak İnşaat için hazırlanmış bir tasarım önizlemesidir. İlanlar ve fotoğraflar temsilidir.",
+  "saatler": "Pazartesi - Cumartesi, 09.00 - 19.00"
+ },
+ "ofisler": [
+  {
+   "sehir": "Saray",
+   "adres": "Atatürk Mah., Saray, Tekirdağ",
+   "tel": "0533 262 05 24",
+   "lat": 41.35875,
+   "lng": 27.94899
+  }
+ ],
+ "danismanlar": [],
+ "istatistik": [],
+ "tarihce": [],
+ "yazilar": [],
+ "ilanlar": [
+  {
+   "id": "ilan-1",
+   "baslik": "Atatürk'te Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Saray",
+   "mahalle": "Atatürk",
+   "fiyat": 4300000,
+   "m2": 137,
+   "kat": "5. kat",
+   "yas": 3,
+   "aciklama": "Asansörlü binada, ara katta 137 m² 3+1 daire. Ebeveyn banyolu ve kapalı otoparklıdır. Toplu ulaşıma ve okullara yakındır.",
+   "gorseller": [
+    "img/ic-moda-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 41.35075,
+   "lng": 27.95582,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-2",
+   "baslik": "Bozoba'da Satılık 2+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Saray",
+   "mahalle": "Bozoba",
+   "fiyat": 3400000,
+   "m2": 101,
+   "kat": "3. kat",
+   "yas": 10,
+   "aciklama": "Bakımlı binada 101 m² 2+1 daire. Doğalgaz kombili ve balkonludur. Krediye uygundur.",
+   "gorseller": [
+    "img/ic-ahsap-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 41.36617,
+   "lng": 27.94629,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-3",
+   "baslik": "Cumhuriyet'te Satılık 4+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Saray",
+   "mahalle": "Cumhuriyet",
+   "fiyat": 5200000,
+   "m2": 164,
+   "kat": "5. kat",
+   "yas": 17,
+   "aciklama": "Site içinde 164 m² 4+1 daire. Geniş salon, iki banyo ve kapalı otopark bulunmaktadır.",
+   "gorseller": [
+    "img/ic-bitkili-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 41.3577,
+   "lng": 27.95689,
+   "oda": "4+1",
+   "banyo": 2,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-4",
+   "baslik": "Atatürk'te Kiralık 2+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Saray",
+   "mahalle": "Atatürk",
+   "fiyat": 15000,
+   "m2": 91,
+   "kat": "1. kat",
+   "yas": 11,
+   "aciklama": "Ana caddeye yakın, 91 m² 2+1 daire. Doğalgaz kombili, aileye kiralıktır.",
+   "gorseller": [
+    "img/ic-urla-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 41.35381,
+   "lng": 27.94099,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 1100
+  },
+  {
+   "id": "ilan-5",
+   "baslik": "Bozoba'da Satılık 1+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Saray",
+   "mahalle": "Bozoba",
+   "fiyat": 1650000,
+   "m2": 54,
+   "kat": "3. kat",
+   "yas": 6,
+   "aciklama": "Yeni binada 54 m² 1+1 daire. Kira getirisi yüksek, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-sari-koltuk.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 41.35195,
+   "lng": 27.95166,
+   "oda": "1+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-6",
+   "baslik": "Cumhuriyet'te Kiralık 3+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Saray",
+   "mahalle": "Cumhuriyet",
+   "fiyat": 23500,
+   "m2": 133,
+   "kat": "5. kat",
+   "yas": 10,
+   "aciklama": "Asansörlü binada 133 m² 3+1 daire. Aydınlık ve geniş balkonludur.",
+   "gorseller": [
+    "img/ic-genis-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 41.35559,
+   "lng": 27.95678,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 1150
+  },
+  {
+   "id": "ilan-7",
+   "baslik": "Atatürk'te Satılık Dükkan",
+   "tip": "Satılık",
+   "kategori": "Dükkan",
+   "il": "Tekirdağ",
+   "ilce": "Saray",
+   "mahalle": "Atatürk",
+   "fiyat": 2650000,
+   "m2": 68,
+   "kat": "Zemin kat",
+   "yas": 6,
+   "aciklama": "Cadde üzerinde, vitrin cepheli 68 m² dükkan. Kiracılıdır, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-gri-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 41.35447,
+   "lng": 27.95775
+  },
+  {
+   "id": "ilan-8",
+   "baslik": "Bozoba'da Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Saray",
+   "mahalle": "Bozoba",
+   "fiyat": 4350000,
+   "m2": 131,
+   "kat": "6. kat",
+   "yas": 5,
+   "aciklama": "Yeni yapılmış binada 131 m² 3+1 daire. Ankastre mutfak ve kapalı otopark mevcuttur.",
+   "gorseller": [
+    "img/ic-bebek-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 41.3595,
+   "lng": 27.94716,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  }
+ ]
+}

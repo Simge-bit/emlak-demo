@@ -1,0 +1,220 @@
+{
+ "klasor": "ilgaz-emlak-gayrimenkul-danismanligi",
+ "sablon": "klasik",
+ "ortak_gorsel": true,
+ "ofis": {
+  "ad": "Ilgaz Emlak Gayrimenkul Danışmanlığı",
+  "kisa": "Ilgaz",
+  "telefon": "0535 430 26 59",
+  "whatsapp": "905354302659",
+  "eposta": "",
+  "adres": "Ergene, Tekirdağ",
+  "yetki": "",
+  "renk": "#2B3A55",
+  "temsili": true,
+  "kapak": "img/ev-havuzlu-villa.jpg",
+  "tanitim": "Ilgaz Emlak Gayrimenkul Danışmanlığı, Ergene merkezli olarak konut, işyeri ve arsa alım satım ve kiralama süreçlerinde danışmanlık hizmeti vermektedir.",
+  "hakkinda": "Ergene ve çevresindeki portföyümüzle alıcı, satıcı ve kiracılara hizmet sunmaktayız.",
+  "aciklama": "Ergene ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.",
+  "demoNot": "Bu sayfa Ilgaz Emlak Gayrimenkul Danışmanlığı için hazırlanmış bir tasarım önizlemesidir. İlanlar ve fotoğraflar temsilidir.",
+  "saatler": "Pazartesi - Cumartesi, 09.00 - 19.00"
+ },
+ "ofisler": [
+  {
+   "sehir": "Ergene",
+   "adres": "Ergene, Tekirdağ",
+   "tel": "0535 430 26 59",
+   "lat": 41.26312,
+   "lng": 27.65559
+  }
+ ],
+ "danismanlar": [],
+ "istatistik": [],
+ "tarihce": [],
+ "yazilar": [],
+ "ilanlar": [
+  {
+   "id": "ilan-1",
+   "baslik": "Ergene'de Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Ergene",
+   "mahalle": "Ergene",
+   "fiyat": 3850000,
+   "m2": 120,
+   "kat": "3. kat",
+   "yas": 12,
+   "aciklama": "Asansörlü binada, ara katta 120 m² 3+1 daire. Ebeveyn banyolu ve kapalı otoparklıdır. Toplu ulaşıma ve okullara yakındır.",
+   "gorseller": [
+    "img/ic-gri-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 41.26575,
+   "lng": 27.66428,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-2",
+   "baslik": "Ergene'de Satılık 2+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Ergene",
+   "mahalle": "Ergene",
+   "fiyat": 2550000,
+   "m2": 95,
+   "kat": "4. kat",
+   "yas": 7,
+   "aciklama": "Bakımlı binada 95 m² 2+1 daire. Doğalgaz kombili ve balkonludur. Krediye uygundur.",
+   "gorseller": [
+    "img/ic-sari-koltuk.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 41.26157,
+   "lng": 27.65937,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-3",
+   "baslik": "Ergene'de Satılık 4+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Ergene",
+   "mahalle": "Ergene",
+   "fiyat": 4200000,
+   "m2": 162,
+   "kat": "2. kat",
+   "yas": 2,
+   "aciklama": "Site içinde 162 m² 4+1 daire. Geniş salon, iki banyo ve kapalı otopark bulunmaktadır.",
+   "gorseller": [
+    "img/ic-genis-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 41.26561,
+   "lng": 27.65241,
+   "oda": "4+1",
+   "banyo": 2,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-4",
+   "baslik": "Ergene'de Kiralık 2+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Ergene",
+   "mahalle": "Ergene",
+   "fiyat": 15500,
+   "m2": 86,
+   "kat": "5. kat",
+   "yas": 12,
+   "aciklama": "Ana caddeye yakın, 86 m² 2+1 daire. Doğalgaz kombili, aileye kiralıktır.",
+   "gorseller": [
+    "img/ic-bebek-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 41.26158,
+   "lng": 27.65158,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 900
+  },
+  {
+   "id": "ilan-5",
+   "baslik": "Ergene'de Satılık 1+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Ergene",
+   "mahalle": "Ergene",
+   "fiyat": 1950000,
+   "m2": 60,
+   "kat": "6. kat",
+   "yas": 4,
+   "aciklama": "Yeni binada 60 m² 1+1 daire. Kira getirisi yüksek, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-bitkili-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 41.25587,
+   "lng": 27.66051,
+   "oda": "1+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-6",
+   "baslik": "Ergene'de Kiralık 3+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Ergene",
+   "mahalle": "Ergene",
+   "fiyat": 23500,
+   "m2": 130,
+   "kat": "4. kat",
+   "yas": 18,
+   "aciklama": "Asansörlü binada 130 m² 3+1 daire. Aydınlık ve geniş balkonludur.",
+   "gorseller": [
+    "img/ic-urla-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 41.26633,
+   "lng": 27.66471,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 1200
+  },
+  {
+   "id": "ilan-7",
+   "baslik": "Ergene'de Satılık Dükkan",
+   "tip": "Satılık",
+   "kategori": "Dükkan",
+   "il": "Tekirdağ",
+   "ilce": "Ergene",
+   "mahalle": "Ergene",
+   "fiyat": 2850000,
+   "m2": 73,
+   "kat": "Zemin kat",
+   "yas": 15,
+   "aciklama": "Cadde üzerinde, vitrin cepheli 73 m² dükkan. Kiracılıdır, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-ahsap-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 41.25659,
+   "lng": 27.66103
+  },
+  {
+   "id": "ilan-8",
+   "baslik": "Ergene'de Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Ergene",
+   "mahalle": "Ergene",
+   "fiyat": 5200000,
+   "m2": 151,
+   "kat": "4. kat",
+   "yas": 17,
+   "aciklama": "Yeni yapılmış binada 151 m² 3+1 daire. Ankastre mutfak ve kapalı otopark mevcuttur.",
+   "gorseller": [
+    "img/ic-moda-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 41.26939,
+   "lng": 27.66265,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  }
+ ]
+}

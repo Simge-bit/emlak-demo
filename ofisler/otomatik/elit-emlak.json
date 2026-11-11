@@ -1,0 +1,220 @@
+{
+ "klasor": "elit-emlak",
+ "sablon": "klasik",
+ "ortak_gorsel": true,
+ "ofis": {
+  "ad": "Elit Emlak",
+  "kisa": "Elit",
+  "telefon": "0541 714 34 71",
+  "whatsapp": "905417143471",
+  "eposta": "",
+  "adres": "Karagümrük Mah., Türkistan sokak, Fatih, İstanbul",
+  "yetki": "",
+  "renk": "#283618",
+  "temsili": true,
+  "kapak": "img/ev-catili.jpg",
+  "tanitim": "Elit Emlak, Fatih merkezli olarak konut, işyeri ve arsa alım satım ve kiralama süreçlerinde danışmanlık hizmeti vermektedir.",
+  "hakkinda": "Fatih ve çevresindeki portföyümüzle alıcı, satıcı ve kiracılara hizmet sunmaktayız.",
+  "aciklama": "Fatih ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.",
+  "demoNot": "Bu sayfa Elit Emlak için hazırlanmış bir tasarım önizlemesidir. İlanlar ve fotoğraflar temsilidir.",
+  "saatler": "Pazartesi - Cumartesi, 09.00 - 19.00"
+ },
+ "ofisler": [
+  {
+   "sehir": "Fatih",
+   "adres": "Karagümrük Mah., Türkistan sokak, Fatih, İstanbul",
+   "tel": "0541 714 34 71",
+   "lat": 41.02679,
+   "lng": 28.93884
+  }
+ ],
+ "danismanlar": [],
+ "istatistik": [],
+ "tarihce": [],
+ "yazilar": [],
+ "ilanlar": [
+  {
+   "id": "ilan-1",
+   "baslik": "Karagümrük'te Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Fatih",
+   "mahalle": "Karagümrük",
+   "fiyat": 6950000,
+   "m2": 124,
+   "kat": "2. kat",
+   "yas": 14,
+   "aciklama": "Asansörlü binada, ara katta 124 m² 3+1 daire. Ebeveyn banyolu ve kapalı otoparklıdır. Toplu ulaşıma ve okullara yakındır.",
+   "gorseller": [
+    "img/ic-sari-koltuk.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 41.03294,
+   "lng": 28.94673,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-2",
+   "baslik": "Unkapanı'da Satılık 2+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Fatih",
+   "mahalle": "Unkapanı",
+   "fiyat": 6900000,
+   "m2": 105,
+   "kat": "6. kat",
+   "yas": 13,
+   "aciklama": "Bakımlı binada 105 m² 2+1 daire. Doğalgaz kombili ve balkonludur. Krediye uygundur.",
+   "gorseller": [
+    "img/ic-urla-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 41.02967,
+   "lng": 28.94697,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-3",
+   "baslik": "Ayvansaray'da Satılık 4+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Fatih",
+   "mahalle": "Ayvansaray",
+   "fiyat": 9750000,
+   "m2": 175,
+   "kat": "1. kat",
+   "yas": 11,
+   "aciklama": "Site içinde 175 m² 4+1 daire. Geniş salon, iki banyo ve kapalı otopark bulunmaktadır.",
+   "gorseller": [
+    "img/ic-bitkili-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 41.03114,
+   "lng": 28.94454,
+   "oda": "4+1",
+   "banyo": 2,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-4",
+   "baslik": "İskenderpaşa'da Kiralık 2+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Fatih",
+   "mahalle": "İskenderpaşa",
+   "fiyat": 35000,
+   "m2": 96,
+   "kat": "4. kat",
+   "yas": 15,
+   "aciklama": "Ana caddeye yakın, 96 m² 2+1 daire. Doğalgaz kombili, aileye kiralıktır.",
+   "gorseller": [
+    "img/ic-bebek-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 41.03138,
+   "lng": 28.93184,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 500
+  },
+  {
+   "id": "ilan-5",
+   "baslik": "Seyyid Ömer'de Satılık 1+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Fatih",
+   "mahalle": "Seyyid Ömer",
+   "fiyat": 4350000,
+   "m2": 61,
+   "kat": "6. kat",
+   "yas": 8,
+   "aciklama": "Yeni binada 61 m² 1+1 daire. Kira getirisi yüksek, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-gri-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 41.02905,
+   "lng": 28.94254,
+   "oda": "1+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-6",
+   "baslik": "Karagümrük'te Kiralık 3+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Fatih",
+   "mahalle": "Karagümrük",
+   "fiyat": 54500,
+   "m2": 145,
+   "kat": "4. kat",
+   "yas": 16,
+   "aciklama": "Asansörlü binada 145 m² 3+1 daire. Aydınlık ve geniş balkonludur.",
+   "gorseller": [
+    "img/ic-moda-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 41.02431,
+   "lng": 28.93174,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 450
+  },
+  {
+   "id": "ilan-7",
+   "baslik": "Unkapanı'da Satılık Dükkan",
+   "tip": "Satılık",
+   "kategori": "Dükkan",
+   "il": "İstanbul",
+   "ilce": "Fatih",
+   "mahalle": "Unkapanı",
+   "fiyat": 5400000,
+   "m2": 66,
+   "kat": "Zemin kat",
+   "yas": 18,
+   "aciklama": "Cadde üzerinde, vitrin cepheli 66 m² dükkan. Kiracılıdır, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-genis-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 41.02559,
+   "lng": 28.93852
+  },
+  {
+   "id": "ilan-8",
+   "baslik": "Ayvansaray'da Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Fatih",
+   "mahalle": "Ayvansaray",
+   "fiyat": 9450000,
+   "m2": 134,
+   "kat": "5. kat",
+   "yas": 7,
+   "aciklama": "Yeni yapılmış binada 134 m² 3+1 daire. Ankastre mutfak ve kapalı otopark mevcuttur.",
+   "gorseller": [
+    "img/ic-ahsap-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 41.03057,
+   "lng": 28.92927,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  }
+ ]
+}

@@ -1,0 +1,220 @@
+{
+ "klasor": "aratto-gayrimenkul",
+ "sablon": "klasik",
+ "ortak_gorsel": true,
+ "ofis": {
+  "ad": "Aratto Gayrimenkul",
+  "kisa": "Aratto",
+  "telefon": "0544 715 72 00",
+  "whatsapp": "905447157200",
+  "eposta": "",
+  "adres": "Gap Mah., 2517/A. Sokak No: 3/C, Merkez, Batman",
+  "yetki": "",
+  "renk": "#2B3A55",
+  "temsili": true,
+  "kapak": "img/ev-modern-villa.jpg",
+  "tanitim": "Aratto Gayrimenkul, Merkez merkezli olarak konut, işyeri ve arsa alım satım ve kiralama süreçlerinde danışmanlık hizmeti vermektedir.",
+  "hakkinda": "Merkez ve çevresindeki portföyümüzle alıcı, satıcı ve kiracılara hizmet sunmaktayız.",
+  "aciklama": "Merkez ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.",
+  "demoNot": "Bu sayfa Aratto Gayrimenkul için hazırlanmış bir tasarım önizlemesidir. İlanlar ve fotoğraflar temsilidir.",
+  "saatler": "Pazartesi - Cumartesi, 09.00 - 19.00"
+ },
+ "ofisler": [
+  {
+   "sehir": "Merkez",
+   "adres": "Gap Mah., 2517/A. Sokak No: 3/C, Merkez, Batman",
+   "tel": "0544 715 72 00",
+   "lat": 37.90434,
+   "lng": 41.13334
+  }
+ ],
+ "danismanlar": [],
+ "istatistik": [],
+ "tarihce": [],
+ "yazilar": [],
+ "ilanlar": [
+  {
+   "id": "ilan-1",
+   "baslik": "Gap'ta Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Batman",
+   "ilce": "Merkez",
+   "mahalle": "Gap",
+   "fiyat": 3100000,
+   "m2": 123,
+   "kat": "4. kat",
+   "yas": 12,
+   "aciklama": "Asansörlü binada, ara katta 123 m² 3+1 daire. Ebeveyn banyolu ve kapalı otoparklıdır. Toplu ulaşıma ve okullara yakındır.",
+   "gorseller": [
+    "img/ic-gri-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 37.90599,
+   "lng": 41.13997,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-2",
+   "baslik": "Çamlıtepe'de Satılık 2+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Batman",
+   "ilce": "Merkez",
+   "mahalle": "Çamlıtepe",
+   "fiyat": 2600000,
+   "m2": 95,
+   "kat": "4. kat",
+   "yas": 18,
+   "aciklama": "Bakımlı binada 95 m² 2+1 daire. Doğalgaz kombili ve balkonludur. Krediye uygundur.",
+   "gorseller": [
+    "img/ic-genis-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 37.91138,
+   "lng": 41.13256,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-3",
+   "baslik": "Fatih'te Satılık 4+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Batman",
+   "ilce": "Merkez",
+   "mahalle": "Fatih",
+   "fiyat": 4900000,
+   "m2": 188,
+   "kat": "6. kat",
+   "yas": 7,
+   "aciklama": "Site içinde 188 m² 4+1 daire. Geniş salon, iki banyo ve kapalı otopark bulunmaktadır.",
+   "gorseller": [
+    "img/ic-urla-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 37.90172,
+   "lng": 41.12929,
+   "oda": "4+1",
+   "banyo": 2,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-4",
+   "baslik": "Şafak'ta Kiralık 2+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "Batman",
+   "ilce": "Merkez",
+   "mahalle": "Şafak",
+   "fiyat": 13000,
+   "m2": 82,
+   "kat": "6. kat",
+   "yas": 8,
+   "aciklama": "Ana caddeye yakın, 82 m² 2+1 daire. Doğalgaz kombili, aileye kiralıktır.",
+   "gorseller": [
+    "img/ic-ahsap-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 37.9034,
+   "lng": 41.13206,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 700
+  },
+  {
+   "id": "ilan-5",
+   "baslik": "Kültür'de Satılık 1+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Batman",
+   "ilce": "Merkez",
+   "mahalle": "Kültür",
+   "fiyat": 1600000,
+   "m2": 64,
+   "kat": "6. kat",
+   "yas": 3,
+   "aciklama": "Yeni binada 64 m² 1+1 daire. Kira getirisi yüksek, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-bitkili-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 37.90199,
+   "lng": 41.13276,
+   "oda": "1+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-6",
+   "baslik": "Gap'ta Kiralık 3+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "Batman",
+   "ilce": "Merkez",
+   "mahalle": "Gap",
+   "fiyat": 17000,
+   "m2": 138,
+   "kat": "4. kat",
+   "yas": 8,
+   "aciklama": "Asansörlü binada 138 m² 3+1 daire. Aydınlık ve geniş balkonludur.",
+   "gorseller": [
+    "img/ic-sari-koltuk.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 37.90896,
+   "lng": 41.12366,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 700
+  },
+  {
+   "id": "ilan-7",
+   "baslik": "Çamlıtepe'de Satılık Dükkan",
+   "tip": "Satılık",
+   "kategori": "Dükkan",
+   "il": "Batman",
+   "ilce": "Merkez",
+   "mahalle": "Çamlıtepe",
+   "fiyat": 1700000,
+   "m2": 68,
+   "kat": "Zemin kat",
+   "yas": 13,
+   "aciklama": "Cadde üzerinde, vitrin cepheli 68 m² dükkan. Kiracılıdır, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-moda-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 37.89983,
+   "lng": 41.12789
+  },
+  {
+   "id": "ilan-8",
+   "baslik": "Fatih'te Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Batman",
+   "ilce": "Merkez",
+   "mahalle": "Fatih",
+   "fiyat": 3550000,
+   "m2": 154,
+   "kat": "1. kat",
+   "yas": 7,
+   "aciklama": "Yeni yapılmış binada 154 m² 3+1 daire. Ankastre mutfak ve kapalı otopark mevcuttur.",
+   "gorseller": [
+    "img/ic-bebek-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 37.8964,
+   "lng": 41.13043,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  }
+ ]
+}
