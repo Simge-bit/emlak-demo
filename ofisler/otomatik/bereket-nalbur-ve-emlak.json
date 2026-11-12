@@ -1,0 +1,220 @@
+{
+ "klasor": "bereket-nalbur-ve-emlak",
+ "sablon": "klasik",
+ "ortak_gorsel": true,
+ "ofis": {
+  "ad": "Bereket Nalbur Ve Emlak",
+  "kisa": "Bereket",
+  "telefon": "0544 445 01 30",
+  "whatsapp": "905444450130",
+  "eposta": "",
+  "adres": "Cibali Mah., Haydar Caddesi, Fatih, İstanbul",
+  "yetki": "",
+  "renk": "#5B2A86",
+  "temsili": true,
+  "kapak": "img/ev-havuzlu-villa.jpg",
+  "tanitim": "Bereket Nalbur Ve Emlak, Fatih merkezli olarak konut, işyeri ve arsa alım satım ve kiralama süreçlerinde danışmanlık hizmeti vermektedir.",
+  "hakkinda": "Fatih ve çevresindeki portföyümüzle alıcı, satıcı ve kiracılara hizmet sunmaktayız.",
+  "aciklama": "Fatih ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.",
+  "demoNot": "Bu sayfa Bereket Nalbur Ve Emlak için hazırlanmış bir tasarım önizlemesidir. İlanlar ve fotoğraflar temsilidir.",
+  "saatler": "Pazartesi - Cumartesi, 09.00 - 19.00"
+ },
+ "ofisler": [
+  {
+   "sehir": "Fatih",
+   "adres": "Cibali Mah., Haydar Caddesi, Fatih, İstanbul",
+   "tel": "0544 445 01 30",
+   "lat": 41.02154,
+   "lng": 28.95583
+  }
+ ],
+ "danismanlar": [],
+ "istatistik": [],
+ "tarihce": [],
+ "yazilar": [],
+ "ilanlar": [
+  {
+   "id": "ilan-1",
+   "baslik": "Cibali'de Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Fatih",
+   "mahalle": "Cibali",
+   "fiyat": 7550000,
+   "m2": 115,
+   "kat": "3. kat",
+   "yas": 6,
+   "aciklama": "Asansörlü binada, ara katta 115 m² 3+1 daire. Ebeveyn banyolu ve kapalı otoparklıdır. Toplu ulaşıma ve okullara yakındır.",
+   "gorseller": [
+    "img/ic-moda-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 41.0137,
+   "lng": 28.94683,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-2",
+   "baslik": "Tepebaşı'da Satılık 2+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Fatih",
+   "mahalle": "Tepebaşı",
+   "fiyat": 6400000,
+   "m2": 105,
+   "kat": "5. kat",
+   "yas": 12,
+   "aciklama": "Bakımlı binada 105 m² 2+1 daire. Doğalgaz kombili ve balkonludur. Krediye uygundur.",
+   "gorseller": [
+    "img/ic-urla-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 41.02643,
+   "lng": 28.96247,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-3",
+   "baslik": "Unkapanı'da Satılık 4+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Fatih",
+   "mahalle": "Unkapanı",
+   "fiyat": 10750000,
+   "m2": 184,
+   "kat": "1. kat",
+   "yas": 17,
+   "aciklama": "Site içinde 184 m² 4+1 daire. Geniş salon, iki banyo ve kapalı otopark bulunmaktadır.",
+   "gorseller": [
+    "img/ic-bitkili-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 41.02774,
+   "lng": 28.95222,
+   "oda": "4+1",
+   "banyo": 2,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-4",
+   "baslik": "Arap Cami'de Kiralık 2+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Fatih",
+   "mahalle": "Arap Cami",
+   "fiyat": 33500,
+   "m2": 98,
+   "kat": "1. kat",
+   "yas": 17,
+   "aciklama": "Ana caddeye yakın, 98 m² 2+1 daire. Doğalgaz kombili, aileye kiralıktır.",
+   "gorseller": [
+    "img/ic-sari-koltuk.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 41.01927,
+   "lng": 28.96551,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 500
+  },
+  {
+   "id": "ilan-5",
+   "baslik": "Ayvansaray'da Satılık 1+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Fatih",
+   "mahalle": "Ayvansaray",
+   "fiyat": 3900000,
+   "m2": 64,
+   "kat": "3. kat",
+   "yas": 4,
+   "aciklama": "Yeni binada 64 m² 1+1 daire. Kira getirisi yüksek, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-gri-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 41.01581,
+   "lng": 28.95295,
+   "oda": "1+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-6",
+   "baslik": "Cibali'de Kiralık 3+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Fatih",
+   "mahalle": "Cibali",
+   "fiyat": 41000,
+   "m2": 124,
+   "kat": "2. kat",
+   "yas": 18,
+   "aciklama": "Asansörlü binada 124 m² 3+1 daire. Aydınlık ve geniş balkonludur.",
+   "gorseller": [
+    "img/ic-genis-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 41.026,
+   "lng": 28.96274,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 500
+  },
+  {
+   "id": "ilan-7",
+   "baslik": "Tepebaşı'da Satılık Dükkan",
+   "tip": "Satılık",
+   "kategori": "Dükkan",
+   "il": "İstanbul",
+   "ilce": "Fatih",
+   "mahalle": "Tepebaşı",
+   "fiyat": 4900000,
+   "m2": 71,
+   "kat": "Zemin kat",
+   "yas": 13,
+   "aciklama": "Cadde üzerinde, vitrin cepheli 71 m² dükkan. Kiracılıdır, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-ahsap-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 41.01778,
+   "lng": 28.94756
+  },
+  {
+   "id": "ilan-8",
+   "baslik": "Unkapanı'da Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Fatih",
+   "mahalle": "Unkapanı",
+   "fiyat": 7000000,
+   "m2": 126,
+   "kat": "4. kat",
+   "yas": 7,
+   "aciklama": "Yeni yapılmış binada 126 m² 3+1 daire. Ankastre mutfak ve kapalı otopark mevcuttur.",
+   "gorseller": [
+    "img/ic-bebek-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 41.02566,
+   "lng": 28.96432,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  }
+ ]
+}

@@ -1,0 +1,220 @@
+{
+ "klasor": "pehlivan-emlak-gayrimenkul",
+ "sablon": "klasik",
+ "ortak_gorsel": true,
+ "ofis": {
+  "ad": "Pehlivan Emlak Gayrimenkul",
+  "kisa": "Pehlivan",
+  "telefon": "0542 219 48 80",
+  "whatsapp": "905422194880",
+  "eposta": "",
+  "adres": "Yenimahalle Mah., Varnalı Sokak No: 15/A, Susurluk, Balıkesir",
+  "yetki": "",
+  "renk": "#1E4D3A",
+  "temsili": true,
+  "kapak": "img/ev-modern-villa.jpg",
+  "tanitim": "Pehlivan Emlak Gayrimenkul, Susurluk merkezli olarak konut, işyeri ve arsa alım satım ve kiralama süreçlerinde danışmanlık hizmeti vermektedir.",
+  "hakkinda": "Susurluk ve çevresindeki portföyümüzle alıcı, satıcı ve kiracılara hizmet sunmaktayız.",
+  "aciklama": "Susurluk ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.",
+  "demoNot": "Bu sayfa Pehlivan Emlak Gayrimenkul için hazırlanmış bir tasarım önizlemesidir. İlanlar ve fotoğraflar temsilidir.",
+  "saatler": "Pazartesi - Cumartesi, 09.00 - 19.00"
+ },
+ "ofisler": [
+  {
+   "sehir": "Susurluk",
+   "adres": "Yenimahalle Mah., Varnalı Sokak No: 15/A, Susurluk, Balıkesir",
+   "tel": "0542 219 48 80",
+   "lat": 39.91587,
+   "lng": 28.15559
+  }
+ ],
+ "danismanlar": [],
+ "istatistik": [],
+ "tarihce": [],
+ "yazilar": [],
+ "ilanlar": [
+  {
+   "id": "ilan-1",
+   "baslik": "Yenimahalle'de Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Balıkesir",
+   "ilce": "Susurluk",
+   "mahalle": "Yenimahalle",
+   "fiyat": 2600000,
+   "m2": 119,
+   "kat": "6. kat",
+   "yas": 18,
+   "aciklama": "Asansörlü binada, ara katta 119 m² 3+1 daire. Ebeveyn banyolu ve kapalı otoparklıdır. Toplu ulaşıma ve okullara yakındır.",
+   "gorseller": [
+    "img/ic-bebek-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 39.91499,
+   "lng": 28.15468,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-2",
+   "baslik": "Han'da Satılık 2+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Balıkesir",
+   "ilce": "Susurluk",
+   "mahalle": "Han",
+   "fiyat": 2550000,
+   "m2": 91,
+   "kat": "5. kat",
+   "yas": 5,
+   "aciklama": "Bakımlı binada 91 m² 2+1 daire. Doğalgaz kombili ve balkonludur. Krediye uygundur.",
+   "gorseller": [
+    "img/ic-gri-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 39.92125,
+   "lng": 28.15129,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-3",
+   "baslik": "Orta'da Satılık 4+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Balıkesir",
+   "ilce": "Susurluk",
+   "mahalle": "Orta",
+   "fiyat": 5150000,
+   "m2": 184,
+   "kat": "4. kat",
+   "yas": 17,
+   "aciklama": "Site içinde 184 m² 4+1 daire. Geniş salon, iki banyo ve kapalı otopark bulunmaktadır.",
+   "gorseller": [
+    "img/ic-genis-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 39.90936,
+   "lng": 28.15982,
+   "oda": "4+1",
+   "banyo": 2,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-4",
+   "baslik": "Kışla'da Kiralık 2+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "Balıkesir",
+   "ilce": "Susurluk",
+   "mahalle": "Kışla",
+   "fiyat": 12000,
+   "m2": 97,
+   "kat": "3. kat",
+   "yas": 12,
+   "aciklama": "Ana caddeye yakın, 97 m² 2+1 daire. Doğalgaz kombili, aileye kiralıktır.",
+   "gorseller": [
+    "img/ic-ahsap-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 39.91178,
+   "lng": 28.14575,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 600
+  },
+  {
+   "id": "ilan-5",
+   "baslik": "Sultaniye'de Satılık 1+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Balıkesir",
+   "ilce": "Susurluk",
+   "mahalle": "Sultaniye",
+   "fiyat": 1450000,
+   "m2": 55,
+   "kat": "4. kat",
+   "yas": 8,
+   "aciklama": "Yeni binada 55 m² 1+1 daire. Kira getirisi yüksek, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-urla-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 39.91775,
+   "lng": 28.16359,
+   "oda": "1+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-6",
+   "baslik": "Yenimahalle'de Kiralık 3+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "Balıkesir",
+   "ilce": "Susurluk",
+   "mahalle": "Yenimahalle",
+   "fiyat": 18000,
+   "m2": 133,
+   "kat": "1. kat",
+   "yas": 10,
+   "aciklama": "Asansörlü binada 133 m² 3+1 daire. Aydınlık ve geniş balkonludur.",
+   "gorseller": [
+    "img/ic-sari-koltuk.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 39.90809,
+   "lng": 28.15752,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 500
+  },
+  {
+   "id": "ilan-7",
+   "baslik": "Han'da Satılık Dükkan",
+   "tip": "Satılık",
+   "kategori": "Dükkan",
+   "il": "Balıkesir",
+   "ilce": "Susurluk",
+   "mahalle": "Han",
+   "fiyat": 2450000,
+   "m2": 76,
+   "kat": "Zemin kat",
+   "yas": 15,
+   "aciklama": "Cadde üzerinde, vitrin cepheli 76 m² dükkan. Kiracılıdır, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-moda-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 39.91674,
+   "lng": 28.15778
+  },
+  {
+   "id": "ilan-8",
+   "baslik": "Orta'da Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Balıkesir",
+   "ilce": "Susurluk",
+   "mahalle": "Orta",
+   "fiyat": 3200000,
+   "m2": 127,
+   "kat": "1. kat",
+   "yas": 9,
+   "aciklama": "Yeni yapılmış binada 127 m² 3+1 daire. Ankastre mutfak ve kapalı otopark mevcuttur.",
+   "gorseller": [
+    "img/ic-bitkili-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 39.92005,
+   "lng": 28.15374,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  }
+ ]
+}

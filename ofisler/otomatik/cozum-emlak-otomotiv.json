@@ -1,0 +1,220 @@
+{
+ "klasor": "cozum-emlak-otomotiv",
+ "sablon": "klasik",
+ "ortak_gorsel": true,
+ "ofis": {
+  "ad": "Çözüm Emlak Otomotiv",
+  "kisa": "Çözüm",
+  "telefon": "0507 615 55 53",
+  "whatsapp": "905076155553",
+  "eposta": "",
+  "adres": "Yeni Mahalle Mah., Silivri, İstanbul",
+  "yetki": "",
+  "renk": "#283618",
+  "temsili": true,
+  "kapak": "img/ev-beyaz-villa.jpg",
+  "tanitim": "Çözüm Emlak Otomotiv, Silivri merkezli olarak konut, işyeri ve arsa alım satım ve kiralama süreçlerinde danışmanlık hizmeti vermektedir.",
+  "hakkinda": "Silivri ve çevresindeki portföyümüzle alıcı, satıcı ve kiracılara hizmet sunmaktayız.",
+  "aciklama": "Silivri ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.",
+  "demoNot": "Bu sayfa Çözüm Emlak Otomotiv için hazırlanmış bir tasarım önizlemesidir. İlanlar ve fotoğraflar temsilidir.",
+  "saatler": "Pazartesi - Cumartesi, 09.00 - 19.00"
+ },
+ "ofisler": [
+  {
+   "sehir": "Silivri",
+   "adres": "Yeni Mahalle Mah., Silivri, İstanbul",
+   "tel": "0507 615 55 53",
+   "lat": 41.07195,
+   "lng": 28.27541
+  }
+ ],
+ "danismanlar": [],
+ "istatistik": [],
+ "tarihce": [],
+ "yazilar": [],
+ "ilanlar": [
+  {
+   "id": "ilan-1",
+   "baslik": "Yeni Mahalle'de Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Silivri",
+   "mahalle": "Yeni Mahalle",
+   "fiyat": 9850000,
+   "m2": 139,
+   "kat": "2. kat",
+   "yas": 4,
+   "aciklama": "Asansörlü binada, ara katta 139 m² 3+1 daire. Ebeveyn banyolu ve kapalı otoparklıdır. Toplu ulaşıma ve okullara yakındır.",
+   "gorseller": [
+    "img/ic-gri-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 41.0648,
+   "lng": 28.28026,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-2",
+   "baslik": "Fatih'te Satılık 2+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Silivri",
+   "mahalle": "Fatih",
+   "fiyat": 7100000,
+   "m2": 103,
+   "kat": "4. kat",
+   "yas": 13,
+   "aciklama": "Bakımlı binada 103 m² 2+1 daire. Doğalgaz kombili ve balkonludur. Krediye uygundur.",
+   "gorseller": [
+    "img/ic-sari-koltuk.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 41.07094,
+   "lng": 28.27863,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-3",
+   "baslik": "Alibey'de Satılık 4+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Silivri",
+   "mahalle": "Alibey",
+   "fiyat": 10450000,
+   "m2": 153,
+   "kat": "1. kat",
+   "yas": 13,
+   "aciklama": "Site içinde 153 m² 4+1 daire. Geniş salon, iki banyo ve kapalı otopark bulunmaktadır.",
+   "gorseller": [
+    "img/ic-bitkili-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 41.0753,
+   "lng": 28.26866,
+   "oda": "4+1",
+   "banyo": 2,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-4",
+   "baslik": "Yeni'de Kiralık 2+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Silivri",
+   "mahalle": "Yeni",
+   "fiyat": 28000,
+   "m2": 99,
+   "kat": "5. kat",
+   "yas": 17,
+   "aciklama": "Ana caddeye yakın, 99 m² 2+1 daire. Doğalgaz kombili, aileye kiralıktır.",
+   "gorseller": [
+    "img/ic-ahsap-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 41.07056,
+   "lng": 28.26903,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 850
+  },
+  {
+   "id": "ilan-5",
+   "baslik": "Cumhuriyet'te Satılık 1+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Silivri",
+   "mahalle": "Cumhuriyet",
+   "fiyat": 3250000,
+   "m2": 57,
+   "kat": "6. kat",
+   "yas": 3,
+   "aciklama": "Yeni binada 57 m² 1+1 daire. Kira getirisi yüksek, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-bebek-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 41.0768,
+   "lng": 28.27492,
+   "oda": "1+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-6",
+   "baslik": "Yeni Mahalle'de Kiralık 3+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Silivri",
+   "mahalle": "Yeni Mahalle",
+   "fiyat": 50000,
+   "m2": 140,
+   "kat": "5. kat",
+   "yas": 5,
+   "aciklama": "Asansörlü binada 140 m² 3+1 daire. Aydınlık ve geniş balkonludur.",
+   "gorseller": [
+    "img/ic-urla-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 41.07964,
+   "lng": 28.27642,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 600
+  },
+  {
+   "id": "ilan-7",
+   "baslik": "Fatih'te Satılık Dükkan",
+   "tip": "Satılık",
+   "kategori": "Dükkan",
+   "il": "İstanbul",
+   "ilce": "Silivri",
+   "mahalle": "Fatih",
+   "fiyat": 4950000,
+   "m2": 77,
+   "kat": "Zemin kat",
+   "yas": 8,
+   "aciklama": "Cadde üzerinde, vitrin cepheli 77 m² dükkan. Kiracılıdır, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-moda-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 41.07017,
+   "lng": 28.27489
+  },
+  {
+   "id": "ilan-8",
+   "baslik": "Alibey'de Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Silivri",
+   "mahalle": "Alibey",
+   "fiyat": 8350000,
+   "m2": 154,
+   "kat": "5. kat",
+   "yas": 14,
+   "aciklama": "Yeni yapılmış binada 154 m² 3+1 daire. Ankastre mutfak ve kapalı otopark mevcuttur.",
+   "gorseller": [
+    "img/ic-genis-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 41.07813,
+   "lng": 28.27327,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  }
+ ]
+}
