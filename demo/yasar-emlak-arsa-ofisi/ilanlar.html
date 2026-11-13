@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>İlanlar | Yaşar Emlak Arsa Ofisi</title>
+<meta name="description" content="Çatalca ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.">
+<meta property="og:description" content="Çatalca ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.">
+<meta property="og:image" content="https://onizleme.konutra.com.tr/img/ic-bitkili-salon.jpg">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../js/vendor/leaflet.css">
+<link rel="stylesheet" href="../../css/klasik.css">
+</head>
+<body data-sayfa="ilanlar">
+<div class="sbas"><div class="kap"><div class="yol"><a href="index.html">Ana sayfa</a> / İlanlar</div><h1>İlanlar</h1></div></div>
+<main class="bolum" style="padding-top:32px"><div class="kap liste">
+  <form class="filtre" id="filtre"></form>
+  <div><div class="ust2"><span id="adet"></span><select id="sira" aria-label="Sıralama"><option value="">Önerilen</option><option value="artan">Fiyat (artan)</option><option value="azalan">Fiyat (azalan)</option></select></div>
+  <div class="harita liste-harita" id="listeHarita"></div>
+  <div class="izgara" id="sonuc"></div></div>
+</div></main>
+<script src="../../js/vendor/leaflet.js"></script>
+<script src="../../js/data.js"></script>
+<script src="js/ofis.js"></script>
+<script src="../../js/klasik.js"></script>
+</body>
+</html>

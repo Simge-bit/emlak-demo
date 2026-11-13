@@ -1,0 +1,220 @@
+{
+ "klasor": "asg-gayrimenkul",
+ "sablon": "klasik",
+ "ortak_gorsel": true,
+ "ofis": {
+  "ad": "ASG Gayrimenkul",
+  "kisa": "ASG",
+  "telefon": "0532 312 01 85",
+  "whatsapp": "905323120185",
+  "eposta": "",
+  "adres": "İnönü Mah., Lüleburgaz, Kırklareli",
+  "yetki": "",
+  "renk": "#1F2D5C",
+  "temsili": true,
+  "kapak": "img/ev-beyaz-villa.jpg",
+  "tanitim": "ASG Gayrimenkul, Lüleburgaz merkezli olarak konut, işyeri ve arsa alım satım ve kiralama süreçlerinde danışmanlık hizmeti vermektedir.",
+  "hakkinda": "Lüleburgaz ve çevresindeki portföyümüzle alıcı, satıcı ve kiracılara hizmet sunmaktayız.",
+  "aciklama": "Lüleburgaz ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.",
+  "demoNot": "Bu sayfa ASG Gayrimenkul için hazırlanmış bir tasarım önizlemesidir. İlanlar ve fotoğraflar temsilidir.",
+  "saatler": "Pazartesi - Cumartesi, 09.00 - 19.00"
+ },
+ "ofisler": [
+  {
+   "sehir": "Lüleburgaz",
+   "adres": "İnönü Mah., Lüleburgaz, Kırklareli",
+   "tel": "0532 312 01 85",
+   "lat": 41.40158,
+   "lng": 27.36105
+  }
+ ],
+ "danismanlar": [],
+ "istatistik": [],
+ "tarihce": [],
+ "yazilar": [],
+ "ilanlar": [
+  {
+   "id": "ilan-1",
+   "baslik": "İnönü'de Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Kırklareli",
+   "ilce": "Lüleburgaz",
+   "mahalle": "İnönü",
+   "fiyat": 2750000,
+   "m2": 126,
+   "kat": "4. kat",
+   "yas": 2,
+   "aciklama": "Asansörlü binada, ara katta 126 m² 3+1 daire. Ebeveyn banyolu ve kapalı otoparklıdır. Toplu ulaşıma ve okullara yakındır.",
+   "gorseller": [
+    "img/ic-ahsap-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 41.3981,
+   "lng": 27.36535,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-2",
+   "baslik": "İnönü'de Satılık 2+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Kırklareli",
+   "ilce": "Lüleburgaz",
+   "mahalle": "İnönü",
+   "fiyat": 2000000,
+   "m2": 88,
+   "kat": "4. kat",
+   "yas": 7,
+   "aciklama": "Bakımlı binada 88 m² 2+1 daire. Doğalgaz kombili ve balkonludur. Krediye uygundur.",
+   "gorseller": [
+    "img/ic-sari-koltuk.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 41.40131,
+   "lng": 27.35349,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-3",
+   "baslik": "İnönü'de Satılık 4+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Kırklareli",
+   "ilce": "Lüleburgaz",
+   "mahalle": "İnönü",
+   "fiyat": 4150000,
+   "m2": 163,
+   "kat": "4. kat",
+   "yas": 12,
+   "aciklama": "Site içinde 163 m² 4+1 daire. Geniş salon, iki banyo ve kapalı otopark bulunmaktadır.",
+   "gorseller": [
+    "img/ic-urla-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 41.39611,
+   "lng": 27.35232,
+   "oda": "4+1",
+   "banyo": 2,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-4",
+   "baslik": "İnönü'de Kiralık 2+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "Kırklareli",
+   "ilce": "Lüleburgaz",
+   "mahalle": "İnönü",
+   "fiyat": 11000,
+   "m2": 94,
+   "kat": "5. kat",
+   "yas": 5,
+   "aciklama": "Ana caddeye yakın, 94 m² 2+1 daire. Doğalgaz kombili, aileye kiralıktır.",
+   "gorseller": [
+    "img/ic-gri-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 41.4073,
+   "lng": 27.36199,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 500
+  },
+  {
+   "id": "ilan-5",
+   "baslik": "İnönü'de Satılık 1+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Kırklareli",
+   "ilce": "Lüleburgaz",
+   "mahalle": "İnönü",
+   "fiyat": 1300000,
+   "m2": 60,
+   "kat": "4. kat",
+   "yas": 5,
+   "aciklama": "Yeni binada 60 m² 1+1 daire. Kira getirisi yüksek, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-bebek-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 41.40033,
+   "lng": 27.35119,
+   "oda": "1+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-6",
+   "baslik": "İnönü'de Kiralık 3+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "Kırklareli",
+   "ilce": "Lüleburgaz",
+   "mahalle": "İnönü",
+   "fiyat": 17500,
+   "m2": 126,
+   "kat": "2. kat",
+   "yas": 5,
+   "aciklama": "Asansörlü binada 126 m² 3+1 daire. Aydınlık ve geniş balkonludur.",
+   "gorseller": [
+    "img/ic-genis-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 41.40218,
+   "lng": 27.36604,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 1150
+  },
+  {
+   "id": "ilan-7",
+   "baslik": "İnönü'de Satılık Dükkan",
+   "tip": "Satılık",
+   "kategori": "Dükkan",
+   "il": "Kırklareli",
+   "ilce": "Lüleburgaz",
+   "mahalle": "İnönü",
+   "fiyat": 1650000,
+   "m2": 66,
+   "kat": "Zemin kat",
+   "yas": 16,
+   "aciklama": "Cadde üzerinde, vitrin cepheli 66 m² dükkan. Kiracılıdır, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-moda-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 41.40026,
+   "lng": 27.36498
+  },
+  {
+   "id": "ilan-8",
+   "baslik": "İnönü'de Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Kırklareli",
+   "ilce": "Lüleburgaz",
+   "mahalle": "İnönü",
+   "fiyat": 2950000,
+   "m2": 137,
+   "kat": "4. kat",
+   "yas": 15,
+   "aciklama": "Yeni yapılmış binada 137 m² 3+1 daire. Ankastre mutfak ve kapalı otopark mevcuttur.",
+   "gorseller": [
+    "img/ic-bitkili-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 41.40494,
+   "lng": 27.35772,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  }
+ ]
+}
