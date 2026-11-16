@@ -1,0 +1,220 @@
+{
+ "klasor": "buca-emlak",
+ "sablon": "klasik",
+ "ortak_gorsel": true,
+ "ofis": {
+  "ad": "Buca Emlak",
+  "kisa": "Buca",
+  "telefon": "0506 179 40 69",
+  "whatsapp": "905061794069",
+  "eposta": "",
+  "adres": "Buca Koop Mah., Buca, İzmir",
+  "yetki": "",
+  "renk": "#2B3A55",
+  "temsili": true,
+  "kapak": "img/ev-havuzlu-villa.jpg",
+  "tanitim": "Buca Emlak, Buca merkezli olarak konut, işyeri ve arsa alım satım ve kiralama süreçlerinde danışmanlık hizmeti vermektedir.",
+  "hakkinda": "Buca ve çevresindeki portföyümüzle alıcı, satıcı ve kiracılara hizmet sunmaktayız.",
+  "aciklama": "Buca ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.",
+  "demoNot": "Bu sayfa Buca Emlak için hazırlanmış bir tasarım önizlemesidir. İlanlar ve fotoğraflar temsilidir.",
+  "saatler": "Pazartesi - Cumartesi, 09.00 - 19.00"
+ },
+ "ofisler": [
+  {
+   "sehir": "Buca",
+   "adres": "Buca Koop Mah., Buca, İzmir",
+   "tel": "0506 179 40 69",
+   "lat": 38.3702,
+   "lng": 27.17803
+  }
+ ],
+ "danismanlar": [],
+ "istatistik": [],
+ "tarihce": [],
+ "yazilar": [],
+ "ilanlar": [
+  {
+   "id": "ilan-1",
+   "baslik": "Buca Koop'ta Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İzmir",
+   "ilce": "Buca",
+   "mahalle": "Buca Koop",
+   "fiyat": 5400000,
+   "m2": 131,
+   "kat": "5. kat",
+   "yas": 16,
+   "aciklama": "Asansörlü binada, ara katta 131 m² 3+1 daire. Ebeveyn banyolu ve kapalı otoparklıdır. Toplu ulaşıma ve okullara yakındır.",
+   "gorseller": [
+    "img/ic-ahsap-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 38.36413,
+   "lng": 27.17406,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-2",
+   "baslik": "Yaylacık'ta Satılık 2+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İzmir",
+   "ilce": "Buca",
+   "mahalle": "Yaylacık",
+   "fiyat": 5000000,
+   "m2": 98,
+   "kat": "1. kat",
+   "yas": 13,
+   "aciklama": "Bakımlı binada 98 m² 2+1 daire. Doğalgaz kombili ve balkonludur. Krediye uygundur.",
+   "gorseller": [
+    "img/ic-genis-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 38.36793,
+   "lng": 27.18614,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-3",
+   "baslik": "Adatepe'de Satılık 4+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İzmir",
+   "ilce": "Buca",
+   "mahalle": "Adatepe",
+   "fiyat": 8600000,
+   "m2": 179,
+   "kat": "3. kat",
+   "yas": 8,
+   "aciklama": "Site içinde 179 m² 4+1 daire. Geniş salon, iki banyo ve kapalı otopark bulunmaktadır.",
+   "gorseller": [
+    "img/ic-sari-koltuk.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 38.37353,
+   "lng": 27.17316,
+   "oda": "4+1",
+   "banyo": 2,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-4",
+   "baslik": "Dumlupınar'da Kiralık 2+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "İzmir",
+   "ilce": "Buca",
+   "mahalle": "Dumlupınar",
+   "fiyat": 27500,
+   "m2": 98,
+   "kat": "2. kat",
+   "yas": 2,
+   "aciklama": "Ana caddeye yakın, 98 m² 2+1 daire. Doğalgaz kombili, aileye kiralıktır.",
+   "gorseller": [
+    "img/ic-urla-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 38.37443,
+   "lng": 27.18349,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 500
+  },
+  {
+   "id": "ilan-5",
+   "baslik": "Vali Rahmi Bey'de Satılık 1+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İzmir",
+   "ilce": "Buca",
+   "mahalle": "Vali Rahmi Bey",
+   "fiyat": 2850000,
+   "m2": 62,
+   "kat": "3. kat",
+   "yas": 7,
+   "aciklama": "Yeni binada 62 m² 1+1 daire. Kira getirisi yüksek, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-bitkili-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 38.36529,
+   "lng": 27.18702,
+   "oda": "1+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-6",
+   "baslik": "Buca Koop'ta Kiralık 3+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "İzmir",
+   "ilce": "Buca",
+   "mahalle": "Buca Koop",
+   "fiyat": 36000,
+   "m2": 128,
+   "kat": "1. kat",
+   "yas": 3,
+   "aciklama": "Asansörlü binada 128 m² 3+1 daire. Aydınlık ve geniş balkonludur.",
+   "gorseller": [
+    "img/ic-bebek-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 38.37767,
+   "lng": 27.18659,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 950
+  },
+  {
+   "id": "ilan-7",
+   "baslik": "Yaylacık'ta Satılık Dükkan",
+   "tip": "Satılık",
+   "kategori": "Dükkan",
+   "il": "İzmir",
+   "ilce": "Buca",
+   "mahalle": "Yaylacık",
+   "fiyat": 3650000,
+   "m2": 70,
+   "kat": "Zemin kat",
+   "yas": 17,
+   "aciklama": "Cadde üzerinde, vitrin cepheli 70 m² dükkan. Kiracılıdır, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-moda-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 38.36785,
+   "lng": 27.18088
+  },
+  {
+   "id": "ilan-8",
+   "baslik": "Adatepe'de Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İzmir",
+   "ilce": "Buca",
+   "mahalle": "Adatepe",
+   "fiyat": 6150000,
+   "m2": 126,
+   "kat": "5. kat",
+   "yas": 17,
+   "aciklama": "Yeni yapılmış binada 126 m² 3+1 daire. Ankastre mutfak ve kapalı otopark mevcuttur.",
+   "gorseller": [
+    "img/ic-gri-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 38.37097,
+   "lng": 27.18361,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  }
+ ]
+}

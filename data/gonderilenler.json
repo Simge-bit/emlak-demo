@@ -393,5 +393,80 @@
   "osm": "node/9751969241",
   "klasor": "tursat-gayrimenkul",
   "tarih": "2026-11-13"
+ },
+ {
+  "osm": "node/5113610117",
+  "klasor": "atlas-emlak",
+  "tarih": "2026-11-16"
+ },
+ {
+  "osm": "node/5485649759",
+  "klasor": "ustunbas-emin-emlak",
+  "tarih": "2026-11-16"
+ },
+ {
+  "osm": "node/5081443153",
+  "klasor": "evyapan-gayrimenkul",
+  "tarih": "2026-11-16"
+ },
+ {
+  "osm": "node/7511907931",
+  "klasor": "erdem-yagi-insaat-emlak",
+  "tarih": "2026-11-16"
+ },
+ {
+  "osm": "node/12843789833",
+  "klasor": "recep-buyukelliiki-gayrimenkul-sigorta",
+  "tarih": "2026-11-16"
+ },
+ {
+  "osm": "node/5571404088",
+  "klasor": "yucel-emlak-icra-mahkeme-dilekce-tapu-miras-veraset-is-takibi",
+  "tarih": "2026-11-16"
+ },
+ {
+  "osm": "node/8710402387",
+  "klasor": "buca-emlak",
+  "tarih": "2026-11-16"
+ },
+ {
+  "osm": "node/5571404090",
+  "klasor": "mazioglu-emlak",
+  "tarih": "2026-11-16"
+ },
+ {
+  "osm": "node/3429947064",
+  "klasor": "kismet-emlak",
+  "tarih": "2026-11-16"
+ },
+ {
+  "osm": "node/8828195887",
+  "klasor": "karacaagac-emlak-ofisi",
+  "tarih": "2026-11-16"
+ },
+ {
+  "osm": "node/10710019564",
+  "klasor": "karadag-otomotiv-emlak",
+  "tarih": "2026-11-16"
+ },
+ {
+  "osm": "node/8960567511",
+  "klasor": "aki-emlak",
+  "tarih": "2026-11-16"
+ },
+ {
+  "osm": "node/5654882907",
+  "klasor": "dogru-gayrimenkul-emlak-danismanligi",
+  "tarih": "2026-11-16"
+ },
+ {
+  "osm": "node/3071394628",
+  "klasor": "hira-emlak",
+  "tarih": "2026-11-16"
+ },
+ {
+  "osm": "node/5113481339",
+  "klasor": "kardes-emlak",
+  "tarih": "2026-11-16"
  }
 ]
