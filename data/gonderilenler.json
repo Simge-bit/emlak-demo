@@ -468,5 +468,80 @@
   "osm": "node/5113481339",
   "klasor": "kardes-emlak",
   "tarih": "2026-11-16"
+ },
+ {
+  "osm": "node/9920602543",
+  "klasor": "busem-emlak-3",
+  "tarih": "2026-11-17"
+ },
+ {
+  "osm": "node/9966473044",
+  "klasor": "yildiz-emlak-gayrimenkul",
+  "tarih": "2026-11-17"
+ },
+ {
+  "osm": "node/6856023849",
+  "klasor": "sahin-emlak-gayrimenkul",
+  "tarih": "2026-11-17"
+ },
+ {
+  "osm": "node/8403439031",
+  "klasor": "ipek-emlak",
+  "tarih": "2026-11-17"
+ },
+ {
+  "osm": "node/5667657768",
+  "klasor": "karadeniz-emlak",
+  "tarih": "2026-11-17"
+ },
+ {
+  "osm": "node/11076055933",
+  "klasor": "azizoglu-gayrimenkul",
+  "tarih": "2026-11-17"
+ },
+ {
+  "osm": "node/5329337018",
+  "klasor": "samcaktar-emlak",
+  "tarih": "2026-11-17"
+ },
+ {
+  "osm": "node/8653777238",
+  "klasor": "tuna-emlak",
+  "tarih": "2026-11-17"
+ },
+ {
+  "osm": "node/3493900938",
+  "klasor": "guven-emlak-suleyman-isik",
+  "tarih": "2026-11-17"
+ },
+ {
+  "osm": "node/5608478814",
+  "klasor": "bener-emlak-gayrimenkul",
+  "tarih": "2026-11-17"
+ },
+ {
+  "osm": "node/13357010610",
+  "klasor": "oz-koyum-emlak",
+  "tarih": "2026-11-17"
+ },
+ {
+  "osm": "node/5113464994",
+  "klasor": "mavi-gayrimenkul",
+  "tarih": "2026-11-17"
+ },
+ {
+  "osm": "node/4949790895",
+  "klasor": "uka-emlak-arsa-tarla-daire-dukkan",
+  "tarih": "2026-11-17"
+ },
+ {
+  "osm": "node/5329298075",
+  "klasor": "alternatif-gayrimenkul-insaat",
+  "tarih": "2026-11-17"
+ },
+ {
+  "osm": "node/5542891191",
+  "klasor": "ayisiciemlakotomotiv",
+  "tarih": "2026-11-17"
  }
 ]
