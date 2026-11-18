@@ -1,0 +1,220 @@
+{
+ "klasor": "yavuz-emlak",
+ "sablon": "klasik",
+ "ortak_gorsel": true,
+ "ofis": {
+  "ad": "Yavuz Emlak",
+  "kisa": "Yavuz",
+  "telefon": "0532 612 06 48",
+  "whatsapp": "905326120648",
+  "eposta": "",
+  "adres": "Merkez Mah., Beykoz, İstanbul",
+  "yetki": "",
+  "renk": "#5B2A86",
+  "temsili": true,
+  "kapak": "img/ev-modern-havuz.jpg",
+  "tanitim": "Yavuz Emlak, Beykoz merkezli olarak konut, işyeri ve arsa alım satım ve kiralama süreçlerinde danışmanlık hizmeti vermektedir.",
+  "hakkinda": "Beykoz ve çevresindeki portföyümüzle alıcı, satıcı ve kiracılara hizmet sunmaktayız.",
+  "aciklama": "Beykoz ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.",
+  "demoNot": "Bu sayfa Yavuz Emlak için hazırlanmış bir tasarım önizlemesidir. İlanlar ve fotoğraflar temsilidir.",
+  "saatler": "Pazartesi - Cumartesi, 09.00 - 19.00"
+ },
+ "ofisler": [
+  {
+   "sehir": "Beykoz",
+   "adres": "Merkez Mah., Beykoz, İstanbul",
+   "tel": "0532 612 06 48",
+   "lat": 41.13489,
+   "lng": 29.09051
+  }
+ ],
+ "danismanlar": [],
+ "istatistik": [],
+ "tarihce": [],
+ "yazilar": [],
+ "ilanlar": [
+  {
+   "id": "ilan-1",
+   "baslik": "Merkez'de Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Beykoz",
+   "mahalle": "Merkez",
+   "fiyat": 8200000,
+   "m2": 116,
+   "kat": "3. kat",
+   "yas": 12,
+   "aciklama": "Asansörlü binada, ara katta 116 m² 3+1 daire. Ebeveyn banyolu ve kapalı otoparklıdır. Toplu ulaşıma ve okullara yakındır.",
+   "gorseller": [
+    "img/ic-bebek-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 41.13663,
+   "lng": 29.08265,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-2",
+   "baslik": "Ortaçeşme'de Satılık 2+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Beykoz",
+   "mahalle": "Ortaçeşme",
+   "fiyat": 5450000,
+   "m2": 85,
+   "kat": "4. kat",
+   "yas": 3,
+   "aciklama": "Bakımlı binada 85 m² 2+1 daire. Doğalgaz kombili ve balkonludur. Krediye uygundur.",
+   "gorseller": [
+    "img/ic-ahsap-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 41.13075,
+   "lng": 29.08608,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-3",
+   "baslik": "Yeniköy'de Satılık 4+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Beykoz",
+   "mahalle": "Yeniköy",
+   "fiyat": 9400000,
+   "m2": 162,
+   "kat": "4. kat",
+   "yas": 10,
+   "aciklama": "Site içinde 162 m² 4+1 daire. Geniş salon, iki banyo ve kapalı otopark bulunmaktadır.",
+   "gorseller": [
+    "img/ic-gri-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 41.13754,
+   "lng": 29.10015,
+   "oda": "4+1",
+   "banyo": 2,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-4",
+   "baslik": "Çamlıbahçe'de Kiralık 2+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Beykoz",
+   "mahalle": "Çamlıbahçe",
+   "fiyat": 29000,
+   "m2": 99,
+   "kat": "6. kat",
+   "yas": 9,
+   "aciklama": "Ana caddeye yakın, 99 m² 2+1 daire. Doğalgaz kombili, aileye kiralıktır.",
+   "gorseller": [
+    "img/ic-bitkili-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 41.13611,
+   "lng": 29.09384,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 850
+  },
+  {
+   "id": "ilan-5",
+   "baslik": "Yalıköy'de Satılık 1+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Beykoz",
+   "mahalle": "Yalıköy",
+   "fiyat": 3000000,
+   "m2": 54,
+   "kat": "6. kat",
+   "yas": 18,
+   "aciklama": "Yeni binada 54 m² 1+1 daire. Kira getirisi yüksek, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-urla-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 41.12734,
+   "lng": 29.09564,
+   "oda": "1+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-6",
+   "baslik": "Merkez'de Kiralık 3+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Beykoz",
+   "mahalle": "Merkez",
+   "fiyat": 41000,
+   "m2": 118,
+   "kat": "6. kat",
+   "yas": 7,
+   "aciklama": "Asansörlü binada 118 m² 3+1 daire. Aydınlık ve geniş balkonludur.",
+   "gorseller": [
+    "img/ic-sari-koltuk.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 41.13478,
+   "lng": 29.08612,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 1000
+  },
+  {
+   "id": "ilan-7",
+   "baslik": "Ortaçeşme'de Satılık Dükkan",
+   "tip": "Satılık",
+   "kategori": "Dükkan",
+   "il": "İstanbul",
+   "ilce": "Beykoz",
+   "mahalle": "Ortaçeşme",
+   "fiyat": 5250000,
+   "m2": 71,
+   "kat": "Zemin kat",
+   "yas": 5,
+   "aciklama": "Cadde üzerinde, vitrin cepheli 71 m² dükkan. Kiracılıdır, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-moda-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 41.12757,
+   "lng": 29.09757
+  },
+  {
+   "id": "ilan-8",
+   "baslik": "Yeniköy'de Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Beykoz",
+   "mahalle": "Yeniköy",
+   "fiyat": 9200000,
+   "m2": 153,
+   "kat": "3. kat",
+   "yas": 13,
+   "aciklama": "Yeni yapılmış binada 153 m² 3+1 daire. Ankastre mutfak ve kapalı otopark mevcuttur.",
+   "gorseller": [
+    "img/ic-genis-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 41.13243,
+   "lng": 29.09825,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  }
+ ]
+}

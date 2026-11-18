@@ -1,0 +1,220 @@
+{
+ "klasor": "ayazma-emlak",
+ "sablon": "klasik",
+ "ortak_gorsel": true,
+ "ofis": {
+  "ad": "Ayazma Emlak",
+  "kisa": "Ayazma",
+  "telefon": "0535 271 60 24",
+  "whatsapp": "905352716024",
+  "eposta": "",
+  "adres": "Aziz Mahmut Hüdayi Mah., Üsküdar, İstanbul",
+  "yetki": "",
+  "renk": "#7A1F2B",
+  "temsili": true,
+  "kapak": "img/ev-beyaz-villa.jpg",
+  "tanitim": "Ayazma Emlak, Üsküdar merkezli olarak konut, işyeri ve arsa alım satım ve kiralama süreçlerinde danışmanlık hizmeti vermektedir.",
+  "hakkinda": "Üsküdar ve çevresindeki portföyümüzle alıcı, satıcı ve kiracılara hizmet sunmaktayız.",
+  "aciklama": "Üsküdar ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.",
+  "demoNot": "Bu sayfa Ayazma Emlak için hazırlanmış bir tasarım önizlemesidir. İlanlar ve fotoğraflar temsilidir.",
+  "saatler": "Pazartesi - Cumartesi, 09.00 - 19.00"
+ },
+ "ofisler": [
+  {
+   "sehir": "Üsküdar",
+   "adres": "Aziz Mahmut Hüdayi Mah., Üsküdar, İstanbul",
+   "tel": "0535 271 60 24",
+   "lat": 41.02169,
+   "lng": 29.01062
+  }
+ ],
+ "danismanlar": [],
+ "istatistik": [],
+ "tarihce": [],
+ "yazilar": [],
+ "ilanlar": [
+  {
+   "id": "ilan-1",
+   "baslik": "Aziz Mahmut Hüdayi'de Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Üsküdar",
+   "mahalle": "Aziz Mahmut Hüdayi",
+   "fiyat": 8000000,
+   "m2": 133,
+   "kat": "3. kat",
+   "yas": 13,
+   "aciklama": "Asansörlü binada, ara katta 133 m² 3+1 daire. Ebeveyn banyolu ve kapalı otoparklıdır. Toplu ulaşıma ve okullara yakındır.",
+   "gorseller": [
+    "img/ic-bitkili-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 41.02506,
+   "lng": 29.00829,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-2",
+   "baslik": "Aziz Mahmut Hüdayi'de Satılık 2+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Üsküdar",
+   "mahalle": "Aziz Mahmut Hüdayi",
+   "fiyat": 5000000,
+   "m2": 88,
+   "kat": "5. kat",
+   "yas": 11,
+   "aciklama": "Bakımlı binada 88 m² 2+1 daire. Doğalgaz kombili ve balkonludur. Krediye uygundur.",
+   "gorseller": [
+    "img/ic-bebek-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 41.02746,
+   "lng": 29.01992,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-3",
+   "baslik": "Aziz Mahmut Hüdayi'de Satılık 4+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Üsküdar",
+   "mahalle": "Aziz Mahmut Hüdayi",
+   "fiyat": 10200000,
+   "m2": 179,
+   "kat": "6. kat",
+   "yas": 3,
+   "aciklama": "Site içinde 179 m² 4+1 daire. Geniş salon, iki banyo ve kapalı otopark bulunmaktadır.",
+   "gorseller": [
+    "img/ic-genis-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 41.02657,
+   "lng": 29.0024,
+   "oda": "4+1",
+   "banyo": 2,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-4",
+   "baslik": "Aziz Mahmut Hüdayi'de Kiralık 2+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Üsküdar",
+   "mahalle": "Aziz Mahmut Hüdayi",
+   "fiyat": 26000,
+   "m2": 87,
+   "kat": "4. kat",
+   "yas": 16,
+   "aciklama": "Ana caddeye yakın, 87 m² 2+1 daire. Doğalgaz kombili, aileye kiralıktır.",
+   "gorseller": [
+    "img/ic-gri-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 41.02393,
+   "lng": 29.00747,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 450
+  },
+  {
+   "id": "ilan-5",
+   "baslik": "Aziz Mahmut Hüdayi'de Satılık 1+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Üsküdar",
+   "mahalle": "Aziz Mahmut Hüdayi",
+   "fiyat": 4050000,
+   "m2": 57,
+   "kat": "4. kat",
+   "yas": 15,
+   "aciklama": "Yeni binada 57 m² 1+1 daire. Kira getirisi yüksek, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-sari-koltuk.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 41.02428,
+   "lng": 29.00123,
+   "oda": "1+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-6",
+   "baslik": "Aziz Mahmut Hüdayi'de Kiralık 3+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Üsküdar",
+   "mahalle": "Aziz Mahmut Hüdayi",
+   "fiyat": 46000,
+   "m2": 133,
+   "kat": "4. kat",
+   "yas": 7,
+   "aciklama": "Asansörlü binada 133 m² 3+1 daire. Aydınlık ve geniş balkonludur.",
+   "gorseller": [
+    "img/ic-moda-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 41.01796,
+   "lng": 29.00383,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 600
+  },
+  {
+   "id": "ilan-7",
+   "baslik": "Aziz Mahmut Hüdayi'de Satılık Dükkan",
+   "tip": "Satılık",
+   "kategori": "Dükkan",
+   "il": "İstanbul",
+   "ilce": "Üsküdar",
+   "mahalle": "Aziz Mahmut Hüdayi",
+   "fiyat": 5650000,
+   "m2": 70,
+   "kat": "Zemin kat",
+   "yas": 15,
+   "aciklama": "Cadde üzerinde, vitrin cepheli 70 m² dükkan. Kiracılıdır, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-urla-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 41.01544,
+   "lng": 29.01202
+  },
+  {
+   "id": "ilan-8",
+   "baslik": "Aziz Mahmut Hüdayi'de Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Üsküdar",
+   "mahalle": "Aziz Mahmut Hüdayi",
+   "fiyat": 9950000,
+   "m2": 152,
+   "kat": "2. kat",
+   "yas": 12,
+   "aciklama": "Yeni yapılmış binada 152 m² 3+1 daire. Ankastre mutfak ve kapalı otopark mevcuttur.",
+   "gorseller": [
+    "img/ic-ahsap-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 41.0233,
+   "lng": 29.0187,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  }
+ ]
+}

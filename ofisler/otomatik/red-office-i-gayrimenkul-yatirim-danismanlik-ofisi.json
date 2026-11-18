@@ -1,0 +1,220 @@
+{
+ "klasor": "red-office-i-gayrimenkul-yatirim-danismanlik-ofisi",
+ "sablon": "klasik",
+ "ortak_gorsel": true,
+ "ofis": {
+  "ad": "Red Office I Gayrimenkul & Yatırım Danışmanlık Ofisi",
+  "kisa": "Red",
+  "telefon": "0532 629 60 71",
+  "whatsapp": "905326296071",
+  "eposta": "",
+  "adres": "Mehmetçik Mah., Lise Caddesi No: 45/A, pamukkale, Denizli",
+  "yetki": "",
+  "renk": "#6B3E26",
+  "temsili": true,
+  "kapak": "img/ev-modern-villa.jpg",
+  "tanitim": "Red Office I Gayrimenkul & Yatırım Danışmanlık Ofisi, pamukkale merkezli olarak konut, işyeri ve arsa alım satım ve kiralama süreçlerinde danışmanlık hizmeti vermektedir.",
+  "hakkinda": "pamukkale ve çevresindeki portföyümüzle alıcı, satıcı ve kiracılara hizmet sunmaktayız.",
+  "aciklama": "pamukkale ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.",
+  "demoNot": "Bu sayfa Red Office I Gayrimenkul & Yatırım Danışmanlık Ofisi için hazırlanmış bir tasarım önizlemesidir. İlanlar ve fotoğraflar temsilidir.",
+  "saatler": "Pazartesi - Cumartesi, 09.00 - 19.00"
+ },
+ "ofisler": [
+  {
+   "sehir": "pamukkale",
+   "adres": "Mehmetçik Mah., Lise Caddesi No: 45/A, pamukkale, Denizli",
+   "tel": "0532 629 60 71",
+   "lat": 37.76298,
+   "lng": 29.08192
+  }
+ ],
+ "danismanlar": [],
+ "istatistik": [],
+ "tarihce": [],
+ "yazilar": [],
+ "ilanlar": [
+  {
+   "id": "ilan-1",
+   "baslik": "Mehmetçik'te Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Denizli",
+   "ilce": "pamukkale",
+   "mahalle": "Mehmetçik",
+   "fiyat": 3050000,
+   "m2": 122,
+   "kat": "6. kat",
+   "yas": 11,
+   "aciklama": "Asansörlü binada, ara katta 122 m² 3+1 daire. Ebeveyn banyolu ve kapalı otoparklıdır. Toplu ulaşıma ve okullara yakındır.",
+   "gorseller": [
+    "img/ic-sari-koltuk.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 37.76749,
+   "lng": 29.09154,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-2",
+   "baslik": "Karaman'da Satılık 2+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Denizli",
+   "ilce": "pamukkale",
+   "mahalle": "Karaman",
+   "fiyat": 2250000,
+   "m2": 90,
+   "kat": "5. kat",
+   "yas": 16,
+   "aciklama": "Bakımlı binada 90 m² 2+1 daire. Doğalgaz kombili ve balkonludur. Krediye uygundur.",
+   "gorseller": [
+    "img/ic-gri-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 37.75873,
+   "lng": 29.09135,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-3",
+   "baslik": "Kınıklı'da Satılık 4+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Denizli",
+   "ilce": "pamukkale",
+   "mahalle": "Kınıklı",
+   "fiyat": 4050000,
+   "m2": 155,
+   "kat": "4. kat",
+   "yas": 6,
+   "aciklama": "Site içinde 155 m² 4+1 daire. Geniş salon, iki banyo ve kapalı otopark bulunmaktadır.",
+   "gorseller": [
+    "img/ic-genis-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 37.76475,
+   "lng": 29.07589,
+   "oda": "4+1",
+   "banyo": 2,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-4",
+   "baslik": "Kuşpınar'da Kiralık 2+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "Denizli",
+   "ilce": "pamukkale",
+   "mahalle": "Kuşpınar",
+   "fiyat": 12000,
+   "m2": 86,
+   "kat": "2. kat",
+   "yas": 17,
+   "aciklama": "Ana caddeye yakın, 86 m² 2+1 daire. Doğalgaz kombili, aileye kiralıktır.",
+   "gorseller": [
+    "img/ic-bebek-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 37.76016,
+   "lng": 29.07921,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 450
+  },
+  {
+   "id": "ilan-5",
+   "baslik": "Atalar'da Satılık 1+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Denizli",
+   "ilce": "pamukkale",
+   "mahalle": "Atalar",
+   "fiyat": 1750000,
+   "m2": 64,
+   "kat": "3. kat",
+   "yas": 4,
+   "aciklama": "Yeni binada 64 m² 1+1 daire. Kira getirisi yüksek, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-urla-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 37.75891,
+   "lng": 29.07945,
+   "oda": "1+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-6",
+   "baslik": "Mehmetçik'te Kiralık 3+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "Denizli",
+   "ilce": "pamukkale",
+   "mahalle": "Mehmetçik",
+   "fiyat": 17500,
+   "m2": 138,
+   "kat": "6. kat",
+   "yas": 10,
+   "aciklama": "Asansörlü binada 138 m² 3+1 daire. Aydınlık ve geniş balkonludur.",
+   "gorseller": [
+    "img/ic-bitkili-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 37.76198,
+   "lng": 29.07459,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 600
+  },
+  {
+   "id": "ilan-7",
+   "baslik": "Karaman'da Satılık Dükkan",
+   "tip": "Satılık",
+   "kategori": "Dükkan",
+   "il": "Denizli",
+   "ilce": "pamukkale",
+   "mahalle": "Karaman",
+   "fiyat": 1700000,
+   "m2": 64,
+   "kat": "Zemin kat",
+   "yas": 2,
+   "aciklama": "Cadde üzerinde, vitrin cepheli 64 m² dükkan. Kiracılıdır, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-ahsap-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 37.77085,
+   "lng": 29.0898
+  },
+  {
+   "id": "ilan-8",
+   "baslik": "Kınıklı'da Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Denizli",
+   "ilce": "pamukkale",
+   "mahalle": "Kınıklı",
+   "fiyat": 3250000,
+   "m2": 135,
+   "kat": "4. kat",
+   "yas": 6,
+   "aciklama": "Yeni yapılmış binada 135 m² 3+1 daire. Ankastre mutfak ve kapalı otopark mevcuttur.",
+   "gorseller": [
+    "img/ic-moda-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 37.76806,
+   "lng": 29.08832,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  }
+ ]
+}

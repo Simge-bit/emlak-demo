@@ -1,0 +1,220 @@
+{
+ "klasor": "aksu-gayrimenkul",
+ "sablon": "klasik",
+ "ortak_gorsel": true,
+ "ofis": {
+  "ad": "Aksu Gayrimenkul",
+  "kisa": "Aksu",
+  "telefon": "0537 465 51 01",
+  "whatsapp": "905374655101",
+  "eposta": "",
+  "adres": "Yenimahalle Mah., Büyükçekmece, İstanbul",
+  "yetki": "",
+  "renk": "#6B3E26",
+  "temsili": true,
+  "kapak": "img/ev-catili.jpg",
+  "tanitim": "Aksu Gayrimenkul, Büyükçekmece merkezli olarak konut, işyeri ve arsa alım satım ve kiralama süreçlerinde danışmanlık hizmeti vermektedir.",
+  "hakkinda": "Büyükçekmece ve çevresindeki portföyümüzle alıcı, satıcı ve kiracılara hizmet sunmaktayız.",
+  "aciklama": "Büyükçekmece ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.",
+  "demoNot": "Bu sayfa Aksu Gayrimenkul için hazırlanmış bir tasarım önizlemesidir. İlanlar ve fotoğraflar temsilidir.",
+  "saatler": "Pazartesi - Cumartesi, 09.00 - 19.00"
+ },
+ "ofisler": [
+  {
+   "sehir": "Büyükçekmece",
+   "adres": "Yenimahalle Mah., Büyükçekmece, İstanbul",
+   "tel": "0537 465 51 01",
+   "lat": 41.02245,
+   "lng": 28.47449
+  }
+ ],
+ "danismanlar": [],
+ "istatistik": [],
+ "tarihce": [],
+ "yazilar": [],
+ "ilanlar": [
+  {
+   "id": "ilan-1",
+   "baslik": "Yenimahalle'de Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Büyükçekmece",
+   "mahalle": "Yenimahalle",
+   "fiyat": 8000000,
+   "m2": 116,
+   "kat": "4. kat",
+   "yas": 7,
+   "aciklama": "Asansörlü binada, ara katta 116 m² 3+1 daire. Ebeveyn banyolu ve kapalı otoparklıdır. Toplu ulaşıma ve okullara yakındır.",
+   "gorseller": [
+    "img/ic-bitkili-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 41.0212,
+   "lng": 28.46548,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-2",
+   "baslik": "Kumburgaz'da Satılık 2+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Büyükçekmece",
+   "mahalle": "Kumburgaz",
+   "fiyat": 5150000,
+   "m2": 94,
+   "kat": "4. kat",
+   "yas": 15,
+   "aciklama": "Bakımlı binada 94 m² 2+1 daire. Doğalgaz kombili ve balkonludur. Krediye uygundur.",
+   "gorseller": [
+    "img/ic-bebek-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 41.02505,
+   "lng": 28.47119,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-3",
+   "baslik": "Bahçelievler'de Satılık 4+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Büyükçekmece",
+   "mahalle": "Bahçelievler",
+   "fiyat": 8950000,
+   "m2": 165,
+   "kat": "2. kat",
+   "yas": 11,
+   "aciklama": "Site içinde 165 m² 4+1 daire. Geniş salon, iki banyo ve kapalı otopark bulunmaktadır.",
+   "gorseller": [
+    "img/ic-genis-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 41.01465,
+   "lng": 28.47197,
+   "oda": "4+1",
+   "banyo": 2,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-4",
+   "baslik": "Yenimahalle'de Kiralık 2+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Büyükçekmece",
+   "mahalle": "Yenimahalle",
+   "fiyat": 33000,
+   "m2": 96,
+   "kat": "5. kat",
+   "yas": 7,
+   "aciklama": "Ana caddeye yakın, 96 m² 2+1 daire. Doğalgaz kombili, aileye kiralıktır.",
+   "gorseller": [
+    "img/ic-sari-koltuk.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 41.0284,
+   "lng": 28.47615,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 650
+  },
+  {
+   "id": "ilan-5",
+   "baslik": "Kumburgaz'da Satılık 1+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Büyükçekmece",
+   "mahalle": "Kumburgaz",
+   "fiyat": 3250000,
+   "m2": 54,
+   "kat": "3. kat",
+   "yas": 14,
+   "aciklama": "Yeni binada 54 m² 1+1 daire. Kira getirisi yüksek, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-urla-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 41.02772,
+   "lng": 28.47663,
+   "oda": "1+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-6",
+   "baslik": "Bahçelievler'de Kiralık 3+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Büyükçekmece",
+   "mahalle": "Bahçelievler",
+   "fiyat": 36500,
+   "m2": 121,
+   "kat": "6. kat",
+   "yas": 3,
+   "aciklama": "Asansörlü binada 121 m² 3+1 daire. Aydınlık ve geniş balkonludur.",
+   "gorseller": [
+    "img/ic-ahsap-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 41.01926,
+   "lng": 28.47565,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 600
+  },
+  {
+   "id": "ilan-7",
+   "baslik": "Yenimahalle'de Satılık Dükkan",
+   "tip": "Satılık",
+   "kategori": "Dükkan",
+   "il": "İstanbul",
+   "ilce": "Büyükçekmece",
+   "mahalle": "Yenimahalle",
+   "fiyat": 4300000,
+   "m2": 69,
+   "kat": "Zemin kat",
+   "yas": 15,
+   "aciklama": "Cadde üzerinde, vitrin cepheli 69 m² dükkan. Kiracılıdır, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-gri-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 41.01519,
+   "lng": 28.48072
+  },
+  {
+   "id": "ilan-8",
+   "baslik": "Kumburgaz'da Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Büyükçekmece",
+   "mahalle": "Kumburgaz",
+   "fiyat": 8350000,
+   "m2": 149,
+   "kat": "3. kat",
+   "yas": 3,
+   "aciklama": "Yeni yapılmış binada 149 m² 3+1 daire. Ankastre mutfak ve kapalı otopark mevcuttur.",
+   "gorseller": [
+    "img/ic-moda-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 41.02441,
+   "lng": 28.47736,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  }
+ ]
+}
