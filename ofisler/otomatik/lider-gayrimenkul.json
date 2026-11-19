@@ -1,0 +1,220 @@
+{
+ "klasor": "lider-gayrimenkul",
+ "sablon": "klasik",
+ "ortak_gorsel": true,
+ "ofis": {
+  "ad": "Lider Gayrimenkul",
+  "kisa": "Lider",
+  "telefon": "0531 622 23 45",
+  "whatsapp": "905316222345",
+  "eposta": "",
+  "adres": "Kemalpaşa Mah., Saray, Tekirdağ",
+  "yetki": "",
+  "renk": "#1F2D5C",
+  "temsili": true,
+  "kapak": "img/ev-modern-havuz.jpg",
+  "tanitim": "Lider Gayrimenkul, Saray merkezli olarak konut, işyeri ve arsa alım satım ve kiralama süreçlerinde danışmanlık hizmeti vermektedir.",
+  "hakkinda": "Saray ve çevresindeki portföyümüzle alıcı, satıcı ve kiracılara hizmet sunmaktayız.",
+  "aciklama": "Saray ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.",
+  "demoNot": "Bu sayfa Lider Gayrimenkul için hazırlanmış bir tasarım önizlemesidir. İlanlar ve fotoğraflar temsilidir.",
+  "saatler": "Pazartesi - Cumartesi, 09.00 - 19.00"
+ },
+ "ofisler": [
+  {
+   "sehir": "Saray",
+   "adres": "Kemalpaşa Mah., Saray, Tekirdağ",
+   "tel": "0531 622 23 45",
+   "lat": 41.44454,
+   "lng": 27.91611
+  }
+ ],
+ "danismanlar": [],
+ "istatistik": [],
+ "tarihce": [],
+ "yazilar": [],
+ "ilanlar": [
+  {
+   "id": "ilan-1",
+   "baslik": "Kemalpaşa'da Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Saray",
+   "mahalle": "Kemalpaşa",
+   "fiyat": 3600000,
+   "m2": 116,
+   "kat": "4. kat",
+   "yas": 6,
+   "aciklama": "Asansörlü binada, ara katta 116 m² 3+1 daire. Ebeveyn banyolu ve kapalı otoparklıdır. Toplu ulaşıma ve okullara yakındır.",
+   "gorseller": [
+    "img/ic-ahsap-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 41.4406,
+   "lng": 27.91962,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-2",
+   "baslik": "Ayaspaşa'da Satılık 2+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Saray",
+   "mahalle": "Ayaspaşa",
+   "fiyat": 2850000,
+   "m2": 89,
+   "kat": "1. kat",
+   "yas": 13,
+   "aciklama": "Bakımlı binada 89 m² 2+1 daire. Doğalgaz kombili ve balkonludur. Krediye uygundur.",
+   "gorseller": [
+    "img/ic-gri-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 41.44146,
+   "lng": 27.9169,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-3",
+   "baslik": "Pazarcık'ta Satılık 4+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Saray",
+   "mahalle": "Pazarcık",
+   "fiyat": 6050000,
+   "m2": 181,
+   "kat": "4. kat",
+   "yas": 6,
+   "aciklama": "Site içinde 181 m² 4+1 daire. Geniş salon, iki banyo ve kapalı otopark bulunmaktadır.",
+   "gorseller": [
+    "img/ic-bitkili-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 41.44361,
+   "lng": 27.91923,
+   "oda": "4+1",
+   "banyo": 2,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-4",
+   "baslik": "Yeni'de Kiralık 2+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Saray",
+   "mahalle": "Yeni",
+   "fiyat": 13000,
+   "m2": 84,
+   "kat": "4. kat",
+   "yas": 5,
+   "aciklama": "Ana caddeye yakın, 84 m² 2+1 daire. Doğalgaz kombili, aileye kiralıktır.",
+   "gorseller": [
+    "img/ic-urla-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 41.44529,
+   "lng": 27.91043,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 500
+  },
+  {
+   "id": "ilan-5",
+   "baslik": "Kemalpaşa'da Satılık 1+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Saray",
+   "mahalle": "Kemalpaşa",
+   "fiyat": 1900000,
+   "m2": 65,
+   "kat": "1. kat",
+   "yas": 17,
+   "aciklama": "Yeni binada 65 m² 1+1 daire. Kira getirisi yüksek, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-bebek-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 41.44583,
+   "lng": 27.92379,
+   "oda": "1+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-6",
+   "baslik": "Ayaspaşa'da Kiralık 3+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Saray",
+   "mahalle": "Ayaspaşa",
+   "fiyat": 20000,
+   "m2": 120,
+   "kat": "4. kat",
+   "yas": 5,
+   "aciklama": "Asansörlü binada 120 m² 3+1 daire. Aydınlık ve geniş balkonludur.",
+   "gorseller": [
+    "img/ic-moda-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 41.43842,
+   "lng": 27.9167,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 500
+  },
+  {
+   "id": "ilan-7",
+   "baslik": "Pazarcık'ta Satılık Dükkan",
+   "tip": "Satılık",
+   "kategori": "Dükkan",
+   "il": "Tekirdağ",
+   "ilce": "Saray",
+   "mahalle": "Pazarcık",
+   "fiyat": 2250000,
+   "m2": 67,
+   "kat": "Zemin kat",
+   "yas": 18,
+   "aciklama": "Cadde üzerinde, vitrin cepheli 67 m² dükkan. Kiracılıdır, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-sari-koltuk.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 41.45186,
+   "lng": 27.91954
+  },
+  {
+   "id": "ilan-8",
+   "baslik": "Yeni'de Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Saray",
+   "mahalle": "Yeni",
+   "fiyat": 3550000,
+   "m2": 130,
+   "kat": "2. kat",
+   "yas": 16,
+   "aciklama": "Yeni yapılmış binada 130 m² 3+1 daire. Ankastre mutfak ve kapalı otopark mevcuttur.",
+   "gorseller": [
+    "img/ic-genis-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 41.43802,
+   "lng": 27.92575,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  }
+ ]
+}

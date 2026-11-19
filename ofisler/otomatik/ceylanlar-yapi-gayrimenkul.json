@@ -1,0 +1,220 @@
+{
+ "klasor": "ceylanlar-yapi-gayrimenkul",
+ "sablon": "klasik",
+ "ortak_gorsel": true,
+ "ofis": {
+  "ad": "Ceylanlar Yapı Gayrimenkul",
+  "kisa": "Ceylanlar",
+  "telefon": "0505 705 09 56",
+  "whatsapp": "905057050956",
+  "eposta": "",
+  "adres": "Mehmet Akif Mah., Aşık Veysel Caddesi 2. yasemin sokak No: 3b, küçükçekmece, İstanbul",
+  "yetki": "",
+  "renk": "#0F4C5C",
+  "temsili": true,
+  "kapak": "img/ev-modern-villa.jpg",
+  "tanitim": "Ceylanlar Yapı Gayrimenkul, küçükçekmece merkezli olarak konut, işyeri ve arsa alım satım ve kiralama süreçlerinde danışmanlık hizmeti vermektedir.",
+  "hakkinda": "küçükçekmece ve çevresindeki portföyümüzle alıcı, satıcı ve kiracılara hizmet sunmaktayız.",
+  "aciklama": "küçükçekmece ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.",
+  "demoNot": "Bu sayfa Ceylanlar Yapı Gayrimenkul için hazırlanmış bir tasarım önizlemesidir. İlanlar ve fotoğraflar temsilidir.",
+  "saatler": "Pazartesi - Cumartesi, 09.00 - 19.00"
+ },
+ "ofisler": [
+  {
+   "sehir": "küçükçekmece",
+   "adres": "Mehmet Akif Mah., Aşık Veysel Caddesi 2. yasemin sokak No: 3b, küçükçekmece, İstanbul",
+   "tel": "0505 705 09 56",
+   "lat": 41.05278,
+   "lng": 28.80431
+  }
+ ],
+ "danismanlar": [],
+ "istatistik": [],
+ "tarihce": [],
+ "yazilar": [],
+ "ilanlar": [
+  {
+   "id": "ilan-1",
+   "baslik": "Mehmet Akif'te Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "küçükçekmece",
+   "mahalle": "Mehmet Akif",
+   "fiyat": 7450000,
+   "m2": 123,
+   "kat": "6. kat",
+   "yas": 9,
+   "aciklama": "Asansörlü binada, ara katta 123 m² 3+1 daire. Ebeveyn banyolu ve kapalı otoparklıdır. Toplu ulaşıma ve okullara yakındır.",
+   "gorseller": [
+    "img/ic-moda-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 41.04862,
+   "lng": 28.80786,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-2",
+   "baslik": "Mahmutbey'de Satılık 2+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "küçükçekmece",
+   "mahalle": "Mahmutbey",
+   "fiyat": 6200000,
+   "m2": 92,
+   "kat": "3. kat",
+   "yas": 11,
+   "aciklama": "Bakımlı binada 92 m² 2+1 daire. Doğalgaz kombili ve balkonludur. Krediye uygundur.",
+   "gorseller": [
+    "img/ic-genis-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 41.05593,
+   "lng": 28.79886,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-3",
+   "baslik": "Halkalı Merkez'de Satılık 4+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "küçükçekmece",
+   "mahalle": "Halkalı Merkez",
+   "fiyat": 12400000,
+   "m2": 182,
+   "kat": "4. kat",
+   "yas": 15,
+   "aciklama": "Site içinde 182 m² 4+1 daire. Geniş salon, iki banyo ve kapalı otopark bulunmaktadır.",
+   "gorseller": [
+    "img/ic-bitkili-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 41.04627,
+   "lng": 28.81074,
+   "oda": "4+1",
+   "banyo": 2,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-4",
+   "baslik": "Atakent'te Kiralık 2+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "küçükçekmece",
+   "mahalle": "Atakent",
+   "fiyat": 26500,
+   "m2": 85,
+   "kat": "3. kat",
+   "yas": 17,
+   "aciklama": "Ana caddeye yakın, 85 m² 2+1 daire. Doğalgaz kombili, aileye kiralıktır.",
+   "gorseller": [
+    "img/ic-sari-koltuk.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 41.0521,
+   "lng": 28.79822,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 750
+  },
+  {
+   "id": "ilan-5",
+   "baslik": "15 Temmuz'da Satılık 1+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "küçükçekmece",
+   "mahalle": "15 Temmuz",
+   "fiyat": 3600000,
+   "m2": 64,
+   "kat": "2. kat",
+   "yas": 16,
+   "aciklama": "Yeni binada 64 m² 1+1 daire. Kira getirisi yüksek, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-ahsap-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 41.05649,
+   "lng": 28.80486,
+   "oda": "1+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-6",
+   "baslik": "Mehmet Akif'te Kiralık 3+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "küçükçekmece",
+   "mahalle": "Mehmet Akif",
+   "fiyat": 53000,
+   "m2": 144,
+   "kat": "3. kat",
+   "yas": 8,
+   "aciklama": "Asansörlü binada 144 m² 3+1 daire. Aydınlık ve geniş balkonludur.",
+   "gorseller": [
+    "img/ic-gri-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 41.05133,
+   "lng": 28.80866,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 1050
+  },
+  {
+   "id": "ilan-7",
+   "baslik": "Mahmutbey'de Satılık Dükkan",
+   "tip": "Satılık",
+   "kategori": "Dükkan",
+   "il": "İstanbul",
+   "ilce": "küçükçekmece",
+   "mahalle": "Mahmutbey",
+   "fiyat": 4850000,
+   "m2": 73,
+   "kat": "Zemin kat",
+   "yas": 12,
+   "aciklama": "Cadde üzerinde, vitrin cepheli 73 m² dükkan. Kiracılıdır, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-urla-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 41.04912,
+   "lng": 28.80759
+  },
+  {
+   "id": "ilan-8",
+   "baslik": "Halkalı Merkez'de Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "küçükçekmece",
+   "mahalle": "Halkalı Merkez",
+   "fiyat": 8950000,
+   "m2": 156,
+   "kat": "5. kat",
+   "yas": 6,
+   "aciklama": "Yeni yapılmış binada 156 m² 3+1 daire. Ankastre mutfak ve kapalı otopark mevcuttur.",
+   "gorseller": [
+    "img/ic-bebek-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 41.05076,
+   "lng": 28.80891,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  }
+ ]
+}
