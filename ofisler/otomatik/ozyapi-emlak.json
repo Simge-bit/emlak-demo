@@ -1,0 +1,220 @@
+{
+ "klasor": "ozyapi-emlak",
+ "sablon": "klasik",
+ "ortak_gorsel": true,
+ "ofis": {
+  "ad": "Özyapı Emlak",
+  "kisa": "Özyapı",
+  "telefon": "0539 658 75 11",
+  "whatsapp": "905396587511",
+  "eposta": "",
+  "adres": "Yeni Mah., Gökçeada, Çanakkale",
+  "yetki": "",
+  "renk": "#0F4C5C",
+  "temsili": true,
+  "kapak": "img/ev-modern-villa.jpg",
+  "tanitim": "Özyapı Emlak, Gökçeada merkezli olarak konut, işyeri ve arsa alım satım ve kiralama süreçlerinde danışmanlık hizmeti vermektedir.",
+  "hakkinda": "Gökçeada ve çevresindeki portföyümüzle alıcı, satıcı ve kiracılara hizmet sunmaktayız.",
+  "aciklama": "Gökçeada ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.",
+  "demoNot": "Bu sayfa Özyapı Emlak için hazırlanmış bir tasarım önizlemesidir. İlanlar ve fotoğraflar temsilidir.",
+  "saatler": "Pazartesi - Cumartesi, 09.00 - 19.00"
+ },
+ "ofisler": [
+  {
+   "sehir": "Gökçeada",
+   "adres": "Yeni Mah., Gökçeada, Çanakkale",
+   "tel": "0539 658 75 11",
+   "lat": 40.19496,
+   "lng": 25.90808
+  }
+ ],
+ "danismanlar": [],
+ "istatistik": [],
+ "tarihce": [],
+ "yazilar": [],
+ "ilanlar": [
+  {
+   "id": "ilan-1",
+   "baslik": "Yeni'de Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Çanakkale",
+   "ilce": "Gökçeada",
+   "mahalle": "Yeni",
+   "fiyat": 3100000,
+   "m2": 126,
+   "kat": "3. kat",
+   "yas": 12,
+   "aciklama": "Asansörlü binada, ara katta 126 m² 3+1 daire. Ebeveyn banyolu ve kapalı otoparklıdır. Toplu ulaşıma ve okullara yakındır.",
+   "gorseller": [
+    "img/ic-gri-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 40.20095,
+   "lng": 25.91793,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-2",
+   "baslik": "Çınarlı'da Satılık 2+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Çanakkale",
+   "ilce": "Gökçeada",
+   "mahalle": "Çınarlı",
+   "fiyat": 2700000,
+   "m2": 96,
+   "kat": "1. kat",
+   "yas": 4,
+   "aciklama": "Bakımlı binada 96 m² 2+1 daire. Doğalgaz kombili ve balkonludur. Krediye uygundur.",
+   "gorseller": [
+    "img/ic-sari-koltuk.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 40.19059,
+   "lng": 25.89956,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-3",
+   "baslik": "Fatih'te Satılık 4+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Çanakkale",
+   "ilce": "Gökçeada",
+   "mahalle": "Fatih",
+   "fiyat": 4250000,
+   "m2": 187,
+   "kat": "6. kat",
+   "yas": 5,
+   "aciklama": "Site içinde 187 m² 4+1 daire. Geniş salon, iki banyo ve kapalı otopark bulunmaktadır.",
+   "gorseller": [
+    "img/ic-ahsap-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 40.20245,
+   "lng": 25.90765,
+   "oda": "4+1",
+   "banyo": 2,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-4",
+   "baslik": "Cumhuriyet'te Kiralık 2+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "Çanakkale",
+   "ilce": "Gökçeada",
+   "mahalle": "Cumhuriyet",
+   "fiyat": 13000,
+   "m2": 97,
+   "kat": "1. kat",
+   "yas": 9,
+   "aciklama": "Ana caddeye yakın, 97 m² 2+1 daire. Doğalgaz kombili, aileye kiralıktır.",
+   "gorseller": [
+    "img/ic-genis-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 40.20005,
+   "lng": 25.91497,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 600
+  },
+  {
+   "id": "ilan-5",
+   "baslik": "Kuzulimanı'da Satılık 1+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Çanakkale",
+   "ilce": "Gökçeada",
+   "mahalle": "Kuzulimanı",
+   "fiyat": 1500000,
+   "m2": 58,
+   "kat": "2. kat",
+   "yas": 12,
+   "aciklama": "Yeni binada 58 m² 1+1 daire. Kira getirisi yüksek, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-bitkili-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 40.18874,
+   "lng": 25.91721,
+   "oda": "1+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-6",
+   "baslik": "Yeni'de Kiralık 3+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "Çanakkale",
+   "ilce": "Gökçeada",
+   "mahalle": "Yeni",
+   "fiyat": 19500,
+   "m2": 129,
+   "kat": "1. kat",
+   "yas": 12,
+   "aciklama": "Asansörlü binada 129 m² 3+1 daire. Aydınlık ve geniş balkonludur.",
+   "gorseller": [
+    "img/ic-moda-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 40.20072,
+   "lng": 25.90019,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 1200
+  },
+  {
+   "id": "ilan-7",
+   "baslik": "Çınarlı'da Satılık Dükkan",
+   "tip": "Satılık",
+   "kategori": "Dükkan",
+   "il": "Çanakkale",
+   "ilce": "Gökçeada",
+   "mahalle": "Çınarlı",
+   "fiyat": 2250000,
+   "m2": 73,
+   "kat": "Zemin kat",
+   "yas": 3,
+   "aciklama": "Cadde üzerinde, vitrin cepheli 73 m² dükkan. Kiracılıdır, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-urla-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 40.19879,
+   "lng": 25.90357
+  },
+  {
+   "id": "ilan-8",
+   "baslik": "Fatih'te Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Çanakkale",
+   "ilce": "Gökçeada",
+   "mahalle": "Fatih",
+   "fiyat": 3450000,
+   "m2": 127,
+   "kat": "2. kat",
+   "yas": 3,
+   "aciklama": "Yeni yapılmış binada 127 m² 3+1 daire. Ankastre mutfak ve kapalı otopark mevcuttur.",
+   "gorseller": [
+    "img/ic-bebek-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 40.19433,
+   "lng": 25.9171,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  }
+ ]
+}

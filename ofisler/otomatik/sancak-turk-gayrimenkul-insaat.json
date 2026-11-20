@@ -1,0 +1,220 @@
+{
+ "klasor": "sancak-turk-gayrimenkul-insaat",
+ "sablon": "klasik",
+ "ortak_gorsel": true,
+ "ofis": {
+  "ad": "SANCAK TÜRK GAYRİMENKUL İNŞAAT",
+  "kisa": "SANCAK",
+  "telefon": "0533 356 95 20",
+  "whatsapp": "905333569520",
+  "eposta": "",
+  "adres": "Fevzi Çakmak Mah., 14 Sokak, Bağcılar, İstanbul",
+  "yetki": "",
+  "renk": "#7A1F2B",
+  "temsili": true,
+  "kapak": "img/ev-modern-villa.jpg",
+  "tanitim": "SANCAK TÜRK GAYRİMENKUL İNŞAAT, Bağcılar merkezli olarak konut, işyeri ve arsa alım satım ve kiralama süreçlerinde danışmanlık hizmeti vermektedir.",
+  "hakkinda": "Bağcılar ve çevresindeki portföyümüzle alıcı, satıcı ve kiracılara hizmet sunmaktayız.",
+  "aciklama": "Bağcılar ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.",
+  "demoNot": "Bu sayfa SANCAK TÜRK GAYRİMENKUL İNŞAAT için hazırlanmış bir tasarım önizlemesidir. İlanlar ve fotoğraflar temsilidir.",
+  "saatler": "Pazartesi - Cumartesi, 09.00 - 19.00"
+ },
+ "ofisler": [
+  {
+   "sehir": "Bağcılar",
+   "adres": "Fevzi Çakmak Mah., 14 Sokak, Bağcılar, İstanbul",
+   "tel": "0533 356 95 20",
+   "lat": 41.04314,
+   "lng": 28.85262
+  }
+ ],
+ "danismanlar": [],
+ "istatistik": [],
+ "tarihce": [],
+ "yazilar": [],
+ "ilanlar": [
+  {
+   "id": "ilan-1",
+   "baslik": "Fevzi Çakmak'ta Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Bağcılar",
+   "mahalle": "Fevzi Çakmak",
+   "fiyat": 6500000,
+   "m2": 117,
+   "kat": "3. kat",
+   "yas": 18,
+   "aciklama": "Asansörlü binada, ara katta 117 m² 3+1 daire. Ebeveyn banyolu ve kapalı otoparklıdır. Toplu ulaşıma ve okullara yakındır.",
+   "gorseller": [
+    "img/ic-gri-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 41.0457,
+   "lng": 28.85451,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-2",
+   "baslik": "Çınar'da Satılık 2+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Bağcılar",
+   "mahalle": "Çınar",
+   "fiyat": 5600000,
+   "m2": 87,
+   "kat": "5. kat",
+   "yas": 5,
+   "aciklama": "Bakımlı binada 87 m² 2+1 daire. Doğalgaz kombili ve balkonludur. Krediye uygundur.",
+   "gorseller": [
+    "img/ic-ahsap-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 41.044,
+   "lng": 28.85475,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-3",
+   "baslik": "Merkez'de Satılık 4+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Bağcılar",
+   "mahalle": "Merkez",
+   "fiyat": 9500000,
+   "m2": 163,
+   "kat": "2. kat",
+   "yas": 6,
+   "aciklama": "Site içinde 163 m² 4+1 daire. Geniş salon, iki banyo ve kapalı otopark bulunmaktadır.",
+   "gorseller": [
+    "img/ic-bitkili-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 41.04292,
+   "lng": 28.85964,
+   "oda": "4+1",
+   "banyo": 2,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-4",
+   "baslik": "Sancaktepe'de Kiralık 2+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Bağcılar",
+   "mahalle": "Sancaktepe",
+   "fiyat": 35000,
+   "m2": 99,
+   "kat": "2. kat",
+   "yas": 16,
+   "aciklama": "Ana caddeye yakın, 99 m² 2+1 daire. Doğalgaz kombili, aileye kiralıktır.",
+   "gorseller": [
+    "img/ic-sari-koltuk.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 41.04288,
+   "lng": 28.8552,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 850
+  },
+  {
+   "id": "ilan-5",
+   "baslik": "İnönü'de Satılık 1+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Bağcılar",
+   "mahalle": "İnönü",
+   "fiyat": 3400000,
+   "m2": 54,
+   "kat": "5. kat",
+   "yas": 9,
+   "aciklama": "Yeni binada 54 m² 1+1 daire. Kira getirisi yüksek, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-moda-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 41.0394,
+   "lng": 28.84574,
+   "oda": "1+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-6",
+   "baslik": "Fevzi Çakmak'ta Kiralık 3+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Bağcılar",
+   "mahalle": "Fevzi Çakmak",
+   "fiyat": 44500,
+   "m2": 124,
+   "kat": "1. kat",
+   "yas": 17,
+   "aciklama": "Asansörlü binada 124 m² 3+1 daire. Aydınlık ve geniş balkonludur.",
+   "gorseller": [
+    "img/ic-genis-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 41.04445,
+   "lng": 28.85686,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 1050
+  },
+  {
+   "id": "ilan-7",
+   "baslik": "Çınar'da Satılık Dükkan",
+   "tip": "Satılık",
+   "kategori": "Dükkan",
+   "il": "İstanbul",
+   "ilce": "Bağcılar",
+   "mahalle": "Çınar",
+   "fiyat": 4200000,
+   "m2": 65,
+   "kat": "Zemin kat",
+   "yas": 14,
+   "aciklama": "Cadde üzerinde, vitrin cepheli 65 m² dükkan. Kiracılıdır, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-bebek-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 41.04678,
+   "lng": 28.86234
+  },
+  {
+   "id": "ilan-8",
+   "baslik": "Merkez'de Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Bağcılar",
+   "mahalle": "Merkez",
+   "fiyat": 7950000,
+   "m2": 149,
+   "kat": "1. kat",
+   "yas": 11,
+   "aciklama": "Yeni yapılmış binada 149 m² 3+1 daire. Ankastre mutfak ve kapalı otopark mevcuttur.",
+   "gorseller": [
+    "img/ic-urla-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 41.04696,
+   "lng": 28.84676,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  }
+ ]
+}

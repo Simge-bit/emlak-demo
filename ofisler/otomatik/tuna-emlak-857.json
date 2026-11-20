@@ -1,0 +1,220 @@
+{
+ "klasor": "tuna-emlak-857",
+ "sablon": "klasik",
+ "ortak_gorsel": true,
+ "ofis": {
+  "ad": "Tuna Emlak",
+  "kisa": "Tuna",
+  "telefon": "0532 484 88 98",
+  "whatsapp": "905324848898",
+  "eposta": "",
+  "adres": "Marmaraereğlisi, Tekirdağ",
+  "yetki": "",
+  "renk": "#7A1F2B",
+  "temsili": true,
+  "kapak": "img/ev-modern-villa.jpg",
+  "tanitim": "Tuna Emlak, Marmaraereğlisi merkezli olarak konut, işyeri ve arsa alım satım ve kiralama süreçlerinde danışmanlık hizmeti vermektedir.",
+  "hakkinda": "Marmaraereğlisi ve çevresindeki portföyümüzle alıcı, satıcı ve kiracılara hizmet sunmaktayız.",
+  "aciklama": "Marmaraereğlisi ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.",
+  "demoNot": "Bu sayfa Tuna Emlak için hazırlanmış bir tasarım önizlemesidir. İlanlar ve fotoğraflar temsilidir.",
+  "saatler": "Pazartesi - Cumartesi, 09.00 - 19.00"
+ },
+ "ofisler": [
+  {
+   "sehir": "Marmaraereğlisi",
+   "adres": "Marmaraereğlisi, Tekirdağ",
+   "tel": "0532 484 88 98",
+   "lat": 40.99722,
+   "lng": 27.84426
+  }
+ ],
+ "danismanlar": [],
+ "istatistik": [],
+ "tarihce": [],
+ "yazilar": [],
+ "ilanlar": [
+  {
+   "id": "ilan-1",
+   "baslik": "Marmaraereğlisi'de Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Marmaraereğlisi",
+   "mahalle": "Marmaraereğlisi",
+   "fiyat": 3100000,
+   "m2": 117,
+   "kat": "6. kat",
+   "yas": 12,
+   "aciklama": "Asansörlü binada, ara katta 117 m² 3+1 daire. Ebeveyn banyolu ve kapalı otoparklıdır. Toplu ulaşıma ve okullara yakındır.",
+   "gorseller": [
+    "img/ic-moda-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 41.00289,
+   "lng": 27.83517,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-2",
+   "baslik": "Marmaraereğlisi'de Satılık 2+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Marmaraereğlisi",
+   "mahalle": "Marmaraereğlisi",
+   "fiyat": 2900000,
+   "m2": 99,
+   "kat": "6. kat",
+   "yas": 4,
+   "aciklama": "Bakımlı binada 99 m² 2+1 daire. Doğalgaz kombili ve balkonludur. Krediye uygundur.",
+   "gorseller": [
+    "img/ic-genis-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 40.99103,
+   "lng": 27.83747,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-3",
+   "baslik": "Marmaraereğlisi'de Satılık 4+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Marmaraereğlisi",
+   "mahalle": "Marmaraereğlisi",
+   "fiyat": 4350000,
+   "m2": 171,
+   "kat": "3. kat",
+   "yas": 18,
+   "aciklama": "Site içinde 171 m² 4+1 daire. Geniş salon, iki banyo ve kapalı otopark bulunmaktadır.",
+   "gorseller": [
+    "img/ic-bebek-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 40.99703,
+   "lng": 27.83511,
+   "oda": "4+1",
+   "banyo": 2,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-4",
+   "baslik": "Marmaraereğlisi'de Kiralık 2+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Marmaraereğlisi",
+   "mahalle": "Marmaraereğlisi",
+   "fiyat": 14000,
+   "m2": 92,
+   "kat": "2. kat",
+   "yas": 10,
+   "aciklama": "Ana caddeye yakın, 92 m² 2+1 daire. Doğalgaz kombili, aileye kiralıktır.",
+   "gorseller": [
+    "img/ic-urla-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 40.99938,
+   "lng": 27.83931,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 800
+  },
+  {
+   "id": "ilan-5",
+   "baslik": "Marmaraereğlisi'de Satılık 1+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Marmaraereğlisi",
+   "mahalle": "Marmaraereğlisi",
+   "fiyat": 1550000,
+   "m2": 55,
+   "kat": "3. kat",
+   "yas": 2,
+   "aciklama": "Yeni binada 55 m² 1+1 daire. Kira getirisi yüksek, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-sari-koltuk.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 40.99881,
+   "lng": 27.84895,
+   "oda": "1+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-6",
+   "baslik": "Marmaraereğlisi'de Kiralık 3+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Marmaraereğlisi",
+   "mahalle": "Marmaraereğlisi",
+   "fiyat": 21000,
+   "m2": 120,
+   "kat": "5. kat",
+   "yas": 14,
+   "aciklama": "Asansörlü binada 120 m² 3+1 daire. Aydınlık ve geniş balkonludur.",
+   "gorseller": [
+    "img/ic-ahsap-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 40.99892,
+   "lng": 27.83933,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 650
+  },
+  {
+   "id": "ilan-7",
+   "baslik": "Marmaraereğlisi'de Satılık Dükkan",
+   "tip": "Satılık",
+   "kategori": "Dükkan",
+   "il": "Tekirdağ",
+   "ilce": "Marmaraereğlisi",
+   "mahalle": "Marmaraereğlisi",
+   "fiyat": 2550000,
+   "m2": 77,
+   "kat": "Zemin kat",
+   "yas": 13,
+   "aciklama": "Cadde üzerinde, vitrin cepheli 77 m² dükkan. Kiracılıdır, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-bitkili-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 40.99095,
+   "lng": 27.85257
+  },
+  {
+   "id": "ilan-8",
+   "baslik": "Marmaraereğlisi'de Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Marmaraereğlisi",
+   "mahalle": "Marmaraereğlisi",
+   "fiyat": 4550000,
+   "m2": 141,
+   "kat": "5. kat",
+   "yas": 2,
+   "aciklama": "Yeni yapılmış binada 141 m² 3+1 daire. Ankastre mutfak ve kapalı otopark mevcuttur.",
+   "gorseller": [
+    "img/ic-gri-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 40.99901,
+   "lng": 27.84826,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  }
+ ]
+}
