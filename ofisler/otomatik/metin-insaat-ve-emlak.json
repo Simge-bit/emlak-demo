@@ -1,0 +1,220 @@
+{
+ "klasor": "metin-insaat-ve-emlak",
+ "sablon": "klasik",
+ "ortak_gorsel": true,
+ "ofis": {
+  "ad": "Metin İnşaat Ve Emlak",
+  "kisa": "Metin",
+  "telefon": "0532 418 29 37",
+  "whatsapp": "905324182937",
+  "eposta": "",
+  "adres": "Seyyid Ömer Mah., Şeyh Hüsamettin Sokak, Fatih, İstanbul",
+  "yetki": "",
+  "renk": "#5B2A86",
+  "temsili": true,
+  "kapak": "img/ev-catili.jpg",
+  "tanitim": "Metin İnşaat Ve Emlak, Fatih merkezli olarak konut, işyeri ve arsa alım satım ve kiralama süreçlerinde danışmanlık hizmeti vermektedir.",
+  "hakkinda": "Fatih ve çevresindeki portföyümüzle alıcı, satıcı ve kiracılara hizmet sunmaktayız.",
+  "aciklama": "Fatih ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.",
+  "demoNot": "Bu sayfa Metin İnşaat Ve Emlak için hazırlanmış bir tasarım önizlemesidir. İlanlar ve fotoğraflar temsilidir.",
+  "saatler": "Pazartesi - Cumartesi, 09.00 - 19.00"
+ },
+ "ofisler": [
+  {
+   "sehir": "Fatih",
+   "adres": "Seyyid Ömer Mah., Şeyh Hüsamettin Sokak, Fatih, İstanbul",
+   "tel": "0532 418 29 37",
+   "lat": 41.00947,
+   "lng": 28.92838
+  }
+ ],
+ "danismanlar": [],
+ "istatistik": [],
+ "tarihce": [],
+ "yazilar": [],
+ "ilanlar": [
+  {
+   "id": "ilan-1",
+   "baslik": "Seyyid Ömer'de Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Fatih",
+   "mahalle": "Seyyid Ömer",
+   "fiyat": 7800000,
+   "m2": 118,
+   "kat": "3. kat",
+   "yas": 14,
+   "aciklama": "Asansörlü binada, ara katta 118 m² 3+1 daire. Ebeveyn banyolu ve kapalı otoparklıdır. Toplu ulaşıma ve okullara yakındır.",
+   "gorseller": [
+    "img/ic-ahsap-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 41.01421,
+   "lng": 28.93243,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-2",
+   "baslik": "Seyyid Ömer'de Satılık 2+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Fatih",
+   "mahalle": "Seyyid Ömer",
+   "fiyat": 6650000,
+   "m2": 103,
+   "kat": "5. kat",
+   "yas": 10,
+   "aciklama": "Bakımlı binada 103 m² 2+1 daire. Doğalgaz kombili ve balkonludur. Krediye uygundur.",
+   "gorseller": [
+    "img/ic-bitkili-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 41.0134,
+   "lng": 28.93208,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-3",
+   "baslik": "Seyyid Ömer'de Satılık 4+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Fatih",
+   "mahalle": "Seyyid Ömer",
+   "fiyat": 10500000,
+   "m2": 184,
+   "kat": "6. kat",
+   "yas": 6,
+   "aciklama": "Site içinde 184 m² 4+1 daire. Geniş salon, iki banyo ve kapalı otopark bulunmaktadır.",
+   "gorseller": [
+    "img/ic-genis-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 41.0128,
+   "lng": 28.93717,
+   "oda": "4+1",
+   "banyo": 2,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-4",
+   "baslik": "Seyyid Ömer'de Kiralık 2+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Fatih",
+   "mahalle": "Seyyid Ömer",
+   "fiyat": 27500,
+   "m2": 90,
+   "kat": "3. kat",
+   "yas": 15,
+   "aciklama": "Ana caddeye yakın, 90 m² 2+1 daire. Doğalgaz kombili, aileye kiralıktır.",
+   "gorseller": [
+    "img/ic-sari-koltuk.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 41.01694,
+   "lng": 28.91855,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 650
+  },
+  {
+   "id": "ilan-5",
+   "baslik": "Seyyid Ömer'de Satılık 1+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Fatih",
+   "mahalle": "Seyyid Ömer",
+   "fiyat": 4500000,
+   "m2": 64,
+   "kat": "1. kat",
+   "yas": 10,
+   "aciklama": "Yeni binada 64 m² 1+1 daire. Kira getirisi yüksek, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-moda-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 41.00923,
+   "lng": 28.91943,
+   "oda": "1+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-6",
+   "baslik": "Seyyid Ömer'de Kiralık 3+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Fatih",
+   "mahalle": "Seyyid Ömer",
+   "fiyat": 43000,
+   "m2": 118,
+   "kat": "3. kat",
+   "yas": 17,
+   "aciklama": "Asansörlü binada 118 m² 3+1 daire. Aydınlık ve geniş balkonludur.",
+   "gorseller": [
+    "img/ic-urla-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 41.00468,
+   "lng": 28.92632,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 1000
+  },
+  {
+   "id": "ilan-7",
+   "baslik": "Seyyid Ömer'de Satılık Dükkan",
+   "tip": "Satılık",
+   "kategori": "Dükkan",
+   "il": "İstanbul",
+   "ilce": "Fatih",
+   "mahalle": "Seyyid Ömer",
+   "fiyat": 5350000,
+   "m2": 71,
+   "kat": "Zemin kat",
+   "yas": 15,
+   "aciklama": "Cadde üzerinde, vitrin cepheli 71 m² dükkan. Kiracılıdır, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-bebek-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 41.0087,
+   "lng": 28.91912
+  },
+  {
+   "id": "ilan-8",
+   "baslik": "Seyyid Ömer'de Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Fatih",
+   "mahalle": "Seyyid Ömer",
+   "fiyat": 8800000,
+   "m2": 126,
+   "kat": "1. kat",
+   "yas": 16,
+   "aciklama": "Yeni yapılmış binada 126 m² 3+1 daire. Ankastre mutfak ve kapalı otopark mevcuttur.",
+   "gorseller": [
+    "img/ic-gri-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 41.00751,
+   "lng": 28.93709,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  }
+ ]
+}

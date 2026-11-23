@@ -1,0 +1,220 @@
+{
+ "klasor": "bilge-emlak-danismanligi",
+ "sablon": "klasik",
+ "ortak_gorsel": true,
+ "ofis": {
+  "ad": "Bilge Emlak Danışmanlığı",
+  "kisa": "Bilge",
+  "telefon": "0532 625 95 08",
+  "whatsapp": "905326259508",
+  "eposta": "",
+  "adres": "Gap Mah., Yayla Cd, Batman, Batman",
+  "yetki": "",
+  "renk": "#5B2A86",
+  "temsili": true,
+  "kapak": "img/ev-beyaz-villa.jpg",
+  "tanitim": "Bilge Emlak Danışmanlığı, Batman merkezli olarak konut, işyeri ve arsa alım satım ve kiralama süreçlerinde danışmanlık hizmeti vermektedir.",
+  "hakkinda": "Batman ve çevresindeki portföyümüzle alıcı, satıcı ve kiracılara hizmet sunmaktayız.",
+  "aciklama": "Batman ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.",
+  "demoNot": "Bu sayfa Bilge Emlak Danışmanlığı için hazırlanmış bir tasarım önizlemesidir. İlanlar ve fotoğraflar temsilidir.",
+  "saatler": "Pazartesi - Cumartesi, 09.00 - 19.00"
+ },
+ "ofisler": [
+  {
+   "sehir": "Batman",
+   "adres": "Gap Mah., Yayla Cd, Batman, Batman",
+   "tel": "0532 625 95 08",
+   "lat": 37.90041,
+   "lng": 41.1329
+  }
+ ],
+ "danismanlar": [],
+ "istatistik": [],
+ "tarihce": [],
+ "yazilar": [],
+ "ilanlar": [
+  {
+   "id": "ilan-1",
+   "baslik": "Gap'ta Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Batman",
+   "ilce": "Batman",
+   "mahalle": "Gap",
+   "fiyat": 3250000,
+   "m2": 130,
+   "kat": "6. kat",
+   "yas": 5,
+   "aciklama": "Asansörlü binada, ara katta 130 m² 3+1 daire. Ebeveyn banyolu ve kapalı otoparklıdır. Toplu ulaşıma ve okullara yakındır.",
+   "gorseller": [
+    "img/ic-sari-koltuk.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 37.89529,
+   "lng": 41.14173,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-2",
+   "baslik": "Gap'ta Satılık 2+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Batman",
+   "ilce": "Batman",
+   "mahalle": "Gap",
+   "fiyat": 2550000,
+   "m2": 99,
+   "kat": "6. kat",
+   "yas": 15,
+   "aciklama": "Bakımlı binada 99 m² 2+1 daire. Doğalgaz kombili ve balkonludur. Krediye uygundur.",
+   "gorseller": [
+    "img/ic-moda-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 37.90356,
+   "lng": 41.12682,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-3",
+   "baslik": "Gap'ta Satılık 4+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Batman",
+   "ilce": "Batman",
+   "mahalle": "Gap",
+   "fiyat": 4350000,
+   "m2": 171,
+   "kat": "5. kat",
+   "yas": 4,
+   "aciklama": "Site içinde 171 m² 4+1 daire. Geniş salon, iki banyo ve kapalı otopark bulunmaktadır.",
+   "gorseller": [
+    "img/ic-bebek-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 37.89842,
+   "lng": 41.13326,
+   "oda": "4+1",
+   "banyo": 2,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-4",
+   "baslik": "Gap'ta Kiralık 2+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "Batman",
+   "ilce": "Batman",
+   "mahalle": "Gap",
+   "fiyat": 13000,
+   "m2": 95,
+   "kat": "2. kat",
+   "yas": 10,
+   "aciklama": "Ana caddeye yakın, 95 m² 2+1 daire. Doğalgaz kombili, aileye kiralıktır.",
+   "gorseller": [
+    "img/ic-gri-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 37.90529,
+   "lng": 41.1287,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 900
+  },
+  {
+   "id": "ilan-5",
+   "baslik": "Gap'ta Satılık 1+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Batman",
+   "ilce": "Batman",
+   "mahalle": "Gap",
+   "fiyat": 1350000,
+   "m2": 55,
+   "kat": "1. kat",
+   "yas": 13,
+   "aciklama": "Yeni binada 55 m² 1+1 daire. Kira getirisi yüksek, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-genis-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 37.90779,
+   "lng": 41.13331,
+   "oda": "1+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-6",
+   "baslik": "Gap'ta Kiralık 3+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "Batman",
+   "ilce": "Batman",
+   "mahalle": "Gap",
+   "fiyat": 18000,
+   "m2": 117,
+   "kat": "5. kat",
+   "yas": 18,
+   "aciklama": "Asansörlü binada 117 m² 3+1 daire. Aydınlık ve geniş balkonludur.",
+   "gorseller": [
+    "img/ic-urla-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 37.90707,
+   "lng": 41.12882,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 800
+  },
+  {
+   "id": "ilan-7",
+   "baslik": "Gap'ta Satılık Dükkan",
+   "tip": "Satılık",
+   "kategori": "Dükkan",
+   "il": "Batman",
+   "ilce": "Batman",
+   "mahalle": "Gap",
+   "fiyat": 2200000,
+   "m2": 66,
+   "kat": "Zemin kat",
+   "yas": 9,
+   "aciklama": "Cadde üzerinde, vitrin cepheli 66 m² dükkan. Kiracılıdır, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-bitkili-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 37.90292,
+   "lng": 41.12858
+  },
+  {
+   "id": "ilan-8",
+   "baslik": "Gap'ta Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Batman",
+   "ilce": "Batman",
+   "mahalle": "Gap",
+   "fiyat": 3700000,
+   "m2": 144,
+   "kat": "2. kat",
+   "yas": 5,
+   "aciklama": "Yeni yapılmış binada 144 m² 3+1 daire. Ankastre mutfak ve kapalı otopark mevcuttur.",
+   "gorseller": [
+    "img/ic-ahsap-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 37.90363,
+   "lng": 41.14146,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  }
+ ]
+}

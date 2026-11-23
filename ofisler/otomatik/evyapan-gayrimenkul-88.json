@@ -1,0 +1,220 @@
+{
+ "klasor": "evyapan-gayrimenkul-88",
+ "sablon": "klasik",
+ "ortak_gorsel": true,
+ "ofis": {
+  "ad": "Evyapan Gayrimenkul",
+  "kisa": "Evyapan",
+  "telefon": "0506 941 44 30",
+  "whatsapp": "905069414430",
+  "eposta": "",
+  "adres": "Cibali Mah., Nevşehirli İbrahim Paşa Cd., Fatih, İstanbul",
+  "yetki": "",
+  "renk": "#1F2D5C",
+  "temsili": true,
+  "kapak": "img/ev-havuzlu-villa.jpg",
+  "tanitim": "Evyapan Gayrimenkul, Fatih merkezli olarak konut, işyeri ve arsa alım satım ve kiralama süreçlerinde danışmanlık hizmeti vermektedir.",
+  "hakkinda": "Fatih ve çevresindeki portföyümüzle alıcı, satıcı ve kiracılara hizmet sunmaktayız.",
+  "aciklama": "Fatih ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.",
+  "demoNot": "Bu sayfa Evyapan Gayrimenkul için hazırlanmış bir tasarım önizlemesidir. İlanlar ve fotoğraflar temsilidir.",
+  "saatler": "Pazartesi - Cumartesi, 09.00 - 19.00"
+ },
+ "ofisler": [
+  {
+   "sehir": "Fatih",
+   "adres": "Cibali Mah., Nevşehirli İbrahim Paşa Cd., Fatih, İstanbul",
+   "tel": "0506 941 44 30",
+   "lat": 41.02207,
+   "lng": 28.95395
+  }
+ ],
+ "danismanlar": [],
+ "istatistik": [],
+ "tarihce": [],
+ "yazilar": [],
+ "ilanlar": [
+  {
+   "id": "ilan-1",
+   "baslik": "Cibali'de Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Fatih",
+   "mahalle": "Cibali",
+   "fiyat": 7750000,
+   "m2": 121,
+   "kat": "6. kat",
+   "yas": 11,
+   "aciklama": "Asansörlü binada, ara katta 121 m² 3+1 daire. Ebeveyn banyolu ve kapalı otoparklıdır. Toplu ulaşıma ve okullara yakındır.",
+   "gorseller": [
+    "img/ic-genis-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 41.02545,
+   "lng": 28.95932,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-2",
+   "baslik": "Cibali'de Satılık 2+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Fatih",
+   "mahalle": "Cibali",
+   "fiyat": 6050000,
+   "m2": 91,
+   "kat": "6. kat",
+   "yas": 7,
+   "aciklama": "Bakımlı binada 91 m² 2+1 daire. Doğalgaz kombili ve balkonludur. Krediye uygundur.",
+   "gorseller": [
+    "img/ic-bitkili-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 41.02315,
+   "lng": 28.95124,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-3",
+   "baslik": "Cibali'de Satılık 4+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Fatih",
+   "mahalle": "Cibali",
+   "fiyat": 11150000,
+   "m2": 185,
+   "kat": "1. kat",
+   "yas": 7,
+   "aciklama": "Site içinde 185 m² 4+1 daire. Geniş salon, iki banyo ve kapalı otopark bulunmaktadır.",
+   "gorseller": [
+    "img/ic-bebek-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 41.0164,
+   "lng": 28.95226,
+   "oda": "4+1",
+   "banyo": 2,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-4",
+   "baslik": "Cibali'de Kiralık 2+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Fatih",
+   "mahalle": "Cibali",
+   "fiyat": 30500,
+   "m2": 82,
+   "kat": "4. kat",
+   "yas": 14,
+   "aciklama": "Ana caddeye yakın, 82 m² 2+1 daire. Doğalgaz kombili, aileye kiralıktır.",
+   "gorseller": [
+    "img/ic-ahsap-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 41.01753,
+   "lng": 28.95783,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 1150
+  },
+  {
+   "id": "ilan-5",
+   "baslik": "Cibali'de Satılık 1+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Fatih",
+   "mahalle": "Cibali",
+   "fiyat": 3950000,
+   "m2": 56,
+   "kat": "2. kat",
+   "yas": 13,
+   "aciklama": "Yeni binada 56 m² 1+1 daire. Kira getirisi yüksek, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-gri-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 41.0234,
+   "lng": 28.95858,
+   "oda": "1+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-6",
+   "baslik": "Cibali'de Kiralık 3+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Fatih",
+   "mahalle": "Cibali",
+   "fiyat": 38000,
+   "m2": 125,
+   "kat": "1. kat",
+   "yas": 18,
+   "aciklama": "Asansörlü binada 125 m² 3+1 daire. Aydınlık ve geniş balkonludur.",
+   "gorseller": [
+    "img/ic-sari-koltuk.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 41.01843,
+   "lng": 28.9616,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 700
+  },
+  {
+   "id": "ilan-7",
+   "baslik": "Cibali'de Satılık Dükkan",
+   "tip": "Satılık",
+   "kategori": "Dükkan",
+   "il": "İstanbul",
+   "ilce": "Fatih",
+   "mahalle": "Cibali",
+   "fiyat": 5350000,
+   "m2": 72,
+   "kat": "Zemin kat",
+   "yas": 3,
+   "aciklama": "Cadde üzerinde, vitrin cepheli 72 m² dükkan. Kiracılıdır, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-moda-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 41.02577,
+   "lng": 28.95322
+  },
+  {
+   "id": "ilan-8",
+   "baslik": "Cibali'de Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Fatih",
+   "mahalle": "Cibali",
+   "fiyat": 7650000,
+   "m2": 137,
+   "kat": "5. kat",
+   "yas": 18,
+   "aciklama": "Yeni yapılmış binada 137 m² 3+1 daire. Ankastre mutfak ve kapalı otopark mevcuttur.",
+   "gorseller": [
+    "img/ic-urla-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 41.02441,
+   "lng": 28.94811,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  }
+ ]
+}
