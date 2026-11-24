@@ -1,0 +1,220 @@
+{
+ "klasor": "guleryuz-emlak-insaat",
+ "sablon": "klasik",
+ "ortak_gorsel": true,
+ "ofis": {
+  "ad": "Güleryüz Emlak İnşaat",
+  "kisa": "Güleryüz",
+  "telefon": "0532 284 87 24",
+  "whatsapp": "905322848724",
+  "eposta": "",
+  "adres": "Çatalca, İstanbul",
+  "yetki": "",
+  "renk": "#6B3E26",
+  "temsili": true,
+  "kapak": "img/ev-modern-havuz.jpg",
+  "tanitim": "Güleryüz Emlak İnşaat, Çatalca merkezli olarak konut, işyeri ve arsa alım satım ve kiralama süreçlerinde danışmanlık hizmeti vermektedir.",
+  "hakkinda": "Çatalca ve çevresindeki portföyümüzle alıcı, satıcı ve kiracılara hizmet sunmaktayız.",
+  "aciklama": "Çatalca ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.",
+  "demoNot": "Bu sayfa Güleryüz Emlak İnşaat için hazırlanmış bir tasarım önizlemesidir. İlanlar ve fotoğraflar temsilidir.",
+  "saatler": "Pazartesi - Cumartesi, 09.00 - 19.00"
+ },
+ "ofisler": [
+  {
+   "sehir": "Çatalca",
+   "adres": "Çatalca, İstanbul",
+   "tel": "0532 284 87 24",
+   "lat": 41.22204,
+   "lng": 28.45499
+  }
+ ],
+ "danismanlar": [],
+ "istatistik": [],
+ "tarihce": [],
+ "yazilar": [],
+ "ilanlar": [
+  {
+   "id": "ilan-1",
+   "baslik": "Çatalca'da Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Çatalca",
+   "mahalle": "Çatalca",
+   "fiyat": 8650000,
+   "m2": 129,
+   "kat": "1. kat",
+   "yas": 10,
+   "aciklama": "Asansörlü binada, ara katta 129 m² 3+1 daire. Ebeveyn banyolu ve kapalı otoparklıdır. Toplu ulaşıma ve okullara yakındır.",
+   "gorseller": [
+    "img/ic-moda-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 41.21689,
+   "lng": 28.45806,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-2",
+   "baslik": "Çatalca'da Satılık 2+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Çatalca",
+   "mahalle": "Çatalca",
+   "fiyat": 5400000,
+   "m2": 97,
+   "kat": "4. kat",
+   "yas": 18,
+   "aciklama": "Bakımlı binada 97 m² 2+1 daire. Doğalgaz kombili ve balkonludur. Krediye uygundur.",
+   "gorseller": [
+    "img/ic-urla-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 41.2184,
+   "lng": 28.45832,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-3",
+   "baslik": "Çatalca'da Satılık 4+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Çatalca",
+   "mahalle": "Çatalca",
+   "fiyat": 11500000,
+   "m2": 185,
+   "kat": "4. kat",
+   "yas": 2,
+   "aciklama": "Site içinde 185 m² 4+1 daire. Geniş salon, iki banyo ve kapalı otopark bulunmaktadır.",
+   "gorseller": [
+    "img/ic-sari-koltuk.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 41.21653,
+   "lng": 28.45337,
+   "oda": "4+1",
+   "banyo": 2,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-4",
+   "baslik": "Çatalca'da Kiralık 2+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Çatalca",
+   "mahalle": "Çatalca",
+   "fiyat": 33500,
+   "m2": 99,
+   "kat": "3. kat",
+   "yas": 10,
+   "aciklama": "Ana caddeye yakın, 99 m² 2+1 daire. Doğalgaz kombili, aileye kiralıktır.",
+   "gorseller": [
+    "img/ic-bitkili-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 41.22584,
+   "lng": 28.45952,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 1200
+  },
+  {
+   "id": "ilan-5",
+   "baslik": "Çatalca'da Satılık 1+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Çatalca",
+   "mahalle": "Çatalca",
+   "fiyat": 3600000,
+   "m2": 60,
+   "kat": "5. kat",
+   "yas": 2,
+   "aciklama": "Yeni binada 60 m² 1+1 daire. Kira getirisi yüksek, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-bebek-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 41.2257,
+   "lng": 28.46455,
+   "oda": "1+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-6",
+   "baslik": "Çatalca'da Kiralık 3+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Çatalca",
+   "mahalle": "Çatalca",
+   "fiyat": 50500,
+   "m2": 145,
+   "kat": "1. kat",
+   "yas": 9,
+   "aciklama": "Asansörlü binada 145 m² 3+1 daire. Aydınlık ve geniş balkonludur.",
+   "gorseller": [
+    "img/ic-genis-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 41.22748,
+   "lng": 28.44662,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 1000
+  },
+  {
+   "id": "ilan-7",
+   "baslik": "Çatalca'da Satılık Dükkan",
+   "tip": "Satılık",
+   "kategori": "Dükkan",
+   "il": "İstanbul",
+   "ilce": "Çatalca",
+   "mahalle": "Çatalca",
+   "fiyat": 5100000,
+   "m2": 74,
+   "kat": "Zemin kat",
+   "yas": 16,
+   "aciklama": "Cadde üzerinde, vitrin cepheli 74 m² dükkan. Kiracılıdır, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-ahsap-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 41.22857,
+   "lng": 28.45143
+  },
+  {
+   "id": "ilan-8",
+   "baslik": "Çatalca'da Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Çatalca",
+   "mahalle": "Çatalca",
+   "fiyat": 7450000,
+   "m2": 130,
+   "kat": "5. kat",
+   "yas": 13,
+   "aciklama": "Yeni yapılmış binada 130 m² 3+1 daire. Ankastre mutfak ve kapalı otopark mevcuttur.",
+   "gorseller": [
+    "img/ic-gri-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 41.22628,
+   "lng": 28.44807,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  }
+ ]
+}

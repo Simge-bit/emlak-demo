@@ -1,0 +1,220 @@
+{
+ "klasor": "guven-emlak-gayrimenkul",
+ "sablon": "klasik",
+ "ortak_gorsel": true,
+ "ofis": {
+  "ad": "Güven Emlak & Gayrimenkul",
+  "kisa": "Güven",
+  "telefon": "0535 987 86 41",
+  "whatsapp": "905359878641",
+  "eposta": "",
+  "adres": "Buca Koop Mah., Buca, İzmir",
+  "yetki": "",
+  "renk": "#6B3E26",
+  "temsili": true,
+  "kapak": "img/ev-modern-havuz.jpg",
+  "tanitim": "Güven Emlak & Gayrimenkul, Buca merkezli olarak konut, işyeri ve arsa alım satım ve kiralama süreçlerinde danışmanlık hizmeti vermektedir.",
+  "hakkinda": "Buca ve çevresindeki portföyümüzle alıcı, satıcı ve kiracılara hizmet sunmaktayız.",
+  "aciklama": "Buca ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.",
+  "demoNot": "Bu sayfa Güven Emlak & Gayrimenkul için hazırlanmış bir tasarım önizlemesidir. İlanlar ve fotoğraflar temsilidir.",
+  "saatler": "Pazartesi - Cumartesi, 09.00 - 19.00"
+ },
+ "ofisler": [
+  {
+   "sehir": "Buca",
+   "adres": "Buca Koop Mah., Buca, İzmir",
+   "tel": "0535 987 86 41",
+   "lat": 38.36866,
+   "lng": 27.18552
+  }
+ ],
+ "danismanlar": [],
+ "istatistik": [],
+ "tarihce": [],
+ "yazilar": [],
+ "ilanlar": [
+  {
+   "id": "ilan-1",
+   "baslik": "Buca Koop'ta Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İzmir",
+   "ilce": "Buca",
+   "mahalle": "Buca Koop",
+   "fiyat": 6050000,
+   "m2": 128,
+   "kat": "3. kat",
+   "yas": 5,
+   "aciklama": "Asansörlü binada, ara katta 128 m² 3+1 daire. Ebeveyn banyolu ve kapalı otoparklıdır. Toplu ulaşıma ve okullara yakındır.",
+   "gorseller": [
+    "img/ic-bebek-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 38.37485,
+   "lng": 27.18634,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-2",
+   "baslik": "Buca Koop'ta Satılık 2+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İzmir",
+   "ilce": "Buca",
+   "mahalle": "Buca Koop",
+   "fiyat": 4050000,
+   "m2": 90,
+   "kat": "1. kat",
+   "yas": 18,
+   "aciklama": "Bakımlı binada 90 m² 2+1 daire. Doğalgaz kombili ve balkonludur. Krediye uygundur.",
+   "gorseller": [
+    "img/ic-urla-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 38.36969,
+   "lng": 27.1916,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-3",
+   "baslik": "Buca Koop'ta Satılık 4+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İzmir",
+   "ilce": "Buca",
+   "mahalle": "Buca Koop",
+   "fiyat": 8150000,
+   "m2": 176,
+   "kat": "5. kat",
+   "yas": 16,
+   "aciklama": "Site içinde 176 m² 4+1 daire. Geniş salon, iki banyo ve kapalı otopark bulunmaktadır.",
+   "gorseller": [
+    "img/ic-genis-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 38.36162,
+   "lng": 27.19284,
+   "oda": "4+1",
+   "banyo": 2,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-4",
+   "baslik": "Buca Koop'ta Kiralık 2+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "İzmir",
+   "ilce": "Buca",
+   "mahalle": "Buca Koop",
+   "fiyat": 24500,
+   "m2": 85,
+   "kat": "2. kat",
+   "yas": 16,
+   "aciklama": "Ana caddeye yakın, 85 m² 2+1 daire. Doğalgaz kombili, aileye kiralıktır.",
+   "gorseller": [
+    "img/ic-sari-koltuk.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 38.37007,
+   "lng": 27.17958,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 950
+  },
+  {
+   "id": "ilan-5",
+   "baslik": "Buca Koop'ta Satılık 1+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İzmir",
+   "ilce": "Buca",
+   "mahalle": "Buca Koop",
+   "fiyat": 3500000,
+   "m2": 66,
+   "kat": "3. kat",
+   "yas": 2,
+   "aciklama": "Yeni binada 66 m² 1+1 daire. Kira getirisi yüksek, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-moda-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 38.36634,
+   "lng": 27.17818,
+   "oda": "1+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-6",
+   "baslik": "Buca Koop'ta Kiralık 3+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "İzmir",
+   "ilce": "Buca",
+   "mahalle": "Buca Koop",
+   "fiyat": 32500,
+   "m2": 123,
+   "kat": "5. kat",
+   "yas": 18,
+   "aciklama": "Asansörlü binada 123 m² 3+1 daire. Aydınlık ve geniş balkonludur.",
+   "gorseller": [
+    "img/ic-ahsap-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 38.36779,
+   "lng": 27.18544,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 900
+  },
+  {
+   "id": "ilan-7",
+   "baslik": "Buca Koop'ta Satılık Dükkan",
+   "tip": "Satılık",
+   "kategori": "Dükkan",
+   "il": "İzmir",
+   "ilce": "Buca",
+   "mahalle": "Buca Koop",
+   "fiyat": 3200000,
+   "m2": 65,
+   "kat": "Zemin kat",
+   "yas": 11,
+   "aciklama": "Cadde üzerinde, vitrin cepheli 65 m² dükkan. Kiracılıdır, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-gri-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 38.36457,
+   "lng": 27.1876
+  },
+  {
+   "id": "ilan-8",
+   "baslik": "Buca Koop'ta Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İzmir",
+   "ilce": "Buca",
+   "mahalle": "Buca Koop",
+   "fiyat": 6000000,
+   "m2": 136,
+   "kat": "2. kat",
+   "yas": 3,
+   "aciklama": "Yeni yapılmış binada 136 m² 3+1 daire. Ankastre mutfak ve kapalı otopark mevcuttur.",
+   "gorseller": [
+    "img/ic-bitkili-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 38.37077,
+   "lng": 27.17768,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  }
+ ]
+}
