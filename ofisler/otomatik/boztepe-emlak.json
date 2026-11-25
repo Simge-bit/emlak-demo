@@ -1,0 +1,220 @@
+{
+ "klasor": "boztepe-emlak",
+ "sablon": "klasik",
+ "ortak_gorsel": true,
+ "ofis": {
+  "ad": "Boztepe Emlak",
+  "kisa": "Boztepe",
+  "telefon": "0535 741 64 38",
+  "whatsapp": "905357416438",
+  "eposta": "",
+  "adres": "Hürriyet Mah., No: 51A, Kartal, İstanbul",
+  "yetki": "",
+  "renk": "#6B3E26",
+  "temsili": true,
+  "kapak": "img/ev-havuzlu-villa.jpg",
+  "tanitim": "Boztepe Emlak, Kartal merkezli olarak konut, işyeri ve arsa alım satım ve kiralama süreçlerinde danışmanlık hizmeti vermektedir.",
+  "hakkinda": "Kartal ve çevresindeki portföyümüzle alıcı, satıcı ve kiracılara hizmet sunmaktayız.",
+  "aciklama": "Kartal ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.",
+  "demoNot": "Bu sayfa Boztepe Emlak için hazırlanmış bir tasarım önizlemesidir. İlanlar ve fotoğraflar temsilidir.",
+  "saatler": "Pazartesi - Cumartesi, 09.00 - 19.00"
+ },
+ "ofisler": [
+  {
+   "sehir": "Kartal",
+   "adres": "Hürriyet Mah., No: 51A, Kartal, İstanbul",
+   "tel": "0535 741 64 38",
+   "lat": 40.90299,
+   "lng": 29.23213
+  }
+ ],
+ "danismanlar": [],
+ "istatistik": [],
+ "tarihce": [],
+ "yazilar": [],
+ "ilanlar": [
+  {
+   "id": "ilan-1",
+   "baslik": "Hürriyet'te Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Kartal",
+   "mahalle": "Hürriyet",
+   "fiyat": 8850000,
+   "m2": 138,
+   "kat": "2. kat",
+   "yas": 7,
+   "aciklama": "Asansörlü binada, ara katta 138 m² 3+1 daire. Ebeveyn banyolu ve kapalı otoparklıdır. Toplu ulaşıma ve okullara yakındır.",
+   "gorseller": [
+    "img/ic-bebek-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 40.90464,
+   "lng": 29.22544,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-2",
+   "baslik": "Yakacık'ta Satılık 2+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Kartal",
+   "mahalle": "Yakacık",
+   "fiyat": 5600000,
+   "m2": 89,
+   "kat": "4. kat",
+   "yas": 9,
+   "aciklama": "Bakımlı binada 89 m² 2+1 daire. Doğalgaz kombili ve balkonludur. Krediye uygundur.",
+   "gorseller": [
+    "img/ic-sari-koltuk.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 40.90393,
+   "lng": 29.23419,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-3",
+   "baslik": "Yunus'ta Satılık 4+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Kartal",
+   "mahalle": "Yunus",
+   "fiyat": 11800000,
+   "m2": 167,
+   "kat": "2. kat",
+   "yas": 6,
+   "aciklama": "Site içinde 167 m² 4+1 daire. Geniş salon, iki banyo ve kapalı otopark bulunmaktadır.",
+   "gorseller": [
+    "img/ic-bitkili-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 40.90735,
+   "lng": 29.2276,
+   "oda": "4+1",
+   "banyo": 2,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-4",
+   "baslik": "Topselvi'de Kiralık 2+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Kartal",
+   "mahalle": "Topselvi",
+   "fiyat": 28000,
+   "m2": 82,
+   "kat": "6. kat",
+   "yas": 9,
+   "aciklama": "Ana caddeye yakın, 82 m² 2+1 daire. Doğalgaz kombili, aileye kiralıktır.",
+   "gorseller": [
+    "img/ic-genis-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 40.9059,
+   "lng": 29.23431,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 1100
+  },
+  {
+   "id": "ilan-5",
+   "baslik": "Cumhuriyet'te Satılık 1+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Kartal",
+   "mahalle": "Cumhuriyet",
+   "fiyat": 2950000,
+   "m2": 55,
+   "kat": "1. kat",
+   "yas": 13,
+   "aciklama": "Yeni binada 55 m² 1+1 daire. Kira getirisi yüksek, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-urla-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 40.90671,
+   "lng": 29.22626,
+   "oda": "1+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-6",
+   "baslik": "Hürriyet'te Kiralık 3+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Kartal",
+   "mahalle": "Hürriyet",
+   "fiyat": 36000,
+   "m2": 121,
+   "kat": "5. kat",
+   "yas": 6,
+   "aciklama": "Asansörlü binada 121 m² 3+1 daire. Aydınlık ve geniş balkonludur.",
+   "gorseller": [
+    "img/ic-ahsap-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 40.89821,
+   "lng": 29.24051,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 800
+  },
+  {
+   "id": "ilan-7",
+   "baslik": "Yakacık'ta Satılık Dükkan",
+   "tip": "Satılık",
+   "kategori": "Dükkan",
+   "il": "İstanbul",
+   "ilce": "Kartal",
+   "mahalle": "Yakacık",
+   "fiyat": 5050000,
+   "m2": 70,
+   "kat": "Zemin kat",
+   "yas": 9,
+   "aciklama": "Cadde üzerinde, vitrin cepheli 70 m² dükkan. Kiracılıdır, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-moda-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 40.90578,
+   "lng": 29.22538
+  },
+  {
+   "id": "ilan-8",
+   "baslik": "Yunus'ta Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Kartal",
+   "mahalle": "Yunus",
+   "fiyat": 7000000,
+   "m2": 133,
+   "kat": "2. kat",
+   "yas": 7,
+   "aciklama": "Yeni yapılmış binada 133 m² 3+1 daire. Ankastre mutfak ve kapalı otopark mevcuttur.",
+   "gorseller": [
+    "img/ic-gri-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 40.89596,
+   "lng": 29.22621,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  }
+ ]
+}
