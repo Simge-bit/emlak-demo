@@ -1,0 +1,220 @@
+{
+ "klasor": "mert-emlak",
+ "sablon": "klasik",
+ "ortak_gorsel": true,
+ "ofis": {
+  "ad": "Mert Emlak",
+  "kisa": "Mert",
+  "telefon": "0544 224 68 36",
+  "whatsapp": "905442246836",
+  "eposta": "",
+  "adres": "Vize, Kırklareli",
+  "yetki": "",
+  "renk": "#2B3A55",
+  "temsili": true,
+  "kapak": "img/ev-beyaz-villa.jpg",
+  "tanitim": "Mert Emlak, Vize merkezli olarak konut, işyeri ve arsa alım satım ve kiralama süreçlerinde danışmanlık hizmeti vermektedir.",
+  "hakkinda": "Vize ve çevresindeki portföyümüzle alıcı, satıcı ve kiracılara hizmet sunmaktayız.",
+  "aciklama": "Vize ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.",
+  "demoNot": "Bu sayfa Mert Emlak için hazırlanmış bir tasarım önizlemesidir. İlanlar ve fotoğraflar temsilidir.",
+  "saatler": "Pazartesi - Cumartesi, 09.00 - 19.00"
+ },
+ "ofisler": [
+  {
+   "sehir": "Vize",
+   "adres": "Vize, Kırklareli",
+   "tel": "0544 224 68 36",
+   "lat": 41.57173,
+   "lng": 27.7685
+  }
+ ],
+ "danismanlar": [],
+ "istatistik": [],
+ "tarihce": [],
+ "yazilar": [],
+ "ilanlar": [
+  {
+   "id": "ilan-1",
+   "baslik": "Vize'de Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Kırklareli",
+   "ilce": "Vize",
+   "mahalle": "Vize",
+   "fiyat": 2650000,
+   "m2": 115,
+   "kat": "4. kat",
+   "yas": 7,
+   "aciklama": "Asansörlü binada, ara katta 115 m² 3+1 daire. Ebeveyn banyolu ve kapalı otoparklıdır. Toplu ulaşıma ve okullara yakındır.",
+   "gorseller": [
+    "img/ic-sari-koltuk.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 41.57709,
+   "lng": 27.77297,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-2",
+   "baslik": "Vize'de Satılık 2+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Kırklareli",
+   "ilce": "Vize",
+   "mahalle": "Vize",
+   "fiyat": 2100000,
+   "m2": 98,
+   "kat": "6. kat",
+   "yas": 15,
+   "aciklama": "Bakımlı binada 98 m² 2+1 daire. Doğalgaz kombili ve balkonludur. Krediye uygundur.",
+   "gorseller": [
+    "img/ic-moda-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 41.57034,
+   "lng": 27.76569,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-3",
+   "baslik": "Vize'de Satılık 4+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Kırklareli",
+   "ilce": "Vize",
+   "mahalle": "Vize",
+   "fiyat": 4450000,
+   "m2": 180,
+   "kat": "1. kat",
+   "yas": 14,
+   "aciklama": "Site içinde 180 m² 4+1 daire. Geniş salon, iki banyo ve kapalı otopark bulunmaktadır.",
+   "gorseller": [
+    "img/ic-bebek-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 41.56676,
+   "lng": 27.77481,
+   "oda": "4+1",
+   "banyo": 2,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-4",
+   "baslik": "Vize'de Kiralık 2+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "Kırklareli",
+   "ilce": "Vize",
+   "mahalle": "Vize",
+   "fiyat": 14500,
+   "m2": 99,
+   "kat": "1. kat",
+   "yas": 12,
+   "aciklama": "Ana caddeye yakın, 99 m² 2+1 daire. Doğalgaz kombili, aileye kiralıktır.",
+   "gorseller": [
+    "img/ic-urla-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 41.57085,
+   "lng": 27.77627,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 750
+  },
+  {
+   "id": "ilan-5",
+   "baslik": "Vize'de Satılık 1+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Kırklareli",
+   "ilce": "Vize",
+   "mahalle": "Vize",
+   "fiyat": 1500000,
+   "m2": 59,
+   "kat": "5. kat",
+   "yas": 4,
+   "aciklama": "Yeni binada 59 m² 1+1 daire. Kira getirisi yüksek, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-gri-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 41.57459,
+   "lng": 27.77497,
+   "oda": "1+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-6",
+   "baslik": "Vize'de Kiralık 3+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "Kırklareli",
+   "ilce": "Vize",
+   "mahalle": "Vize",
+   "fiyat": 15000,
+   "m2": 126,
+   "kat": "1. kat",
+   "yas": 10,
+   "aciklama": "Asansörlü binada 126 m² 3+1 daire. Aydınlık ve geniş balkonludur.",
+   "gorseller": [
+    "img/ic-genis-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 41.57846,
+   "lng": 27.76897,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 450
+  },
+  {
+   "id": "ilan-7",
+   "baslik": "Vize'de Satılık Dükkan",
+   "tip": "Satılık",
+   "kategori": "Dükkan",
+   "il": "Kırklareli",
+   "ilce": "Vize",
+   "mahalle": "Vize",
+   "fiyat": 2050000,
+   "m2": 74,
+   "kat": "Zemin kat",
+   "yas": 16,
+   "aciklama": "Cadde üzerinde, vitrin cepheli 74 m² dükkan. Kiracılıdır, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-ahsap-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 41.56717,
+   "lng": 27.76665
+  },
+  {
+   "id": "ilan-8",
+   "baslik": "Vize'de Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Kırklareli",
+   "ilce": "Vize",
+   "mahalle": "Vize",
+   "fiyat": 3450000,
+   "m2": 140,
+   "kat": "1. kat",
+   "yas": 9,
+   "aciklama": "Yeni yapılmış binada 140 m² 3+1 daire. Ankastre mutfak ve kapalı otopark mevcuttur.",
+   "gorseller": [
+    "img/ic-bitkili-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 41.57541,
+   "lng": 27.77521,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  }
+ ]
+}
