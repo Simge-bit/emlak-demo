@@ -1,0 +1,220 @@
+{
+ "klasor": "veluna-emlak",
+ "sablon": "klasik",
+ "ortak_gorsel": true,
+ "ofis": {
+  "ad": "Velüna Emlak",
+  "kisa": "Velüna",
+  "telefon": "0554 959 70 88",
+  "whatsapp": "905549597088",
+  "eposta": "",
+  "adres": "Ortabayır Mah., Atalar Caddesi No: 35A, Kağıthane, İstanbul",
+  "yetki": "",
+  "renk": "#6B3E26",
+  "temsili": true,
+  "kapak": "img/ev-beyaz-villa.jpg",
+  "tanitim": "Velüna Emlak, Kağıthane merkezli olarak konut, işyeri ve arsa alım satım ve kiralama süreçlerinde danışmanlık hizmeti vermektedir.",
+  "hakkinda": "Kağıthane ve çevresindeki portföyümüzle alıcı, satıcı ve kiracılara hizmet sunmaktayız.",
+  "aciklama": "Kağıthane ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.",
+  "demoNot": "Bu sayfa Velüna Emlak için hazırlanmış bir tasarım önizlemesidir. İlanlar ve fotoğraflar temsilidir.",
+  "saatler": "Pazartesi - Cumartesi, 09.00 - 19.00"
+ },
+ "ofisler": [
+  {
+   "sehir": "Kağıthane",
+   "adres": "Ortabayır Mah., Atalar Caddesi No: 35A, Kağıthane, İstanbul",
+   "tel": "0554 959 70 88",
+   "lat": 41.07784,
+   "lng": 29.00665
+  }
+ ],
+ "danismanlar": [],
+ "istatistik": [],
+ "tarihce": [],
+ "yazilar": [],
+ "ilanlar": [
+  {
+   "id": "ilan-1",
+   "baslik": "Ortabayır'da Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Kağıthane",
+   "mahalle": "Ortabayır",
+   "fiyat": 7700000,
+   "m2": 118,
+   "kat": "3. kat",
+   "yas": 17,
+   "aciklama": "Asansörlü binada, ara katta 118 m² 3+1 daire. Ebeveyn banyolu ve kapalı otoparklıdır. Toplu ulaşıma ve okullara yakındır.",
+   "gorseller": [
+    "img/ic-sari-koltuk.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 41.07956,
+   "lng": 29.0092,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-2",
+   "baslik": "Levent'te Satılık 2+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Kağıthane",
+   "mahalle": "Levent",
+   "fiyat": 5600000,
+   "m2": 93,
+   "kat": "2. kat",
+   "yas": 18,
+   "aciklama": "Bakımlı binada 93 m² 2+1 daire. Doğalgaz kombili ve balkonludur. Krediye uygundur.",
+   "gorseller": [
+    "img/ic-gri-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 41.07189,
+   "lng": 29.00442,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-3",
+   "baslik": "Kültür'de Satılık 4+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Kağıthane",
+   "mahalle": "Kültür",
+   "fiyat": 10550000,
+   "m2": 159,
+   "kat": "2. kat",
+   "yas": 18,
+   "aciklama": "Site içinde 159 m² 4+1 daire. Geniş salon, iki banyo ve kapalı otopark bulunmaktadır.",
+   "gorseller": [
+    "img/ic-ahsap-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 41.08376,
+   "lng": 29.00629,
+   "oda": "4+1",
+   "banyo": 2,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-4",
+   "baslik": "Levazım'da Kiralık 2+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Kağıthane",
+   "mahalle": "Levazım",
+   "fiyat": 27000,
+   "m2": 94,
+   "kat": "6. kat",
+   "yas": 6,
+   "aciklama": "Ana caddeye yakın, 94 m² 2+1 daire. Doğalgaz kombili, aileye kiralıktır.",
+   "gorseller": [
+    "img/ic-genis-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 41.0791,
+   "lng": 29.01505,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 1050
+  },
+  {
+   "id": "ilan-5",
+   "baslik": "Balmumcu'da Satılık 1+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Kağıthane",
+   "mahalle": "Balmumcu",
+   "fiyat": 4550000,
+   "m2": 65,
+   "kat": "4. kat",
+   "yas": 8,
+   "aciklama": "Yeni binada 65 m² 1+1 daire. Kira getirisi yüksek, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-bebek-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 41.07154,
+   "lng": 29.01101,
+   "oda": "1+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-6",
+   "baslik": "Ortabayır'da Kiralık 3+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Kağıthane",
+   "mahalle": "Ortabayır",
+   "fiyat": 45500,
+   "m2": 136,
+   "kat": "2. kat",
+   "yas": 3,
+   "aciklama": "Asansörlü binada 136 m² 3+1 daire. Aydınlık ve geniş balkonludur.",
+   "gorseller": [
+    "img/ic-bitkili-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 41.07012,
+   "lng": 29.01061,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 800
+  },
+  {
+   "id": "ilan-7",
+   "baslik": "Levent'te Satılık Dükkan",
+   "tip": "Satılık",
+   "kategori": "Dükkan",
+   "il": "İstanbul",
+   "ilce": "Kağıthane",
+   "mahalle": "Levent",
+   "fiyat": 5900000,
+   "m2": 77,
+   "kat": "Zemin kat",
+   "yas": 8,
+   "aciklama": "Cadde üzerinde, vitrin cepheli 77 m² dükkan. Kiracılıdır, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-moda-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 41.0736,
+   "lng": 29.01569
+  },
+  {
+   "id": "ilan-8",
+   "baslik": "Kültür'de Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "İstanbul",
+   "ilce": "Kağıthane",
+   "mahalle": "Kültür",
+   "fiyat": 10650000,
+   "m2": 153,
+   "kat": "1. kat",
+   "yas": 9,
+   "aciklama": "Yeni yapılmış binada 153 m² 3+1 daire. Ankastre mutfak ve kapalı otopark mevcuttur.",
+   "gorseller": [
+    "img/ic-urla-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 41.07073,
+   "lng": 29.00777,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  }
+ ]
+}

@@ -1,0 +1,220 @@
+{
+ "klasor": "serdar-gayrimenkul",
+ "sablon": "klasik",
+ "ortak_gorsel": true,
+ "ofis": {
+  "ad": "Serdar Gayrimenkul",
+  "kisa": "Serdar",
+  "telefon": "0544 311 68 57",
+  "whatsapp": "905443116857",
+  "eposta": "",
+  "adres": "Çobançeşme Mah., Çorlu, Tekirdağ",
+  "yetki": "",
+  "renk": "#7A1F2B",
+  "temsili": true,
+  "kapak": "img/ev-havuzlu-villa.jpg",
+  "tanitim": "Serdar Gayrimenkul, Çorlu merkezli olarak konut, işyeri ve arsa alım satım ve kiralama süreçlerinde danışmanlık hizmeti vermektedir.",
+  "hakkinda": "Çorlu ve çevresindeki portföyümüzle alıcı, satıcı ve kiracılara hizmet sunmaktayız.",
+  "aciklama": "Çorlu ve çevresinde satılık ve kiralık daire, işyeri ve arsa ilanları.",
+  "demoNot": "Bu sayfa Serdar Gayrimenkul için hazırlanmış bir tasarım önizlemesidir. İlanlar ve fotoğraflar temsilidir.",
+  "saatler": "Pazartesi - Cumartesi, 09.00 - 19.00"
+ },
+ "ofisler": [
+  {
+   "sehir": "Çorlu",
+   "adres": "Çobançeşme Mah., Çorlu, Tekirdağ",
+   "tel": "0544 311 68 57",
+   "lat": 41.14931,
+   "lng": 27.79708
+  }
+ ],
+ "danismanlar": [],
+ "istatistik": [],
+ "tarihce": [],
+ "yazilar": [],
+ "ilanlar": [
+  {
+   "id": "ilan-1",
+   "baslik": "Çobançeşme'de Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Çorlu",
+   "mahalle": "Çobançeşme",
+   "fiyat": 3950000,
+   "m2": 133,
+   "kat": "1. kat",
+   "yas": 17,
+   "aciklama": "Asansörlü binada, ara katta 133 m² 3+1 daire. Ebeveyn banyolu ve kapalı otoparklıdır. Toplu ulaşıma ve okullara yakındır.",
+   "gorseller": [
+    "img/ic-genis-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 41.14852,
+   "lng": 27.80149,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-2",
+   "baslik": "Hatip'te Satılık 2+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Çorlu",
+   "mahalle": "Hatip",
+   "fiyat": 2750000,
+   "m2": 86,
+   "kat": "5. kat",
+   "yas": 6,
+   "aciklama": "Bakımlı binada 86 m² 2+1 daire. Doğalgaz kombili ve balkonludur. Krediye uygundur.",
+   "gorseller": [
+    "img/ic-ahsap-salon.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 41.14806,
+   "lng": 27.79557,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-3",
+   "baslik": "Cumhuriyet'te Satılık 4+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Çorlu",
+   "mahalle": "Cumhuriyet",
+   "fiyat": 5500000,
+   "m2": 165,
+   "kat": "6. kat",
+   "yas": 18,
+   "aciklama": "Site içinde 165 m² 4+1 daire. Geniş salon, iki banyo ve kapalı otopark bulunmaktadır.",
+   "gorseller": [
+    "img/ic-bitkili-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 41.14841,
+   "lng": 27.78922,
+   "oda": "4+1",
+   "banyo": 2,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-4",
+   "baslik": "Silahtarağa'da Kiralık 2+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Çorlu",
+   "mahalle": "Silahtarağa",
+   "fiyat": 17500,
+   "m2": 97,
+   "kat": "1. kat",
+   "yas": 14,
+   "aciklama": "Ana caddeye yakın, 97 m² 2+1 daire. Doğalgaz kombili, aileye kiralıktır.",
+   "gorseller": [
+    "img/ic-urla-salon.jpg",
+    "img/ic-beyaz-yatak.jpg"
+   ],
+   "lat": 41.15228,
+   "lng": 27.79797,
+   "oda": "2+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 1100
+  },
+  {
+   "id": "ilan-5",
+   "baslik": "Hıdırağa'da Satılık 1+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Çorlu",
+   "mahalle": "Hıdırağa",
+   "fiyat": 2000000,
+   "m2": 64,
+   "kat": "5. kat",
+   "yas": 6,
+   "aciklama": "Yeni binada 64 m² 1+1 daire. Kira getirisi yüksek, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-gri-salon.jpg",
+    "img/ic-yemek.jpg"
+   ],
+   "lat": 41.15432,
+   "lng": 27.79766,
+   "oda": "1+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  },
+  {
+   "id": "ilan-6",
+   "baslik": "Çobançeşme'de Kiralık 3+1 Daire",
+   "tip": "Kiralık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Çorlu",
+   "mahalle": "Çobançeşme",
+   "fiyat": 23000,
+   "m2": 138,
+   "kat": "5. kat",
+   "yas": 11,
+   "aciklama": "Asansörlü binada 138 m² 3+1 daire. Aydınlık ve geniş balkonludur.",
+   "gorseller": [
+    "img/ic-moda-salon.jpg",
+    "img/ic-beyaz-mutfak.jpg"
+   ],
+   "lat": 41.15619,
+   "lng": 27.79339,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)",
+   "aidat": 900
+  },
+  {
+   "id": "ilan-7",
+   "baslik": "Hatip'te Satılık Dükkan",
+   "tip": "Satılık",
+   "kategori": "Dükkan",
+   "il": "Tekirdağ",
+   "ilce": "Çorlu",
+   "mahalle": "Hatip",
+   "fiyat": 2000000,
+   "m2": 65,
+   "kat": "Zemin kat",
+   "yas": 3,
+   "aciklama": "Cadde üzerinde, vitrin cepheli 65 m² dükkan. Kiracılıdır, yatırıma uygundur.",
+   "gorseller": [
+    "img/ic-sari-koltuk.jpg",
+    "img/ic-mutfak.jpg"
+   ],
+   "lat": 41.15572,
+   "lng": 27.78864
+  },
+  {
+   "id": "ilan-8",
+   "baslik": "Cumhuriyet'te Satılık 3+1 Daire",
+   "tip": "Satılık",
+   "kategori": "Daire",
+   "il": "Tekirdağ",
+   "ilce": "Çorlu",
+   "mahalle": "Cumhuriyet",
+   "fiyat": 4050000,
+   "m2": 136,
+   "kat": "4. kat",
+   "yas": 2,
+   "aciklama": "Yeni yapılmış binada 136 m² 3+1 daire. Ankastre mutfak ve kapalı otopark mevcuttur.",
+   "gorseller": [
+    "img/ic-bebek-salon.jpg",
+    "img/ic-cam-merdiven.jpg"
+   ],
+   "lat": 41.14307,
+   "lng": 27.80625,
+   "oda": "3+1",
+   "banyo": 1,
+   "isitma": "Kombi (doğalgaz)"
+  }
+ ]
+}
